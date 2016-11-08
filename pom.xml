@@ -251,7 +251,7 @@
         <repository>
             <id>traveliko-releases</id>
             <name>Traveliko Release Repository</name>
-            <url>s3://travelikomavenrepo/releases</url>
+            <url>s3://travelikomavenrepo-sg/releases</url>
             <releases>
                 <enabled>true</enabled>
             </releases>
@@ -264,7 +264,7 @@
         <repository>
             <id>traveliko-snapshots</id>
             <name>Traveliko Snapshot Repository</name>
-            <url>s3://travelikomavenrepo/snapshots</url>
+            <url>s3://travelikomavenrepo-sg/snapshots</url>
             <releases>
                 <enabled>false</enabled>
             </releases>
@@ -279,12 +279,12 @@
         <repository>
             <id>traveliko-releases</id>
             <name>AWS Release Repository</name>
-            <url>s3://travelikomavenrepo/releases</url>
+            <url>s3://travelikomavenrepo-sg/releases</url>
         </repository>
         <snapshotRepository>
             <id>traveliko-snapshots</id>
             <name>AWS Snapshot Repository</name>
-            <url>s3://travelikomavenrepo/snapshots</url>
+            <url>s3://travelikomavenrepo-sg/snapshots</url>
         </snapshotRepository>
     </distributionManagement>
 
