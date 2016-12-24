@@ -48,7 +48,7 @@
 
         <plugins>
 
-            <!-- TODO Only needs to be enabled when we upgrade Fastbooking's WSDL version -->
+            <!-- TODO Only needs to be enabled when we upgrade RateGain's WSDL version 
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
@@ -76,6 +76,7 @@
                     </execution>
                 </executions>
             </plugin>
+			-->
 			
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
