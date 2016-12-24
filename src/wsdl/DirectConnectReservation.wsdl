@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<wsdl:definitions xmlns:tns="http://cgbridge.rategain.com/2011A" xmlns:ota="http://www.opentravel.org/OTA/2003/05" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:xs="http://www.w3.org/2001/XMLSchema" name="ReservationService" targetNamespace="http://cgbridge.rategain.com/2011A" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+	<wsdl:types>
+		<xs:schema>
+			<xs:import schemaLocation="DirectConnectReservation.xsd" namespace="http://www.opentravel.org/OTA/2003/05"/>
+		</xs:schema>
+	</wsdl:types>
+	<wsdl:message name="OTA_HotelResNotifRQ">
+		<wsdl:part name="OTA_HotelResNotifRQ" element="ota:OTA_HotelResNotifRQ"/>
+	</wsdl:message>
+	<wsdl:message name="OTA_HotelResNotifRS">
+		<wsdl:part name="OTA_HotelResNotifRS" element="ota:OTA_HotelResNotifRS"/>
+	</wsdl:message>
+
+	<wsdl:portType name="Reservation">
+		<wsdl:operation name="OTA_HotelResNotifRQ">
+			<wsdl:input message="tns:OTA_HotelResNotifRQ"/>
+			<wsdl:output message="tns:OTA_HotelResNotifRS"/>
+		</wsdl:operation>
+	</wsdl:portType>
+
+	<wsdl:binding name="ReservationPortBindingSoap" type="tns:Reservation">
+		<soap:binding transport="http://schemas.xmlsoap.org/soap/http"/>
+		<wsdl:operation name="OTA_HotelResNotifRQ">
+			<soap:operation soapAction="http://cgbridge.rategain.com/2011A/ReservationService/HotelResNotif" style="document"/>
+			<wsdl:input>
+				<soap:body use="literal"/>
+			</wsdl:input>
+			<wsdl:output>
+				<soap:body use="literal"/>
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>
+
+	<!--<wsdl:binding name="ReservationPortBindingSoap12" type="tns:Reservation">
+		<soap12:binding transport="http://schemas.xmlsoap.org/soap/http" />
+		<wsdl:operation name="OTA_HotelResNotifRQ">
+			<soap12:operation soapAction="http://cgbridge.rategain.com/2011A/ReservationService/HotelResNotif" style="document" />
+			<wsdl:input>
+				<soap12:body use="literal" />
+			</wsdl:input>
+			<wsdl:output>
+				<soap12:body use="literal" />
+			</wsdl:output>
+		</wsdl:operation>
+	</wsdl:binding>-->
+
+	<wsdl:service name="ReservationService">
+			<wsdl:port name="ReservationServiceSoap" binding="tns:ReservationPortBindingSoap">
+				<soap:address location="https://rzbetal4.rategain.com/RZL4PREPRODYieldGainWS/Reservation.svc"/>
+			</wsdl:port>
+	</wsdl:service>
+</wsdl:definitions>
