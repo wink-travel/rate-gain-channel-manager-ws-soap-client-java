@@ -23,8 +23,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * &lt;complexType name="MonetaryRuleType">
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to255">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
  *       &lt;attribute name="RuleType" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
  *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
  *       &lt;attribute name="DateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
@@ -56,13 +56,6 @@ public class MonetaryRuleType {
     protected String paymentType;
     @XmlAttribute(name = "RateConvertedInd")
     protected Boolean rateConvertedInd;
-    @XmlAttribute(name = "Amount")
-    protected BigDecimal amount;
-    @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
-    @XmlAttribute(name = "DecimalPlaces")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
     @XmlAttribute(name = "AbsoluteDeadline")
     protected String absoluteDeadline;
     @XmlAttribute(name = "OffsetTimeUnit")
@@ -72,6 +65,13 @@ public class MonetaryRuleType {
     @XmlAttribute(name = "OffsetDropTime")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String offsetDropTime;
+    @XmlAttribute(name = "Amount")
+    protected BigDecimal amount;
+    @XmlAttribute(name = "CurrencyCode")
+    protected String currencyCode;
+    @XmlAttribute(name = "DecimalPlaces")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger decimalPlaces;
 
     /**
      * Gets the value of the value property.
@@ -218,78 +218,6 @@ public class MonetaryRuleType {
     }
 
     /**
-     * Gets the value of the amount property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public BigDecimal getAmount() {
-        return amount;
-    }
-
-    /**
-     * Sets the value of the amount property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigDecimal }
-     *     
-     */
-    public void setAmount(BigDecimal value) {
-        this.amount = value;
-    }
-
-    /**
-     * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCurrencyCode() {
-        return currencyCode;
-    }
-
-    /**
-     * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCurrencyCode(String value) {
-        this.currencyCode = value;
-    }
-
-    /**
-     * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getDecimalPlaces() {
-        return decimalPlaces;
-    }
-
-    /**
-     * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setDecimalPlaces(BigInteger value) {
-        this.decimalPlaces = value;
-    }
-
-    /**
      * Gets the value of the absoluteDeadline property.
      * 
      * @return
@@ -383,6 +311,78 @@ public class MonetaryRuleType {
      */
     public void setOffsetDropTime(String value) {
         this.offsetDropTime = value;
+    }
+
+    /**
+     * Gets the value of the amount property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public BigDecimal getAmount() {
+        return amount;
+    }
+
+    /**
+     * Sets the value of the amount property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigDecimal }
+     *     
+     */
+    public void setAmount(BigDecimal value) {
+        this.amount = value;
+    }
+
+    /**
+     * Gets the value of the currencyCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    /**
+     * Sets the value of the currencyCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCurrencyCode(String value) {
+        this.currencyCode = value;
+    }
+
+    /**
+     * Gets the value of the decimalPlaces property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getDecimalPlaces() {
+        return decimalPlaces;
+    }
+
+    /**
+     * Sets the value of the decimalPlaces property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setDecimalPlaces(BigInteger value) {
+        this.decimalPlaces = value;
     }
 
 }

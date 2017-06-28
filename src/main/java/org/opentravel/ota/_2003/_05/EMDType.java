@@ -4038,6 +4038,135 @@ public class EMDType {
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class OriginDestination {
+
+        @XmlAttribute(name = "OriginCityCode")
+        protected String originCityCode;
+        @XmlAttribute(name = "OriginCodeContext")
+        protected String originCodeContext;
+        @XmlAttribute(name = "DestinationCityCode")
+        protected String destinationCityCode;
+        @XmlAttribute(name = "DestinationCodeContext")
+        protected String destinationCodeContext;
+
+        /**
+         * Gets the value of the originCityCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getOriginCityCode() {
+            return originCityCode;
+        }
+
+        /**
+         * Sets the value of the originCityCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setOriginCityCode(String value) {
+            this.originCityCode = value;
+        }
+
+        /**
+         * Gets the value of the originCodeContext property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getOriginCodeContext() {
+            return originCodeContext;
+        }
+
+        /**
+         * Sets the value of the originCodeContext property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setOriginCodeContext(String value) {
+            this.originCodeContext = value;
+        }
+
+        /**
+         * Gets the value of the destinationCityCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDestinationCityCode() {
+            return destinationCityCode;
+        }
+
+        /**
+         * Sets the value of the destinationCityCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDestinationCityCode(String value) {
+            this.destinationCityCode = value;
+        }
+
+        /**
+         * Gets the value of the destinationCodeContext property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDestinationCodeContext() {
+            return destinationCodeContext;
+        }
+
+        /**
+         * Sets the value of the destinationCodeContext property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDestinationCodeContext(String value) {
+            this.destinationCodeContext = value;
+        }
+
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;attribute name="Information">
      *         &lt;simpleType>
      *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
@@ -4191,135 +4320,6 @@ public class EMDType {
          */
         public void setLocationCode(String value) {
             this.locationCode = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class OriginDestination {
-
-        @XmlAttribute(name = "OriginCityCode")
-        protected String originCityCode;
-        @XmlAttribute(name = "OriginCodeContext")
-        protected String originCodeContext;
-        @XmlAttribute(name = "DestinationCityCode")
-        protected String destinationCityCode;
-        @XmlAttribute(name = "DestinationCodeContext")
-        protected String destinationCodeContext;
-
-        /**
-         * Gets the value of the originCityCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getOriginCityCode() {
-            return originCityCode;
-        }
-
-        /**
-         * Sets the value of the originCityCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setOriginCityCode(String value) {
-            this.originCityCode = value;
-        }
-
-        /**
-         * Gets the value of the originCodeContext property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getOriginCodeContext() {
-            return originCodeContext;
-        }
-
-        /**
-         * Sets the value of the originCodeContext property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setOriginCodeContext(String value) {
-            this.originCodeContext = value;
-        }
-
-        /**
-         * Gets the value of the destinationCityCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDestinationCityCode() {
-            return destinationCityCode;
-        }
-
-        /**
-         * Sets the value of the destinationCityCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDestinationCityCode(String value) {
-            this.destinationCityCode = value;
-        }
-
-        /**
-         * Gets the value of the destinationCodeContext property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDestinationCodeContext() {
-            return destinationCodeContext;
-        }
-
-        /**
-         * Sets the value of the destinationCodeContext property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDestinationCodeContext(String value) {
-            this.destinationCodeContext = value;
         }
 
     }

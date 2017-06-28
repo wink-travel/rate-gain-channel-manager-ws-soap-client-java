@@ -21,8 +21,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * &lt;complexType name="URL_Type">
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>anyURI">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
  *     &lt;/extension>
  *   &lt;/simpleContent>
@@ -45,14 +45,14 @@ public class URLType {
     protected String value;
     @XmlAttribute(name = "Type")
     protected String type;
+    @XmlAttribute(name = "DefaultInd")
+    protected Boolean defaultInd;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
-    @XmlAttribute(name = "DefaultInd")
-    protected Boolean defaultInd;
 
     /**
      * Gets the value of the value property.
@@ -103,6 +103,30 @@ public class URLType {
     }
 
     /**
+     * Gets the value of the defaultInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isDefaultInd() {
+        return defaultInd;
+    }
+
+    /**
+     * Sets the value of the defaultInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setDefaultInd(Boolean value) {
+        this.defaultInd = value;
+    }
+
+    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -148,30 +172,6 @@ public class URLType {
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the defaultInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isDefaultInd() {
-        return defaultInd;
-    }
-
-    /**
-     * Sets the value of the defaultInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setDefaultInd(Boolean value) {
-        this.defaultInd = value;
     }
 
 }

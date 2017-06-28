@@ -27,8 +27,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="TaxDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ChargeUnitGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -60,6 +60,14 @@ public class TaxType {
     @XmlAttribute(name = "MaxChargeFrequencyApplies")
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger maxChargeFrequencyApplies;
+    @XmlAttribute(name = "EffectiveDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar effectiveDate;
+    @XmlAttribute(name = "ExpireDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar expireDate;
+    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
+    protected Boolean expireDateExclusiveIndicator;
     @XmlAttribute(name = "Type")
     protected AmountDeterminationType type;
     @XmlAttribute(name = "Code")
@@ -73,14 +81,6 @@ public class TaxType {
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger decimalPlaces;
-    @XmlAttribute(name = "EffectiveDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
-    @XmlAttribute(name = "ExpireDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
-    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
-    protected Boolean expireDateExclusiveIndicator;
 
     /**
      * Gets the value of the taxDescription property.
@@ -256,6 +256,78 @@ public class TaxType {
     }
 
     /**
+     * Gets the value of the effectiveDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    /**
+     * Sets the value of the effectiveDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEffectiveDate(XMLGregorianCalendar value) {
+        this.effectiveDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getExpireDate() {
+        return expireDate;
+    }
+
+    /**
+     * Sets the value of the expireDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setExpireDate(XMLGregorianCalendar value) {
+        this.expireDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isExpireDateExclusiveIndicator() {
+        return expireDateExclusiveIndicator;
+    }
+
+    /**
+     * Sets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setExpireDateExclusiveIndicator(Boolean value) {
+        this.expireDateExclusiveIndicator = value;
+    }
+
+    /**
      * Gets the value of the type property.
      * 
      * @return
@@ -397,78 +469,6 @@ public class TaxType {
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
-    }
-
-    /**
-     * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getEffectiveDate() {
-        return effectiveDate;
-    }
-
-    /**
-     * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setEffectiveDate(XMLGregorianCalendar value) {
-        this.effectiveDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getExpireDate() {
-        return expireDate;
-    }
-
-    /**
-     * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setExpireDate(XMLGregorianCalendar value) {
-        this.expireDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isExpireDateExclusiveIndicator() {
-        return expireDateExclusiveIndicator;
-    }
-
-    /**
-     * Sets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setExpireDateExclusiveIndicator(Boolean value) {
-        this.expireDateExclusiveIndicator = value;
     }
 
 }

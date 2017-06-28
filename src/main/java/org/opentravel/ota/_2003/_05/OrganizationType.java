@@ -38,9 +38,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OfficeTypeGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OfficeTypeGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -67,14 +67,6 @@ public class OrganizationType {
     protected List<TravelArrangerType> travelArranger;
     @XmlAttribute(name = "DefaultInd")
     protected Boolean defaultInd;
-    @XmlAttribute(name = "ShareSynchInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
-    @XmlAttribute(name = "ShareMarketInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
-    @XmlAttribute(name = "OfficeType")
-    protected OfficeLocationType officeType;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar effectiveDate;
@@ -83,6 +75,14 @@ public class OrganizationType {
     protected XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
+    @XmlAttribute(name = "OfficeType")
+    protected OfficeLocationType officeType;
+    @XmlAttribute(name = "ShareSynchInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareSynchInd;
+    @XmlAttribute(name = "ShareMarketInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareMarketInd;
 
     /**
      * Gets the value of the orgMemberName property.
@@ -215,78 +215,6 @@ public class OrganizationType {
     }
 
     /**
-     * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareSynchInd() {
-        return shareSynchInd;
-    }
-
-    /**
-     * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareSynchInd(String value) {
-        this.shareSynchInd = value;
-    }
-
-    /**
-     * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareMarketInd() {
-        return shareMarketInd;
-    }
-
-    /**
-     * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareMarketInd(String value) {
-        this.shareMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the officeType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OfficeLocationType }
-     *     
-     */
-    public OfficeLocationType getOfficeType() {
-        return officeType;
-    }
-
-    /**
-     * Sets the value of the officeType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OfficeLocationType }
-     *     
-     */
-    public void setOfficeType(OfficeLocationType value) {
-        this.officeType = value;
-    }
-
-    /**
      * Gets the value of the effectiveDate property.
      * 
      * @return
@@ -356,6 +284,78 @@ public class OrganizationType {
      */
     public void setExpireDateExclusiveIndicator(Boolean value) {
         this.expireDateExclusiveIndicator = value;
+    }
+
+    /**
+     * Gets the value of the officeType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link OfficeLocationType }
+     *     
+     */
+    public OfficeLocationType getOfficeType() {
+        return officeType;
+    }
+
+    /**
+     * Sets the value of the officeType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link OfficeLocationType }
+     *     
+     */
+    public void setOfficeType(OfficeLocationType value) {
+        this.officeType = value;
+    }
+
+    /**
+     * Gets the value of the shareSynchInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareSynchInd() {
+        return shareSynchInd;
+    }
+
+    /**
+     * Sets the value of the shareSynchInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareSynchInd(String value) {
+        this.shareSynchInd = value;
+    }
+
+    /**
+     * Gets the value of the shareMarketInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareMarketInd() {
+        return shareMarketInd;
+    }
+
+    /**
+     * Sets the value of the shareMarketInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareMarketInd(String value) {
+        this.shareMarketInd = value;
     }
 
 

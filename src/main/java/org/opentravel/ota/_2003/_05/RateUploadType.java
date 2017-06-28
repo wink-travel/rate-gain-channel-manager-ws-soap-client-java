@@ -101,10 +101,10 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;/element>
  *         &lt;element name="AdditionalCharges" type="{http://www.opentravel.org/OTA/2003/05}HotelAdditionalChargesType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
  *       &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *       &lt;attribute name="RateTimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" />
  *       &lt;attribute name="UnitMultiplier" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
@@ -178,21 +178,6 @@ public class RateUploadType {
     protected DayOfWeekType stayOverDate;
     @XmlAttribute(name = "RateTier")
     protected String rateTier;
-    @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
-    @XmlAttribute(name = "DecimalPlaces")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
-    @XmlAttribute(name = "AgeQualifyingCode")
-    protected String ageQualifyingCode;
-    @XmlAttribute(name = "MinAge")
-    protected Integer minAge;
-    @XmlAttribute(name = "MaxAge")
-    protected Integer maxAge;
-    @XmlAttribute(name = "AgeTimeUnit")
-    protected TimeUnitType ageTimeUnit;
-    @XmlAttribute(name = "AgeBucket")
-    protected String ageBucket;
     @XmlAttribute(name = "Mon")
     protected Boolean mon;
     @XmlAttribute(name = "Tue")
@@ -213,6 +198,21 @@ public class RateUploadType {
     protected String duration;
     @XmlAttribute(name = "End")
     protected String end;
+    @XmlAttribute(name = "AgeQualifyingCode")
+    protected String ageQualifyingCode;
+    @XmlAttribute(name = "MinAge")
+    protected Integer minAge;
+    @XmlAttribute(name = "MaxAge")
+    protected Integer maxAge;
+    @XmlAttribute(name = "AgeTimeUnit")
+    protected TimeUnitType ageTimeUnit;
+    @XmlAttribute(name = "AgeBucket")
+    protected String ageBucket;
+    @XmlAttribute(name = "CurrencyCode")
+    protected String currencyCode;
+    @XmlAttribute(name = "DecimalPlaces")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger decimalPlaces;
 
     /**
      * Gets the value of the baseByGuestAmts property.
@@ -671,174 +671,6 @@ public class RateUploadType {
     }
 
     /**
-     * Gets the value of the currencyCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCurrencyCode() {
-        return currencyCode;
-    }
-
-    /**
-     * Sets the value of the currencyCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCurrencyCode(String value) {
-        this.currencyCode = value;
-    }
-
-    /**
-     * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getDecimalPlaces() {
-        return decimalPlaces;
-    }
-
-    /**
-     * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setDecimalPlaces(BigInteger value) {
-        this.decimalPlaces = value;
-    }
-
-    /**
-     * Gets the value of the ageQualifyingCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAgeQualifyingCode() {
-        return ageQualifyingCode;
-    }
-
-    /**
-     * Sets the value of the ageQualifyingCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAgeQualifyingCode(String value) {
-        this.ageQualifyingCode = value;
-    }
-
-    /**
-     * Gets the value of the minAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getMinAge() {
-        return minAge;
-    }
-
-    /**
-     * Sets the value of the minAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setMinAge(Integer value) {
-        this.minAge = value;
-    }
-
-    /**
-     * Gets the value of the maxAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getMaxAge() {
-        return maxAge;
-    }
-
-    /**
-     * Sets the value of the maxAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setMaxAge(Integer value) {
-        this.maxAge = value;
-    }
-
-    /**
-     * Gets the value of the ageTimeUnit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TimeUnitType }
-     *     
-     */
-    public TimeUnitType getAgeTimeUnit() {
-        return ageTimeUnit;
-    }
-
-    /**
-     * Sets the value of the ageTimeUnit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TimeUnitType }
-     *     
-     */
-    public void setAgeTimeUnit(TimeUnitType value) {
-        this.ageTimeUnit = value;
-    }
-
-    /**
-     * Gets the value of the ageBucket property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAgeBucket() {
-        return ageBucket;
-    }
-
-    /**
-     * Sets the value of the ageBucket property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAgeBucket(String value) {
-        this.ageBucket = value;
-    }
-
-    /**
      * Gets the value of the mon property.
      * 
      * @return
@@ -1076,6 +908,174 @@ public class RateUploadType {
      */
     public void setEnd(String value) {
         this.end = value;
+    }
+
+    /**
+     * Gets the value of the ageQualifyingCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAgeQualifyingCode() {
+        return ageQualifyingCode;
+    }
+
+    /**
+     * Sets the value of the ageQualifyingCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAgeQualifyingCode(String value) {
+        this.ageQualifyingCode = value;
+    }
+
+    /**
+     * Gets the value of the minAge property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMinAge() {
+        return minAge;
+    }
+
+    /**
+     * Sets the value of the minAge property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMinAge(Integer value) {
+        this.minAge = value;
+    }
+
+    /**
+     * Gets the value of the maxAge property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMaxAge() {
+        return maxAge;
+    }
+
+    /**
+     * Sets the value of the maxAge property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMaxAge(Integer value) {
+        this.maxAge = value;
+    }
+
+    /**
+     * Gets the value of the ageTimeUnit property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TimeUnitType }
+     *     
+     */
+    public TimeUnitType getAgeTimeUnit() {
+        return ageTimeUnit;
+    }
+
+    /**
+     * Sets the value of the ageTimeUnit property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TimeUnitType }
+     *     
+     */
+    public void setAgeTimeUnit(TimeUnitType value) {
+        this.ageTimeUnit = value;
+    }
+
+    /**
+     * Gets the value of the ageBucket property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAgeBucket() {
+        return ageBucket;
+    }
+
+    /**
+     * Sets the value of the ageBucket property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAgeBucket(String value) {
+        this.ageBucket = value;
+    }
+
+    /**
+     * Gets the value of the currencyCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCurrencyCode() {
+        return currencyCode;
+    }
+
+    /**
+     * Sets the value of the currencyCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCurrencyCode(String value) {
+        this.currencyCode = value;
+    }
+
+    /**
+     * Gets the value of the decimalPlaces property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getDecimalPlaces() {
+        return decimalPlaces;
+    }
+
+    /**
+     * Sets the value of the decimalPlaces property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setDecimalPlaces(BigInteger value) {
+        this.decimalPlaces = value;
     }
 
 

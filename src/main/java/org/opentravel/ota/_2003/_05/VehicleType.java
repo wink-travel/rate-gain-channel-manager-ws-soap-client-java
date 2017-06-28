@@ -43,9 +43,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/complexType>
  *         &lt;/element>
  *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}UnitsOfMeasureGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeGroup"/>
  *       &lt;attribute name="PassengerQuantity" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
  *       &lt;attribute name="BaggageQuantity" type="{http://www.w3.org/2001/XMLSchema}integer" />
  *       &lt;attribute name="VendorCarType" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
@@ -90,6 +90,10 @@ public class VehicleType
     protected DistanceUnitNameType odometerUnitOfMeasure;
     @XmlAttribute(name = "Description")
     protected String description;
+    @XmlAttribute(name = "Code")
+    protected String code;
+    @XmlAttribute(name = "CodeContext")
+    protected String codeContext;
     @XmlAttribute(name = "UnitOfMeasureQuantity")
     protected BigDecimal unitOfMeasureQuantity;
     @XmlAttribute(name = "UnitOfMeasure")
@@ -102,10 +106,6 @@ public class VehicleType
     protected String duration;
     @XmlAttribute(name = "End")
     protected String end;
-    @XmlAttribute(name = "Code")
-    protected String code;
-    @XmlAttribute(name = "CodeContext")
-    protected String codeContext;
 
     /**
      * Gets the value of the vehMakeModel property.
@@ -300,6 +300,54 @@ public class VehicleType
     }
 
     /**
+     * Gets the value of the code property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCode() {
+        return code;
+    }
+
+    /**
+     * Sets the value of the code property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCode(String value) {
+        this.code = value;
+    }
+
+    /**
+     * Gets the value of the codeContext property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getCodeContext() {
+        return codeContext;
+    }
+
+    /**
+     * Sets the value of the codeContext property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setCodeContext(String value) {
+        this.codeContext = value;
+    }
+
+    /**
      * Gets the value of the unitOfMeasureQuantity property.
      * 
      * @return
@@ -441,54 +489,6 @@ public class VehicleType
      */
     public void setEnd(String value) {
         this.end = value;
-    }
-
-    /**
-     * Gets the value of the code property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCode() {
-        return code;
-    }
-
-    /**
-     * Sets the value of the code property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCode(String value) {
-        this.code = value;
-    }
-
-    /**
-     * Gets the value of the codeContext property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getCodeContext() {
-        return codeContext;
-    }
-
-    /**
-     * Sets the value of the codeContext property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setCodeContext(String value) {
-        this.codeContext = value;
     }
 
 

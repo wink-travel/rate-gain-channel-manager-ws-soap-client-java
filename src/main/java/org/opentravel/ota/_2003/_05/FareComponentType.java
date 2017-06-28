@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.XmlType;
  *                               &lt;complexType>
  *                                 &lt;complexContent>
  *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
  *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
  *                                     &lt;attribute name="SequenceNbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
  *                                     &lt;attribute name="CouponItinerarySeqNbr" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" />
  *                                     &lt;attribute name="StopoverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
@@ -347,8 +347,8 @@ public class FareComponentType {
      *                     &lt;complexType>
      *                       &lt;complexContent>
      *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
      *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
      *                           &lt;attribute name="SequenceNbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
      *                           &lt;attribute name="CouponItinerarySeqNbr" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" />
      *                           &lt;attribute name="StopoverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
@@ -491,8 +491,8 @@ public class FareComponentType {
          *           &lt;complexType>
          *             &lt;complexContent>
          *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
          *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
          *                 &lt;attribute name="SequenceNbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
          *                 &lt;attribute name="CouponItinerarySeqNbr" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" />
          *                 &lt;attribute name="StopoverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
@@ -1339,8 +1339,8 @@ public class FareComponentType {
              * &lt;complexType>
              *   &lt;complexContent>
              *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
              *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginDestinationGroup"/>
              *       &lt;attribute name="SequenceNbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
              *       &lt;attribute name="CouponItinerarySeqNbr" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" />
              *       &lt;attribute name="StopoverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
@@ -1364,14 +1364,6 @@ public class FareComponentType {
                 protected Boolean stopoverInd;
                 @XmlAttribute(name = "ResBookDesigCode")
                 protected String resBookDesigCode;
-                @XmlAttribute(name = "OriginCityCode")
-                protected String originCityCode;
-                @XmlAttribute(name = "OriginCodeContext")
-                protected String originCodeContext;
-                @XmlAttribute(name = "DestinationCityCode")
-                protected String destinationCityCode;
-                @XmlAttribute(name = "DestinationCodeContext")
-                protected String destinationCodeContext;
                 @XmlAttribute(name = "CompanyShortName")
                 protected String companyShortName;
                 @XmlAttribute(name = "TravelSector")
@@ -1380,6 +1372,14 @@ public class FareComponentType {
                 protected String code;
                 @XmlAttribute(name = "CodeContext")
                 protected String codeContext;
+                @XmlAttribute(name = "OriginCityCode")
+                protected String originCityCode;
+                @XmlAttribute(name = "OriginCodeContext")
+                protected String originCodeContext;
+                @XmlAttribute(name = "DestinationCityCode")
+                protected String destinationCityCode;
+                @XmlAttribute(name = "DestinationCodeContext")
+                protected String destinationCodeContext;
 
                 /**
                  * Gets the value of the sequenceNbr property.
@@ -1478,102 +1478,6 @@ public class FareComponentType {
                 }
 
                 /**
-                 * Gets the value of the originCityCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getOriginCityCode() {
-                    return originCityCode;
-                }
-
-                /**
-                 * Sets the value of the originCityCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setOriginCityCode(String value) {
-                    this.originCityCode = value;
-                }
-
-                /**
-                 * Gets the value of the originCodeContext property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getOriginCodeContext() {
-                    return originCodeContext;
-                }
-
-                /**
-                 * Sets the value of the originCodeContext property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setOriginCodeContext(String value) {
-                    this.originCodeContext = value;
-                }
-
-                /**
-                 * Gets the value of the destinationCityCode property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getDestinationCityCode() {
-                    return destinationCityCode;
-                }
-
-                /**
-                 * Sets the value of the destinationCityCode property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setDestinationCityCode(String value) {
-                    this.destinationCityCode = value;
-                }
-
-                /**
-                 * Gets the value of the destinationCodeContext property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getDestinationCodeContext() {
-                    return destinationCodeContext;
-                }
-
-                /**
-                 * Sets the value of the destinationCodeContext property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setDestinationCodeContext(String value) {
-                    this.destinationCodeContext = value;
-                }
-
-                /**
                  * Gets the value of the companyShortName property.
                  * 
                  * @return
@@ -1667,6 +1571,102 @@ public class FareComponentType {
                  */
                 public void setCodeContext(String value) {
                     this.codeContext = value;
+                }
+
+                /**
+                 * Gets the value of the originCityCode property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getOriginCityCode() {
+                    return originCityCode;
+                }
+
+                /**
+                 * Sets the value of the originCityCode property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setOriginCityCode(String value) {
+                    this.originCityCode = value;
+                }
+
+                /**
+                 * Gets the value of the originCodeContext property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getOriginCodeContext() {
+                    return originCodeContext;
+                }
+
+                /**
+                 * Sets the value of the originCodeContext property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setOriginCodeContext(String value) {
+                    this.originCodeContext = value;
+                }
+
+                /**
+                 * Gets the value of the destinationCityCode property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getDestinationCityCode() {
+                    return destinationCityCode;
+                }
+
+                /**
+                 * Sets the value of the destinationCityCode property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setDestinationCityCode(String value) {
+                    this.destinationCityCode = value;
+                }
+
+                /**
+                 * Gets the value of the destinationCodeContext property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getDestinationCodeContext() {
+                    return destinationCodeContext;
+                }
+
+                /**
+                 * Sets the value of the destinationCodeContext property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setDestinationCodeContext(String value) {
+                    this.destinationCodeContext = value;
                 }
 
             }

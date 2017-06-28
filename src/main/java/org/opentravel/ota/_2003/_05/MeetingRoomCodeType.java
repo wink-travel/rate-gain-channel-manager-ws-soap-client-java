@@ -24,8 +24,8 @@ import javax.xml.bind.annotation.XmlType;
  *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}QuantityGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
  *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
  *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
  *       &lt;attribute name="DiscountsAvailableCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
@@ -55,13 +55,13 @@ public class MeetingRoomCodeType {
     protected String discountsAvailableCode;
     @XmlAttribute(name = "ID")
     protected String id;
+    @XmlAttribute(name = "Quantity")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger quantity;
     @XmlAttribute(name = "CodeDetail")
     protected String codeDetail;
     @XmlAttribute(name = "Removal")
     protected Boolean removal;
-    @XmlAttribute(name = "Quantity")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger quantity;
 
     /**
      * Gets the value of the charge property.
@@ -208,6 +208,30 @@ public class MeetingRoomCodeType {
     }
 
     /**
+     * Gets the value of the quantity property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getQuantity() {
+        return quantity;
+    }
+
+    /**
+     * Sets the value of the quantity property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setQuantity(BigInteger value) {
+        this.quantity = value;
+    }
+
+    /**
      * Gets the value of the codeDetail property.
      * 
      * @return
@@ -253,30 +277,6 @@ public class MeetingRoomCodeType {
      */
     public void setRemoval(Boolean value) {
         this.removal = value;
-    }
-
-    /**
-     * Gets the value of the quantity property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getQuantity() {
-        return quantity;
-    }
-
-    /**
-     * Sets the value of the quantity property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setQuantity(BigInteger value) {
-        this.quantity = value;
     }
 
 }

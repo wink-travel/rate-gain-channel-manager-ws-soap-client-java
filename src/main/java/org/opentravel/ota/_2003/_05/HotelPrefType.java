@@ -45,9 +45,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="SpecRequestPref" type="{http://www.opentravel.org/OTA/2003/05}SpecRequestPrefType" maxOccurs="unbounded" minOccurs="0"/>
  *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
  *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
  *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
  *       &lt;attribute name="HotelGuestType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
  *     &lt;/restriction>
@@ -132,6 +132,8 @@ public class HotelPrefType {
     protected String ratePlanCode;
     @XmlAttribute(name = "HotelGuestType")
     protected String hotelGuestType;
+    @XmlAttribute(name = "SmokingAllowed")
+    protected Boolean smokingAllowed;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
@@ -140,8 +142,6 @@ public class HotelPrefType {
     protected String shareMarketInd;
     @XmlAttribute(name = "PreferLevel")
     protected PreferLevelType preferLevel;
-    @XmlAttribute(name = "SmokingAllowed")
-    protected Boolean smokingAllowed;
 
     /**
      * Gets the value of the loyaltyPref property.
@@ -825,6 +825,30 @@ public class HotelPrefType {
     }
 
     /**
+     * Gets the value of the smokingAllowed property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSmokingAllowed() {
+        return smokingAllowed;
+    }
+
+    /**
+     * Sets the value of the smokingAllowed property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSmokingAllowed(Boolean value) {
+        this.smokingAllowed = value;
+    }
+
+    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -894,30 +918,6 @@ public class HotelPrefType {
      */
     public void setPreferLevel(PreferLevelType value) {
         this.preferLevel = value;
-    }
-
-    /**
-     * Gets the value of the smokingAllowed property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isSmokingAllowed() {
-        return smokingAllowed;
-    }
-
-    /**
-     * Sets the value of the smokingAllowed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setSmokingAllowed(Boolean value) {
-        this.smokingAllowed = value;
     }
 
 }

@@ -28,8 +28,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ChargeUnitGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ChargeUnitGroup"/>
  *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *       &lt;attribute name="MandatoryIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
@@ -68,6 +68,19 @@ public class FeeType {
     protected XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
+    @XmlAttribute(name = "Type")
+    protected AmountDeterminationType type;
+    @XmlAttribute(name = "Code")
+    protected String code;
+    @XmlAttribute(name = "Percent")
+    protected BigDecimal percent;
+    @XmlAttribute(name = "Amount")
+    protected BigDecimal amount;
+    @XmlAttribute(name = "CurrencyCode")
+    protected String currencyCode;
+    @XmlAttribute(name = "DecimalPlaces")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger decimalPlaces;
     @XmlAttribute(name = "ChargeUnit")
     protected String chargeUnit;
     @XmlAttribute(name = "ChargeFrequency")
@@ -84,19 +97,6 @@ public class FeeType {
     @XmlAttribute(name = "MaxChargeFrequencyApplies")
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger maxChargeFrequencyApplies;
-    @XmlAttribute(name = "Type")
-    protected AmountDeterminationType type;
-    @XmlAttribute(name = "Code")
-    protected String code;
-    @XmlAttribute(name = "Percent")
-    protected BigDecimal percent;
-    @XmlAttribute(name = "Amount")
-    protected BigDecimal amount;
-    @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
-    @XmlAttribute(name = "DecimalPlaces")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
 
     /**
      * Gets the value of the taxes property.
@@ -320,150 +320,6 @@ public class FeeType {
     }
 
     /**
-     * Gets the value of the chargeUnit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getChargeUnit() {
-        return chargeUnit;
-    }
-
-    /**
-     * Sets the value of the chargeUnit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setChargeUnit(String value) {
-        this.chargeUnit = value;
-    }
-
-    /**
-     * Gets the value of the chargeFrequency property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getChargeFrequency() {
-        return chargeFrequency;
-    }
-
-    /**
-     * Sets the value of the chargeFrequency property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setChargeFrequency(String value) {
-        this.chargeFrequency = value;
-    }
-
-    /**
-     * Gets the value of the chargeUnitExempt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getChargeUnitExempt() {
-        return chargeUnitExempt;
-    }
-
-    /**
-     * Sets the value of the chargeUnitExempt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setChargeUnitExempt(BigInteger value) {
-        this.chargeUnitExempt = value;
-    }
-
-    /**
-     * Gets the value of the chargeFrequencyExempt property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getChargeFrequencyExempt() {
-        return chargeFrequencyExempt;
-    }
-
-    /**
-     * Sets the value of the chargeFrequencyExempt property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setChargeFrequencyExempt(BigInteger value) {
-        this.chargeFrequencyExempt = value;
-    }
-
-    /**
-     * Gets the value of the maxChargeUnitApplies property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getMaxChargeUnitApplies() {
-        return maxChargeUnitApplies;
-    }
-
-    /**
-     * Sets the value of the maxChargeUnitApplies property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setMaxChargeUnitApplies(BigInteger value) {
-        this.maxChargeUnitApplies = value;
-    }
-
-    /**
-     * Gets the value of the maxChargeFrequencyApplies property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getMaxChargeFrequencyApplies() {
-        return maxChargeFrequencyApplies;
-    }
-
-    /**
-     * Sets the value of the maxChargeFrequencyApplies property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setMaxChargeFrequencyApplies(BigInteger value) {
-        this.maxChargeFrequencyApplies = value;
-    }
-
-    /**
      * Gets the value of the type property.
      * 
      * @return
@@ -605,6 +461,150 @@ public class FeeType {
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
+    }
+
+    /**
+     * Gets the value of the chargeUnit property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getChargeUnit() {
+        return chargeUnit;
+    }
+
+    /**
+     * Sets the value of the chargeUnit property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setChargeUnit(String value) {
+        this.chargeUnit = value;
+    }
+
+    /**
+     * Gets the value of the chargeFrequency property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getChargeFrequency() {
+        return chargeFrequency;
+    }
+
+    /**
+     * Sets the value of the chargeFrequency property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setChargeFrequency(String value) {
+        this.chargeFrequency = value;
+    }
+
+    /**
+     * Gets the value of the chargeUnitExempt property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getChargeUnitExempt() {
+        return chargeUnitExempt;
+    }
+
+    /**
+     * Sets the value of the chargeUnitExempt property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setChargeUnitExempt(BigInteger value) {
+        this.chargeUnitExempt = value;
+    }
+
+    /**
+     * Gets the value of the chargeFrequencyExempt property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getChargeFrequencyExempt() {
+        return chargeFrequencyExempt;
+    }
+
+    /**
+     * Sets the value of the chargeFrequencyExempt property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setChargeFrequencyExempt(BigInteger value) {
+        this.chargeFrequencyExempt = value;
+    }
+
+    /**
+     * Gets the value of the maxChargeUnitApplies property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getMaxChargeUnitApplies() {
+        return maxChargeUnitApplies;
+    }
+
+    /**
+     * Sets the value of the maxChargeUnitApplies property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setMaxChargeUnitApplies(BigInteger value) {
+        this.maxChargeUnitApplies = value;
+    }
+
+    /**
+     * Gets the value of the maxChargeFrequencyApplies property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getMaxChargeFrequencyApplies() {
+        return maxChargeFrequencyApplies;
+    }
+
+    /**
+     * Sets the value of the maxChargeFrequencyApplies property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setMaxChargeFrequencyApplies(BigInteger value) {
+        this.maxChargeFrequencyApplies = value;
     }
 
 }

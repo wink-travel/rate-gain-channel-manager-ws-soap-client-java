@@ -27,8 +27,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *             &lt;complexContent>
  *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ImageDescriptionType">
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
  *                 &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
  *               &lt;/extension>
  *             &lt;/complexContent>
@@ -91,8 +91,8 @@ public class ImageItemsType {
      *   &lt;complexContent>
      *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ImageDescriptionType">
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
      *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
      *     &lt;/extension>
      *   &lt;/complexContent>
@@ -111,6 +111,8 @@ public class ImageItemsType {
         protected String version;
         @XmlAttribute(name = "Removal")
         protected Boolean removal;
+        @XmlAttribute(name = "ID")
+        protected String id;
         @XmlAttribute(name = "CreateDateTime")
         @XmlSchemaType(name = "dateTime")
         protected XMLGregorianCalendar createDateTime;
@@ -124,8 +126,6 @@ public class ImageItemsType {
         @XmlAttribute(name = "PurgeDate")
         @XmlSchemaType(name = "date")
         protected XMLGregorianCalendar purgeDate;
-        @XmlAttribute(name = "ID")
-        protected String id;
 
         /**
          * Gets the value of the version property.
@@ -173,6 +173,30 @@ public class ImageItemsType {
          */
         public void setRemoval(Boolean value) {
             this.removal = value;
+        }
+
+        /**
+         * Gets the value of the id property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getID() {
+            return id;
+        }
+
+        /**
+         * Sets the value of the id property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setID(String value) {
+            this.id = value;
         }
 
         /**
@@ -293,30 +317,6 @@ public class ImageItemsType {
          */
         public void setPurgeDate(XMLGregorianCalendar value) {
             this.purgeDate = value;
-        }
-
-        /**
-         * Gets the value of the id property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getID() {
-            return id;
-        }
-
-        /**
-         * Sets the value of the id property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setID(String value) {
-            this.id = value;
         }
 
     }

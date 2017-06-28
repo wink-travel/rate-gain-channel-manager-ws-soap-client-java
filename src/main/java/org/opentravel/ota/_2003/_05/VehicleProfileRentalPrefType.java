@@ -65,8 +65,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;/element>
  *       &lt;/sequence>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attribute name="GasPrePay" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -105,14 +105,14 @@ public class VehicleProfileRentalPrefType {
     protected Boolean gasPrePay;
     @XmlAttribute(name = "SmokingAllowed")
     protected Boolean smokingAllowed;
+    @XmlAttribute(name = "PreferLevel")
+    protected PreferLevelType preferLevel;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
-    @XmlAttribute(name = "PreferLevel")
-    protected PreferLevelType preferLevel;
 
     /**
      * Gets the value of the loyaltyPref property.
@@ -366,6 +366,30 @@ public class VehicleProfileRentalPrefType {
     }
 
     /**
+     * Gets the value of the preferLevel property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public PreferLevelType getPreferLevel() {
+        return preferLevel;
+    }
+
+    /**
+     * Sets the value of the preferLevel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public void setPreferLevel(PreferLevelType value) {
+        this.preferLevel = value;
+    }
+
+    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -411,30 +435,6 @@ public class VehicleProfileRentalPrefType {
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the preferLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public PreferLevelType getPreferLevel() {
-        return preferLevel;
-    }
-
-    /**
-     * Sets the value of the preferLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public void setPreferLevel(PreferLevelType value) {
-        this.preferLevel = value;
     }
 
 

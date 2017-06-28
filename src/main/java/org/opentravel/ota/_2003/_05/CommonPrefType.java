@@ -50,9 +50,9 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="EmployeeLevelInfo" type="{http://www.opentravel.org/OTA/2003/05}EmployeeInfoType" minOccurs="0"/>
  *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AltLangID_Group"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrimaryLangID_Group"/>
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -117,18 +117,18 @@ public class CommonPrefType {
     protected EmployeeInfoType employeeLevelInfo;
     @XmlElement(name = "TPA_Extensions")
     protected TPAExtensionsType tpaExtensions;
+    @XmlAttribute(name = "AltLangID")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "language")
+    protected String altLangID;
+    @XmlAttribute(name = "SmokingAllowed")
+    protected Boolean smokingAllowed;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
-    @XmlAttribute(name = "SmokingAllowed")
-    protected Boolean smokingAllowed;
-    @XmlAttribute(name = "AltLangID")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlSchemaType(name = "language")
-    protected String altLangID;
     @XmlAttribute(name = "PrimaryLangID")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
@@ -618,6 +618,54 @@ public class CommonPrefType {
     }
 
     /**
+     * Gets the value of the altLangID property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAltLangID() {
+        return altLangID;
+    }
+
+    /**
+     * Sets the value of the altLangID property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAltLangID(String value) {
+        this.altLangID = value;
+    }
+
+    /**
+     * Gets the value of the smokingAllowed property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSmokingAllowed() {
+        return smokingAllowed;
+    }
+
+    /**
+     * Sets the value of the smokingAllowed property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSmokingAllowed(Boolean value) {
+        this.smokingAllowed = value;
+    }
+
+    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -663,54 +711,6 @@ public class CommonPrefType {
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the smokingAllowed property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isSmokingAllowed() {
-        return smokingAllowed;
-    }
-
-    /**
-     * Sets the value of the smokingAllowed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setSmokingAllowed(Boolean value) {
-        this.smokingAllowed = value;
-    }
-
-    /**
-     * Gets the value of the altLangID property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAltLangID() {
-        return altLangID;
-    }
-
-    /**
-     * Sets the value of the altLangID property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAltLangID(String value) {
-        this.altLangID = value;
     }
 
     /**

@@ -32,8 +32,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneInfoGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
  *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
  *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
  *               &lt;/restriction>
@@ -250,10 +250,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;/element>
  *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GenderGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GenderGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
  *       &lt;attribute name="Deceased" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *       &lt;attribute name="LockoutType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
  *       &lt;attribute name="VIP_Indicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
@@ -360,12 +360,6 @@ public class CustomerType {
     protected Boolean previouslyMarriedIndicator;
     @XmlAttribute(name = "ChildQuantity")
     protected Integer childQuantity;
-    @XmlAttribute(name = "Gender")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String gender;
-    @XmlAttribute(name = "BirthDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar birthDate;
     @XmlAttribute(name = "CurrencyCode")
     protected String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
@@ -375,6 +369,12 @@ public class CustomerType {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
     protected String language;
+    @XmlAttribute(name = "Gender")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String gender;
+    @XmlAttribute(name = "BirthDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar birthDate;
 
     /**
      * Gets the value of the personName property.
@@ -1052,54 +1052,6 @@ public class CustomerType {
     }
 
     /**
-     * Gets the value of the gender property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getGender() {
-        return gender;
-    }
-
-    /**
-     * Sets the value of the gender property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setGender(String value) {
-        this.gender = value;
-    }
-
-    /**
-     * Gets the value of the birthDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getBirthDate() {
-        return birthDate;
-    }
-
-    /**
-     * Sets the value of the birthDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setBirthDate(XMLGregorianCalendar value) {
-        this.birthDate = value;
-    }
-
-    /**
      * Gets the value of the currencyCode property.
      * 
      * @return
@@ -1169,6 +1121,54 @@ public class CustomerType {
      */
     public void setLanguage(String value) {
         this.language = value;
+    }
+
+    /**
+     * Gets the value of the gender property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getGender() {
+        return gender;
+    }
+
+    /**
+     * Sets the value of the gender property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setGender(String value) {
+        this.gender = value;
+    }
+
+    /**
+     * Gets the value of the birthDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getBirthDate() {
+        return birthDate;
+    }
+
+    /**
+     * Sets the value of the birthDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setBirthDate(XMLGregorianCalendar value) {
+        this.birthDate = value;
     }
 
 
@@ -3551,8 +3551,8 @@ public class CustomerType {
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneInfoGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
      *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
      *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
      *     &lt;/restriction>
@@ -3570,14 +3570,6 @@ public class CustomerType {
         protected TransferActionType transferAction;
         @XmlAttribute(name = "ParentCompanyRef")
         protected String parentCompanyRef;
-        @XmlAttribute(name = "EffectiveDate")
-        @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar effectiveDate;
-        @XmlAttribute(name = "ExpireDate")
-        @XmlSchemaType(name = "date")
-        protected XMLGregorianCalendar expireDate;
-        @XmlAttribute(name = "ExpireDateExclusiveIndicator")
-        protected Boolean expireDateExclusiveIndicator;
         @XmlAttribute(name = "ShareSynchInd")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String shareSynchInd;
@@ -3608,6 +3600,14 @@ public class CustomerType {
         protected Boolean defaultInd;
         @XmlAttribute(name = "RPH")
         protected String rph;
+        @XmlAttribute(name = "EffectiveDate")
+        @XmlSchemaType(name = "date")
+        protected XMLGregorianCalendar effectiveDate;
+        @XmlAttribute(name = "ExpireDate")
+        @XmlSchemaType(name = "date")
+        protected XMLGregorianCalendar expireDate;
+        @XmlAttribute(name = "ExpireDateExclusiveIndicator")
+        protected Boolean expireDateExclusiveIndicator;
 
         /**
          * Gets the value of the transferAction property.
@@ -3655,78 +3655,6 @@ public class CustomerType {
          */
         public void setParentCompanyRef(String value) {
             this.parentCompanyRef = value;
-        }
-
-        /**
-         * Gets the value of the effectiveDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
-         */
-        public XMLGregorianCalendar getEffectiveDate() {
-            return effectiveDate;
-        }
-
-        /**
-         * Sets the value of the effectiveDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
-         */
-        public void setEffectiveDate(XMLGregorianCalendar value) {
-            this.effectiveDate = value;
-        }
-
-        /**
-         * Gets the value of the expireDate property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link XMLGregorianCalendar }
-         *     
-         */
-        public XMLGregorianCalendar getExpireDate() {
-            return expireDate;
-        }
-
-        /**
-         * Sets the value of the expireDate property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link XMLGregorianCalendar }
-         *     
-         */
-        public void setExpireDate(XMLGregorianCalendar value) {
-            this.expireDate = value;
-        }
-
-        /**
-         * Gets the value of the expireDateExclusiveIndicator property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
-         */
-        public Boolean isExpireDateExclusiveIndicator() {
-            return expireDateExclusiveIndicator;
-        }
-
-        /**
-         * Sets the value of the expireDateExclusiveIndicator property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
-         */
-        public void setExpireDateExclusiveIndicator(Boolean value) {
-            this.expireDateExclusiveIndicator = value;
         }
 
         /**
@@ -4063,6 +3991,78 @@ public class CustomerType {
          */
         public void setRPH(String value) {
             this.rph = value;
+        }
+
+        /**
+         * Gets the value of the effectiveDate property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link XMLGregorianCalendar }
+         *     
+         */
+        public XMLGregorianCalendar getEffectiveDate() {
+            return effectiveDate;
+        }
+
+        /**
+         * Sets the value of the effectiveDate property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link XMLGregorianCalendar }
+         *     
+         */
+        public void setEffectiveDate(XMLGregorianCalendar value) {
+            this.effectiveDate = value;
+        }
+
+        /**
+         * Gets the value of the expireDate property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link XMLGregorianCalendar }
+         *     
+         */
+        public XMLGregorianCalendar getExpireDate() {
+            return expireDate;
+        }
+
+        /**
+         * Sets the value of the expireDate property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link XMLGregorianCalendar }
+         *     
+         */
+        public void setExpireDate(XMLGregorianCalendar value) {
+            this.expireDate = value;
+        }
+
+        /**
+         * Gets the value of the expireDateExclusiveIndicator property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Boolean }
+         *     
+         */
+        public Boolean isExpireDateExclusiveIndicator() {
+            return expireDateExclusiveIndicator;
+        }
+
+        /**
+         * Sets the value of the expireDateExclusiveIndicator property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Boolean }
+         *     
+         */
+        public void setExpireDateExclusiveIndicator(Boolean value) {
+            this.expireDateExclusiveIndicator = value;
         }
 
     }

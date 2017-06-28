@@ -26,8 +26,8 @@ import javax.xml.bind.annotation.XmlType;
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
  *                 &lt;attribute name="ReservationOriginatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
  *                 &lt;attribute name="ConfirmationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
  *                 &lt;attribute name="ReservationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
@@ -129,8 +129,8 @@ public class AdjustmentsType {
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
      *       &lt;attribute name="ReservationOriginatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
      *       &lt;attribute name="ConfirmationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
      *       &lt;attribute name="ReservationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
@@ -171,16 +171,16 @@ public class AdjustmentsType {
         protected BigInteger sequence;
         @XmlAttribute(name = "InvValue")
         protected BigInteger invValue;
-        @XmlAttribute(name = "PromotionCode")
-        protected String promotionCode;
-        @XmlAttribute(name = "PromotionVendorCode")
-        protected List<String> promotionVendorCode;
         @XmlAttribute(name = "Start")
         protected String start;
         @XmlAttribute(name = "Duration")
         protected String duration;
         @XmlAttribute(name = "End")
         protected String end;
+        @XmlAttribute(name = "PromotionCode")
+        protected String promotionCode;
+        @XmlAttribute(name = "PromotionVendorCode")
+        protected List<String> promotionVendorCode;
 
         /**
          * Gets the value of the reservationOriginatorCode property.
@@ -351,59 +351,6 @@ public class AdjustmentsType {
         }
 
         /**
-         * Gets the value of the promotionCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getPromotionCode() {
-            return promotionCode;
-        }
-
-        /**
-         * Sets the value of the promotionCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setPromotionCode(String value) {
-            this.promotionCode = value;
-        }
-
-        /**
-         * Gets the value of the promotionVendorCode property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getPromotionVendorCode().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getPromotionVendorCode() {
-            if (promotionVendorCode == null) {
-                promotionVendorCode = new ArrayList<String>();
-            }
-            return this.promotionVendorCode;
-        }
-
-        /**
          * Gets the value of the start property.
          * 
          * @return
@@ -473,6 +420,59 @@ public class AdjustmentsType {
          */
         public void setEnd(String value) {
             this.end = value;
+        }
+
+        /**
+         * Gets the value of the promotionCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPromotionCode() {
+            return promotionCode;
+        }
+
+        /**
+         * Sets the value of the promotionCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPromotionCode(String value) {
+            this.promotionCode = value;
+        }
+
+        /**
+         * Gets the value of the promotionVendorCode property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getPromotionVendorCode().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link String }
+         * 
+         * 
+         */
+        public List<String> getPromotionVendorCode() {
+            if (promotionVendorCode == null) {
+                promotionVendorCode = new ArrayList<String>();
+            }
+            return this.promotionVendorCode;
         }
 
     }
