@@ -140,9 +140,9 @@ import javax.xml.datatype.Duration;
  *                     &lt;/complexType>
  *                   &lt;/element>
  *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/>
  *                 &lt;attribute name="MaxAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
  *                 &lt;attribute name="MinAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
  *                 &lt;attribute name="ForceGuaranteeOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
@@ -325,9 +325,9 @@ public class BookingRulesType {
      *           &lt;/complexType>
      *         &lt;/element>
      *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/>
      *       &lt;attribute name="MaxAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
      *       &lt;attribute name="MinAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
      *       &lt;attribute name="ForceGuaranteeOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
@@ -412,13 +412,6 @@ public class BookingRulesType {
         @XmlAttribute(name = "MaxContiguousBookings")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger maxContiguousBookings;
-        @XmlAttribute(name = "AbsoluteCutoff")
-        protected String absoluteCutoff;
-        @XmlAttribute(name = "OffsetDuration")
-        protected Duration offsetDuration;
-        @XmlAttribute(name = "OffsetCalculationMode")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String offsetCalculationMode;
         @XmlAttribute(name = "Code")
         protected String code;
         @XmlAttribute(name = "CodeContext")
@@ -435,6 +428,13 @@ public class BookingRulesType {
         protected String duration;
         @XmlAttribute(name = "End")
         protected String end;
+        @XmlAttribute(name = "AbsoluteCutoff")
+        protected String absoluteCutoff;
+        @XmlAttribute(name = "OffsetDuration")
+        protected Duration offsetDuration;
+        @XmlAttribute(name = "OffsetCalculationMode")
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+        protected String offsetCalculationMode;
 
         /**
          * Gets the value of the acceptableGuarantees property.
@@ -999,78 +999,6 @@ public class BookingRulesType {
         }
 
         /**
-         * Gets the value of the absoluteCutoff property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getAbsoluteCutoff() {
-            return absoluteCutoff;
-        }
-
-        /**
-         * Sets the value of the absoluteCutoff property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setAbsoluteCutoff(String value) {
-            this.absoluteCutoff = value;
-        }
-
-        /**
-         * Gets the value of the offsetDuration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Duration }
-         *     
-         */
-        public Duration getOffsetDuration() {
-            return offsetDuration;
-        }
-
-        /**
-         * Sets the value of the offsetDuration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Duration }
-         *     
-         */
-        public void setOffsetDuration(Duration value) {
-            this.offsetDuration = value;
-        }
-
-        /**
-         * Gets the value of the offsetCalculationMode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getOffsetCalculationMode() {
-            return offsetCalculationMode;
-        }
-
-        /**
-         * Sets the value of the offsetCalculationMode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setOffsetCalculationMode(String value) {
-            this.offsetCalculationMode = value;
-        }
-
-        /**
          * Gets the value of the code property.
          * 
          * @return
@@ -1236,6 +1164,78 @@ public class BookingRulesType {
          */
         public void setEnd(String value) {
             this.end = value;
+        }
+
+        /**
+         * Gets the value of the absoluteCutoff property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getAbsoluteCutoff() {
+            return absoluteCutoff;
+        }
+
+        /**
+         * Sets the value of the absoluteCutoff property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setAbsoluteCutoff(String value) {
+            this.absoluteCutoff = value;
+        }
+
+        /**
+         * Gets the value of the offsetDuration property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Duration }
+         *     
+         */
+        public Duration getOffsetDuration() {
+            return offsetDuration;
+        }
+
+        /**
+         * Sets the value of the offsetDuration property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Duration }
+         *     
+         */
+        public void setOffsetDuration(Duration value) {
+            this.offsetDuration = value;
+        }
+
+        /**
+         * Gets the value of the offsetCalculationMode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getOffsetCalculationMode() {
+            return offsetCalculationMode;
+        }
+
+        /**
+         * Sets the value of the offsetCalculationMode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setOffsetCalculationMode(String value) {
+            this.offsetCalculationMode = value;
         }
 
 

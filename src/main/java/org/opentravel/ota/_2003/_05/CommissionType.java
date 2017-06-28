@@ -505,7 +505,6 @@ public class CommissionType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *       &lt;attribute name="TaxInclusiveIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
      *     &lt;/restriction>
      *   &lt;/complexContent>
      * &lt;/complexType>
@@ -515,10 +514,8 @@ public class CommissionType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class CommissionableAmount {
+    public static class CommissionPayableAmount {
 
-        @XmlAttribute(name = "TaxInclusiveIndicator")
-        protected Boolean taxInclusiveIndicator;
         @XmlAttribute(name = "Amount")
         protected BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
@@ -526,30 +523,6 @@ public class CommissionType {
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger decimalPlaces;
-
-        /**
-         * Gets the value of the taxInclusiveIndicator property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
-         */
-        public Boolean isTaxInclusiveIndicator() {
-            return taxInclusiveIndicator;
-        }
-
-        /**
-         * Sets the value of the taxInclusiveIndicator property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
-         */
-        public void setTaxInclusiveIndicator(Boolean value) {
-            this.taxInclusiveIndicator = value;
-        }
 
         /**
          * Gets the value of the amount property.
@@ -636,6 +609,7 @@ public class CommissionType {
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+     *       &lt;attribute name="TaxInclusiveIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
      *     &lt;/restriction>
      *   &lt;/complexContent>
      * &lt;/complexType>
@@ -645,8 +619,10 @@ public class CommissionType {
      */
     @XmlAccessorType(XmlAccessType.FIELD)
     @XmlType(name = "")
-    public static class CommissionPayableAmount {
+    public static class CommissionableAmount {
 
+        @XmlAttribute(name = "TaxInclusiveIndicator")
+        protected Boolean taxInclusiveIndicator;
         @XmlAttribute(name = "Amount")
         protected BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
@@ -654,6 +630,30 @@ public class CommissionType {
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger decimalPlaces;
+
+        /**
+         * Gets the value of the taxInclusiveIndicator property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Boolean }
+         *     
+         */
+        public Boolean isTaxInclusiveIndicator() {
+            return taxInclusiveIndicator;
+        }
+
+        /**
+         * Sets the value of the taxInclusiveIndicator property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Boolean }
+         *     
+         */
+        public void setTaxInclusiveIndicator(Boolean value) {
+            this.taxInclusiveIndicator = value;
+        }
 
         /**
          * Gets the value of the amount property.

@@ -26,8 +26,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TextDescriptionType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
  *                 &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
  *               &lt;/extension>
  *             &lt;/complexContent>
@@ -89,8 +89,8 @@ public class TextItemsType {
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TextDescriptionType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
      *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
      *     &lt;/extension>
      *   &lt;/complexContent>
@@ -107,8 +107,6 @@ public class TextItemsType {
 
         @XmlAttribute(name = "Version")
         protected String version;
-        @XmlAttribute(name = "Removal")
-        protected Boolean removal;
         @XmlAttribute(name = "CreateDateTime")
         @XmlSchemaType(name = "dateTime")
         protected XMLGregorianCalendar createDateTime;
@@ -122,6 +120,8 @@ public class TextItemsType {
         @XmlAttribute(name = "PurgeDate")
         @XmlSchemaType(name = "date")
         protected XMLGregorianCalendar purgeDate;
+        @XmlAttribute(name = "Removal")
+        protected Boolean removal;
 
         /**
          * Gets the value of the version property.
@@ -145,30 +145,6 @@ public class TextItemsType {
          */
         public void setVersion(String value) {
             this.version = value;
-        }
-
-        /**
-         * Gets the value of the removal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
-         */
-        public Boolean isRemoval() {
-            return removal;
-        }
-
-        /**
-         * Sets the value of the removal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
-         */
-        public void setRemoval(Boolean value) {
-            this.removal = value;
         }
 
         /**
@@ -289,6 +265,30 @@ public class TextItemsType {
          */
         public void setPurgeDate(XMLGregorianCalendar value) {
             this.purgeDate = value;
+        }
+
+        /**
+         * Gets the value of the removal property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Boolean }
+         *     
+         */
+        public Boolean isRemoval() {
+            return removal;
+        }
+
+        /**
+         * Sets the value of the removal property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Boolean }
+         *     
+         */
+        public void setRemoval(Boolean value) {
+            this.removal = value;
         }
 
     }

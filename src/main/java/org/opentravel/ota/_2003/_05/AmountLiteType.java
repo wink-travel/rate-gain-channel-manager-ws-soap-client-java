@@ -22,8 +22,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *       &lt;sequence>
  *         &lt;element name="Base" type="{http://www.opentravel.org/OTA/2003/05}TotalType"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
  *       &lt;attribute name="GuaranteedInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -42,6 +42,14 @@ public class AmountLiteType {
     protected TotalType base;
     @XmlAttribute(name = "GuaranteedInd")
     protected Boolean guaranteedInd;
+    @XmlAttribute(name = "EffectiveDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar effectiveDate;
+    @XmlAttribute(name = "ExpireDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar expireDate;
+    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
+    protected Boolean expireDateExclusiveIndicator;
     @XmlAttribute(name = "AgeQualifyingCode")
     protected String ageQualifyingCode;
     @XmlAttribute(name = "MinAge")
@@ -52,14 +60,6 @@ public class AmountLiteType {
     protected TimeUnitType ageTimeUnit;
     @XmlAttribute(name = "AgeBucket")
     protected String ageBucket;
-    @XmlAttribute(name = "EffectiveDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
-    @XmlAttribute(name = "ExpireDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
-    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
-    protected Boolean expireDateExclusiveIndicator;
 
     /**
      * Gets the value of the base property.
@@ -107,6 +107,78 @@ public class AmountLiteType {
      */
     public void setGuaranteedInd(Boolean value) {
         this.guaranteedInd = value;
+    }
+
+    /**
+     * Gets the value of the effectiveDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    /**
+     * Sets the value of the effectiveDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEffectiveDate(XMLGregorianCalendar value) {
+        this.effectiveDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getExpireDate() {
+        return expireDate;
+    }
+
+    /**
+     * Sets the value of the expireDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setExpireDate(XMLGregorianCalendar value) {
+        this.expireDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isExpireDateExclusiveIndicator() {
+        return expireDateExclusiveIndicator;
+    }
+
+    /**
+     * Sets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setExpireDateExclusiveIndicator(Boolean value) {
+        this.expireDateExclusiveIndicator = value;
     }
 
     /**
@@ -227,78 +299,6 @@ public class AmountLiteType {
      */
     public void setAgeBucket(String value) {
         this.ageBucket = value;
-    }
-
-    /**
-     * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getEffectiveDate() {
-        return effectiveDate;
-    }
-
-    /**
-     * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setEffectiveDate(XMLGregorianCalendar value) {
-        this.effectiveDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getExpireDate() {
-        return expireDate;
-    }
-
-    /**
-     * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setExpireDate(XMLGregorianCalendar value) {
-        this.expireDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isExpireDateExclusiveIndicator() {
-        return expireDateExclusiveIndicator;
-    }
-
-    /**
-     * Sets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setExpireDateExclusiveIndicator(Boolean value) {
-        this.expireDateExclusiveIndicator = value;
     }
 
 }

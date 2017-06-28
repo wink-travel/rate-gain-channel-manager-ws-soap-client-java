@@ -24,8 +24,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *       &lt;sequence>
  *         &lt;element name="DestinationSystemCodes" type="{http://www.opentravel.org/OTA/2003/05}DestinationSystemCodesType" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}StatusApplicationGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}StatusApplicationGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RatePlanCodeTypeGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeApplyGroup"/>
  *       &lt;attribute name="RateTier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
@@ -67,6 +67,20 @@ public class StatusApplicationControlType {
     protected String subBlockCode;
     @XmlAttribute(name = "WingIdentifier")
     protected String wingIdentifier;
+    @XmlAttribute(name = "Mon")
+    protected Boolean mon;
+    @XmlAttribute(name = "Tue")
+    protected Boolean tue;
+    @XmlAttribute(name = "Weds")
+    protected Boolean weds;
+    @XmlAttribute(name = "Thur")
+    protected Boolean thur;
+    @XmlAttribute(name = "Fri")
+    protected Boolean fri;
+    @XmlAttribute(name = "Sat")
+    protected Boolean sat;
+    @XmlAttribute(name = "Sun")
+    protected Boolean sun;
     @XmlAttribute(name = "Start")
     protected String start;
     @XmlAttribute(name = "Duration")
@@ -98,20 +112,6 @@ public class StatusApplicationControlType {
     protected String invTypeCode;
     @XmlAttribute(name = "IsRoom")
     protected Boolean isRoom;
-    @XmlAttribute(name = "Mon")
-    protected Boolean mon;
-    @XmlAttribute(name = "Tue")
-    protected Boolean tue;
-    @XmlAttribute(name = "Weds")
-    protected Boolean weds;
-    @XmlAttribute(name = "Thur")
-    protected Boolean thur;
-    @XmlAttribute(name = "Fri")
-    protected Boolean fri;
-    @XmlAttribute(name = "Sat")
-    protected Boolean sat;
-    @XmlAttribute(name = "Sun")
-    protected Boolean sun;
     @XmlAttribute(name = "RatePlanCodeType")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String ratePlanCodeType;
@@ -333,6 +333,174 @@ public class StatusApplicationControlType {
      */
     public void setWingIdentifier(String value) {
         this.wingIdentifier = value;
+    }
+
+    /**
+     * Gets the value of the mon property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isMon() {
+        return mon;
+    }
+
+    /**
+     * Sets the value of the mon property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setMon(Boolean value) {
+        this.mon = value;
+    }
+
+    /**
+     * Gets the value of the tue property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isTue() {
+        return tue;
+    }
+
+    /**
+     * Sets the value of the tue property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setTue(Boolean value) {
+        this.tue = value;
+    }
+
+    /**
+     * Gets the value of the weds property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isWeds() {
+        return weds;
+    }
+
+    /**
+     * Sets the value of the weds property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setWeds(Boolean value) {
+        this.weds = value;
+    }
+
+    /**
+     * Gets the value of the thur property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isThur() {
+        return thur;
+    }
+
+    /**
+     * Sets the value of the thur property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setThur(Boolean value) {
+        this.thur = value;
+    }
+
+    /**
+     * Gets the value of the fri property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isFri() {
+        return fri;
+    }
+
+    /**
+     * Sets the value of the fri property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setFri(Boolean value) {
+        this.fri = value;
+    }
+
+    /**
+     * Gets the value of the sat property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSat() {
+        return sat;
+    }
+
+    /**
+     * Sets the value of the sat property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSat(Boolean value) {
+        this.sat = value;
+    }
+
+    /**
+     * Gets the value of the sun property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSun() {
+        return sun;
+    }
+
+    /**
+     * Sets the value of the sun property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSun(Boolean value) {
+        this.sun = value;
     }
 
     /**
@@ -698,174 +866,6 @@ public class StatusApplicationControlType {
      */
     public void setIsRoom(Boolean value) {
         this.isRoom = value;
-    }
-
-    /**
-     * Gets the value of the mon property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isMon() {
-        return mon;
-    }
-
-    /**
-     * Sets the value of the mon property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setMon(Boolean value) {
-        this.mon = value;
-    }
-
-    /**
-     * Gets the value of the tue property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isTue() {
-        return tue;
-    }
-
-    /**
-     * Sets the value of the tue property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setTue(Boolean value) {
-        this.tue = value;
-    }
-
-    /**
-     * Gets the value of the weds property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isWeds() {
-        return weds;
-    }
-
-    /**
-     * Sets the value of the weds property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setWeds(Boolean value) {
-        this.weds = value;
-    }
-
-    /**
-     * Gets the value of the thur property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isThur() {
-        return thur;
-    }
-
-    /**
-     * Sets the value of the thur property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setThur(Boolean value) {
-        this.thur = value;
-    }
-
-    /**
-     * Gets the value of the fri property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isFri() {
-        return fri;
-    }
-
-    /**
-     * Sets the value of the fri property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setFri(Boolean value) {
-        this.fri = value;
-    }
-
-    /**
-     * Gets the value of the sat property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isSat() {
-        return sat;
-    }
-
-    /**
-     * Sets the value of the sat property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setSat(Boolean value) {
-        this.sat = value;
-    }
-
-    /**
-     * Gets the value of the sun property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isSun() {
-        return sun;
-    }
-
-    /**
-     * Sets the value of the sun property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setSun(Boolean value) {
-        this.sun = value;
     }
 
     /**

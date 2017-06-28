@@ -39,8 +39,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *           &lt;complexType>
  *             &lt;complexContent>
  *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TravelerCountGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
  *                 &lt;attribute name="CorpDiscountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
  *                 &lt;attribute name="CorpDiscountNmbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
  *                 &lt;attribute name="QualificationMethod">
@@ -139,8 +139,8 @@ public class CustomerPrimaryAdditionalType {
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TravelerCountGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
      *       &lt;attribute name="CorpDiscountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
      *       &lt;attribute name="CorpDiscountNmbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
      *       &lt;attribute name="QualificationMethod">
@@ -172,12 +172,6 @@ public class CustomerPrimaryAdditionalType {
         @XmlAttribute(name = "QualificationMethod")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String qualificationMethod;
-        @XmlAttribute(name = "Start")
-        protected String start;
-        @XmlAttribute(name = "Duration")
-        protected String duration;
-        @XmlAttribute(name = "End")
-        protected String end;
         @XmlAttribute(name = "Age")
         protected Integer age;
         @XmlAttribute(name = "Code")
@@ -190,6 +184,12 @@ public class CustomerPrimaryAdditionalType {
         @XmlAttribute(name = "Quantity")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger quantity;
+        @XmlAttribute(name = "Start")
+        protected String start;
+        @XmlAttribute(name = "Duration")
+        protected String duration;
+        @XmlAttribute(name = "End")
+        protected String end;
 
         /**
          * Gets the value of the corpDiscountName property.
@@ -261,78 +261,6 @@ public class CustomerPrimaryAdditionalType {
          */
         public void setQualificationMethod(String value) {
             this.qualificationMethod = value;
-        }
-
-        /**
-         * Gets the value of the start property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getStart() {
-            return start;
-        }
-
-        /**
-         * Sets the value of the start property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setStart(String value) {
-            this.start = value;
-        }
-
-        /**
-         * Gets the value of the duration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDuration() {
-            return duration;
-        }
-
-        /**
-         * Sets the value of the duration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDuration(String value) {
-            this.duration = value;
-        }
-
-        /**
-         * Gets the value of the end property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getEnd() {
-            return end;
-        }
-
-        /**
-         * Sets the value of the end property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setEnd(String value) {
-            this.end = value;
         }
 
         /**
@@ -453,6 +381,78 @@ public class CustomerPrimaryAdditionalType {
          */
         public void setQuantity(BigInteger value) {
             this.quantity = value;
+        }
+
+        /**
+         * Gets the value of the start property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getStart() {
+            return start;
+        }
+
+        /**
+         * Sets the value of the start property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setStart(String value) {
+            this.start = value;
+        }
+
+        /**
+         * Gets the value of the duration property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDuration() {
+            return duration;
+        }
+
+        /**
+         * Sets the value of the duration property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDuration(String value) {
+            this.duration = value;
+        }
+
+        /**
+         * Gets the value of the end property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getEnd() {
+            return end;
+        }
+
+        /**
+         * Sets the value of the end property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setEnd(String value) {
+            this.end = value;
         }
 
     }

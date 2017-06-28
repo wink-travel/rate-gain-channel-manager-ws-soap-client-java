@@ -74,9 +74,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;/element>
  *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ProfileTypeGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ShareAllGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ShareAllGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ProfileTypeGroup"/>
  *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
  *       &lt;attribute name="StatusCode" type="{http://www.opentravel.org/OTA/2003/05}ListOfOTA_CodeType" />
  *     &lt;/restriction>
@@ -122,14 +122,6 @@ public class ProfileType {
     protected String rph;
     @XmlAttribute(name = "StatusCode")
     protected List<String> statusCode;
-    @XmlAttribute(name = "ProfileType")
-    protected String profileType;
-    @XmlAttribute(name = "ShareAllSynchInd")
-    protected YesNoType shareAllSynchInd;
-    @XmlAttribute(name = "ShareAllMarketInd")
-    protected YesNoType shareAllMarketInd;
-    @XmlAttribute(name = "ShareAllOptOutInd")
-    protected YesNoType shareAllOptOutInd;
     @XmlAttribute(name = "CreateDateTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar createDateTime;
@@ -143,6 +135,14 @@ public class ProfileType {
     @XmlAttribute(name = "PurgeDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar purgeDate;
+    @XmlAttribute(name = "ShareAllSynchInd")
+    protected YesNoType shareAllSynchInd;
+    @XmlAttribute(name = "ShareAllMarketInd")
+    protected YesNoType shareAllMarketInd;
+    @XmlAttribute(name = "ShareAllOptOutInd")
+    protected YesNoType shareAllOptOutInd;
+    @XmlAttribute(name = "ProfileType")
+    protected String profileType;
 
     /**
      * Gets the value of the accesses property.
@@ -419,102 +419,6 @@ public class ProfileType {
     }
 
     /**
-     * Gets the value of the profileType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getProfileType() {
-        return profileType;
-    }
-
-    /**
-     * Sets the value of the profileType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setProfileType(String value) {
-        this.profileType = value;
-    }
-
-    /**
-     * Gets the value of the shareAllSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link YesNoType }
-     *     
-     */
-    public YesNoType getShareAllSynchInd() {
-        return shareAllSynchInd;
-    }
-
-    /**
-     * Sets the value of the shareAllSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link YesNoType }
-     *     
-     */
-    public void setShareAllSynchInd(YesNoType value) {
-        this.shareAllSynchInd = value;
-    }
-
-    /**
-     * Gets the value of the shareAllMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link YesNoType }
-     *     
-     */
-    public YesNoType getShareAllMarketInd() {
-        return shareAllMarketInd;
-    }
-
-    /**
-     * Sets the value of the shareAllMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link YesNoType }
-     *     
-     */
-    public void setShareAllMarketInd(YesNoType value) {
-        this.shareAllMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the shareAllOptOutInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link YesNoType }
-     *     
-     */
-    public YesNoType getShareAllOptOutInd() {
-        return shareAllOptOutInd;
-    }
-
-    /**
-     * Sets the value of the shareAllOptOutInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link YesNoType }
-     *     
-     */
-    public void setShareAllOptOutInd(YesNoType value) {
-        this.shareAllOptOutInd = value;
-    }
-
-    /**
      * Gets the value of the createDateTime property.
      * 
      * @return
@@ -632,6 +536,102 @@ public class ProfileType {
      */
     public void setPurgeDate(XMLGregorianCalendar value) {
         this.purgeDate = value;
+    }
+
+    /**
+     * Gets the value of the shareAllSynchInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link YesNoType }
+     *     
+     */
+    public YesNoType getShareAllSynchInd() {
+        return shareAllSynchInd;
+    }
+
+    /**
+     * Sets the value of the shareAllSynchInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link YesNoType }
+     *     
+     */
+    public void setShareAllSynchInd(YesNoType value) {
+        this.shareAllSynchInd = value;
+    }
+
+    /**
+     * Gets the value of the shareAllMarketInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link YesNoType }
+     *     
+     */
+    public YesNoType getShareAllMarketInd() {
+        return shareAllMarketInd;
+    }
+
+    /**
+     * Sets the value of the shareAllMarketInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link YesNoType }
+     *     
+     */
+    public void setShareAllMarketInd(YesNoType value) {
+        this.shareAllMarketInd = value;
+    }
+
+    /**
+     * Gets the value of the shareAllOptOutInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link YesNoType }
+     *     
+     */
+    public YesNoType getShareAllOptOutInd() {
+        return shareAllOptOutInd;
+    }
+
+    /**
+     * Sets the value of the shareAllOptOutInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link YesNoType }
+     *     
+     */
+    public void setShareAllOptOutInd(YesNoType value) {
+        this.shareAllOptOutInd = value;
+    }
+
+    /**
+     * Gets the value of the profileType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getProfileType() {
+        return profileType;
+    }
+
+    /**
+     * Sets the value of the profileType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setProfileType(String value) {
+        this.profileType = value;
     }
 
 

@@ -2282,6 +2282,278 @@ public class AirlinePrefType {
      * &lt;complexType>
      *   &lt;complexContent>
      *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SSR_PrefGroup"/>
+     *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
+     *       &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
+     *       &lt;attribute name="DefaultStatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+     *       &lt;attribute name="LookupKey" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+     *       &lt;attribute name="TransferActionType" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
+     * </pre>
+     * 
+     * 
+     */
+    @XmlAccessorType(XmlAccessType.FIELD)
+    @XmlType(name = "")
+    public static class SSRPref {
+
+        @XmlAttribute(name = "VendorCode")
+        protected String vendorCode;
+        @XmlAttribute(name = "NumberInParty")
+        @XmlSchemaType(name = "positiveInteger")
+        protected BigInteger numberInParty;
+        @XmlAttribute(name = "DefaultStatusCode")
+        protected String defaultStatusCode;
+        @XmlAttribute(name = "Remark")
+        protected String remark;
+        @XmlAttribute(name = "LookupKey")
+        protected String lookupKey;
+        @XmlAttribute(name = "AirlineVendorPrefRPH")
+        protected List<String> airlineVendorPrefRPH;
+        @XmlAttribute(name = "TransferActionType")
+        protected TransferActionType transferActionType;
+        @XmlAttribute(name = "PreferLevel")
+        protected PreferLevelType preferLevel;
+        @XmlAttribute(name = "SSR_Code")
+        protected String ssrCode;
+
+        /**
+         * Gets the value of the vendorCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getVendorCode() {
+            return vendorCode;
+        }
+
+        /**
+         * Sets the value of the vendorCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setVendorCode(String value) {
+            this.vendorCode = value;
+        }
+
+        /**
+         * Gets the value of the numberInParty property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link BigInteger }
+         *     
+         */
+        public BigInteger getNumberInParty() {
+            return numberInParty;
+        }
+
+        /**
+         * Sets the value of the numberInParty property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link BigInteger }
+         *     
+         */
+        public void setNumberInParty(BigInteger value) {
+            this.numberInParty = value;
+        }
+
+        /**
+         * Gets the value of the defaultStatusCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDefaultStatusCode() {
+            return defaultStatusCode;
+        }
+
+        /**
+         * Sets the value of the defaultStatusCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDefaultStatusCode(String value) {
+            this.defaultStatusCode = value;
+        }
+
+        /**
+         * Gets the value of the remark property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getRemark() {
+            return remark;
+        }
+
+        /**
+         * Sets the value of the remark property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setRemark(String value) {
+            this.remark = value;
+        }
+
+        /**
+         * Gets the value of the lookupKey property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getLookupKey() {
+            return lookupKey;
+        }
+
+        /**
+         * Sets the value of the lookupKey property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setLookupKey(String value) {
+            this.lookupKey = value;
+        }
+
+        /**
+         * Gets the value of the airlineVendorPrefRPH property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the airlineVendorPrefRPH property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getAirlineVendorPrefRPH().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link String }
+         * 
+         * 
+         */
+        public List<String> getAirlineVendorPrefRPH() {
+            if (airlineVendorPrefRPH == null) {
+                airlineVendorPrefRPH = new ArrayList<String>();
+            }
+            return this.airlineVendorPrefRPH;
+        }
+
+        /**
+         * Gets the value of the transferActionType property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link TransferActionType }
+         *     
+         */
+        public TransferActionType getTransferActionType() {
+            return transferActionType;
+        }
+
+        /**
+         * Sets the value of the transferActionType property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link TransferActionType }
+         *     
+         */
+        public void setTransferActionType(TransferActionType value) {
+            this.transferActionType = value;
+        }
+
+        /**
+         * Gets the value of the preferLevel property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link PreferLevelType }
+         *     
+         */
+        public PreferLevelType getPreferLevel() {
+            return preferLevel;
+        }
+
+        /**
+         * Sets the value of the preferLevel property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link PreferLevelType }
+         *     
+         */
+        public void setPreferLevel(PreferLevelType value) {
+            this.preferLevel = value;
+        }
+
+        /**
+         * Gets the value of the ssrCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getSSRCode() {
+            return ssrCode;
+        }
+
+        /**
+         * Sets the value of the ssrCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setSSRCode(String value) {
+            this.ssrCode = value;
+        }
+
+    }
+
+
+    /**
+     * <p>Java class for anonymous complex type.
+     * 
+     * <p>The following schema fragment specifies the expected content contained within this class.
+     * 
+     * <pre>
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SeatPrefGroup"/>
      *       &lt;attribute name="FlightDistanceQualifier">
      *         &lt;simpleType>
@@ -2628,278 +2900,6 @@ public class AirlinePrefType {
          */
         public void setSeatInRow(String value) {
             this.seatInRow = value;
-        }
-
-    }
-
-
-    /**
-     * <p>Java class for anonymous complex type.
-     * 
-     * <p>The following schema fragment specifies the expected content contained within this class.
-     * 
-     * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SSR_PrefGroup"/>
-     *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *       &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-     *       &lt;attribute name="DefaultStatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *       &lt;attribute name="LookupKey" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *       &lt;attribute name="TransferActionType" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
-     * </pre>
-     * 
-     * 
-     */
-    @XmlAccessorType(XmlAccessType.FIELD)
-    @XmlType(name = "")
-    public static class SSRPref {
-
-        @XmlAttribute(name = "VendorCode")
-        protected String vendorCode;
-        @XmlAttribute(name = "NumberInParty")
-        @XmlSchemaType(name = "positiveInteger")
-        protected BigInteger numberInParty;
-        @XmlAttribute(name = "DefaultStatusCode")
-        protected String defaultStatusCode;
-        @XmlAttribute(name = "Remark")
-        protected String remark;
-        @XmlAttribute(name = "LookupKey")
-        protected String lookupKey;
-        @XmlAttribute(name = "AirlineVendorPrefRPH")
-        protected List<String> airlineVendorPrefRPH;
-        @XmlAttribute(name = "TransferActionType")
-        protected TransferActionType transferActionType;
-        @XmlAttribute(name = "PreferLevel")
-        protected PreferLevelType preferLevel;
-        @XmlAttribute(name = "SSR_Code")
-        protected String ssrCode;
-
-        /**
-         * Gets the value of the vendorCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getVendorCode() {
-            return vendorCode;
-        }
-
-        /**
-         * Sets the value of the vendorCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setVendorCode(String value) {
-            this.vendorCode = value;
-        }
-
-        /**
-         * Gets the value of the numberInParty property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link BigInteger }
-         *     
-         */
-        public BigInteger getNumberInParty() {
-            return numberInParty;
-        }
-
-        /**
-         * Sets the value of the numberInParty property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link BigInteger }
-         *     
-         */
-        public void setNumberInParty(BigInteger value) {
-            this.numberInParty = value;
-        }
-
-        /**
-         * Gets the value of the defaultStatusCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDefaultStatusCode() {
-            return defaultStatusCode;
-        }
-
-        /**
-         * Sets the value of the defaultStatusCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDefaultStatusCode(String value) {
-            this.defaultStatusCode = value;
-        }
-
-        /**
-         * Gets the value of the remark property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getRemark() {
-            return remark;
-        }
-
-        /**
-         * Sets the value of the remark property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setRemark(String value) {
-            this.remark = value;
-        }
-
-        /**
-         * Gets the value of the lookupKey property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getLookupKey() {
-            return lookupKey;
-        }
-
-        /**
-         * Sets the value of the lookupKey property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setLookupKey(String value) {
-            this.lookupKey = value;
-        }
-
-        /**
-         * Gets the value of the airlineVendorPrefRPH property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the airlineVendorPrefRPH property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getAirlineVendorPrefRPH().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getAirlineVendorPrefRPH() {
-            if (airlineVendorPrefRPH == null) {
-                airlineVendorPrefRPH = new ArrayList<String>();
-            }
-            return this.airlineVendorPrefRPH;
-        }
-
-        /**
-         * Gets the value of the transferActionType property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link TransferActionType }
-         *     
-         */
-        public TransferActionType getTransferActionType() {
-            return transferActionType;
-        }
-
-        /**
-         * Sets the value of the transferActionType property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link TransferActionType }
-         *     
-         */
-        public void setTransferActionType(TransferActionType value) {
-            this.transferActionType = value;
-        }
-
-        /**
-         * Gets the value of the preferLevel property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link PreferLevelType }
-         *     
-         */
-        public PreferLevelType getPreferLevel() {
-            return preferLevel;
-        }
-
-        /**
-         * Sets the value of the preferLevel property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link PreferLevelType }
-         *     
-         */
-        public void setPreferLevel(PreferLevelType value) {
-            this.preferLevel = value;
-        }
-
-        /**
-         * Gets the value of the ssrCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getSSRCode() {
-            return ssrCode;
-        }
-
-        /**
-         * Sets the value of the ssrCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setSSRCode(String value) {
-            this.ssrCode = value;
         }
 
     }

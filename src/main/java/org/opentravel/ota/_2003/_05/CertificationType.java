@@ -20,9 +20,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * &lt;complexType name="CertificationType">
  *   &lt;simpleContent>
  *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>FreeTextType">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SingleVendorIndGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
  *     &lt;/extension>
  *   &lt;/simpleContent>
  * &lt;/complexType>
@@ -36,6 +36,11 @@ public class CertificationType
     extends FreeTextType
 {
 
+    @XmlAttribute(name = "ID")
+    protected String id;
+    @XmlAttribute(name = "SingleVendorInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String singleVendorInd;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar effectiveDate;
@@ -44,11 +49,54 @@ public class CertificationType
     protected XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
-    @XmlAttribute(name = "ID")
-    protected String id;
-    @XmlAttribute(name = "SingleVendorInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String singleVendorInd;
+
+    /**
+     * Gets the value of the id property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getID() {
+        return id;
+    }
+
+    /**
+     * Sets the value of the id property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setID(String value) {
+        this.id = value;
+    }
+
+    /**
+     * Gets the value of the singleVendorInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getSingleVendorInd() {
+        return singleVendorInd;
+    }
+
+    /**
+     * Sets the value of the singleVendorInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setSingleVendorInd(String value) {
+        this.singleVendorInd = value;
+    }
 
     /**
      * Gets the value of the effectiveDate property.
@@ -120,54 +168,6 @@ public class CertificationType
      */
     public void setExpireDateExclusiveIndicator(Boolean value) {
         this.expireDateExclusiveIndicator = value;
-    }
-
-    /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getID() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setID(String value) {
-        this.id = value;
-    }
-
-    /**
-     * Gets the value of the singleVendorInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getSingleVendorInd() {
-        return singleVendorInd;
-    }
-
-    /**
-     * Sets the value of the singleVendorInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setSingleVendorInd(String value) {
-        this.singleVendorInd = value;
     }
 
 }

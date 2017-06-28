@@ -40,8 +40,8 @@ import javax.xml.bind.annotation.XmlType;
  *                   &lt;/element>
  *                 &lt;/sequence>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
  *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
  *                 &lt;attribute name="NotificationRequired" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
  *                 &lt;attribute name="TransportationCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
  *                 &lt;attribute name="ChargeUnit" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
@@ -122,8 +122,8 @@ public class TransportationType {
      *         &lt;/element>
      *       &lt;/sequence>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
      *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
      *       &lt;attribute name="NotificationRequired" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
      *       &lt;attribute name="TransportationCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
      *       &lt;attribute name="ChargeUnit" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
@@ -168,6 +168,10 @@ public class TransportationType {
         protected String existsCode;
         @XmlAttribute(name = "ID")
         protected String id;
+        @XmlAttribute(name = "CodeDetail")
+        protected String codeDetail;
+        @XmlAttribute(name = "Removal")
+        protected Boolean removal;
         @XmlAttribute(name = "Amount")
         protected BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
@@ -175,10 +179,6 @@ public class TransportationType {
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger decimalPlaces;
-        @XmlAttribute(name = "CodeDetail")
-        protected String codeDetail;
-        @XmlAttribute(name = "Removal")
-        protected Boolean removal;
 
         /**
          * Gets the value of the multimediaDescriptions property.
@@ -445,6 +445,54 @@ public class TransportationType {
         }
 
         /**
+         * Gets the value of the codeDetail property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getCodeDetail() {
+            return codeDetail;
+        }
+
+        /**
+         * Sets the value of the codeDetail property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setCodeDetail(String value) {
+            this.codeDetail = value;
+        }
+
+        /**
+         * Gets the value of the removal property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Boolean }
+         *     
+         */
+        public Boolean isRemoval() {
+            return removal;
+        }
+
+        /**
+         * Sets the value of the removal property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Boolean }
+         *     
+         */
+        public void setRemoval(Boolean value) {
+            this.removal = value;
+        }
+
+        /**
          * Gets the value of the amount property.
          * 
          * @return
@@ -514,54 +562,6 @@ public class TransportationType {
          */
         public void setDecimalPlaces(BigInteger value) {
             this.decimalPlaces = value;
-        }
-
-        /**
-         * Gets the value of the codeDetail property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getCodeDetail() {
-            return codeDetail;
-        }
-
-        /**
-         * Sets the value of the codeDetail property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setCodeDetail(String value) {
-            this.codeDetail = value;
-        }
-
-        /**
-         * Gets the value of the removal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
-         */
-        public Boolean isRemoval() {
-            return removal;
-        }
-
-        /**
-         * Sets the value of the removal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
-         */
-        public void setRemoval(Boolean value) {
-            this.removal = value;
         }
 
     }

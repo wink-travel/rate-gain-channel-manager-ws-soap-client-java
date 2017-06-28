@@ -41,8 +41,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/complexType>
  *         &lt;/element>
  *       &lt;/choice>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
  *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
  *       &lt;attribute name="ParagraphNumber" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
  *     &lt;/restriction>
@@ -65,10 +65,10 @@ import javax.xml.datatype.XMLGregorianCalendar;
 public class ParagraphType {
 
     @XmlElementRefs({
+        @XmlElementRef(name = "ListItem", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "Text", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Image", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "URL", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "ListItem", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "Image", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false)
     })
     protected List<JAXBElement<?>> textOrImageOrURL;
     @XmlAttribute(name = "Name")
@@ -76,6 +76,10 @@ public class ParagraphType {
     @XmlAttribute(name = "ParagraphNumber")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger paragraphNumber;
+    @XmlAttribute(name = "Language")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    @XmlSchemaType(name = "language")
+    protected String language;
     @XmlAttribute(name = "CreateDateTime")
     @XmlSchemaType(name = "dateTime")
     protected XMLGregorianCalendar createDateTime;
@@ -89,10 +93,6 @@ public class ParagraphType {
     @XmlAttribute(name = "PurgeDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar purgeDate;
-    @XmlAttribute(name = "Language")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    @XmlSchemaType(name = "language")
-    protected String language;
 
     /**
      * Gets the value of the textOrImageOrURL property.
@@ -112,10 +112,10 @@ public class ParagraphType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
-     * {@link JAXBElement }{@code <}{@link FormattedTextTextType }{@code >}
-     * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link ParagraphType.ListItem }{@code >}
+     * {@link JAXBElement }{@code <}{@link String }{@code >}
+     * {@link JAXBElement }{@code <}{@link FormattedTextTextType }{@code >}
      * 
      * 
      */
@@ -172,6 +172,30 @@ public class ParagraphType {
      */
     public void setParagraphNumber(BigInteger value) {
         this.paragraphNumber = value;
+    }
+
+    /**
+     * Gets the value of the language property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getLanguage() {
+        return language;
+    }
+
+    /**
+     * Sets the value of the language property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setLanguage(String value) {
+        this.language = value;
     }
 
     /**
@@ -292,30 +316,6 @@ public class ParagraphType {
      */
     public void setPurgeDate(XMLGregorianCalendar value) {
         this.purgeDate = value;
-    }
-
-    /**
-     * Gets the value of the language property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getLanguage() {
-        return language;
-    }
-
-    /**
-     * Sets the value of the language property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setLanguage(String value) {
-        this.language = value;
     }
 
 

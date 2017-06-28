@@ -29,8 +29,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  *         &lt;element name="SpecRequestPref" type="{http://www.opentravel.org/OTA/2003/05}SpecRequestPrefType" maxOccurs="5" minOccurs="0"/>
  *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
  *       &lt;attribute name="TravelPurpose" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
  *     &lt;/restriction>
  *   &lt;/complexContent>
@@ -64,14 +64,14 @@ public class OtherSrvcPrefType {
     protected TPAExtensionsType tpaExtensions;
     @XmlAttribute(name = "TravelPurpose")
     protected String travelPurpose;
+    @XmlAttribute(name = "PreferLevel")
+    protected PreferLevelType preferLevel;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
-    @XmlAttribute(name = "PreferLevel")
-    protected PreferLevelType preferLevel;
 
     /**
      * Gets the value of the otherSrvcName property.
@@ -262,6 +262,30 @@ public class OtherSrvcPrefType {
     }
 
     /**
+     * Gets the value of the preferLevel property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public PreferLevelType getPreferLevel() {
+        return preferLevel;
+    }
+
+    /**
+     * Sets the value of the preferLevel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public void setPreferLevel(PreferLevelType value) {
+        this.preferLevel = value;
+    }
+
+    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -307,30 +331,6 @@ public class OtherSrvcPrefType {
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the preferLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public PreferLevelType getPreferLevel() {
-        return preferLevel;
-    }
-
-    /**
-     * Sets the value of the preferLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public void setPreferLevel(PreferLevelType value) {
-        this.preferLevel = value;
     }
 
 }

@@ -33,8 +33,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/complexType>
  *         &lt;/element>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
  *     &lt;/restriction>
  *   &lt;/complexContent>
  * &lt;/complexType>
@@ -53,6 +53,12 @@ public class TravelClubType {
     protected CompanyNameType travelClubName;
     @XmlElement(name = "ClubMemberName")
     protected TravelClubType.ClubMemberName clubMemberName;
+    @XmlAttribute(name = "ShareSynchInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareSynchInd;
+    @XmlAttribute(name = "ShareMarketInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareMarketInd;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar effectiveDate;
@@ -61,12 +67,6 @@ public class TravelClubType {
     protected XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
-    @XmlAttribute(name = "ShareSynchInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
-    @XmlAttribute(name = "ShareMarketInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
 
     /**
      * Gets the value of the travelClubName property.
@@ -114,6 +114,54 @@ public class TravelClubType {
      */
     public void setClubMemberName(TravelClubType.ClubMemberName value) {
         this.clubMemberName = value;
+    }
+
+    /**
+     * Gets the value of the shareSynchInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareSynchInd() {
+        return shareSynchInd;
+    }
+
+    /**
+     * Sets the value of the shareSynchInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareSynchInd(String value) {
+        this.shareSynchInd = value;
+    }
+
+    /**
+     * Gets the value of the shareMarketInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareMarketInd() {
+        return shareMarketInd;
+    }
+
+    /**
+     * Sets the value of the shareMarketInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareMarketInd(String value) {
+        this.shareMarketInd = value;
     }
 
     /**
@@ -186,54 +234,6 @@ public class TravelClubType {
      */
     public void setExpireDateExclusiveIndicator(Boolean value) {
         this.expireDateExclusiveIndicator = value;
-    }
-
-    /**
-     * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareSynchInd() {
-        return shareSynchInd;
-    }
-
-    /**
-     * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareSynchInd(String value) {
-        this.shareSynchInd = value;
-    }
-
-    /**
-     * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareMarketInd() {
-        return shareMarketInd;
-    }
-
-    /**
-     * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareMarketInd(String value) {
-        this.shareMarketInd = value;
     }
 
 

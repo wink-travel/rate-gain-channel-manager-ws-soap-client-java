@@ -92,8 +92,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *           &lt;/complexType>
  *         &lt;/element>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
  *       &lt;attribute name="OnTimeRate" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
  *       &lt;attribute name="ETicketDesired" type="{http://www.w3.org/2001/XMLSchema}boolean" />
  *       &lt;attribute name="MaxStopsQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to4" />
@@ -136,14 +136,14 @@ public class AirSearchPrefsType {
     protected Boolean eTicketDesired;
     @XmlAttribute(name = "MaxStopsQuantity")
     protected Integer maxStopsQuantity;
-    @XmlAttribute(name = "SmokingAllowed")
-    protected Boolean smokingAllowed;
     @XmlAttribute(name = "Start")
     protected String start;
     @XmlAttribute(name = "Duration")
     protected String duration;
     @XmlAttribute(name = "End")
     protected String end;
+    @XmlAttribute(name = "SmokingAllowed")
+    protected Boolean smokingAllowed;
 
     /**
      * Gets the value of the vendorPref property.
@@ -416,30 +416,6 @@ public class AirSearchPrefsType {
     }
 
     /**
-     * Gets the value of the smokingAllowed property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isSmokingAllowed() {
-        return smokingAllowed;
-    }
-
-    /**
-     * Sets the value of the smokingAllowed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setSmokingAllowed(Boolean value) {
-        this.smokingAllowed = value;
-    }
-
-    /**
      * Gets the value of the start property.
      * 
      * @return
@@ -509,6 +485,30 @@ public class AirSearchPrefsType {
      */
     public void setEnd(String value) {
         this.end = value;
+    }
+
+    /**
+     * Gets the value of the smokingAllowed property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSmokingAllowed() {
+        return smokingAllowed;
+    }
+
+    /**
+     * Sets the value of the smokingAllowed property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSmokingAllowed(Boolean value) {
+        this.smokingAllowed = value;
     }
 
 

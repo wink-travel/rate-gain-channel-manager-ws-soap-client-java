@@ -35,8 +35,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
  *         &lt;/element>
  *         &lt;element name="MessageContent" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
  *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
  *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
  *       &lt;attribute name="StartSeqNmbr" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
  *       &lt;attribute name="EndSeqNmbr" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
  *       &lt;attribute name="MessageType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
@@ -87,12 +87,6 @@ public class MessageType {
     protected String confirmationID;
     @XmlAttribute(name = "ReservationID")
     protected String reservationID;
-    @XmlAttribute(name = "Start")
-    protected String start;
-    @XmlAttribute(name = "Duration")
-    protected String duration;
-    @XmlAttribute(name = "End")
-    protected String end;
     @XmlAttribute(name = "ChainCode")
     protected String chainCode;
     @XmlAttribute(name = "BrandCode")
@@ -111,6 +105,12 @@ public class MessageType {
     protected String brandName;
     @XmlAttribute(name = "AreaID")
     protected String areaID;
+    @XmlAttribute(name = "Start")
+    protected String start;
+    @XmlAttribute(name = "Duration")
+    protected String duration;
+    @XmlAttribute(name = "End")
+    protected String end;
 
     /**
      * Gets the value of the originalPayloadStdAttributes property.
@@ -401,78 +401,6 @@ public class MessageType {
     }
 
     /**
-     * Gets the value of the start property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getStart() {
-        return start;
-    }
-
-    /**
-     * Sets the value of the start property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setStart(String value) {
-        this.start = value;
-    }
-
-    /**
-     * Gets the value of the duration property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getDuration() {
-        return duration;
-    }
-
-    /**
-     * Sets the value of the duration property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setDuration(String value) {
-        this.duration = value;
-    }
-
-    /**
-     * Gets the value of the end property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getEnd() {
-        return end;
-    }
-
-    /**
-     * Sets the value of the end property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setEnd(String value) {
-        this.end = value;
-    }
-
-    /**
      * Gets the value of the chainCode property.
      * 
      * @return
@@ -686,6 +614,78 @@ public class MessageType {
      */
     public void setAreaID(String value) {
         this.areaID = value;
+    }
+
+    /**
+     * Gets the value of the start property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getStart() {
+        return start;
+    }
+
+    /**
+     * Sets the value of the start property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setStart(String value) {
+        this.start = value;
+    }
+
+    /**
+     * Gets the value of the duration property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getDuration() {
+        return duration;
+    }
+
+    /**
+     * Sets the value of the duration property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setDuration(String value) {
+        this.duration = value;
+    }
+
+    /**
+     * Gets the value of the end property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getEnd() {
+        return end;
+    }
+
+    /**
+     * Sets the value of the end property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setEnd(String value) {
+        this.end = value;
     }
 
 
