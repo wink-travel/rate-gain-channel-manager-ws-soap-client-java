@@ -20,103 +20,103 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RateUploadType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="BaseByGuestAmts" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="BaseByGuestAmt" maxOccurs="unbounded"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="NumberOfGuestsDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/&gt;
- *                           &lt;/sequence&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
- *                           &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                           &lt;attribute name="NumberOfGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
- *                         &lt;/extension&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="AdditionalGuestAmounts" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="AdditionalGuestAmount" maxOccurs="unbounded"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/&gt;
- *                             &lt;element name="AddlGuestAmtDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/&gt;
- *                           &lt;/sequence&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/&gt;
- *                           &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                           &lt;attribute name="MaxAdditionalGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Fees" type="{http://www.opentravel.org/OTA/2003/05}FeesType" minOccurs="0"/&gt;
- *         &lt;element name="GuaranteePolicies" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="GuaranteePolicy" type="{http://www.opentravel.org/OTA/2003/05}GuaranteeType" maxOccurs="unbounded"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="CancelPolicies" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/&gt;
- *         &lt;element name="PaymentPolicies" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/&gt;
- *         &lt;element name="RateDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
- *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
- *         &lt;element name="MealsIncluded" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MealsIncludedGroup"/&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="AdditionalCharges" type="{http://www.opentravel.org/OTA/2003/05}HotelAdditionalChargesType" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
- *       &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
- *       &lt;attribute name="RateTimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" /&gt;
- *       &lt;attribute name="UnitMultiplier" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
- *       &lt;attribute name="MinGuestApplicable" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
- *       &lt;attribute name="MaxGuestApplicable" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
- *       &lt;attribute name="MinLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *       &lt;attribute name="MaxLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *       &lt;attribute name="StayOverDate" type="{http://www.opentravel.org/OTA/2003/05}DayOfWeekType" /&gt;
- *       &lt;attribute name="RateTier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RateUploadType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="BaseByGuestAmts" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="BaseByGuestAmt" maxOccurs="unbounded">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType">
+ *                           &lt;sequence>
+ *                             &lt;element name="NumberOfGuestsDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/>
+ *                           &lt;/sequence>
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+ *                           &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                           &lt;attribute name="NumberOfGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+ *                         &lt;/extension>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="AdditionalGuestAmounts" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="AdditionalGuestAmount" maxOccurs="unbounded">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/>
+ *                             &lt;element name="AddlGuestAmtDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/>
+ *                           &lt;/sequence>
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
+ *                           &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                           &lt;attribute name="MaxAdditionalGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="Fees" type="{http://www.opentravel.org/OTA/2003/05}FeesType" minOccurs="0"/>
+ *         &lt;element name="GuaranteePolicies" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="GuaranteePolicy" type="{http://www.opentravel.org/OTA/2003/05}GuaranteeType" maxOccurs="unbounded"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="CancelPolicies" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/>
+ *         &lt;element name="PaymentPolicies" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/>
+ *         &lt;element name="RateDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
+ *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+ *         &lt;element name="MealsIncluded" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MealsIncludedGroup"/>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="AdditionalCharges" type="{http://www.opentravel.org/OTA/2003/05}HotelAdditionalChargesType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+ *       &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" />
+ *       &lt;attribute name="RateTimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" />
+ *       &lt;attribute name="UnitMultiplier" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+ *       &lt;attribute name="MinGuestApplicable" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+ *       &lt;attribute name="MaxGuestApplicable" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+ *       &lt;attribute name="MinLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *       &lt;attribute name="MaxLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *       &lt;attribute name="StayOverDate" type="{http://www.opentravel.org/OTA/2003/05}DayOfWeekType" />
+ *       &lt;attribute name="RateTier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -135,8 +135,8 @@ import javax.xml.bind.annotation.XmlType;
     "additionalCharges"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.InvBlockRoomType.RatePlans.RatePlan.class,
-    com.traveliko.platform.ws.rategain.RateAmountMessageType.Rates.Rate.class
+    com.traveliko.platform.ws.rategain.RateAmountMessageType.Rates.Rate.class,
+    com.traveliko.platform.ws.rategain.InvBlockRoomType.RatePlans.RatePlan.class
 })
 public class RateUploadType {
 
@@ -184,6 +184,16 @@ public class RateUploadType {
     protected String duration;
     @XmlAttribute(name = "End")
     protected String end;
+    @XmlAttribute(name = "AgeQualifyingCode")
+    protected String ageQualifyingCode;
+    @XmlAttribute(name = "MinAge")
+    protected Integer minAge;
+    @XmlAttribute(name = "MaxAge")
+    protected Integer maxAge;
+    @XmlAttribute(name = "AgeTimeUnit")
+    protected TimeUnitType ageTimeUnit;
+    @XmlAttribute(name = "AgeBucket")
+    protected String ageBucket;
     @XmlAttribute(name = "CurrencyCode")
     protected String currencyCode;
     @XmlAttribute(name = "DecimalPlaces")
@@ -203,16 +213,6 @@ public class RateUploadType {
     protected Boolean sat;
     @XmlAttribute(name = "Sun")
     protected Boolean sun;
-    @XmlAttribute(name = "AgeQualifyingCode")
-    protected String ageQualifyingCode;
-    @XmlAttribute(name = "MinAge")
-    protected Integer minAge;
-    @XmlAttribute(name = "MaxAge")
-    protected Integer maxAge;
-    @XmlAttribute(name = "AgeTimeUnit")
-    protected TimeUnitType ageTimeUnit;
-    @XmlAttribute(name = "AgeBucket")
-    protected String ageBucket;
 
     /**
      * Gets the value of the baseByGuestAmts property.
@@ -743,6 +743,126 @@ public class RateUploadType {
     }
 
     /**
+     * Gets the value of the ageQualifyingCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAgeQualifyingCode() {
+        return ageQualifyingCode;
+    }
+
+    /**
+     * Sets the value of the ageQualifyingCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAgeQualifyingCode(String value) {
+        this.ageQualifyingCode = value;
+    }
+
+    /**
+     * Gets the value of the minAge property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMinAge() {
+        return minAge;
+    }
+
+    /**
+     * Sets the value of the minAge property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMinAge(Integer value) {
+        this.minAge = value;
+    }
+
+    /**
+     * Gets the value of the maxAge property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Integer }
+     *     
+     */
+    public Integer getMaxAge() {
+        return maxAge;
+    }
+
+    /**
+     * Sets the value of the maxAge property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Integer }
+     *     
+     */
+    public void setMaxAge(Integer value) {
+        this.maxAge = value;
+    }
+
+    /**
+     * Gets the value of the ageTimeUnit property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link TimeUnitType }
+     *     
+     */
+    public TimeUnitType getAgeTimeUnit() {
+        return ageTimeUnit;
+    }
+
+    /**
+     * Sets the value of the ageTimeUnit property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link TimeUnitType }
+     *     
+     */
+    public void setAgeTimeUnit(TimeUnitType value) {
+        this.ageTimeUnit = value;
+    }
+
+    /**
+     * Gets the value of the ageBucket property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getAgeBucket() {
+        return ageBucket;
+    }
+
+    /**
+     * Sets the value of the ageBucket property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setAgeBucket(String value) {
+        this.ageBucket = value;
+    }
+
+    /**
      * Gets the value of the currencyCode property.
      * 
      * @return
@@ -958,126 +1078,6 @@ public class RateUploadType {
         this.sun = value;
     }
 
-    /**
-     * Gets the value of the ageQualifyingCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAgeQualifyingCode() {
-        return ageQualifyingCode;
-    }
-
-    /**
-     * Sets the value of the ageQualifyingCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAgeQualifyingCode(String value) {
-        this.ageQualifyingCode = value;
-    }
-
-    /**
-     * Gets the value of the minAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getMinAge() {
-        return minAge;
-    }
-
-    /**
-     * Sets the value of the minAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setMinAge(Integer value) {
-        this.minAge = value;
-    }
-
-    /**
-     * Gets the value of the maxAge property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Integer }
-     *     
-     */
-    public Integer getMaxAge() {
-        return maxAge;
-    }
-
-    /**
-     * Sets the value of the maxAge property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Integer }
-     *     
-     */
-    public void setMaxAge(Integer value) {
-        this.maxAge = value;
-    }
-
-    /**
-     * Gets the value of the ageTimeUnit property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link TimeUnitType }
-     *     
-     */
-    public TimeUnitType getAgeTimeUnit() {
-        return ageTimeUnit;
-    }
-
-    /**
-     * Sets the value of the ageTimeUnit property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link TimeUnitType }
-     *     
-     */
-    public void setAgeTimeUnit(TimeUnitType value) {
-        this.ageTimeUnit = value;
-    }
-
-    /**
-     * Gets the value of the ageBucket property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getAgeBucket() {
-        return ageBucket;
-    }
-
-    /**
-     * Sets the value of the ageBucket property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setAgeBucket(String value) {
-        this.ageBucket = value;
-    }
-
 
     /**
      * <p>Java class for anonymous complex type.
@@ -1085,30 +1085,30 @@ public class RateUploadType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="AdditionalGuestAmount" maxOccurs="unbounded"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/&gt;
-     *                   &lt;element name="AddlGuestAmtDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/&gt;
-     *                 &lt;/sequence&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/&gt;
-     *                 &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *                 &lt;attribute name="MaxAdditionalGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="AdditionalGuestAmount" maxOccurs="unbounded">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/>
+     *                   &lt;element name="AddlGuestAmtDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/>
+     *                 &lt;/sequence>
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
+     *                 &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *                 &lt;attribute name="MaxAdditionalGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1158,20 +1158,20 @@ public class RateUploadType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/&gt;
-         *         &lt;element name="AddlGuestAmtDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/&gt;
-         *       &lt;/sequence&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/&gt;
-         *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *       &lt;attribute name="MaxAdditionalGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/>
+         *         &lt;element name="AddlGuestAmtDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/>
+         *       &lt;/sequence>
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
+         *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *       &lt;attribute name="MaxAdditionalGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1591,28 +1591,28 @@ public class RateUploadType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="BaseByGuestAmt" maxOccurs="unbounded"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="NumberOfGuestsDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/&gt;
-     *                 &lt;/sequence&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
-     *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *                 &lt;attribute name="NumberOfGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
-     *               &lt;/extension&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="BaseByGuestAmt" maxOccurs="unbounded">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType">
+     *                 &lt;sequence>
+     *                   &lt;element name="NumberOfGuestsDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/>
+     *                 &lt;/sequence>
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+     *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *                 &lt;attribute name="NumberOfGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+     *               &lt;/extension>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1662,18 +1662,18 @@ public class RateUploadType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="NumberOfGuestsDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/&gt;
-         *       &lt;/sequence&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/&gt;
-         *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-         *       &lt;attribute name="NumberOfGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
-         *     &lt;/extension&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType">
+         *       &lt;sequence>
+         *         &lt;element name="NumberOfGuestsDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="9" minOccurs="0"/>
+         *       &lt;/sequence>
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AgeQualifyingGroup"/>
+         *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+         *       &lt;attribute name="NumberOfGuests" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+         *     &lt;/extension>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1911,15 +1911,15 @@ public class RateUploadType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="GuaranteePolicy" type="{http://www.opentravel.org/OTA/2003/05}GuaranteeType" maxOccurs="unbounded"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="GuaranteePolicy" type="{http://www.opentravel.org/OTA/2003/05}GuaranteeType" maxOccurs="unbounded"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1971,13 +1971,13 @@ public class RateUploadType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MealsIncludedGroup"/&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MealsIncludedGroup"/>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

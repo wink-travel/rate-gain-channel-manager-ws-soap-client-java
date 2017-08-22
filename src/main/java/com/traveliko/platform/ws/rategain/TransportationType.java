@@ -19,44 +19,44 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TransportationType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Transportation" maxOccurs="unbounded"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/&gt;
- *                   &lt;element name="OperationSchedules" type="{http://www.opentravel.org/OTA/2003/05}OperationSchedulesType" minOccurs="0"/&gt;
- *                   &lt;element name="DescriptiveText" minOccurs="0"&gt;
- *                     &lt;simpleType&gt;
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                         &lt;minLength value="1"/&gt;
- *                         &lt;maxLength value="500"/&gt;
- *                       &lt;/restriction&gt;
- *                     &lt;/simpleType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
- *                 &lt;attribute name="NotificationRequired" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                 &lt;attribute name="TransportationCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                 &lt;attribute name="ChargeUnit" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                 &lt;attribute name="Included" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
- *                 &lt;attribute name="TypicalTravelTime" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *                 &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="TransportationType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Transportation" maxOccurs="unbounded">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/>
+ *                   &lt;element name="OperationSchedules" type="{http://www.opentravel.org/OTA/2003/05}OperationSchedulesType" minOccurs="0"/>
+ *                   &lt;element name="DescriptiveText" minOccurs="0">
+ *                     &lt;simpleType>
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                         &lt;minLength value="1"/>
+ *                         &lt;maxLength value="500"/>
+ *                       &lt;/restriction>
+ *                     &lt;/simpleType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
+ *                 &lt;attribute name="NotificationRequired" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                 &lt;attribute name="TransportationCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                 &lt;attribute name="ChargeUnit" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                 &lt;attribute name="Included" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
+ *                 &lt;attribute name="TypicalTravelTime" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *                 &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -106,34 +106,34 @@ public class TransportationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/&gt;
-     *         &lt;element name="OperationSchedules" type="{http://www.opentravel.org/OTA/2003/05}OperationSchedulesType" minOccurs="0"/&gt;
-     *         &lt;element name="DescriptiveText" minOccurs="0"&gt;
-     *           &lt;simpleType&gt;
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *               &lt;minLength value="1"/&gt;
-     *               &lt;maxLength value="500"/&gt;
-     *             &lt;/restriction&gt;
-     *           &lt;/simpleType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
-     *       &lt;attribute name="NotificationRequired" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *       &lt;attribute name="TransportationCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *       &lt;attribute name="ChargeUnit" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *       &lt;attribute name="Included" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
-     *       &lt;attribute name="TypicalTravelTime" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
-     *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/>
+     *         &lt;element name="OperationSchedules" type="{http://www.opentravel.org/OTA/2003/05}OperationSchedulesType" minOccurs="0"/>
+     *         &lt;element name="DescriptiveText" minOccurs="0">
+     *           &lt;simpleType>
+     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *               &lt;minLength value="1"/>
+     *               &lt;maxLength value="500"/>
+     *             &lt;/restriction>
+     *           &lt;/simpleType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
+     *       &lt;attribute name="NotificationRequired" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *       &lt;attribute name="TransportationCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *       &lt;attribute name="ChargeUnit" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *       &lt;attribute name="Included" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
+     *       &lt;attribute name="TypicalTravelTime" type="{http://www.w3.org/2001/XMLSchema}string" />
+     *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -166,8 +166,10 @@ public class TransportationType {
         protected String typicalTravelTime;
         @XmlAttribute(name = "ExistsCode")
         protected String existsCode;
-        @XmlAttribute(name = "ID")
-        protected String id;
+        @XmlAttribute(name = "CodeDetail")
+        protected String codeDetail;
+        @XmlAttribute(name = "Removal")
+        protected Boolean removal;
         @XmlAttribute(name = "Amount")
         protected BigDecimal amount;
         @XmlAttribute(name = "CurrencyCode")
@@ -175,10 +177,8 @@ public class TransportationType {
         @XmlAttribute(name = "DecimalPlaces")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger decimalPlaces;
-        @XmlAttribute(name = "CodeDetail")
-        protected String codeDetail;
-        @XmlAttribute(name = "Removal")
-        protected Boolean removal;
+        @XmlAttribute(name = "ID")
+        protected String id;
 
         /**
          * Gets the value of the multimediaDescriptions property.
@@ -421,27 +421,51 @@ public class TransportationType {
         }
 
         /**
-         * Gets the value of the id property.
+         * Gets the value of the codeDetail property.
          * 
          * @return
          *     possible object is
          *     {@link String }
          *     
          */
-        public String getID() {
-            return id;
+        public String getCodeDetail() {
+            return codeDetail;
         }
 
         /**
-         * Sets the value of the id property.
+         * Sets the value of the codeDetail property.
          * 
          * @param value
          *     allowed object is
          *     {@link String }
          *     
          */
-        public void setID(String value) {
-            this.id = value;
+        public void setCodeDetail(String value) {
+            this.codeDetail = value;
+        }
+
+        /**
+         * Gets the value of the removal property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Boolean }
+         *     
+         */
+        public Boolean isRemoval() {
+            return removal;
+        }
+
+        /**
+         * Sets the value of the removal property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Boolean }
+         *     
+         */
+        public void setRemoval(Boolean value) {
+            this.removal = value;
         }
 
         /**
@@ -517,51 +541,27 @@ public class TransportationType {
         }
 
         /**
-         * Gets the value of the codeDetail property.
+         * Gets the value of the id property.
          * 
          * @return
          *     possible object is
          *     {@link String }
          *     
          */
-        public String getCodeDetail() {
-            return codeDetail;
+        public String getID() {
+            return id;
         }
 
         /**
-         * Sets the value of the codeDetail property.
+         * Sets the value of the id property.
          * 
          * @param value
          *     allowed object is
          *     {@link String }
          *     
          */
-        public void setCodeDetail(String value) {
-            this.codeDetail = value;
-        }
-
-        /**
-         * Gets the value of the removal property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Boolean }
-         *     
-         */
-        public Boolean isRemoval() {
-            return removal;
-        }
-
-        /**
-         * Sets the value of the removal property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Boolean }
-         *     
-         */
-        public void setRemoval(Boolean value) {
-            this.removal = value;
+        public void setID(String value) {
+            this.id = value;
         }
 
     }

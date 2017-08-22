@@ -15,26 +15,26 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RelativePositionType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TransportationsType"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RelativePositionGroup"/&gt;
- *       &lt;attribute name="Nearest" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="IndexPointCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
- *       &lt;attribute name="PrimaryIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="ToFrom"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="ToFacility"/&gt;
- *             &lt;enumeration value="FromFacility"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="ApproximateDistanceInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RelativePositionType">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TransportationsType">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RelativePositionGroup"/>
+ *       &lt;attribute name="Nearest" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="IndexPointCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
+ *       &lt;attribute name="PrimaryIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="ToFrom">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             &lt;enumeration value="ToFacility"/>
+ *             &lt;enumeration value="FromFacility"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="ApproximateDistanceInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

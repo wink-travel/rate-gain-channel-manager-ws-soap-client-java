@@ -16,22 +16,22 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="MultimediaDescriptionType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice minOccurs="0"&gt;
- *         &lt;element name="VideoItems" type="{http://www.opentravel.org/OTA/2003/05}VideoItemsType" minOccurs="0"/&gt;
- *         &lt;element name="ImageItems" type="{http://www.opentravel.org/OTA/2003/05}ImageItemsType" minOccurs="0"/&gt;
- *         &lt;element name="TextItems" type="{http://www.opentravel.org/OTA/2003/05}TextItemsType" minOccurs="0"/&gt;
- *       &lt;/choice&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/&gt;
- *       &lt;attribute name="InfoCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="AdditionalDetailCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="LastUpdated" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
- *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="MultimediaDescriptionType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;choice minOccurs="0">
+ *         &lt;element name="VideoItems" type="{http://www.opentravel.org/OTA/2003/05}VideoItemsType" minOccurs="0"/>
+ *         &lt;element name="ImageItems" type="{http://www.opentravel.org/OTA/2003/05}ImageItemsType" minOccurs="0"/>
+ *         &lt;element name="TextItems" type="{http://www.opentravel.org/OTA/2003/05}TextItemsType" minOccurs="0"/>
+ *       &lt;/choice>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
+ *       &lt;attribute name="InfoCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="AdditionalDetailCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="LastUpdated" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
+ *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

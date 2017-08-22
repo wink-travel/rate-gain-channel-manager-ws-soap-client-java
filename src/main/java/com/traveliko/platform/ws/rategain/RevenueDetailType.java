@@ -18,21 +18,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RevenueDetailType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="FolioIDs" type="{http://www.opentravel.org/OTA/2003/05}FolioIDsType"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
- *       &lt;attribute name="ReferenceID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
- *       &lt;attribute name="TransactionDate" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
- *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
- *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="PMSRevenueCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RevenueDetailType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="FolioIDs" type="{http://www.opentravel.org/OTA/2003/05}FolioIDsType"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+ *       &lt;attribute name="ReferenceID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
+ *       &lt;attribute name="TransactionDate" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
+ *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="PMSRevenueCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

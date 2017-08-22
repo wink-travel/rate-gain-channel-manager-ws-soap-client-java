@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="DistanceUnitNameType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Mile"/&gt;
- *     &lt;enumeration value="Km"/&gt;
- *     &lt;enumeration value="Block"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="DistanceUnitNameType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="Mile"/>
+ *     &lt;enumeration value="Km"/>
+ *     &lt;enumeration value="Block"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

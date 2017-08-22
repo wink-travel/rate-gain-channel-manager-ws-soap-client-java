@@ -20,21 +20,21 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RoomStayCandidateType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="GuestCounts" type="{http://www.opentravel.org/OTA/2003/05}GuestCountType" minOccurs="0"/&gt;
- *         &lt;element name="RoomAmenity" type="{http://www.opentravel.org/OTA/2003/05}RoomAmenityPrefType" maxOccurs="5" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RoomGroup"/&gt;
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
- *       &lt;attribute name="RatePlanCandidateRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
- *       &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RoomStayCandidateType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="GuestCounts" type="{http://www.opentravel.org/OTA/2003/05}GuestCountType" minOccurs="0"/>
+ *         &lt;element name="RoomAmenity" type="{http://www.opentravel.org/OTA/2003/05}RoomAmenityPrefType" maxOccurs="5" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RoomGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
+ *       &lt;attribute name="RatePlanCandidateRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
+ *       &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -56,14 +56,6 @@ public class RoomStayCandidateType {
     protected String ratePlanCandidateRPH;
     @XmlAttribute(name = "BookingCode")
     protected String bookingCode;
-    @XmlAttribute(name = "EffectiveDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
-    @XmlAttribute(name = "ExpireDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
-    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
-    protected Boolean expireDateExclusiveIndicator;
     @XmlAttribute(name = "RoomType")
     protected String roomType;
     @XmlAttribute(name = "RoomTypeCode")
@@ -105,6 +97,14 @@ public class RoomStayCandidateType {
     protected String roomGender;
     @XmlAttribute(name = "SharedRoomInd")
     protected Boolean sharedRoomInd;
+    @XmlAttribute(name = "EffectiveDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar effectiveDate;
+    @XmlAttribute(name = "ExpireDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar expireDate;
+    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
+    protected Boolean expireDateExclusiveIndicator;
 
     /**
      * Gets the value of the guestCounts property.
@@ -229,78 +229,6 @@ public class RoomStayCandidateType {
      */
     public void setBookingCode(String value) {
         this.bookingCode = value;
-    }
-
-    /**
-     * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getEffectiveDate() {
-        return effectiveDate;
-    }
-
-    /**
-     * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setEffectiveDate(XMLGregorianCalendar value) {
-        this.effectiveDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getExpireDate() {
-        return expireDate;
-    }
-
-    /**
-     * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setExpireDate(XMLGregorianCalendar value) {
-        this.expireDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isExpireDateExclusiveIndicator() {
-        return expireDateExclusiveIndicator;
-    }
-
-    /**
-     * Sets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setExpireDateExclusiveIndicator(Boolean value) {
-        this.expireDateExclusiveIndicator = value;
     }
 
     /**
@@ -791,6 +719,78 @@ public class RoomStayCandidateType {
      */
     public void setSharedRoomInd(Boolean value) {
         this.sharedRoomInd = value;
+    }
+
+    /**
+     * Gets the value of the effectiveDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    /**
+     * Sets the value of the effectiveDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEffectiveDate(XMLGregorianCalendar value) {
+        this.effectiveDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getExpireDate() {
+        return expireDate;
+    }
+
+    /**
+     * Sets the value of the expireDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setExpireDate(XMLGregorianCalendar value) {
+        this.expireDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isExpireDateExclusiveIndicator() {
+        return expireDateExclusiveIndicator;
+    }
+
+    /**
+     * Sets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setExpireDateExclusiveIndicator(Boolean value) {
+        this.expireDateExclusiveIndicator = value;
     }
 
 }

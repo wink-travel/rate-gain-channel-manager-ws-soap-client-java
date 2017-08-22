@@ -24,161 +24,161 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RoomStayType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="RoomTypes" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="RoomType" type="{http://www.opentravel.org/OTA/2003/05}RoomTypeType" maxOccurs="unbounded"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="RatePlans" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="RatePlan" type="{http://www.opentravel.org/OTA/2003/05}RatePlanType" maxOccurs="unbounded"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="RoomRates" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="RoomRate" maxOccurs="unbounded"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomRateType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="AdvanceBookingRestriction" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
- *                                     &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                                     &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="Restrictions" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;sequence&gt;
- *                                       &lt;element name="Restriction" maxOccurs="unbounded"&gt;
- *                                         &lt;complexType&gt;
- *                                           &lt;complexContent&gt;
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                               &lt;sequence&gt;
- *                                                 &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/&gt;
- *                                               &lt;/sequence&gt;
- *                                               &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
- *                                             &lt;/restriction&gt;
- *                                           &lt;/complexContent&gt;
- *                                         &lt;/complexType&gt;
- *                                       &lt;/element&gt;
- *                                     &lt;/sequence&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="ServiceRPHs" type="{http://www.opentravel.org/OTA/2003/05}ServiceRPHsType" minOccurs="0"/&gt;
- *                             &lt;element name="GuestCounts" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;sequence&gt;
- *                                       &lt;element name="GuestCount" maxOccurs="99"&gt;
- *                                         &lt;complexType&gt;
- *                                           &lt;complexContent&gt;
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                               &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/&gt;
- *                                             &lt;/restriction&gt;
- *                                           &lt;/complexContent&gt;
- *                                         &lt;/complexType&gt;
- *                                       &lt;/element&gt;
- *                                     &lt;/sequence&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/extension&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attribute name="MoreRatesExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="GuestCounts" type="{http://www.opentravel.org/OTA/2003/05}GuestCountType" minOccurs="0"/&gt;
- *         &lt;element name="TimeSpan" type="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanType" minOccurs="0"/&gt;
- *         &lt;element name="Guarantee" type="{http://www.opentravel.org/OTA/2003/05}GuaranteeType" maxOccurs="5" minOccurs="0"/&gt;
- *         &lt;element name="DepositPayments" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/&gt;
- *         &lt;element name="CancelPenalties" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/&gt;
- *         &lt;element name="Discount" type="{http://www.opentravel.org/OTA/2003/05}DiscountType" minOccurs="0"/&gt;
- *         &lt;element name="Total" type="{http://www.opentravel.org/OTA/2003/05}TotalType" minOccurs="0"/&gt;
- *         &lt;element name="BasicPropertyInfo" type="{http://www.opentravel.org/OTA/2003/05}BasicPropertyInfoType" minOccurs="0"/&gt;
- *         &lt;element name="MapURL" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;simpleContent&gt;
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;anyURI"&gt;
- *                 &lt;attribute name="BottomRightLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
- *                 &lt;attribute name="BottomRightLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
- *                 &lt;attribute name="TopLeftLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
- *                 &lt;attribute name="TopLeftLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
- *                 &lt;attribute name="Height"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999"&gt;
- *                       &lt;maxInclusive value="480"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="Width"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999"&gt;
- *                       &lt;maxInclusive value="640"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="ZoomFactor"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric0to99"&gt;
- *                       &lt;maxInclusive value="12"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/extension&gt;
- *             &lt;/simpleContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
- *       &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="SourceOfBusiness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="RoomStayStatus" type="{http://www.opentravel.org/OTA/2003/05}HotelResStatusType" /&gt;
- *       &lt;attribute name="WarningRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
- *       &lt;attribute name="RoomStayLanguage" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RoomStayType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="RoomTypes" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="RoomType" type="{http://www.opentravel.org/OTA/2003/05}RoomTypeType" maxOccurs="unbounded"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="RatePlans" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="RatePlan" type="{http://www.opentravel.org/OTA/2003/05}RatePlanType" maxOccurs="unbounded"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="RoomRates" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="RoomRate" maxOccurs="unbounded">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomRateType">
+ *                           &lt;sequence>
+ *                             &lt;element name="AdvanceBookingRestriction" minOccurs="0">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *                                     &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                                     &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                             &lt;element name="Restrictions" minOccurs="0">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;sequence>
+ *                                       &lt;element name="Restriction" maxOccurs="unbounded">
+ *                                         &lt;complexType>
+ *                                           &lt;complexContent>
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                               &lt;sequence>
+ *                                                 &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/>
+ *                                               &lt;/sequence>
+ *                                               &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *                                             &lt;/restriction>
+ *                                           &lt;/complexContent>
+ *                                         &lt;/complexType>
+ *                                       &lt;/element>
+ *                                     &lt;/sequence>
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                             &lt;element name="ServiceRPHs" type="{http://www.opentravel.org/OTA/2003/05}ServiceRPHsType" minOccurs="0"/>
+ *                             &lt;element name="GuestCounts" minOccurs="0">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;sequence>
+ *                                       &lt;element name="GuestCount" maxOccurs="99">
+ *                                         &lt;complexType>
+ *                                           &lt;complexContent>
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                               &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/>
+ *                                             &lt;/restriction>
+ *                                           &lt;/complexContent>
+ *                                         &lt;/complexType>
+ *                                       &lt;/element>
+ *                                     &lt;/sequence>
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                         &lt;/extension>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *                 &lt;attribute name="MoreRatesExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="GuestCounts" type="{http://www.opentravel.org/OTA/2003/05}GuestCountType" minOccurs="0"/>
+ *         &lt;element name="TimeSpan" type="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanType" minOccurs="0"/>
+ *         &lt;element name="Guarantee" type="{http://www.opentravel.org/OTA/2003/05}GuaranteeType" maxOccurs="5" minOccurs="0"/>
+ *         &lt;element name="DepositPayments" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/>
+ *         &lt;element name="CancelPenalties" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/>
+ *         &lt;element name="Discount" type="{http://www.opentravel.org/OTA/2003/05}DiscountType" minOccurs="0"/>
+ *         &lt;element name="Total" type="{http://www.opentravel.org/OTA/2003/05}TotalType" minOccurs="0"/>
+ *         &lt;element name="BasicPropertyInfo" type="{http://www.opentravel.org/OTA/2003/05}BasicPropertyInfoType" minOccurs="0"/>
+ *         &lt;element name="MapURL" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;simpleContent>
+ *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>anyURI">
+ *                 &lt;attribute name="BottomRightLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+ *                 &lt;attribute name="BottomRightLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+ *                 &lt;attribute name="TopLeftLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+ *                 &lt;attribute name="TopLeftLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+ *                 &lt;attribute name="Height">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999">
+ *                       &lt;maxInclusive value="480"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="Width">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999">
+ *                       &lt;maxInclusive value="640"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="ZoomFactor">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric0to99">
+ *                       &lt;maxInclusive value="12"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *               &lt;/extension>
+ *             &lt;/simpleContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
+ *       &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="SourceOfBusiness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="RoomStayStatus" type="{http://www.opentravel.org/OTA/2003/05}HotelResStatusType" />
+ *       &lt;attribute name="WarningRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+ *       &lt;attribute name="RoomStayLanguage" type="{http://www.w3.org/2001/XMLSchema}language" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -200,8 +200,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "tpaExtensions"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.HotelRoomListType.RoomStays.RoomStay.class,
-    com.traveliko.platform.ws.rategain.RoomStaysType.RoomStay.class
+    com.traveliko.platform.ws.rategain.RoomStaysType.RoomStay.class,
+    com.traveliko.platform.ws.rategain.HotelRoomListType.RoomStays.RoomStay.class
 })
 public class RoomStayType {
 
@@ -776,37 +776,37 @@ public class RoomStayType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;simpleContent&gt;
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;anyURI"&gt;
-     *       &lt;attribute name="BottomRightLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
-     *       &lt;attribute name="BottomRightLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
-     *       &lt;attribute name="TopLeftLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
-     *       &lt;attribute name="TopLeftLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" /&gt;
-     *       &lt;attribute name="Height"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999"&gt;
-     *             &lt;maxInclusive value="480"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="Width"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999"&gt;
-     *             &lt;maxInclusive value="640"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="ZoomFactor"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric0to99"&gt;
-     *             &lt;maxInclusive value="12"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/simpleContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;simpleContent>
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>anyURI">
+     *       &lt;attribute name="BottomRightLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+     *       &lt;attribute name="BottomRightLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+     *       &lt;attribute name="TopLeftLatitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+     *       &lt;attribute name="TopLeftLongitude" type="{http://www.w3.org/2001/XMLSchema}decimal" />
+     *       &lt;attribute name="Height">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999">
+     *             &lt;maxInclusive value="480"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="Width">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric1to999">
+     *             &lt;maxInclusive value="640"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="ZoomFactor">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}Numeric0to99">
+     *             &lt;maxInclusive value="12"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *     &lt;/extension>
+     *   &lt;/simpleContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1036,15 +1036,15 @@ public class RoomStayType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="RatePlan" type="{http://www.opentravel.org/OTA/2003/05}RatePlanType" maxOccurs="unbounded"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="RatePlan" type="{http://www.opentravel.org/OTA/2003/05}RatePlanType" maxOccurs="unbounded"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1096,80 +1096,80 @@ public class RoomStayType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="RoomRate" maxOccurs="unbounded"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomRateType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="AdvanceBookingRestriction" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
-     *                           &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *                           &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="Restrictions" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;element name="Restriction" maxOccurs="unbounded"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;sequence&gt;
-     *                                       &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/&gt;
-     *                                     &lt;/sequence&gt;
-     *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                           &lt;/sequence&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="ServiceRPHs" type="{http://www.opentravel.org/OTA/2003/05}ServiceRPHsType" minOccurs="0"/&gt;
-     *                   &lt;element name="GuestCounts" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;element name="GuestCount" maxOccurs="99"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                           &lt;/sequence&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/extension&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attribute name="MoreRatesExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="RoomRate" maxOccurs="unbounded">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomRateType">
+     *                 &lt;sequence>
+     *                   &lt;element name="AdvanceBookingRestriction" minOccurs="0">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+     *                           &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *                           &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                   &lt;element name="Restrictions" minOccurs="0">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;sequence>
+     *                             &lt;element name="Restriction" maxOccurs="unbounded">
+     *                               &lt;complexType>
+     *                                 &lt;complexContent>
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                                     &lt;sequence>
+     *                                       &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/>
+     *                                     &lt;/sequence>
+     *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+     *                                   &lt;/restriction>
+     *                                 &lt;/complexContent>
+     *                               &lt;/complexType>
+     *                             &lt;/element>
+     *                           &lt;/sequence>
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                   &lt;element name="ServiceRPHs" type="{http://www.opentravel.org/OTA/2003/05}ServiceRPHsType" minOccurs="0"/>
+     *                   &lt;element name="GuestCounts" minOccurs="0">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;sequence>
+     *                             &lt;element name="GuestCount" maxOccurs="99">
+     *                               &lt;complexType>
+     *                                 &lt;complexContent>
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/>
+     *                                   &lt;/restriction>
+     *                                 &lt;/complexContent>
+     *                               &lt;/complexType>
+     *                             &lt;/element>
+     *                           &lt;/sequence>
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *               &lt;/extension>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+     *       &lt;/sequence>
+     *       &lt;attribute name="MoreRatesExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1272,68 +1272,68 @@ public class RoomStayType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomRateType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="AdvanceBookingRestriction" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
-         *                 &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-         *                 &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="Restrictions" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;element name="Restriction" maxOccurs="unbounded"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;sequence&gt;
-         *                             &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/&gt;
-         *                           &lt;/sequence&gt;
-         *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                 &lt;/sequence&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="ServiceRPHs" type="{http://www.opentravel.org/OTA/2003/05}ServiceRPHsType" minOccurs="0"/&gt;
-         *         &lt;element name="GuestCounts" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;element name="GuestCount" maxOccurs="99"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                 &lt;/sequence&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/extension&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomRateType">
+         *       &lt;sequence>
+         *         &lt;element name="AdvanceBookingRestriction" minOccurs="0">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+         *                 &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+         *                 &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *         &lt;element name="Restrictions" minOccurs="0">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;sequence>
+         *                   &lt;element name="Restriction" maxOccurs="unbounded">
+         *                     &lt;complexType>
+         *                       &lt;complexContent>
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                           &lt;sequence>
+         *                             &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/>
+         *                           &lt;/sequence>
+         *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+         *                         &lt;/restriction>
+         *                       &lt;/complexContent>
+         *                     &lt;/complexType>
+         *                   &lt;/element>
+         *                 &lt;/sequence>
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *         &lt;element name="ServiceRPHs" type="{http://www.opentravel.org/OTA/2003/05}ServiceRPHsType" minOccurs="0"/>
+         *         &lt;element name="GuestCounts" minOccurs="0">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;sequence>
+         *                   &lt;element name="GuestCount" maxOccurs="99">
+         *                     &lt;complexType>
+         *                       &lt;complexContent>
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/>
+         *                         &lt;/restriction>
+         *                       &lt;/complexContent>
+         *                     &lt;/complexType>
+         *                   &lt;/element>
+         *                 &lt;/sequence>
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *     &lt;/extension>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1461,16 +1461,16 @@ public class RoomStayType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
-             *       &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-             *       &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+             *       &lt;attribute name="MinAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+             *       &lt;attribute name="MaxAdvanceBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -1483,12 +1483,6 @@ public class RoomStayType {
                 protected Duration minAdvanceBookingOffset;
                 @XmlAttribute(name = "MaxAdvanceBookingOffset")
                 protected Duration maxAdvanceBookingOffset;
-                @XmlAttribute(name = "Start")
-                protected String start;
-                @XmlAttribute(name = "Duration")
-                protected String duration;
-                @XmlAttribute(name = "End")
-                protected String end;
                 @XmlAttribute(name = "Mon")
                 protected Boolean mon;
                 @XmlAttribute(name = "Tue")
@@ -1503,6 +1497,12 @@ public class RoomStayType {
                 protected Boolean sat;
                 @XmlAttribute(name = "Sun")
                 protected Boolean sun;
+                @XmlAttribute(name = "Start")
+                protected String start;
+                @XmlAttribute(name = "Duration")
+                protected String duration;
+                @XmlAttribute(name = "End")
+                protected String end;
 
                 /**
                  * Gets the value of the minAdvanceBookingOffset property.
@@ -1550,78 +1550,6 @@ public class RoomStayType {
                  */
                 public void setMaxAdvanceBookingOffset(Duration value) {
                     this.maxAdvanceBookingOffset = value;
-                }
-
-                /**
-                 * Gets the value of the start property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getStart() {
-                    return start;
-                }
-
-                /**
-                 * Sets the value of the start property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setStart(String value) {
-                    this.start = value;
-                }
-
-                /**
-                 * Gets the value of the duration property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getDuration() {
-                    return duration;
-                }
-
-                /**
-                 * Sets the value of the duration property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setDuration(String value) {
-                    this.duration = value;
-                }
-
-                /**
-                 * Gets the value of the end property.
-                 * 
-                 * @return
-                 *     possible object is
-                 *     {@link String }
-                 *     
-                 */
-                public String getEnd() {
-                    return end;
-                }
-
-                /**
-                 * Sets the value of the end property.
-                 * 
-                 * @param value
-                 *     allowed object is
-                 *     {@link String }
-                 *     
-                 */
-                public void setEnd(String value) {
-                    this.end = value;
                 }
 
                 /**
@@ -1792,6 +1720,78 @@ public class RoomStayType {
                     this.sun = value;
                 }
 
+                /**
+                 * Gets the value of the start property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getStart() {
+                    return start;
+                }
+
+                /**
+                 * Sets the value of the start property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setStart(String value) {
+                    this.start = value;
+                }
+
+                /**
+                 * Gets the value of the duration property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getDuration() {
+                    return duration;
+                }
+
+                /**
+                 * Sets the value of the duration property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setDuration(String value) {
+                    this.duration = value;
+                }
+
+                /**
+                 * Gets the value of the end property.
+                 * 
+                 * @return
+                 *     possible object is
+                 *     {@link String }
+                 *     
+                 */
+                public String getEnd() {
+                    return end;
+                }
+
+                /**
+                 * Sets the value of the end property.
+                 * 
+                 * @param value
+                 *     allowed object is
+                 *     {@link String }
+                 *     
+                 */
+                public void setEnd(String value) {
+                    this.end = value;
+                }
+
             }
 
 
@@ -1801,23 +1801,23 @@ public class RoomStayType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;element name="GuestCount" maxOccurs="99"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *       &lt;/sequence&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;sequence>
+             *         &lt;element name="GuestCount" maxOccurs="99">
+             *           &lt;complexType>
+             *             &lt;complexContent>
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/>
+             *               &lt;/restriction>
+             *             &lt;/complexContent>
+             *           &lt;/complexType>
+             *         &lt;/element>
+             *       &lt;/sequence>
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -1867,13 +1867,13 @@ public class RoomStayType {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
+                 * &lt;complexType>
+                 *   &lt;complexContent>
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+                 *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GuestCountGroup"/>
+                 *     &lt;/restriction>
+                 *   &lt;/complexContent>
+                 * &lt;/complexType>
                  * </pre>
                  * 
                  * 
@@ -1998,26 +1998,26 @@ public class RoomStayType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;element name="Restriction" maxOccurs="unbounded"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;sequence&gt;
-             *                   &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/&gt;
-             *                 &lt;/sequence&gt;
-             *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *       &lt;/sequence&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;sequence>
+             *         &lt;element name="Restriction" maxOccurs="unbounded">
+             *           &lt;complexType>
+             *             &lt;complexContent>
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *                 &lt;sequence>
+             *                   &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/>
+             *                 &lt;/sequence>
+             *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+             *               &lt;/restriction>
+             *             &lt;/complexContent>
+             *           &lt;/complexType>
+             *         &lt;/element>
+             *       &lt;/sequence>
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -2067,16 +2067,16 @@ public class RoomStayType {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;sequence&gt;
-                 *         &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/&gt;
-                 *       &lt;/sequence&gt;
-                 *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
+                 * &lt;complexType>
+                 *   &lt;complexContent>
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+                 *       &lt;sequence>
+                 *         &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType"/>
+                 *       &lt;/sequence>
+                 *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+                 *     &lt;/restriction>
+                 *   &lt;/complexContent>
+                 * &lt;/complexType>
                  * </pre>
                  * 
                  * 
@@ -2209,15 +2209,15 @@ public class RoomStayType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="RoomType" type="{http://www.opentravel.org/OTA/2003/05}RoomTypeType" maxOccurs="unbounded"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="RoomType" type="{http://www.opentravel.org/OTA/2003/05}RoomTypeType" maxOccurs="unbounded"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

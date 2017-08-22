@@ -17,58 +17,58 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleCoreType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="VehType" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTypeGroup"/&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="VehClass" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleClassGroup"/&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="AirConditionInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="TransmissionType" type="{http://www.opentravel.org/OTA/2003/05}VehicleTransmissionType" /&gt;
- *       &lt;attribute name="FuelType"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="Unspecified"/&gt;
- *             &lt;enumeration value="Diesel"/&gt;
- *             &lt;enumeration value="Hybrid"/&gt;
- *             &lt;enumeration value="Electric"/&gt;
- *             &lt;enumeration value="LPG_CompressedGas"/&gt;
- *             &lt;enumeration value="Hydrogen"/&gt;
- *             &lt;enumeration value="MultiFuel"/&gt;
- *             &lt;enumeration value="Petrol"/&gt;
- *             &lt;enumeration value="Ethanol"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="DriveType"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="AWD"/&gt;
- *             &lt;enumeration value="4WD"/&gt;
- *             &lt;enumeration value="Unspecified"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="VehicleCoreType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="VehType" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTypeGroup"/>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="VehClass" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleClassGroup"/>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attribute name="AirConditionInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="TransmissionType" type="{http://www.opentravel.org/OTA/2003/05}VehicleTransmissionType" />
+ *       &lt;attribute name="FuelType">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             &lt;enumeration value="Unspecified"/>
+ *             &lt;enumeration value="Diesel"/>
+ *             &lt;enumeration value="Hybrid"/>
+ *             &lt;enumeration value="Electric"/>
+ *             &lt;enumeration value="LPG_CompressedGas"/>
+ *             &lt;enumeration value="Hydrogen"/>
+ *             &lt;enumeration value="MultiFuel"/>
+ *             &lt;enumeration value="Petrol"/>
+ *             &lt;enumeration value="Ethanol"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="DriveType">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             &lt;enumeration value="AWD"/>
+ *             &lt;enumeration value="4WD"/>
+ *             &lt;enumeration value="Unspecified"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -79,10 +79,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "vehClass"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles.Vehicle.class,
     com.traveliko.platform.ws.rategain.VehicleAgeRequirementsType.Age.Vehicles.Vehicle.class,
     VehiclePrefType.class,
-    VehicleType.class
+    VehicleType.class,
+    com.traveliko.platform.ws.rategain.VehicleAdditionalDriverRequirementsType.AddlDriverInfos.Vehicles.Vehicle.class
 })
 public class VehicleCoreType {
 
@@ -252,13 +252,13 @@ public class VehicleCoreType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleClassGroup"/&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleClassGroup"/>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -303,13 +303,13 @@ public class VehicleCoreType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTypeGroup"/&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTypeGroup"/>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

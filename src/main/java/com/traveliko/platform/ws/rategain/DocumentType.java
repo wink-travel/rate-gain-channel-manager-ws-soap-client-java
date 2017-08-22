@@ -21,54 +21,54 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DocumentType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;choice minOccurs="0"&gt;
- *           &lt;element name="DocHolderName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" minOccurs="0"/&gt;
- *           &lt;element name="DocHolderFormattedName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
- *         &lt;/choice&gt;
- *         &lt;element name="DocLimitations" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="9" minOccurs="0"/&gt;
- *         &lt;element name="AdditionalPersonNames" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="AdditionalPersonName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="99"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GenderGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
- *       &lt;attribute name="DocIssueAuthority" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="DocIssueLocation" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="DocID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *       &lt;attribute name="DocType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="DocIssueStateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" /&gt;
- *       &lt;attribute name="DocIssueCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
- *       &lt;attribute name="BirthCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
- *       &lt;attribute name="BirthPlace" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="DocHolderNationality" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
- *       &lt;attribute name="ContactName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="HolderType"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="Infant"/&gt;
- *             &lt;enumeration value="HeadOfHousehold"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
- *       &lt;attribute name="PostalCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="DocumentType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;choice minOccurs="0">
+ *           &lt;element name="DocHolderName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" minOccurs="0"/>
+ *           &lt;element name="DocHolderFormattedName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
+ *         &lt;/choice>
+ *         &lt;element name="DocLimitations" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="9" minOccurs="0"/>
+ *         &lt;element name="AdditionalPersonNames" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="AdditionalPersonName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="99"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GenderGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
+ *       &lt;attribute name="DocIssueAuthority" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="DocIssueLocation" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="DocID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *       &lt;attribute name="DocType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="DocIssueStateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" />
+ *       &lt;attribute name="DocIssueCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
+ *       &lt;attribute name="BirthCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
+ *       &lt;attribute name="BirthPlace" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="DocHolderNationality" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
+ *       &lt;attribute name="ContactName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="HolderType">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             &lt;enumeration value="Infant"/>
+ *             &lt;enumeration value="HeadOfHousehold"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+ *       &lt;attribute name="PostalCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -129,9 +129,6 @@ public class DocumentType {
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
-    @XmlAttribute(name = "BirthDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar birthDate;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar effectiveDate;
@@ -140,6 +137,9 @@ public class DocumentType {
     protected XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
+    @XmlAttribute(name = "BirthDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar birthDate;
 
     /**
      * Gets the value of the docHolderName property.
@@ -627,30 +627,6 @@ public class DocumentType {
     }
 
     /**
-     * Gets the value of the birthDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getBirthDate() {
-        return birthDate;
-    }
-
-    /**
-     * Sets the value of the birthDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setBirthDate(XMLGregorianCalendar value) {
-        this.birthDate = value;
-    }
-
-    /**
      * Gets the value of the effectiveDate property.
      * 
      * @return
@@ -722,6 +698,30 @@ public class DocumentType {
         this.expireDateExclusiveIndicator = value;
     }
 
+    /**
+     * Gets the value of the birthDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getBirthDate() {
+        return birthDate;
+    }
+
+    /**
+     * Sets the value of the birthDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setBirthDate(XMLGregorianCalendar value) {
+        this.birthDate = value;
+    }
+
 
     /**
      * <p>Java class for anonymous complex type.
@@ -729,15 +729,15 @@ public class DocumentType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="AdditionalPersonName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="99"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="AdditionalPersonName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="99"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

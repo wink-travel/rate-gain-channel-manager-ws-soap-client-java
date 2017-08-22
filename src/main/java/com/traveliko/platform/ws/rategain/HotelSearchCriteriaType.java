@@ -18,44 +18,44 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="HotelSearchCriteriaType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Criterion" maxOccurs="unbounded"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelSearchCriterionType"&gt;
- *                 &lt;attribute name="MoreDataEchoToken" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
- *                 &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" /&gt;
- *                 &lt;attribute name="AlternateAvailability"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                       &lt;enumeration value="Never"/&gt;
- *                       &lt;enumeration value="WhenUnavailable"/&gt;
- *                       &lt;enumeration value="Always"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="AddressSearchScope"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                       &lt;enumeration value="Primary"/&gt;
- *                       &lt;enumeration value="Alternate"/&gt;
- *                       &lt;enumeration value="PrimaryAndAlternate"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="AvailableOnlyIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="BestOnlyIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="HotelSearchCriteriaType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Criterion" maxOccurs="unbounded">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelSearchCriterionType">
+ *                 &lt;attribute name="MoreDataEchoToken" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+ *                 &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" />
+ *                 &lt;attribute name="AlternateAvailability">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                       &lt;enumeration value="Never"/>
+ *                       &lt;enumeration value="WhenUnavailable"/>
+ *                       &lt;enumeration value="Always"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="AddressSearchScope">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                       &lt;enumeration value="Primary"/>
+ *                       &lt;enumeration value="Alternate"/>
+ *                       &lt;enumeration value="PrimaryAndAlternate"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attribute name="AvailableOnlyIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="BestOnlyIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -157,32 +157,32 @@ public class HotelSearchCriteriaType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelSearchCriterionType"&gt;
-     *       &lt;attribute name="MoreDataEchoToken" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
-     *       &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" /&gt;
-     *       &lt;attribute name="AlternateAvailability"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *             &lt;enumeration value="Never"/&gt;
-     *             &lt;enumeration value="WhenUnavailable"/&gt;
-     *             &lt;enumeration value="Always"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="AddressSearchScope"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *             &lt;enumeration value="Primary"/&gt;
-     *             &lt;enumeration value="Alternate"/&gt;
-     *             &lt;enumeration value="PrimaryAndAlternate"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelSearchCriterionType">
+     *       &lt;attribute name="MoreDataEchoToken" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+     *       &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" />
+     *       &lt;attribute name="AlternateAvailability">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *             &lt;enumeration value="Never"/>
+     *             &lt;enumeration value="WhenUnavailable"/>
+     *             &lt;enumeration value="Always"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="AddressSearchScope">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *             &lt;enumeration value="Primary"/>
+     *             &lt;enumeration value="Alternate"/>
+     *             &lt;enumeration value="PrimaryAndAlternate"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

@@ -13,14 +13,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="EquipmentTypePref"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;EquipmentType"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
- *       &lt;attribute name="WideBody" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="EquipmentTypePref">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>EquipmentType">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *       &lt;attribute name="WideBody" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

@@ -12,23 +12,23 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="VehiclePeriodUnitNameType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="RentalPeriod"/&gt;
- *     &lt;enumeration value="Year"/&gt;
- *     &lt;enumeration value="Month"/&gt;
- *     &lt;enumeration value="Week"/&gt;
- *     &lt;enumeration value="Day"/&gt;
- *     &lt;enumeration value="Hour"/&gt;
- *     &lt;enumeration value="Weekend"/&gt;
- *     &lt;enumeration value="ExtraMonth"/&gt;
- *     &lt;enumeration value="Bundle"/&gt;
- *     &lt;enumeration value="Package"/&gt;
- *     &lt;enumeration value="ExtraDay"/&gt;
- *     &lt;enumeration value="ExtraHour"/&gt;
- *     &lt;enumeration value="ExtraWeek"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="VehiclePeriodUnitNameType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="RentalPeriod"/>
+ *     &lt;enumeration value="Year"/>
+ *     &lt;enumeration value="Month"/>
+ *     &lt;enumeration value="Week"/>
+ *     &lt;enumeration value="Day"/>
+ *     &lt;enumeration value="Hour"/>
+ *     &lt;enumeration value="Weekend"/>
+ *     &lt;enumeration value="ExtraMonth"/>
+ *     &lt;enumeration value="Bundle"/>
+ *     &lt;enumeration value="Package"/>
+ *     &lt;enumeration value="ExtraDay"/>
+ *     &lt;enumeration value="ExtraHour"/>
+ *     &lt;enumeration value="ExtraWeek"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

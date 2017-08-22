@@ -21,101 +21,101 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleRentalTransactionType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="PickUpReturnDetails" maxOccurs="2" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleRentalCoreType"&gt;
- *                 &lt;attribute name="ExpectedActualCode"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                       &lt;enumeration value="Expected"/&gt;
- *                       &lt;enumeration value="Actual"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Vehicle"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="VehRentalDetails" type="{http://www.opentravel.org/OTA/2003/05}VehicleRentalDetailsType" maxOccurs="2" minOccurs="0"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="RentalRate" type="{http://www.opentravel.org/OTA/2003/05}VehicleRentalRateType" minOccurs="0"/&gt;
- *         &lt;element name="PricedEquips" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="PricedEquip" maxOccurs="25"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="Equipment" maxOccurs="2"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType"&gt;
- *                                     &lt;attribute name="CheckOutCheckInCode"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                                           &lt;enumeration value="CheckOut"/&gt;
- *                                           &lt;enumeration value="CheckIn"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/extension&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                             &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType" minOccurs="0"/&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Fees" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="Fee" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargePurposeType" maxOccurs="99"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="TotalCharge" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTotalChargeGroup"/&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="ConfID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
- *         &lt;element name="ContractID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="VehicleRentalTransactionType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="PickUpReturnDetails" maxOccurs="2" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleRentalCoreType">
+ *                 &lt;attribute name="ExpectedActualCode">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                       &lt;enumeration value="Expected"/>
+ *                       &lt;enumeration value="Actual"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="Vehicle">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
+ *                 &lt;sequence>
+ *                   &lt;element name="VehRentalDetails" type="{http://www.opentravel.org/OTA/2003/05}VehicleRentalDetailsType" maxOccurs="2" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="RentalRate" type="{http://www.opentravel.org/OTA/2003/05}VehicleRentalRateType" minOccurs="0"/>
+ *         &lt;element name="PricedEquips" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="PricedEquip" maxOccurs="25">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="Equipment" maxOccurs="2">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType">
+ *                                     &lt;attribute name="CheckOutCheckInCode">
+ *                                       &lt;simpleType>
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                                           &lt;enumeration value="CheckOut"/>
+ *                                           &lt;enumeration value="CheckIn"/>
+ *                                         &lt;/restriction>
+ *                                       &lt;/simpleType>
+ *                                     &lt;/attribute>
+ *                                   &lt;/extension>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                             &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType" minOccurs="0"/>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="Fees" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="Fee" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargePurposeType" maxOccurs="99"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="TotalCharge" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTotalChargeGroup"/>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="ConfID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+ *         &lt;element name="ContractID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -354,15 +354,15 @@ public class VehicleRentalTransactionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="Fee" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargePurposeType" maxOccurs="99"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="Fee" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargePurposeType" maxOccurs="99"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -414,20 +414,20 @@ public class VehicleRentalTransactionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleRentalCoreType"&gt;
-     *       &lt;attribute name="ExpectedActualCode"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *             &lt;enumeration value="Expected"/&gt;
-     *             &lt;enumeration value="Actual"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleRentalCoreType">
+     *       &lt;attribute name="ExpectedActualCode">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *             &lt;enumeration value="Expected"/>
+     *             &lt;enumeration value="Actual"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -475,41 +475,41 @@ public class VehicleRentalTransactionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="PricedEquip" maxOccurs="25"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="Equipment" maxOccurs="2"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType"&gt;
-     *                           &lt;attribute name="CheckOutCheckInCode"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *                                 &lt;enumeration value="CheckOut"/&gt;
-     *                                 &lt;enumeration value="CheckIn"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/extension&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                   &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType" minOccurs="0"/&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="PricedEquip" maxOccurs="25">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="Equipment" maxOccurs="2">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType">
+     *                           &lt;attribute name="CheckOutCheckInCode">
+     *                             &lt;simpleType>
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *                                 &lt;enumeration value="CheckOut"/>
+     *                                 &lt;enumeration value="CheckIn"/>
+     *                               &lt;/restriction>
+     *                             &lt;/simpleType>
+     *                           &lt;/attribute>
+     *                         &lt;/extension>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                   &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType" minOccurs="0"/>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -559,31 +559,31 @@ public class VehicleRentalTransactionType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="Equipment" maxOccurs="2"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType"&gt;
-         *                 &lt;attribute name="CheckOutCheckInCode"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-         *                       &lt;enumeration value="CheckOut"/&gt;
-         *                       &lt;enumeration value="CheckIn"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/extension&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType" minOccurs="0"/&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="Equipment" maxOccurs="2">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType">
+         *                 &lt;attribute name="CheckOutCheckInCode">
+         *                   &lt;simpleType>
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+         *                       &lt;enumeration value="CheckOut"/>
+         *                       &lt;enumeration value="CheckIn"/>
+         *                     &lt;/restriction>
+         *                   &lt;/simpleType>
+         *                 &lt;/attribute>
+         *               &lt;/extension>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType" minOccurs="0"/>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -660,20 +660,20 @@ public class VehicleRentalTransactionType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType"&gt;
-             *       &lt;attribute name="CheckOutCheckInCode"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-             *             &lt;enumeration value="CheckOut"/&gt;
-             *             &lt;enumeration value="CheckIn"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/extension&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleEquipmentType">
+             *       &lt;attribute name="CheckOutCheckInCode">
+             *         &lt;simpleType>
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+             *             &lt;enumeration value="CheckOut"/>
+             *             &lt;enumeration value="CheckIn"/>
+             *           &lt;/restriction>
+             *         &lt;/simpleType>
+             *       &lt;/attribute>
+             *     &lt;/extension>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -725,13 +725,13 @@ public class VehicleRentalTransactionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTotalChargeGroup"/&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTotalChargeGroup"/>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -855,15 +855,15 @@ public class VehicleRentalTransactionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="VehRentalDetails" type="{http://www.opentravel.org/OTA/2003/05}VehicleRentalDetailsType" maxOccurs="2" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
+     *       &lt;sequence>
+     *         &lt;element name="VehRentalDetails" type="{http://www.opentravel.org/OTA/2003/05}VehicleRentalDetailsType" maxOccurs="2" minOccurs="0"/>
+     *       &lt;/sequence>
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

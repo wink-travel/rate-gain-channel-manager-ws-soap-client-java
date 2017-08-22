@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="EquipmentRestrictionType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="OneWayOnly"/&gt;
- *     &lt;enumeration value="RoundTripOnly"/&gt;
- *     &lt;enumeration value="AnyReservation"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="EquipmentRestrictionType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="OneWayOnly"/>
+ *     &lt;enumeration value="RoundTripOnly"/>
+ *     &lt;enumeration value="AnyReservation"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

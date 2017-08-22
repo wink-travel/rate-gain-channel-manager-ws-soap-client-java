@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TicketType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="eTicket"/&gt;
- *     &lt;enumeration value="Paper"/&gt;
- *     &lt;enumeration value="MCO"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="TicketType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="eTicket"/>
+ *     &lt;enumeration value="Paper"/>
+ *     &lt;enumeration value="MCO"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

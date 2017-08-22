@@ -16,27 +16,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="StatisticType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="StatisticApplicationSets"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="StatisticApplicationSet" type="{http://www.opentravel.org/OTA/2003/05}StatisticApplicationSetType" maxOccurs="unbounded"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}StatisticReportGroup"/&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="StatisticType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="StatisticApplicationSets">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="StatisticApplicationSet" type="{http://www.opentravel.org/OTA/2003/05}StatisticApplicationSetType" maxOccurs="unbounded"/>
+ *                 &lt;/sequence>
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}StatisticReportGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -49,6 +49,10 @@ public class StatisticType {
 
     @XmlElement(name = "StatisticApplicationSets", required = true)
     protected StatisticType.StatisticApplicationSets statisticApplicationSets;
+    @XmlAttribute(name = "FiscalDate")
+    protected String fiscalDate;
+    @XmlAttribute(name = "ReportCode")
+    protected String reportCode;
     @XmlAttribute(name = "ChainCode")
     protected String chainCode;
     @XmlAttribute(name = "BrandCode")
@@ -67,10 +71,6 @@ public class StatisticType {
     protected String brandName;
     @XmlAttribute(name = "AreaID")
     protected String areaID;
-    @XmlAttribute(name = "FiscalDate")
-    protected String fiscalDate;
-    @XmlAttribute(name = "ReportCode")
-    protected String reportCode;
 
     /**
      * Gets the value of the statisticApplicationSets property.
@@ -94,6 +94,54 @@ public class StatisticType {
      */
     public void setStatisticApplicationSets(StatisticType.StatisticApplicationSets value) {
         this.statisticApplicationSets = value;
+    }
+
+    /**
+     * Gets the value of the fiscalDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getFiscalDate() {
+        return fiscalDate;
+    }
+
+    /**
+     * Sets the value of the fiscalDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setFiscalDate(String value) {
+        this.fiscalDate = value;
+    }
+
+    /**
+     * Gets the value of the reportCode property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getReportCode() {
+        return reportCode;
+    }
+
+    /**
+     * Sets the value of the reportCode property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setReportCode(String value) {
+        this.reportCode = value;
     }
 
     /**
@@ -312,54 +360,6 @@ public class StatisticType {
         this.areaID = value;
     }
 
-    /**
-     * Gets the value of the fiscalDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getFiscalDate() {
-        return fiscalDate;
-    }
-
-    /**
-     * Sets the value of the fiscalDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setFiscalDate(String value) {
-        this.fiscalDate = value;
-    }
-
-    /**
-     * Gets the value of the reportCode property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getReportCode() {
-        return reportCode;
-    }
-
-    /**
-     * Sets the value of the reportCode property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setReportCode(String value) {
-        this.reportCode = value;
-    }
-
 
     /**
      * <p>Java class for anonymous complex type.
@@ -367,15 +367,15 @@ public class StatisticType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="StatisticApplicationSet" type="{http://www.opentravel.org/OTA/2003/05}StatisticApplicationSetType" maxOccurs="unbounded"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="StatisticApplicationSet" type="{http://www.opentravel.org/OTA/2003/05}StatisticApplicationSetType" maxOccurs="unbounded"/>
+     *       &lt;/sequence>
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

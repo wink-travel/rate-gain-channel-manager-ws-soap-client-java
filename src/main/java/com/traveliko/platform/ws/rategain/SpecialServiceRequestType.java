@@ -15,20 +15,20 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SpecialServiceRequestType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Airline" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
- *         &lt;element name="Text" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="SSRCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength4" /&gt;
- *       &lt;attribute name="ServiceQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" /&gt;
- *       &lt;attribute name="Status" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="Number" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="SpecialServiceRequestType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Airline" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
+ *         &lt;element name="Text" type="{http://www.w3.org/2001/XMLSchema}string" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attribute name="SSRCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength4" />
+ *       &lt;attribute name="ServiceQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" />
+ *       &lt;attribute name="Status" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="Number" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

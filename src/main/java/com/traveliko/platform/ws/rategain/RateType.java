@@ -17,31 +17,31 @@ import javax.xml.datatype.Duration;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RateType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Rate" maxOccurs="unbounded"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attribute name="Duration" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                 &lt;attribute name="RateMode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                 &lt;attribute name="CachedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="RateSource" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="RateTypeCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                 &lt;attribute name="RoomPricingType" type="{http://www.opentravel.org/OTA/2003/05}PricingType" /&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RateType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Rate" maxOccurs="unbounded">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountType">
+ *                 &lt;sequence>
+ *                   &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *                 &lt;attribute name="Duration" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                 &lt;attribute name="RateMode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                 &lt;attribute name="CachedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="RateSource" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="RateTypeCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                 &lt;attribute name="RoomPricingType" type="{http://www.opentravel.org/OTA/2003/05}PricingType" />
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -91,21 +91,21 @@ public class RateType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attribute name="Duration" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *       &lt;attribute name="RateMode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *       &lt;attribute name="CachedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="RateSource" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="RateTypeCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *       &lt;attribute name="RoomPricingType" type="{http://www.opentravel.org/OTA/2003/05}PricingType" /&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountType">
+     *       &lt;sequence>
+     *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+     *       &lt;/sequence>
+     *       &lt;attribute name="Duration" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *       &lt;attribute name="RateMode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *       &lt;attribute name="CachedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="RateSource" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="RateTypeCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *       &lt;attribute name="RoomPricingType" type="{http://www.opentravel.org/OTA/2003/05}PricingType" />
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

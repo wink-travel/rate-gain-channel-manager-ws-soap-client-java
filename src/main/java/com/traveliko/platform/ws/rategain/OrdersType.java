@@ -21,67 +21,67 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="OrdersType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Order" maxOccurs="99" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="Products" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="Product" maxOccurs="99" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
- *                                     &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
- *                                     &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                                     &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                                     &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *                                     &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                                     &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                                     &lt;attribute name="Status"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                                           &lt;enumeration value="OrderPending"/&gt;
- *                                           &lt;enumeration value="BackOrder"/&gt;
- *                                           &lt;enumeration value="Unavailable"/&gt;
- *                                           &lt;enumeration value="Confirmed"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attribute name="OrderType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                 &lt;attribute name="OrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="OrderType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *       &lt;attribute name="VendorPurchaseOrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *       &lt;attribute name="OrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="OrdersType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Order" maxOccurs="99" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="Products" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="Product" maxOccurs="99" minOccurs="0">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+ *                                     &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
+ *                                     &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                                     &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                                     &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *                                     &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                                     &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                                     &lt;attribute name="Status">
+ *                                       &lt;simpleType>
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                                           &lt;enumeration value="OrderPending"/>
+ *                                           &lt;enumeration value="BackOrder"/>
+ *                                           &lt;enumeration value="Unavailable"/>
+ *                                           &lt;enumeration value="Confirmed"/>
+ *                                         &lt;/restriction>
+ *                                       &lt;/simpleType>
+ *                                     &lt;/attribute>
+ *                                     &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attribute name="OrderType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                 &lt;attribute name="OrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attribute name="OrderType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *       &lt;attribute name="VendorPurchaseOrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *       &lt;attribute name="OrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -235,53 +235,53 @@ public class OrdersType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="Products" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="Product" maxOccurs="99" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
-     *                           &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
-     *                           &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *                           &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *                           &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-     *                           &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *                           &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *                           &lt;attribute name="Status"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *                                 &lt;enumeration value="OrderPending"/&gt;
-     *                                 &lt;enumeration value="BackOrder"/&gt;
-     *                                 &lt;enumeration value="Unavailable"/&gt;
-     *                                 &lt;enumeration value="Confirmed"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attribute name="OrderType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *       &lt;attribute name="OrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="Products" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="Product" maxOccurs="99" minOccurs="0">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+     *                           &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
+     *                           &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *                           &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *                           &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+     *                           &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *                           &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *                           &lt;attribute name="Status">
+     *                             &lt;simpleType>
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *                                 &lt;enumeration value="OrderPending"/>
+     *                                 &lt;enumeration value="BackOrder"/>
+     *                                 &lt;enumeration value="Unavailable"/>
+     *                                 &lt;enumeration value="Confirmed"/>
+     *                               &lt;/restriction>
+     *                             &lt;/simpleType>
+     *                           &lt;/attribute>
+     *                           &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attribute name="OrderType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *       &lt;attribute name="OrderID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -409,40 +409,40 @@ public class OrdersType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="Product" maxOccurs="99" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
-         *                 &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
-         *                 &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-         *                 &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-         *                 &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-         *                 &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-         *                 &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-         *                 &lt;attribute name="Status"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-         *                       &lt;enumeration value="OrderPending"/&gt;
-         *                       &lt;enumeration value="BackOrder"/&gt;
-         *                       &lt;enumeration value="Unavailable"/&gt;
-         *                       &lt;enumeration value="Confirmed"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="Product" maxOccurs="99" minOccurs="0">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+         *                 &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
+         *                 &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+         *                 &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+         *                 &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+         *                 &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+         *                 &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+         *                 &lt;attribute name="Status">
+         *                   &lt;simpleType>
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+         *                       &lt;enumeration value="OrderPending"/>
+         *                       &lt;enumeration value="BackOrder"/>
+         *                       &lt;enumeration value="Unavailable"/>
+         *                       &lt;enumeration value="Confirmed"/>
+         *                     &lt;/restriction>
+         *                   &lt;/simpleType>
+         *                 &lt;/attribute>
+         *                 &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -492,30 +492,30 @@ public class OrdersType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
-             *       &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
-             *       &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-             *       &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-             *       &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-             *       &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-             *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-             *       &lt;attribute name="Status"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-             *             &lt;enumeration value="OrderPending"/&gt;
-             *             &lt;enumeration value="BackOrder"/&gt;
-             *             &lt;enumeration value="Unavailable"/&gt;
-             *             &lt;enumeration value="Confirmed"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+             *       &lt;attribute name="ProductIssueDate" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
+             *       &lt;attribute name="ProductID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+             *       &lt;attribute name="ProductType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+             *       &lt;attribute name="ProductQuantity" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+             *       &lt;attribute name="ProductSerialNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+             *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+             *       &lt;attribute name="Status">
+             *         &lt;simpleType>
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+             *             &lt;enumeration value="OrderPending"/>
+             *             &lt;enumeration value="BackOrder"/>
+             *             &lt;enumeration value="Unavailable"/>
+             *             &lt;enumeration value="Confirmed"/>
+             *           &lt;/restriction>
+             *         &lt;/simpleType>
+             *       &lt;/attribute>
+             *       &lt;attribute name="ListOfRecipientRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 

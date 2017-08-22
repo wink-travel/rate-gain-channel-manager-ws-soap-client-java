@@ -17,17 +17,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="EmailType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to128"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attribute name="EmailType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
- *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="EmailType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to128">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attribute name="EmailType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
+ *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -38,8 +38,8 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
 })
 @XmlSeeAlso({
     com.traveliko.platform.ws.rategain.CompanyInfoType.Email.class,
-    com.traveliko.platform.ws.rategain.AirTravelerType.Email.class,
-    com.traveliko.platform.ws.rategain.CustomerType.Email.class
+    com.traveliko.platform.ws.rategain.CustomerType.Email.class,
+    com.traveliko.platform.ws.rategain.AirTravelerType.Email.class
 })
 public class EmailType {
 

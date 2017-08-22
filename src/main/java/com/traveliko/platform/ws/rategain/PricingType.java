@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="PricingType"&gt;
- *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
- *     &lt;enumeration value="Per stay"/&gt;
- *     &lt;enumeration value="Per person"/&gt;
- *     &lt;enumeration value="Per night"/&gt;
- *     &lt;enumeration value="Per person per night"/&gt;
- *     &lt;enumeration value="Per use"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="PricingType">
+ *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
+ *     &lt;enumeration value="Per stay"/>
+ *     &lt;enumeration value="Per person"/>
+ *     &lt;enumeration value="Per night"/>
+ *     &lt;enumeration value="Per person per night"/>
+ *     &lt;enumeration value="Per use"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

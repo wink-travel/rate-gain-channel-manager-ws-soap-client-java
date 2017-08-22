@@ -15,15 +15,15 @@ import javax.xml.datatype.Duration;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TimeInstantType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;DateOrDateTimeType"&gt;
- *       &lt;attribute name="WindowBefore" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *       &lt;attribute name="WindowAfter" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *       &lt;attribute name="CrossDateAllowedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="TimeInstantType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>DateOrDateTimeType">
+ *       &lt;attribute name="WindowBefore" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *       &lt;attribute name="WindowAfter" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *       &lt;attribute name="CrossDateAllowedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

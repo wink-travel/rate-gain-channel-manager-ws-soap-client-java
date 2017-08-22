@@ -18,15 +18,15 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CommissionInfoType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;FreeTextType"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attribute name="CommissionPlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="CommissionInfoType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>FreeTextType">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+ *       &lt;attribute name="CommissionPlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -39,6 +39,12 @@ public class CommissionInfoType
 
     @XmlAttribute(name = "CommissionPlanCode")
     protected String commissionPlanCode;
+    @XmlAttribute(name = "ShareSynchInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareSynchInd;
+    @XmlAttribute(name = "ShareMarketInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareMarketInd;
     @XmlAttribute(name = "Amount")
     protected BigDecimal amount;
     @XmlAttribute(name = "CurrencyCode")
@@ -46,12 +52,6 @@ public class CommissionInfoType
     @XmlAttribute(name = "DecimalPlaces")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger decimalPlaces;
-    @XmlAttribute(name = "ShareSynchInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
-    @XmlAttribute(name = "ShareMarketInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
 
     /**
      * Gets the value of the commissionPlanCode property.
@@ -75,6 +75,54 @@ public class CommissionInfoType
      */
     public void setCommissionPlanCode(String value) {
         this.commissionPlanCode = value;
+    }
+
+    /**
+     * Gets the value of the shareSynchInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareSynchInd() {
+        return shareSynchInd;
+    }
+
+    /**
+     * Sets the value of the shareSynchInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareSynchInd(String value) {
+        this.shareSynchInd = value;
+    }
+
+    /**
+     * Gets the value of the shareMarketInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareMarketInd() {
+        return shareMarketInd;
+    }
+
+    /**
+     * Sets the value of the shareMarketInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareMarketInd(String value) {
+        this.shareMarketInd = value;
     }
 
     /**
@@ -147,54 +195,6 @@ public class CommissionInfoType
      */
     public void setDecimalPlaces(BigInteger value) {
         this.decimalPlaces = value;
-    }
-
-    /**
-     * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareSynchInd() {
-        return shareSynchInd;
-    }
-
-    /**
-     * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareSynchInd(String value) {
-        this.shareSynchInd = value;
-    }
-
-    /**
-     * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareMarketInd() {
-        return shareMarketInd;
-    }
-
-    /**
-     * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareMarketInd(String value) {
-        this.shareMarketInd = value;
     }
 
 }

@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="DisplayOrderType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="ByDepartureTime"/&gt;
- *     &lt;enumeration value="ByArrivalTime"/&gt;
- *     &lt;enumeration value="ByJourneyTime"/&gt;
- *     &lt;enumeration value="ByPriceHighToLow"/&gt;
- *     &lt;enumeration value="ByPriceLowToHigh"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="DisplayOrderType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="ByDepartureTime"/>
+ *     &lt;enumeration value="ByArrivalTime"/>
+ *     &lt;enumeration value="ByJourneyTime"/>
+ *     &lt;enumeration value="ByPriceHighToLow"/>
+ *     &lt;enumeration value="ByPriceLowToHigh"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

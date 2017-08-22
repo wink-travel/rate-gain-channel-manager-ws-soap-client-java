@@ -12,24 +12,24 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TransactionStatusType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Pending"/&gt;
- *     &lt;enumeration value="Cancelled"/&gt;
- *     &lt;enumeration value="Modified"/&gt;
- *     &lt;enumeration value="Committed"/&gt;
- *     &lt;enumeration value="Ignored"/&gt;
- *     &lt;enumeration value="On Hold"/&gt;
- *     &lt;enumeration value="Unsuccessful"/&gt;
- *     &lt;enumeration value="PendingCancellation"/&gt;
- *     &lt;enumeration value="PendingPurchase"/&gt;
- *     &lt;enumeration value="Requested"/&gt;
- *     &lt;enumeration value="Reserved"/&gt;
- *     &lt;enumeration value="Unchanged"/&gt;
- *     &lt;enumeration value="RequestDenied"/&gt;
- *     &lt;enumeration value="Ticketed"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="TransactionStatusType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Pending"/>
+ *     &lt;enumeration value="Cancelled"/>
+ *     &lt;enumeration value="Modified"/>
+ *     &lt;enumeration value="Committed"/>
+ *     &lt;enumeration value="Ignored"/>
+ *     &lt;enumeration value="On Hold"/>
+ *     &lt;enumeration value="Unsuccessful"/>
+ *     &lt;enumeration value="PendingCancellation"/>
+ *     &lt;enumeration value="PendingPurchase"/>
+ *     &lt;enumeration value="Requested"/>
+ *     &lt;enumeration value="Reserved"/>
+ *     &lt;enumeration value="Unchanged"/>
+ *     &lt;enumeration value="RequestDenied"/>
+ *     &lt;enumeration value="Ticketed"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

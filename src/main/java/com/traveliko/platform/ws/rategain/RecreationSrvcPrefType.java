@@ -14,14 +14,14 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RecreationSrvcPrefType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to128"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
- *       &lt;attribute name="RecreationSrvcType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RecreationSrvcPrefType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to128">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *       &lt;attribute name="RecreationSrvcType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

@@ -16,77 +16,77 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="GDS_InfoType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="GDS_Codes" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="GDS_Code" maxOccurs="unbounded" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="GDS_CodeDetails" minOccurs="0"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;sequence&gt;
- *                                       &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0"&gt;
- *                                         &lt;complexType&gt;
- *                                           &lt;complexContent&gt;
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                               &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                                               &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                                             &lt;/restriction&gt;
- *                                           &lt;/complexContent&gt;
- *                                         &lt;/complexType&gt;
- *                                       &lt;/element&gt;
- *                                     &lt;/sequence&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                           &lt;attribute name="ChainCode"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                                 &lt;minLength value="2"/&gt;
- *                                 &lt;maxLength value="2"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="GDS_PropertyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                           &lt;attribute name="GDS_Name" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                           &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                           &lt;attribute name="GDS_PropertyLongName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                           &lt;attribute name="GDS_PropertyShortName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                           &lt;attribute name="GDS_RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="MasterChainCode"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *             &lt;minLength value="2"/&gt;
- *             &lt;maxLength value="2"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="GDS_InfoType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="GDS_Codes" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="GDS_Code" maxOccurs="unbounded" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="GDS_CodeDetails" minOccurs="0">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;sequence>
+ *                                       &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0">
+ *                                         &lt;complexType>
+ *                                           &lt;complexContent>
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                               &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                                               &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                                             &lt;/restriction>
+ *                                           &lt;/complexContent>
+ *                                         &lt;/complexType>
+ *                                       &lt;/element>
+ *                                     &lt;/sequence>
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                           &lt;attribute name="ChainCode">
+ *                             &lt;simpleType>
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                                 &lt;minLength value="2"/>
+ *                                 &lt;maxLength value="2"/>
+ *                               &lt;/restriction>
+ *                             &lt;/simpleType>
+ *                           &lt;/attribute>
+ *                           &lt;attribute name="GDS_PropertyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                           &lt;attribute name="GDS_Name" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                           &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                           &lt;attribute name="GDS_PropertyLongName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                           &lt;attribute name="GDS_PropertyShortName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                           &lt;attribute name="GDS_RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attribute name="MasterChainCode">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *             &lt;minLength value="2"/>
+ *             &lt;maxLength value="2"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -157,59 +157,59 @@ public class GDSInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="GDS_Code" maxOccurs="unbounded" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="GDS_CodeDetails" minOccurs="0"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;sequence&gt;
-     *                             &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0"&gt;
-     *                               &lt;complexType&gt;
-     *                                 &lt;complexContent&gt;
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                                     &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *                                     &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *                                   &lt;/restriction&gt;
-     *                                 &lt;/complexContent&gt;
-     *                               &lt;/complexType&gt;
-     *                             &lt;/element&gt;
-     *                           &lt;/sequence&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *                 &lt;attribute name="ChainCode"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *                       &lt;minLength value="2"/&gt;
-     *                       &lt;maxLength value="2"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="GDS_PropertyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *                 &lt;attribute name="GDS_Name" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *                 &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *                 &lt;attribute name="GDS_PropertyLongName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *                 &lt;attribute name="GDS_PropertyShortName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *                 &lt;attribute name="GDS_RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="GDS_Code" maxOccurs="unbounded" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="GDS_CodeDetails" minOccurs="0">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;sequence>
+     *                             &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0">
+     *                               &lt;complexType>
+     *                                 &lt;complexContent>
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                                     &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *                                     &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *                                   &lt;/restriction>
+     *                                 &lt;/complexContent>
+     *                               &lt;/complexType>
+     *                             &lt;/element>
+     *                           &lt;/sequence>
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *                 &lt;attribute name="ChainCode">
+     *                   &lt;simpleType>
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *                       &lt;minLength value="2"/>
+     *                       &lt;maxLength value="2"/>
+     *                     &lt;/restriction>
+     *                   &lt;/simpleType>
+     *                 &lt;/attribute>
+     *                 &lt;attribute name="GDS_PropertyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *                 &lt;attribute name="GDS_Name" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *                 &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *                 &lt;attribute name="GDS_PropertyLongName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *                 &lt;attribute name="GDS_PropertyShortName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *                 &lt;attribute name="GDS_RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -285,48 +285,48 @@ public class GDSInfoType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="GDS_CodeDetails" minOccurs="0"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;sequence&gt;
-         *                   &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0"&gt;
-         *                     &lt;complexType&gt;
-         *                       &lt;complexContent&gt;
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                           &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-         *                           &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-         *                         &lt;/restriction&gt;
-         *                       &lt;/complexContent&gt;
-         *                     &lt;/complexType&gt;
-         *                   &lt;/element&gt;
-         *                 &lt;/sequence&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *       &lt;attribute name="ChainCode"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-         *             &lt;minLength value="2"/&gt;
-         *             &lt;maxLength value="2"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="GDS_PropertyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-         *       &lt;attribute name="GDS_Name" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-         *       &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *       &lt;attribute name="GDS_PropertyLongName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-         *       &lt;attribute name="GDS_PropertyShortName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-         *       &lt;attribute name="GDS_RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="GDS_CodeDetails" minOccurs="0">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;sequence>
+         *                   &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0">
+         *                     &lt;complexType>
+         *                       &lt;complexContent>
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                           &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+         *                           &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+         *                         &lt;/restriction>
+         *                       &lt;/complexContent>
+         *                     &lt;/complexType>
+         *                   &lt;/element>
+         *                 &lt;/sequence>
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *       &lt;attribute name="ChainCode">
+         *         &lt;simpleType>
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+         *             &lt;minLength value="2"/>
+         *             &lt;maxLength value="2"/>
+         *           &lt;/restriction>
+         *         &lt;/simpleType>
+         *       &lt;/attribute>
+         *       &lt;attribute name="GDS_PropertyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+         *       &lt;attribute name="GDS_Name" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+         *       &lt;attribute name="LoadGDSIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *       &lt;attribute name="GDS_PropertyLongName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+         *       &lt;attribute name="GDS_PropertyShortName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+         *       &lt;attribute name="GDS_RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -553,24 +553,24 @@ public class GDSInfoType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;sequence&gt;
-             *         &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0"&gt;
-             *           &lt;complexType&gt;
-             *             &lt;complexContent&gt;
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *                 &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-             *                 &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-             *               &lt;/restriction&gt;
-             *             &lt;/complexContent&gt;
-             *           &lt;/complexType&gt;
-             *         &lt;/element&gt;
-             *       &lt;/sequence&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;sequence>
+             *         &lt;element name="GDS_CodeDetail" maxOccurs="unbounded" minOccurs="0">
+             *           &lt;complexType>
+             *             &lt;complexContent>
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *                 &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+             *                 &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+             *               &lt;/restriction>
+             *             &lt;/complexContent>
+             *           &lt;/complexType>
+             *         &lt;/element>
+             *       &lt;/sequence>
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -620,14 +620,14 @@ public class GDSInfoType {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType&gt;
-                 *   &lt;complexContent&gt;
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-                 *       &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-                 *       &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-                 *     &lt;/restriction&gt;
-                 *   &lt;/complexContent&gt;
-                 * &lt;/complexType&gt;
+                 * &lt;complexType>
+                 *   &lt;complexContent>
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+                 *       &lt;attribute name="PseudoCityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+                 *       &lt;attribute name="AgencyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+                 *     &lt;/restriction>
+                 *   &lt;/complexContent>
+                 * &lt;/complexType>
                  * </pre>
                  * 
                  * 

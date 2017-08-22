@@ -23,119 +23,119 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PaymentFormType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice minOccurs="0"&gt;
- *         &lt;element name="PaymentCard" type="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"/&gt;
- *         &lt;element name="BankAcct" type="{http://www.opentravel.org/OTA/2003/05}BankAcctType"/&gt;
- *         &lt;element name="DirectBill" type="{http://www.opentravel.org/OTA/2003/05}DirectBillType"/&gt;
- *         &lt;element name="Voucher"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VoucherGroup"/&gt;
- *                 &lt;attribute name="BillingNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                 &lt;attribute name="SupplierIdentifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                 &lt;attribute name="Identifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                 &lt;attribute name="ValueType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="ElectronicIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="LoyaltyRedemption"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="LoyaltyCertificate" maxOccurs="9" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateGroup"/&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateNumberGroup"/&gt;
- *                 &lt;attribute name="RedemptionQuantity" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="MiscChargeOrder"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/&gt;
- *                 &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="PaperMCO_ExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Ticket"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="ConjunctionTicketNbr" maxOccurs="16" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;simpleContent&gt;
- *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
- *                           &lt;attribute name="Coupons" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
- *                         &lt;/extension&gt;
- *                       &lt;/simpleContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/&gt;
- *                 &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="ReroutingType"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                       &lt;enumeration value="voluntary"/&gt;
- *                       &lt;enumeration value="involuntary"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="ReasonForReroute" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Cash"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;attribute name="CashIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/choice&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attribute name="CostCenterID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
- *       &lt;attribute name="PaymentTransactionTypeCode"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="charge"/&gt;
- *             &lt;enumeration value="reserve"/&gt;
- *             &lt;enumeration value="refund"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="GuaranteeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="GuaranteeTypeCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="GuaranteeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="PaymentFormType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;choice minOccurs="0">
+ *         &lt;element name="PaymentCard" type="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"/>
+ *         &lt;element name="BankAcct" type="{http://www.opentravel.org/OTA/2003/05}BankAcctType"/>
+ *         &lt;element name="DirectBill" type="{http://www.opentravel.org/OTA/2003/05}DirectBillType"/>
+ *         &lt;element name="Voucher">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VoucherGroup"/>
+ *                 &lt;attribute name="BillingNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                 &lt;attribute name="SupplierIdentifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                 &lt;attribute name="Identifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                 &lt;attribute name="ValueType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="ElectronicIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="LoyaltyRedemption">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="LoyaltyCertificate" maxOccurs="9" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateGroup"/>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateNumberGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
+ *                 &lt;attribute name="RedemptionQuantity" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="MiscChargeOrder">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/>
+ *                 &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="PaperMCO_ExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="Ticket">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="ConjunctionTicketNbr" maxOccurs="16" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;simpleContent>
+ *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
+ *                           &lt;attribute name="Coupons" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+ *                         &lt;/extension>
+ *                       &lt;/simpleContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/>
+ *                 &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="ReroutingType">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                       &lt;enumeration value="voluntary"/>
+ *                       &lt;enumeration value="involuntary"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="ReasonForReroute" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="Cash">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;attribute name="CashIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/choice>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attribute name="CostCenterID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
+ *       &lt;attribute name="PaymentTransactionTypeCode">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             &lt;enumeration value="charge"/>
+ *             &lt;enumeration value="reserve"/>
+ *             &lt;enumeration value="refund"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="GuaranteeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="GuaranteeTypeCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="GuaranteeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -152,9 +152,9 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "cash"
 })
 @XmlSeeAlso({
+    com.traveliko.platform.ws.rategain.CompanyInfoType.PaymentForm.class,
     com.traveliko.platform.ws.rategain.GuaranteeType.GuaranteesAccepted.GuaranteeAccepted.class,
     HotelPaymentFormType.class,
-    com.traveliko.platform.ws.rategain.CompanyInfoType.PaymentForm.class,
     com.traveliko.platform.ws.rategain.CustomerType.PaymentForm.class,
     PaymentDetailType.class
 })
@@ -613,13 +613,13 @@ public class PaymentFormType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attribute name="CashIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attribute name="CashIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -664,26 +664,26 @@ public class PaymentFormType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="LoyaltyCertificate" maxOccurs="9" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateGroup"/&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateNumberGroup"/&gt;
-     *       &lt;attribute name="RedemptionQuantity" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="LoyaltyCertificate" maxOccurs="9" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateGroup"/>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateNumberGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
+     *       &lt;attribute name="RedemptionQuantity" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -699,16 +699,16 @@ public class PaymentFormType {
         @XmlAttribute(name = "RedemptionQuantity")
         @XmlSchemaType(name = "positiveInteger")
         protected BigInteger redemptionQuantity;
-        @XmlAttribute(name = "PromotionCode")
-        protected String promotionCode;
-        @XmlAttribute(name = "PromotionVendorCode")
-        protected List<String> promotionVendorCode;
         @XmlAttribute(name = "CertificateNumber")
         protected String certificateNumber;
         @XmlAttribute(name = "MemberNumber")
         protected String memberNumber;
         @XmlAttribute(name = "ProgramName")
         protected String programName;
+        @XmlAttribute(name = "PromotionCode")
+        protected String promotionCode;
+        @XmlAttribute(name = "PromotionVendorCode")
+        protected List<String> promotionVendorCode;
 
         /**
          * Gets the value of the loyaltyCertificate property.
@@ -761,59 +761,6 @@ public class PaymentFormType {
          */
         public void setRedemptionQuantity(BigInteger value) {
             this.redemptionQuantity = value;
-        }
-
-        /**
-         * Gets the value of the promotionCode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getPromotionCode() {
-            return promotionCode;
-        }
-
-        /**
-         * Sets the value of the promotionCode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setPromotionCode(String value) {
-            this.promotionCode = value;
-        }
-
-        /**
-         * Gets the value of the promotionVendorCode property.
-         * 
-         * <p>
-         * This accessor method returns a reference to the live list,
-         * not a snapshot. Therefore any modification you make to the
-         * returned list will be present inside the JAXB object.
-         * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
-         * 
-         * <p>
-         * For example, to add a new item, do as follows:
-         * <pre>
-         *    getPromotionVendorCode().add(newItem);
-         * </pre>
-         * 
-         * 
-         * <p>
-         * Objects of the following type(s) are allowed in the list
-         * {@link String }
-         * 
-         * 
-         */
-        public List<String> getPromotionVendorCode() {
-            if (promotionVendorCode == null) {
-                promotionVendorCode = new ArrayList<String>();
-            }
-            return this.promotionVendorCode;
         }
 
         /**
@@ -888,6 +835,59 @@ public class PaymentFormType {
             this.programName = value;
         }
 
+        /**
+         * Gets the value of the promotionCode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getPromotionCode() {
+            return promotionCode;
+        }
+
+        /**
+         * Sets the value of the promotionCode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setPromotionCode(String value) {
+            this.promotionCode = value;
+        }
+
+        /**
+         * Gets the value of the promotionVendorCode property.
+         * 
+         * <p>
+         * This accessor method returns a reference to the live list,
+         * not a snapshot. Therefore any modification you make to the
+         * returned list will be present inside the JAXB object.
+         * This is why there is not a <CODE>set</CODE> method for the promotionVendorCode property.
+         * 
+         * <p>
+         * For example, to add a new item, do as follows:
+         * <pre>
+         *    getPromotionVendorCode().add(newItem);
+         * </pre>
+         * 
+         * 
+         * <p>
+         * Objects of the following type(s) are allowed in the list
+         * {@link String }
+         * 
+         * 
+         */
+        public List<String> getPromotionVendorCode() {
+            if (promotionVendorCode == null) {
+                promotionVendorCode = new ArrayList<String>();
+            }
+            return this.promotionVendorCode;
+        }
+
 
         /**
          * <p>Java class for anonymous complex type.
@@ -895,13 +895,13 @@ public class PaymentFormType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateGroup"/&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LoyaltyCertificateGroup"/>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1212,15 +1212,15 @@ public class PaymentFormType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/&gt;
-     *       &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="PaperMCO_ExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/>
+     *       &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="PaperMCO_ExistInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1480,34 +1480,34 @@ public class PaymentFormType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="ConjunctionTicketNbr" maxOccurs="16" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;simpleContent&gt;
-     *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
-     *                 &lt;attribute name="Coupons" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
-     *               &lt;/extension&gt;
-     *             &lt;/simpleContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/&gt;
-     *       &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="ReroutingType"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *             &lt;enumeration value="voluntary"/&gt;
-     *             &lt;enumeration value="involuntary"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="ReasonForReroute" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="ConjunctionTicketNbr" maxOccurs="16" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;simpleContent>
+     *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
+     *                 &lt;attribute name="Coupons" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+     *               &lt;/extension>
+     *             &lt;/simpleContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OriginalIssueAttributes"/>
+     *       &lt;attribute name="TicketNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="ReroutingType">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *             &lt;enumeration value="voluntary"/>
+     *             &lt;enumeration value="involuntary"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="ReasonForReroute" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -1825,13 +1825,13 @@ public class PaymentFormType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;simpleContent&gt;
-         *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
-         *       &lt;attribute name="Coupons" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
-         *     &lt;/extension&gt;
-         *   &lt;/simpleContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;simpleContent>
+         *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
+         *       &lt;attribute name="Coupons" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+         *     &lt;/extension>
+         *   &lt;/simpleContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1911,18 +1911,18 @@ public class PaymentFormType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VoucherGroup"/&gt;
-     *       &lt;attribute name="BillingNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *       &lt;attribute name="SupplierIdentifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *       &lt;attribute name="Identifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *       &lt;attribute name="ValueType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="ElectronicIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VoucherGroup"/>
+     *       &lt;attribute name="BillingNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *       &lt;attribute name="SupplierIdentifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *       &lt;attribute name="Identifier" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *       &lt;attribute name="ValueType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="ElectronicIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

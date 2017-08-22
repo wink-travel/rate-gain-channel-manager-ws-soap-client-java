@@ -12,14 +12,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="LocationDetailRequirementAddlDriverInfoType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="IncludedAuthorized"/&gt;
- *     &lt;enumeration value="AdditionalAuthorized"/&gt;
- *     &lt;enumeration value="Fees"/&gt;
- *     &lt;enumeration value="Miscellaneous"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="LocationDetailRequirementAddlDriverInfoType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="IncludedAuthorized"/>
+ *     &lt;enumeration value="AdditionalAuthorized"/>
+ *     &lt;enumeration value="Fees"/>
+ *     &lt;enumeration value="Miscellaneous"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

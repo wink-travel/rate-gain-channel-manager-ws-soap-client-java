@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="FareApplicationType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="OneWay"/&gt;
- *     &lt;enumeration value="Return"/&gt;
- *     &lt;enumeration value="HalfReturn"/&gt;
- *     &lt;enumeration value="Roundtrip"/&gt;
- *     &lt;enumeration value="OneWayOnly"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="FareApplicationType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="OneWay"/>
+ *     &lt;enumeration value="Return"/>
+ *     &lt;enumeration value="HalfReturn"/>
+ *     &lt;enumeration value="Roundtrip"/>
+ *     &lt;enumeration value="OneWayOnly"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

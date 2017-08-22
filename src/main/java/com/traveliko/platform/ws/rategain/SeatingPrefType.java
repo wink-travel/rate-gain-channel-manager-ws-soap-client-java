@@ -14,17 +14,17 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SeatingPrefType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
- *       &lt;attribute name="SeatDirection" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *       &lt;attribute name="SeatLocation" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="SeatPosition" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="SeatRow" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="SeatingPrefType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *       &lt;attribute name="SeatDirection" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *       &lt;attribute name="SeatLocation" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="SeatPosition" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="SeatRow" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

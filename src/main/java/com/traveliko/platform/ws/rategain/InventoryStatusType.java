@@ -12,17 +12,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="InventoryStatusType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Available"/&gt;
- *     &lt;enumeration value="Unavailable"/&gt;
- *     &lt;enumeration value="OnRequest"/&gt;
- *     &lt;enumeration value="Confirmed"/&gt;
- *     &lt;enumeration value="All"/&gt;
- *     &lt;enumeration value="Waitlist"/&gt;
- *     &lt;enumeration value="SupplierBooked"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="InventoryStatusType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="Available"/>
+ *     &lt;enumeration value="Unavailable"/>
+ *     &lt;enumeration value="OnRequest"/>
+ *     &lt;enumeration value="Confirmed"/>
+ *     &lt;enumeration value="All"/>
+ *     &lt;enumeration value="Waitlist"/>
+ *     &lt;enumeration value="SupplierBooked"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

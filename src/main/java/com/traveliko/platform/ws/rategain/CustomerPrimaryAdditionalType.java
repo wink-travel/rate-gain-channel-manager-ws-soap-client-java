@@ -20,46 +20,46 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CustomerPrimaryAdditionalType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Primary"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="CustomerID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
- *                 &lt;/sequence&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="Additional" maxOccurs="9" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TravelerCountGroup"/&gt;
- *                 &lt;attribute name="CorpDiscountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                 &lt;attribute name="CorpDiscountNmbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="QualificationMethod"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                       &lt;enumeration value="RT_AirlineTicket"/&gt;
- *                       &lt;enumeration value="CreditCard"/&gt;
- *                       &lt;enumeration value="PassportAndReturnTkt"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="CustomerPrimaryAdditionalType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Primary">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType">
+ *                 &lt;sequence>
+ *                   &lt;element name="CustomerID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="Additional" maxOccurs="9" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TravelerCountGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *                 &lt;attribute name="CorpDiscountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                 &lt;attribute name="CorpDiscountNmbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="QualificationMethod">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                       &lt;enumeration value="RT_AirlineTicket"/>
+ *                       &lt;enumeration value="CreditCard"/>
+ *                       &lt;enumeration value="PassportAndReturnTkt"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -136,25 +136,25 @@ public class CustomerPrimaryAdditionalType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TravelerCountGroup"/&gt;
-     *       &lt;attribute name="CorpDiscountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *       &lt;attribute name="CorpDiscountNmbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="QualificationMethod"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *             &lt;enumeration value="RT_AirlineTicket"/&gt;
-     *             &lt;enumeration value="CreditCard"/&gt;
-     *             &lt;enumeration value="PassportAndReturnTkt"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TravelerCountGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+     *       &lt;attribute name="CorpDiscountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *       &lt;attribute name="CorpDiscountNmbr" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="QualificationMethod">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *             &lt;enumeration value="RT_AirlineTicket"/>
+     *             &lt;enumeration value="CreditCard"/>
+     *             &lt;enumeration value="PassportAndReturnTkt"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -172,12 +172,6 @@ public class CustomerPrimaryAdditionalType {
         @XmlAttribute(name = "QualificationMethod")
         @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
         protected String qualificationMethod;
-        @XmlAttribute(name = "Start")
-        protected String start;
-        @XmlAttribute(name = "Duration")
-        protected String duration;
-        @XmlAttribute(name = "End")
-        protected String end;
         @XmlAttribute(name = "Age")
         protected Integer age;
         @XmlAttribute(name = "Code")
@@ -190,6 +184,12 @@ public class CustomerPrimaryAdditionalType {
         @XmlAttribute(name = "Quantity")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger quantity;
+        @XmlAttribute(name = "Start")
+        protected String start;
+        @XmlAttribute(name = "Duration")
+        protected String duration;
+        @XmlAttribute(name = "End")
+        protected String end;
 
         /**
          * Gets the value of the corpDiscountName property.
@@ -261,78 +261,6 @@ public class CustomerPrimaryAdditionalType {
          */
         public void setQualificationMethod(String value) {
             this.qualificationMethod = value;
-        }
-
-        /**
-         * Gets the value of the start property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getStart() {
-            return start;
-        }
-
-        /**
-         * Sets the value of the start property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setStart(String value) {
-            this.start = value;
-        }
-
-        /**
-         * Gets the value of the duration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDuration() {
-            return duration;
-        }
-
-        /**
-         * Sets the value of the duration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDuration(String value) {
-            this.duration = value;
-        }
-
-        /**
-         * Gets the value of the end property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getEnd() {
-            return end;
-        }
-
-        /**
-         * Sets the value of the end property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setEnd(String value) {
-            this.end = value;
         }
 
         /**
@@ -455,6 +383,78 @@ public class CustomerPrimaryAdditionalType {
             this.quantity = value;
         }
 
+        /**
+         * Gets the value of the start property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getStart() {
+            return start;
+        }
+
+        /**
+         * Sets the value of the start property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setStart(String value) {
+            this.start = value;
+        }
+
+        /**
+         * Gets the value of the duration property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDuration() {
+            return duration;
+        }
+
+        /**
+         * Sets the value of the duration property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDuration(String value) {
+            this.duration = value;
+        }
+
+        /**
+         * Gets the value of the end property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getEnd() {
+            return end;
+        }
+
+        /**
+         * Sets the value of the end property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setEnd(String value) {
+            this.end = value;
+        }
+
     }
 
 
@@ -464,15 +464,15 @@ public class CustomerPrimaryAdditionalType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="CustomerID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CustomerType">
+     *       &lt;sequence>
+     *         &lt;element name="CustomerID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+     *       &lt;/sequence>
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

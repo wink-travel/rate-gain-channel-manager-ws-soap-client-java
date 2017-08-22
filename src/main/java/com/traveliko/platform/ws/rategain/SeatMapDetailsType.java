@@ -16,25 +16,25 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SeatMapDetailsType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="CabinClass" maxOccurs="5"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CabinClassType"&gt;
- *                 &lt;attribute name="StartingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" /&gt;
- *                 &lt;attribute name="EndingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" /&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="TravelerRefNumberRPHs" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="SeatMapDetailsType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="CabinClass" maxOccurs="5">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CabinClassType">
+ *                 &lt;attribute name="StartingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" />
+ *                 &lt;attribute name="EndingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" />
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attribute name="TravelerRefNumberRPHs" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -115,14 +115,14 @@ public class SeatMapDetailsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CabinClassType"&gt;
-     *       &lt;attribute name="StartingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" /&gt;
-     *       &lt;attribute name="EndingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" /&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CabinClassType">
+     *       &lt;attribute name="StartingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" />
+     *       &lt;attribute name="EndingRow" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to3" />
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

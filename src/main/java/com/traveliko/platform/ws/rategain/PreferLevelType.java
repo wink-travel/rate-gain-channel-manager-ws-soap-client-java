@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="PreferLevelType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Only"/&gt;
- *     &lt;enumeration value="Unacceptable"/&gt;
- *     &lt;enumeration value="Preferred"/&gt;
- *     &lt;enumeration value="Required"/&gt;
- *     &lt;enumeration value="NoPreference"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="PreferLevelType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="Only"/>
+ *     &lt;enumeration value="Unacceptable"/>
+ *     &lt;enumeration value="Preferred"/>
+ *     &lt;enumeration value="Required"/>
+ *     &lt;enumeration value="NoPreference"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

@@ -14,21 +14,21 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="WrittenConfInstType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="SupplementalData" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
- *         &lt;element name="Email" type="{http://www.opentravel.org/OTA/2003/05}EmailType" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="LanguageID" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="AddresseeName" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="Address" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="Telephone" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
- *       &lt;attribute name="ConfirmInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="WrittenConfInstType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="SupplementalData" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
+ *         &lt;element name="Email" type="{http://www.opentravel.org/OTA/2003/05}EmailType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attribute name="LanguageID" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="AddresseeName" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="Address" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="Telephone" type="{http://www.w3.org/2001/XMLSchema}string" />
+ *       &lt;attribute name="ConfirmInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

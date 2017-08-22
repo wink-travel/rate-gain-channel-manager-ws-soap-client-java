@@ -11,34 +11,34 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="MealType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="AVML"/&gt;
- *     &lt;enumeration value="BBML"/&gt;
- *     &lt;enumeration value="BLML"/&gt;
- *     &lt;enumeration value="CHML"/&gt;
- *     &lt;enumeration value="DBML"/&gt;
- *     &lt;enumeration value="FPML"/&gt;
- *     &lt;enumeration value="GFML"/&gt;
- *     &lt;enumeration value="HFML"/&gt;
- *     &lt;enumeration value="HNML"/&gt;
- *     &lt;enumeration value="KSML"/&gt;
- *     &lt;enumeration value="LCML"/&gt;
- *     &lt;enumeration value="LFML"/&gt;
- *     &lt;enumeration value="LPML"/&gt;
- *     &lt;enumeration value="LSML"/&gt;
- *     &lt;enumeration value="MOML"/&gt;
- *     &lt;enumeration value="NLML"/&gt;
- *     &lt;enumeration value="ORML"/&gt;
- *     &lt;enumeration value="PRML"/&gt;
- *     &lt;enumeration value="RVML"/&gt;
- *     &lt;enumeration value="SFML"/&gt;
- *     &lt;enumeration value="SPML"/&gt;
- *     &lt;enumeration value="VGML"/&gt;
- *     &lt;enumeration value="VLML"/&gt;
- *     &lt;enumeration value="RGML"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="MealType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="AVML"/>
+ *     &lt;enumeration value="BBML"/>
+ *     &lt;enumeration value="BLML"/>
+ *     &lt;enumeration value="CHML"/>
+ *     &lt;enumeration value="DBML"/>
+ *     &lt;enumeration value="FPML"/>
+ *     &lt;enumeration value="GFML"/>
+ *     &lt;enumeration value="HFML"/>
+ *     &lt;enumeration value="HNML"/>
+ *     &lt;enumeration value="KSML"/>
+ *     &lt;enumeration value="LCML"/>
+ *     &lt;enumeration value="LFML"/>
+ *     &lt;enumeration value="LPML"/>
+ *     &lt;enumeration value="LSML"/>
+ *     &lt;enumeration value="MOML"/>
+ *     &lt;enumeration value="NLML"/>
+ *     &lt;enumeration value="ORML"/>
+ *     &lt;enumeration value="PRML"/>
+ *     &lt;enumeration value="RVML"/>
+ *     &lt;enumeration value="SFML"/>
+ *     &lt;enumeration value="SPML"/>
+ *     &lt;enumeration value="VGML"/>
+ *     &lt;enumeration value="VLML"/>
+ *     &lt;enumeration value="RGML"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

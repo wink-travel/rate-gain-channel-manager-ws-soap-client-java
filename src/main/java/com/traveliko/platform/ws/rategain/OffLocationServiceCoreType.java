@@ -15,25 +15,25 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="OffLocationServiceCoreType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Address" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
- *                 &lt;attribute name="SiteID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                 &lt;attribute name="SiteName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OffLocationServiceID_Type" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="OffLocationServiceCoreType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Address" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
+ *                 &lt;attribute name="SiteID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                 &lt;attribute name="SiteName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OffLocationServiceID_Type" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -107,14 +107,14 @@ public class OffLocationServiceCoreType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
-     *       &lt;attribute name="SiteID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *       &lt;attribute name="SiteName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
+     *       &lt;attribute name="SiteID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *       &lt;attribute name="SiteName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

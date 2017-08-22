@@ -16,21 +16,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="BankAcctType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="BankAcctName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attribute name="BankID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="AcctType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *       &lt;attribute name="BankAcctNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *       &lt;attribute name="ChecksAcceptedInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="CheckNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="BankAcctType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="BankAcctName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attribute name="BankID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="AcctType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *       &lt;attribute name="BankAcctNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *       &lt;attribute name="ChecksAcceptedInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="CheckNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

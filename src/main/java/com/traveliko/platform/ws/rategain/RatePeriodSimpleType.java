@@ -12,19 +12,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="RatePeriodSimpleType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Hourly"/&gt;
- *     &lt;enumeration value="Daily"/&gt;
- *     &lt;enumeration value="Weekly"/&gt;
- *     &lt;enumeration value="Monthly"/&gt;
- *     &lt;enumeration value="WeekendDay"/&gt;
- *     &lt;enumeration value="Other"/&gt;
- *     &lt;enumeration value="Package"/&gt;
- *     &lt;enumeration value="Bundle"/&gt;
- *     &lt;enumeration value="Total"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="RatePeriodSimpleType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="Hourly"/>
+ *     &lt;enumeration value="Daily"/>
+ *     &lt;enumeration value="Weekly"/>
+ *     &lt;enumeration value="Monthly"/>
+ *     &lt;enumeration value="WeekendDay"/>
+ *     &lt;enumeration value="Other"/>
+ *     &lt;enumeration value="Package"/>
+ *     &lt;enumeration value="Bundle"/>
+ *     &lt;enumeration value="Total"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

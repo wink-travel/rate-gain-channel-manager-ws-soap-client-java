@@ -18,41 +18,41 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="HotelPrefType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="LoyaltyPref" type="{http://www.opentravel.org/OTA/2003/05}LoyaltyPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PaymentFormPref" type="{http://www.opentravel.org/OTA/2003/05}PaymentFormPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="HotelChainPref" type="{http://www.opentravel.org/OTA/2003/05}CompanyNamePrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PropertyNamePref" type="{http://www.opentravel.org/OTA/2003/05}PropertyNamePrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PropertyLocationPref" type="{http://www.opentravel.org/OTA/2003/05}PropertyLocationPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PropertyTypePref" type="{http://www.opentravel.org/OTA/2003/05}PropertyTypePrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PropertyClassPref" type="{http://www.opentravel.org/OTA/2003/05}PropertyClassPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PropertyAmenityPref" type="{http://www.opentravel.org/OTA/2003/05}PropertyAmenityPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="RoomAmenityPref" type="{http://www.opentravel.org/OTA/2003/05}RoomAmenityPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="RoomLocationPref" type="{http://www.opentravel.org/OTA/2003/05}RoomLocationPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="BedTypePref" type="{http://www.opentravel.org/OTA/2003/05}BedTypePrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="FoodSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}FoodSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="MediaEntertainPref" type="{http://www.opentravel.org/OTA/2003/05}MediaEntertainPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PetInfoPref" type="{http://www.opentravel.org/OTA/2003/05}PetInfoPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="MealPref" type="{http://www.opentravel.org/OTA/2003/05}MealPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="RecreationSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}RecreationSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="BusinessSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}BusinessSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PersonalSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}PersonalSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="SecurityFeaturePref" type="{http://www.opentravel.org/OTA/2003/05}SecurityFeaturePrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="PhysChallFeaturePref" type="{http://www.opentravel.org/OTA/2003/05}PhysChallFeaturePrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="SpecRequestPref" type="{http://www.opentravel.org/OTA/2003/05}SpecRequestPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
- *       &lt;attribute name="HotelGuestType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="HotelPrefType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="LoyaltyPref" type="{http://www.opentravel.org/OTA/2003/05}LoyaltyPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PaymentFormPref" type="{http://www.opentravel.org/OTA/2003/05}PaymentFormPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="HotelChainPref" type="{http://www.opentravel.org/OTA/2003/05}CompanyNamePrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PropertyNamePref" type="{http://www.opentravel.org/OTA/2003/05}PropertyNamePrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PropertyLocationPref" type="{http://www.opentravel.org/OTA/2003/05}PropertyLocationPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PropertyTypePref" type="{http://www.opentravel.org/OTA/2003/05}PropertyTypePrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PropertyClassPref" type="{http://www.opentravel.org/OTA/2003/05}PropertyClassPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PropertyAmenityPref" type="{http://www.opentravel.org/OTA/2003/05}PropertyAmenityPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="RoomAmenityPref" type="{http://www.opentravel.org/OTA/2003/05}RoomAmenityPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="RoomLocationPref" type="{http://www.opentravel.org/OTA/2003/05}RoomLocationPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="BedTypePref" type="{http://www.opentravel.org/OTA/2003/05}BedTypePrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="FoodSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}FoodSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="MediaEntertainPref" type="{http://www.opentravel.org/OTA/2003/05}MediaEntertainPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PetInfoPref" type="{http://www.opentravel.org/OTA/2003/05}PetInfoPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="MealPref" type="{http://www.opentravel.org/OTA/2003/05}MealPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="RecreationSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}RecreationSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="BusinessSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}BusinessSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PersonalSrvcPref" type="{http://www.opentravel.org/OTA/2003/05}PersonalSrvcPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SecurityFeaturePref" type="{http://www.opentravel.org/OTA/2003/05}SecurityFeaturePrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="PhysChallFeaturePref" type="{http://www.opentravel.org/OTA/2003/05}PhysChallFeaturePrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="SpecRequestPref" type="{http://www.opentravel.org/OTA/2003/05}SpecRequestPrefType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
+ *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
+ *       &lt;attribute name="HotelGuestType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -132,16 +132,16 @@ public class HotelPrefType {
     protected String ratePlanCode;
     @XmlAttribute(name = "HotelGuestType")
     protected String hotelGuestType;
-    @XmlAttribute(name = "SmokingAllowed")
-    protected Boolean smokingAllowed;
-    @XmlAttribute(name = "PreferLevel")
-    protected PreferLevelType preferLevel;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
+    @XmlAttribute(name = "PreferLevel")
+    protected PreferLevelType preferLevel;
+    @XmlAttribute(name = "SmokingAllowed")
+    protected Boolean smokingAllowed;
 
     /**
      * Gets the value of the loyaltyPref property.
@@ -825,54 +825,6 @@ public class HotelPrefType {
     }
 
     /**
-     * Gets the value of the smokingAllowed property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isSmokingAllowed() {
-        return smokingAllowed;
-    }
-
-    /**
-     * Sets the value of the smokingAllowed property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setSmokingAllowed(Boolean value) {
-        this.smokingAllowed = value;
-    }
-
-    /**
-     * Gets the value of the preferLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public PreferLevelType getPreferLevel() {
-        return preferLevel;
-    }
-
-    /**
-     * Sets the value of the preferLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public void setPreferLevel(PreferLevelType value) {
-        this.preferLevel = value;
-    }
-
-    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -918,6 +870,54 @@ public class HotelPrefType {
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
+    }
+
+    /**
+     * Gets the value of the preferLevel property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public PreferLevelType getPreferLevel() {
+        return preferLevel;
+    }
+
+    /**
+     * Sets the value of the preferLevel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public void setPreferLevel(PreferLevelType value) {
+        this.preferLevel = value;
+    }
+
+    /**
+     * Gets the value of the smokingAllowed property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isSmokingAllowed() {
+        return smokingAllowed;
+    }
+
+    /**
+     * Sets the value of the smokingAllowed property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setSmokingAllowed(Boolean value) {
+        this.smokingAllowed = value;
     }
 
 }

@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="SeatType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Window"/&gt;
- *     &lt;enumeration value="Aisle"/&gt;
- *     &lt;enumeration value="Table"/&gt;
- *     &lt;enumeration value="Middle"/&gt;
- *     &lt;enumeration value="Individual"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="SeatType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Window"/>
+ *     &lt;enumeration value="Aisle"/>
+ *     &lt;enumeration value="Table"/>
+ *     &lt;enumeration value="Middle"/>
+ *     &lt;enumeration value="Individual"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

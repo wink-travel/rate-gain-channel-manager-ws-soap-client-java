@@ -16,16 +16,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FareBasisCodeType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to16"&gt;
- *       &lt;attribute name="FlightSegmentRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
- *       &lt;attribute name="NotValidBefore" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
- *       &lt;attribute name="NotValidAfter" type="{http://www.w3.org/2001/XMLSchema}date" /&gt;
- *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="FareBasisCodeType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to16">
+ *       &lt;attribute name="FlightSegmentRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
+ *       &lt;attribute name="NotValidBefore" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *       &lt;attribute name="NotValidAfter" type="{http://www.w3.org/2001/XMLSchema}date" />
+ *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

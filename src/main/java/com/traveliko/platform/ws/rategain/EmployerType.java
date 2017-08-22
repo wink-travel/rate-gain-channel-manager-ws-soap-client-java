@@ -18,23 +18,23 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="EmployerType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
- *         &lt;element name="RelatedEmployer" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="EmployeeInfo" type="{http://www.opentravel.org/OTA/2003/05}EmployeeInfoType" maxOccurs="3" minOccurs="0"/&gt;
- *         &lt;element name="InternalRefNmbr" type="{http://www.opentravel.org/OTA/2003/05}FreeTextType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="LoyaltyProgram" type="{http://www.opentravel.org/OTA/2003/05}LoyaltyProgramType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OfficeTypeGroup"/&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="EmployerType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
+ *         &lt;element name="RelatedEmployer" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="EmployeeInfo" type="{http://www.opentravel.org/OTA/2003/05}EmployeeInfoType" maxOccurs="3" minOccurs="0"/>
+ *         &lt;element name="InternalRefNmbr" type="{http://www.opentravel.org/OTA/2003/05}FreeTextType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="LoyaltyProgram" type="{http://www.opentravel.org/OTA/2003/05}LoyaltyProgramType" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OfficeTypeGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -62,6 +62,8 @@ public class EmployerType {
     protected List<TravelArrangerType> travelArranger;
     @XmlElement(name = "LoyaltyProgram")
     protected List<LoyaltyProgramType> loyaltyProgram;
+    @XmlAttribute(name = "OfficeType")
+    protected OfficeLocationType officeType;
     @XmlAttribute(name = "DefaultInd")
     protected Boolean defaultInd;
     @XmlAttribute(name = "EffectiveDate")
@@ -72,8 +74,6 @@ public class EmployerType {
     protected XMLGregorianCalendar expireDate;
     @XmlAttribute(name = "ExpireDateExclusiveIndicator")
     protected Boolean expireDateExclusiveIndicator;
-    @XmlAttribute(name = "OfficeType")
-    protected OfficeLocationType officeType;
 
     /**
      * Gets the value of the companyName property.
@@ -245,6 +245,30 @@ public class EmployerType {
     }
 
     /**
+     * Gets the value of the officeType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link OfficeLocationType }
+     *     
+     */
+    public OfficeLocationType getOfficeType() {
+        return officeType;
+    }
+
+    /**
+     * Sets the value of the officeType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link OfficeLocationType }
+     *     
+     */
+    public void setOfficeType(OfficeLocationType value) {
+        this.officeType = value;
+    }
+
+    /**
      * Gets the value of the defaultInd property.
      * 
      * @return
@@ -338,30 +362,6 @@ public class EmployerType {
      */
     public void setExpireDateExclusiveIndicator(Boolean value) {
         this.expireDateExclusiveIndicator = value;
-    }
-
-    /**
-     * Gets the value of the officeType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OfficeLocationType }
-     *     
-     */
-    public OfficeLocationType getOfficeType() {
-        return officeType;
-    }
-
-    /**
-     * Sets the value of the officeType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OfficeLocationType }
-     *     
-     */
-    public void setOfficeType(OfficeLocationType value) {
-        this.officeType = value;
     }
 
 }

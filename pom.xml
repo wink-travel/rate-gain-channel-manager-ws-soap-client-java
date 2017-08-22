@@ -55,8 +55,8 @@
 
         <plugins>
 
-            <!-- TODO Only needs to be enabled when we upgrade RateGain's WSDL version 
-            <plugin>
+            <!-- TODO Only needs to be enabled when we upgrade RateGain's WSDL version
+           <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
                 <version>2.4.1</version>
@@ -79,13 +79,15 @@
 					            <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
 					            <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
 					          </vmArgs>
+					          <packageName>com.traveliko.platform.ws.rategain</packageName>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-			-->
+-->
 
 		</plugins>
+
 
     </build>		
 

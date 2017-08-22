@@ -20,100 +20,100 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RequiredPaymentsType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="GuaranteePayment" maxOccurs="unbounded"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="AcceptedPayments" type="{http://www.opentravel.org/OTA/2003/05}AcceptedPaymentsType" minOccurs="0"/&gt;
- *                   &lt;element name="AmountPercent" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountPercentType"&gt;
- *                           &lt;attribute name="OverriddenAmountIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                         &lt;/extension&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="Deadline" maxOccurs="2" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/&gt;
- *                           &lt;attribute name="OverrideIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/&gt;
- *                   &lt;element name="Address" maxOccurs="3" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType"&gt;
- *                           &lt;attribute name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *                         &lt;/extension&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
- *                 &lt;attribute name="RetributionType"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
- *                       &lt;enumeration value="ResAutoCancelled"/&gt;
- *                       &lt;enumeration value="ResNotGuaranteed"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="PaymentCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
- *                 &lt;attribute name="Type"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *                       &lt;enumeration value="RequiredPayment"/&gt;
- *                       &lt;enumeration value="GuaranteePolicy"/&gt;
- *                       &lt;enumeration value="AcceptedPaymentForms"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="GuaranteeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
- *                 &lt;attribute name="GuaranteeType"&gt;
- *                   &lt;simpleType&gt;
- *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
- *                       &lt;enumeration value="GuaranteeRequired"/&gt;
- *                       &lt;enumeration value="None"/&gt;
- *                       &lt;enumeration value="CC/DC/Voucher"/&gt;
- *                       &lt;enumeration value="Profile"/&gt;
- *                       &lt;enumeration value="Deposit"/&gt;
- *                       &lt;enumeration value="PrePay"/&gt;
- *                     &lt;/restriction&gt;
- *                   &lt;/simpleType&gt;
- *                 &lt;/attribute&gt;
- *                 &lt;attribute name="HoldTime" type="{http://www.w3.org/2001/XMLSchema}time" /&gt;
- *                 &lt;attribute name="NoCardHolderInfoReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="NameInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="AddressInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="PhoneInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="InterbankNbrInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                 &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" /&gt;
- *                 &lt;attribute name="NonRefundableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="PolicyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *                 &lt;attribute name="AgencyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="CompanyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="RequiredPaymentsType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="GuaranteePayment" maxOccurs="unbounded">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="AcceptedPayments" type="{http://www.opentravel.org/OTA/2003/05}AcceptedPaymentsType" minOccurs="0"/>
+ *                   &lt;element name="AmountPercent" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountPercentType">
+ *                           &lt;attribute name="OverriddenAmountIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                         &lt;/extension>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="Deadline" maxOccurs="2" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/>
+ *                           &lt;attribute name="OverrideIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/>
+ *                   &lt;element name="Address" maxOccurs="3" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType">
+ *                           &lt;attribute name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *                         &lt;/extension>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+ *                 &lt;/sequence>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *                 &lt;attribute name="RetributionType">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
+ *                       &lt;enumeration value="ResAutoCancelled"/>
+ *                       &lt;enumeration value="ResNotGuaranteed"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="PaymentCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
+ *                 &lt;attribute name="Type">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *                       &lt;enumeration value="RequiredPayment"/>
+ *                       &lt;enumeration value="GuaranteePolicy"/>
+ *                       &lt;enumeration value="AcceptedPaymentForms"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="GuaranteeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+ *                 &lt;attribute name="GuaranteeType">
+ *                   &lt;simpleType>
+ *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
+ *                       &lt;enumeration value="GuaranteeRequired"/>
+ *                       &lt;enumeration value="None"/>
+ *                       &lt;enumeration value="CC/DC/Voucher"/>
+ *                       &lt;enumeration value="Profile"/>
+ *                       &lt;enumeration value="Deposit"/>
+ *                       &lt;enumeration value="PrePay"/>
+ *                     &lt;/restriction>
+ *                   &lt;/simpleType>
+ *                 &lt;/attribute>
+ *                 &lt;attribute name="HoldTime" type="{http://www.w3.org/2001/XMLSchema}time" />
+ *                 &lt;attribute name="NoCardHolderInfoReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="NameInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="AddressInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="PhoneInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="InterbankNbrInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                 &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" />
+ *                 &lt;attribute name="NonRefundableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="PolicyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *                 &lt;attribute name="AgencyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="CompanyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -163,90 +163,90 @@ public class RequiredPaymentsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="AcceptedPayments" type="{http://www.opentravel.org/OTA/2003/05}AcceptedPaymentsType" minOccurs="0"/&gt;
-     *         &lt;element name="AmountPercent" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountPercentType"&gt;
-     *                 &lt;attribute name="OverriddenAmountIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *               &lt;/extension&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="Deadline" maxOccurs="2" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/&gt;
-     *                 &lt;attribute name="OverrideIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/&gt;
-     *         &lt;element name="Address" maxOccurs="3" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType"&gt;
-     *                 &lt;attribute name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-     *               &lt;/extension&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/&gt;
-     *       &lt;attribute name="RetributionType"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
-     *             &lt;enumeration value="ResAutoCancelled"/&gt;
-     *             &lt;enumeration value="ResNotGuaranteed"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="PaymentCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
-     *       &lt;attribute name="Type"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
-     *             &lt;enumeration value="RequiredPayment"/&gt;
-     *             &lt;enumeration value="GuaranteePolicy"/&gt;
-     *             &lt;enumeration value="AcceptedPaymentForms"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="GuaranteeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
-     *       &lt;attribute name="GuaranteeType"&gt;
-     *         &lt;simpleType&gt;
-     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
-     *             &lt;enumeration value="GuaranteeRequired"/&gt;
-     *             &lt;enumeration value="None"/&gt;
-     *             &lt;enumeration value="CC/DC/Voucher"/&gt;
-     *             &lt;enumeration value="Profile"/&gt;
-     *             &lt;enumeration value="Deposit"/&gt;
-     *             &lt;enumeration value="PrePay"/&gt;
-     *           &lt;/restriction&gt;
-     *         &lt;/simpleType&gt;
-     *       &lt;/attribute&gt;
-     *       &lt;attribute name="HoldTime" type="{http://www.w3.org/2001/XMLSchema}time" /&gt;
-     *       &lt;attribute name="NoCardHolderInfoReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="NameInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="AddressInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="PhoneInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="InterbankNbrInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *       &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" /&gt;
-     *       &lt;attribute name="NonRefundableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="PolicyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
-     *       &lt;attribute name="AgencyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="CompanyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="AcceptedPayments" type="{http://www.opentravel.org/OTA/2003/05}AcceptedPaymentsType" minOccurs="0"/>
+     *         &lt;element name="AmountPercent" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountPercentType">
+     *                 &lt;attribute name="OverriddenAmountIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *               &lt;/extension>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="Deadline" maxOccurs="2" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/>
+     *                 &lt;attribute name="OverrideIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/>
+     *         &lt;element name="Address" maxOccurs="3" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType">
+     *                 &lt;attribute name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+     *               &lt;/extension>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+     *       &lt;/sequence>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DOW_PatternGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+     *       &lt;attribute name="RetributionType">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
+     *             &lt;enumeration value="ResAutoCancelled"/>
+     *             &lt;enumeration value="ResNotGuaranteed"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="PaymentCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
+     *       &lt;attribute name="Type">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+     *             &lt;enumeration value="RequiredPayment"/>
+     *             &lt;enumeration value="GuaranteePolicy"/>
+     *             &lt;enumeration value="AcceptedPaymentForms"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="GuaranteeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
+     *       &lt;attribute name="GuaranteeType">
+     *         &lt;simpleType>
+     *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
+     *             &lt;enumeration value="GuaranteeRequired"/>
+     *             &lt;enumeration value="None"/>
+     *             &lt;enumeration value="CC/DC/Voucher"/>
+     *             &lt;enumeration value="Profile"/>
+     *             &lt;enumeration value="Deposit"/>
+     *             &lt;enumeration value="PrePay"/>
+     *           &lt;/restriction>
+     *         &lt;/simpleType>
+     *       &lt;/attribute>
+     *       &lt;attribute name="HoldTime" type="{http://www.w3.org/2001/XMLSchema}time" />
+     *       &lt;attribute name="NoCardHolderInfoReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="NameInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="AddressInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="PhoneInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="InterbankNbrInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *       &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" />
+     *       &lt;attribute name="NonRefundableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="PolicyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+     *       &lt;attribute name="AgencyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="CompanyNameAddrReqInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -309,12 +309,6 @@ public class RequiredPaymentsType {
         protected Boolean agencyNameAddrReqInd;
         @XmlAttribute(name = "CompanyNameAddrReqInd")
         protected Boolean companyNameAddrReqInd;
-        @XmlAttribute(name = "Start")
-        protected String start;
-        @XmlAttribute(name = "Duration")
-        protected String duration;
-        @XmlAttribute(name = "End")
-        protected String end;
         @XmlAttribute(name = "Mon")
         protected Boolean mon;
         @XmlAttribute(name = "Tue")
@@ -329,6 +323,12 @@ public class RequiredPaymentsType {
         protected Boolean sat;
         @XmlAttribute(name = "Sun")
         protected Boolean sun;
+        @XmlAttribute(name = "Start")
+        protected String start;
+        @XmlAttribute(name = "Duration")
+        protected String duration;
+        @XmlAttribute(name = "End")
+        protected String end;
 
         /**
          * Gets the value of the acceptedPayments property.
@@ -898,78 +898,6 @@ public class RequiredPaymentsType {
         }
 
         /**
-         * Gets the value of the start property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getStart() {
-            return start;
-        }
-
-        /**
-         * Sets the value of the start property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setStart(String value) {
-            this.start = value;
-        }
-
-        /**
-         * Gets the value of the duration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getDuration() {
-            return duration;
-        }
-
-        /**
-         * Sets the value of the duration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setDuration(String value) {
-            this.duration = value;
-        }
-
-        /**
-         * Gets the value of the end property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getEnd() {
-            return end;
-        }
-
-        /**
-         * Sets the value of the end property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setEnd(String value) {
-            this.end = value;
-        }
-
-        /**
          * Gets the value of the mon property.
          * 
          * @return
@@ -1137,6 +1065,78 @@ public class RequiredPaymentsType {
             this.sun = value;
         }
 
+        /**
+         * Gets the value of the start property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getStart() {
+            return start;
+        }
+
+        /**
+         * Sets the value of the start property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setStart(String value) {
+            this.start = value;
+        }
+
+        /**
+         * Gets the value of the duration property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getDuration() {
+            return duration;
+        }
+
+        /**
+         * Sets the value of the duration property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setDuration(String value) {
+            this.duration = value;
+        }
+
+        /**
+         * Gets the value of the end property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getEnd() {
+            return end;
+        }
+
+        /**
+         * Sets the value of the end property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setEnd(String value) {
+            this.end = value;
+        }
+
 
         /**
          * <p>Java class for anonymous complex type.
@@ -1144,13 +1144,13 @@ public class RequiredPaymentsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType"&gt;
-         *       &lt;attribute name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
-         *     &lt;/extension&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType">
+         *       &lt;attribute name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+         *     &lt;/extension>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1197,13 +1197,13 @@ public class RequiredPaymentsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountPercentType"&gt;
-         *       &lt;attribute name="OverriddenAmountIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *     &lt;/extension&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AmountPercentType">
+         *       &lt;attribute name="OverriddenAmountIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *     &lt;/extension>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1250,14 +1250,14 @@ public class RequiredPaymentsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/&gt;
-         *       &lt;attribute name="OverrideIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DeadlineGroup"/>
+         *       &lt;attribute name="OverrideIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 

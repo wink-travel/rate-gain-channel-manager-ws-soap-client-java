@@ -12,16 +12,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="FlightTypeType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Nonstop"/&gt;
- *     &lt;enumeration value="Direct"/&gt;
- *     &lt;enumeration value="Connection"/&gt;
- *     &lt;enumeration value="SingleConnection"/&gt;
- *     &lt;enumeration value="DoubleConnection"/&gt;
- *     &lt;enumeration value="OneStopOnly"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="FlightTypeType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="Nonstop"/>
+ *     &lt;enumeration value="Direct"/>
+ *     &lt;enumeration value="Connection"/>
+ *     &lt;enumeration value="SingleConnection"/>
+ *     &lt;enumeration value="DoubleConnection"/>
+ *     &lt;enumeration value="OneStopOnly"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

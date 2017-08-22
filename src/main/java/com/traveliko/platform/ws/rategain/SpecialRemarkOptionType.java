@@ -12,18 +12,18 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="SpecialRemarkOptionType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Itinerary"/&gt;
- *     &lt;enumeration value="Invoice"/&gt;
- *     &lt;enumeration value="Endorsement"/&gt;
- *     &lt;enumeration value="Save"/&gt;
- *     &lt;enumeration value="Confidential"/&gt;
- *     &lt;enumeration value="Free"/&gt;
- *     &lt;enumeration value="GRMS"/&gt;
- *     &lt;enumeration value="Split"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="SpecialRemarkOptionType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Itinerary"/>
+ *     &lt;enumeration value="Invoice"/>
+ *     &lt;enumeration value="Endorsement"/>
+ *     &lt;enumeration value="Save"/>
+ *     &lt;enumeration value="Confidential"/>
+ *     &lt;enumeration value="Free"/>
+ *     &lt;enumeration value="GRMS"/>
+ *     &lt;enumeration value="Split"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

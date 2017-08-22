@@ -12,25 +12,25 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="RateIndicatorType"&gt;
- *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
- *     &lt;enumeration value="ChangeDuringStay"/&gt;
- *     &lt;enumeration value="MultipleNights"/&gt;
- *     &lt;enumeration value="Exclusive"/&gt;
- *     &lt;enumeration value="OnRequest"/&gt;
- *     &lt;enumeration value="LimitedAvailability"/&gt;
- *     &lt;enumeration value="AvailableForSale"/&gt;
- *     &lt;enumeration value="ClosedOut"/&gt;
- *     &lt;enumeration value="OtherAvailable"/&gt;
- *     &lt;enumeration value="UnableToProcess"/&gt;
- *     &lt;enumeration value="NoAvailability"/&gt;
- *     &lt;enumeration value="RoomTypeClosed"/&gt;
- *     &lt;enumeration value="RatePlanClosed"/&gt;
- *     &lt;enumeration value="LOS_Restricted"/&gt;
- *     &lt;enumeration value="Restricted"/&gt;
- *     &lt;enumeration value="DoesNotExist"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="RateIndicatorType">
+ *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
+ *     &lt;enumeration value="ChangeDuringStay"/>
+ *     &lt;enumeration value="MultipleNights"/>
+ *     &lt;enumeration value="Exclusive"/>
+ *     &lt;enumeration value="OnRequest"/>
+ *     &lt;enumeration value="LimitedAvailability"/>
+ *     &lt;enumeration value="AvailableForSale"/>
+ *     &lt;enumeration value="ClosedOut"/>
+ *     &lt;enumeration value="OtherAvailable"/>
+ *     &lt;enumeration value="UnableToProcess"/>
+ *     &lt;enumeration value="NoAvailability"/>
+ *     &lt;enumeration value="RoomTypeClosed"/>
+ *     &lt;enumeration value="RatePlanClosed"/>
+ *     &lt;enumeration value="LOS_Restricted"/>
+ *     &lt;enumeration value="Restricted"/>
+ *     &lt;enumeration value="DoesNotExist"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

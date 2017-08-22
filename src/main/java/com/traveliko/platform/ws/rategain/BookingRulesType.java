@@ -22,147 +22,147 @@ import javax.xml.datatype.Duration;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="BookingRulesType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="BookingRule" maxOccurs="unbounded"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                 &lt;sequence&gt;
- *                   &lt;element name="AcceptableGuarantees" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="AcceptableGuarantee" maxOccurs="unbounded"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType"&gt;
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/&gt;
- *                                     &lt;attribute name="GuaranteePolicyType"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                                           &lt;enumeration value="NoGuaranteesAccepted"/&gt;
- *                                           &lt;enumeration value="GuaranteesAccepted"/&gt;
- *                                           &lt;enumeration value="GuaranteesRequired"/&gt;
- *                                           &lt;enumeration value="DepositRequired"/&gt;
- *                                           &lt;enumeration value="GuaranteesNotRequired"/&gt;
- *                                           &lt;enumeration value="DepositNotRequired"/&gt;
- *                                           &lt;enumeration value="PrepayRequired"/&gt;
- *                                           &lt;enumeration value="PrepayNotRequired"/&gt;
- *                                           &lt;enumeration value="NoDepositsAccepted"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                     &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                                     &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                                   &lt;/extension&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="CancelPenalties" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/&gt;
- *                   &lt;element name="RequiredPaymts" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/&gt;
- *                   &lt;element name="LengthsOfStay" type="{http://www.opentravel.org/OTA/2003/05}LengthsOfStayType" minOccurs="0"/&gt;
- *                   &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType" minOccurs="0"/&gt;
- *                   &lt;element name="RestrictionStatus" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RestrictionStatusGroup"/&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="Viewerships" type="{http://www.opentravel.org/OTA/2003/05}ViewershipsType" minOccurs="0"/&gt;
- *                   &lt;element name="AddtionalRules" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;sequence&gt;
- *                             &lt;element name="AdditionalRule" maxOccurs="unbounded"&gt;
- *                               &lt;complexType&gt;
- *                                 &lt;complexContent&gt;
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                                     &lt;attribute name="AdditionalRule"&gt;
- *                                       &lt;simpleType&gt;
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                                           &lt;enumeration value="IsCancelable"/&gt;
- *                                           &lt;enumeration value="IsModifiable"/&gt;
- *                                           &lt;enumeration value="IsRefundable"/&gt;
- *                                           &lt;enumeration value="NotCancelable"/&gt;
- *                                           &lt;enumeration value="NotModifiable"/&gt;
- *                                           &lt;enumeration value="NotRefundable"/&gt;
- *                                           &lt;enumeration value="IsCommissionable"/&gt;
- *                                           &lt;enumeration value="NotCommissionable"/&gt;
- *                                           &lt;enumeration value="CertificateRequired"/&gt;
- *                                           &lt;enumeration value="ID_Required"/&gt;
- *                                         &lt;/restriction&gt;
- *                                       &lt;/simpleType&gt;
- *                                     &lt;/attribute&gt;
- *                                   &lt;/restriction&gt;
- *                                 &lt;/complexContent&gt;
- *                               &lt;/complexType&gt;
- *                             &lt;/element&gt;
- *                           &lt;/sequence&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                   &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="20" minOccurs="0"/&gt;
- *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
- *                   &lt;element name="CheckoutCharge" maxOccurs="2" minOccurs="0"&gt;
- *                     &lt;complexType&gt;
- *                       &lt;complexContent&gt;
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
- *                           &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
- *                           &lt;attribute name="Type"&gt;
- *                             &lt;simpleType&gt;
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *                                 &lt;enumeration value="Early"/&gt;
- *                                 &lt;enumeration value="Late"/&gt;
- *                               &lt;/restriction&gt;
- *                             &lt;/simpleType&gt;
- *                           &lt;/attribute&gt;
- *                           &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *                           &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *                           &lt;attribute name="BalanceOfStayInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                         &lt;/restriction&gt;
- *                       &lt;/complexContent&gt;
- *                     &lt;/complexType&gt;
- *                   &lt;/element&gt;
- *                 &lt;/sequence&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/&gt;
- *                 &lt;attribute name="MaxAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                 &lt;attribute name="MinAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                 &lt;attribute name="ForceGuaranteeOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                 &lt;attribute name="DepositWaiverOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *                 &lt;attribute name="MinTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *                 &lt;attribute name="MaxTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *                 &lt;attribute name="AbsoluteDropTime" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
- *                 &lt;attribute name="GenerallyBookable" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="PriceViewable" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="QualifiedRateYN" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="AddressRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *                 &lt;attribute name="MaxContiguousBookings" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *               &lt;/restriction&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *       &lt;/sequence&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="BookingRulesType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="BookingRule" maxOccurs="unbounded">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                 &lt;sequence>
+ *                   &lt;element name="AcceptableGuarantees" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="AcceptableGuarantee" maxOccurs="unbounded">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType">
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
+ *                                     &lt;attribute name="GuaranteePolicyType">
+ *                                       &lt;simpleType>
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                                           &lt;enumeration value="NoGuaranteesAccepted"/>
+ *                                           &lt;enumeration value="GuaranteesAccepted"/>
+ *                                           &lt;enumeration value="GuaranteesRequired"/>
+ *                                           &lt;enumeration value="DepositRequired"/>
+ *                                           &lt;enumeration value="GuaranteesNotRequired"/>
+ *                                           &lt;enumeration value="DepositNotRequired"/>
+ *                                           &lt;enumeration value="PrepayRequired"/>
+ *                                           &lt;enumeration value="PrepayNotRequired"/>
+ *                                           &lt;enumeration value="NoDepositsAccepted"/>
+ *                                         &lt;/restriction>
+ *                                       &lt;/simpleType>
+ *                                     &lt;/attribute>
+ *                                     &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                                     &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                                   &lt;/extension>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="CancelPenalties" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/>
+ *                   &lt;element name="RequiredPaymts" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/>
+ *                   &lt;element name="LengthsOfStay" type="{http://www.opentravel.org/OTA/2003/05}LengthsOfStayType" minOccurs="0"/>
+ *                   &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType" minOccurs="0"/>
+ *                   &lt;element name="RestrictionStatus" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RestrictionStatusGroup"/>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="Viewerships" type="{http://www.opentravel.org/OTA/2003/05}ViewershipsType" minOccurs="0"/>
+ *                   &lt;element name="AddtionalRules" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;sequence>
+ *                             &lt;element name="AdditionalRule" maxOccurs="unbounded">
+ *                               &lt;complexType>
+ *                                 &lt;complexContent>
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                                     &lt;attribute name="AdditionalRule">
+ *                                       &lt;simpleType>
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                                           &lt;enumeration value="IsCancelable"/>
+ *                                           &lt;enumeration value="IsModifiable"/>
+ *                                           &lt;enumeration value="IsRefundable"/>
+ *                                           &lt;enumeration value="NotCancelable"/>
+ *                                           &lt;enumeration value="NotModifiable"/>
+ *                                           &lt;enumeration value="NotRefundable"/>
+ *                                           &lt;enumeration value="IsCommissionable"/>
+ *                                           &lt;enumeration value="NotCommissionable"/>
+ *                                           &lt;enumeration value="CertificateRequired"/>
+ *                                           &lt;enumeration value="ID_Required"/>
+ *                                         &lt;/restriction>
+ *                                       &lt;/simpleType>
+ *                                     &lt;/attribute>
+ *                                   &lt;/restriction>
+ *                                 &lt;/complexContent>
+ *                               &lt;/complexType>
+ *                             &lt;/element>
+ *                           &lt;/sequence>
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                   &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="20" minOccurs="0"/>
+ *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+ *                   &lt;element name="CheckoutCharge" maxOccurs="2" minOccurs="0">
+ *                     &lt;complexType>
+ *                       &lt;complexContent>
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+ *                           &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
+ *                           &lt;attribute name="Type">
+ *                             &lt;simpleType>
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *                                 &lt;enumeration value="Early"/>
+ *                                 &lt;enumeration value="Late"/>
+ *                               &lt;/restriction>
+ *                             &lt;/simpleType>
+ *                           &lt;/attribute>
+ *                           &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *                           &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *                           &lt;attribute name="BalanceOfStayInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                         &lt;/restriction>
+ *                       &lt;/complexContent>
+ *                     &lt;/complexType>
+ *                   &lt;/element>
+ *                 &lt;/sequence>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/>
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+ *                 &lt;attribute name="MaxAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                 &lt;attribute name="MinAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                 &lt;attribute name="ForceGuaranteeOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                 &lt;attribute name="DepositWaiverOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *                 &lt;attribute name="MinTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *                 &lt;attribute name="MaxTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *                 &lt;attribute name="AbsoluteDropTime" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
+ *                 &lt;attribute name="GenerallyBookable" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="PriceViewable" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="QualifiedRateYN" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="AddressRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *                 &lt;attribute name="MaxContiguousBookings" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *               &lt;/restriction>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *       &lt;/sequence>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -212,137 +212,137 @@ public class BookingRulesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *       &lt;sequence&gt;
-     *         &lt;element name="AcceptableGuarantees" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="AcceptableGuarantee" maxOccurs="unbounded"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType"&gt;
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/&gt;
-     *                           &lt;attribute name="GuaranteePolicyType"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *                                 &lt;enumeration value="NoGuaranteesAccepted"/&gt;
-     *                                 &lt;enumeration value="GuaranteesAccepted"/&gt;
-     *                                 &lt;enumeration value="GuaranteesRequired"/&gt;
-     *                                 &lt;enumeration value="DepositRequired"/&gt;
-     *                                 &lt;enumeration value="GuaranteesNotRequired"/&gt;
-     *                                 &lt;enumeration value="DepositNotRequired"/&gt;
-     *                                 &lt;enumeration value="PrepayRequired"/&gt;
-     *                                 &lt;enumeration value="PrepayNotRequired"/&gt;
-     *                                 &lt;enumeration value="NoDepositsAccepted"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                           &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *                           &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *                         &lt;/extension&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="CancelPenalties" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/&gt;
-     *         &lt;element name="RequiredPaymts" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/&gt;
-     *         &lt;element name="LengthsOfStay" type="{http://www.opentravel.org/OTA/2003/05}LengthsOfStayType" minOccurs="0"/&gt;
-     *         &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType" minOccurs="0"/&gt;
-     *         &lt;element name="RestrictionStatus" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RestrictionStatusGroup"/&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="Viewerships" type="{http://www.opentravel.org/OTA/2003/05}ViewershipsType" minOccurs="0"/&gt;
-     *         &lt;element name="AddtionalRules" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;sequence&gt;
-     *                   &lt;element name="AdditionalRule" maxOccurs="unbounded"&gt;
-     *                     &lt;complexType&gt;
-     *                       &lt;complexContent&gt;
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                           &lt;attribute name="AdditionalRule"&gt;
-     *                             &lt;simpleType&gt;
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *                                 &lt;enumeration value="IsCancelable"/&gt;
-     *                                 &lt;enumeration value="IsModifiable"/&gt;
-     *                                 &lt;enumeration value="IsRefundable"/&gt;
-     *                                 &lt;enumeration value="NotCancelable"/&gt;
-     *                                 &lt;enumeration value="NotModifiable"/&gt;
-     *                                 &lt;enumeration value="NotRefundable"/&gt;
-     *                                 &lt;enumeration value="IsCommissionable"/&gt;
-     *                                 &lt;enumeration value="NotCommissionable"/&gt;
-     *                                 &lt;enumeration value="CertificateRequired"/&gt;
-     *                                 &lt;enumeration value="ID_Required"/&gt;
-     *                               &lt;/restriction&gt;
-     *                             &lt;/simpleType&gt;
-     *                           &lt;/attribute&gt;
-     *                         &lt;/restriction&gt;
-     *                       &lt;/complexContent&gt;
-     *                     &lt;/complexType&gt;
-     *                   &lt;/element&gt;
-     *                 &lt;/sequence&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="20" minOccurs="0"/&gt;
-     *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
-     *         &lt;element name="CheckoutCharge" maxOccurs="2" minOccurs="0"&gt;
-     *           &lt;complexType&gt;
-     *             &lt;complexContent&gt;
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
-     *                 &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
-     *                 &lt;attribute name="Type"&gt;
-     *                   &lt;simpleType&gt;
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-     *                       &lt;enumeration value="Early"/&gt;
-     *                       &lt;enumeration value="Late"/&gt;
-     *                     &lt;/restriction&gt;
-     *                   &lt;/simpleType&gt;
-     *                 &lt;/attribute&gt;
-     *                 &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-     *                 &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-     *                 &lt;attribute name="BalanceOfStayInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *               &lt;/restriction&gt;
-     *             &lt;/complexContent&gt;
-     *           &lt;/complexType&gt;
-     *         &lt;/element&gt;
-     *       &lt;/sequence&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/&gt;
-     *       &lt;attribute name="MaxAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *       &lt;attribute name="MinAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *       &lt;attribute name="ForceGuaranteeOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *       &lt;attribute name="DepositWaiverOffset" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
-     *       &lt;attribute name="MinTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-     *       &lt;attribute name="MaxTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-     *       &lt;attribute name="AbsoluteDropTime" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
-     *       &lt;attribute name="GenerallyBookable" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="PriceViewable" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="QualifiedRateYN" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="AddressRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-     *       &lt;attribute name="MaxContiguousBookings" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-     *     &lt;/restriction&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *       &lt;sequence>
+     *         &lt;element name="AcceptableGuarantees" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="AcceptableGuarantee" maxOccurs="unbounded">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType">
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
+     *                           &lt;attribute name="GuaranteePolicyType">
+     *                             &lt;simpleType>
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *                                 &lt;enumeration value="NoGuaranteesAccepted"/>
+     *                                 &lt;enumeration value="GuaranteesAccepted"/>
+     *                                 &lt;enumeration value="GuaranteesRequired"/>
+     *                                 &lt;enumeration value="DepositRequired"/>
+     *                                 &lt;enumeration value="GuaranteesNotRequired"/>
+     *                                 &lt;enumeration value="DepositNotRequired"/>
+     *                                 &lt;enumeration value="PrepayRequired"/>
+     *                                 &lt;enumeration value="PrepayNotRequired"/>
+     *                                 &lt;enumeration value="NoDepositsAccepted"/>
+     *                               &lt;/restriction>
+     *                             &lt;/simpleType>
+     *                           &lt;/attribute>
+     *                           &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *                           &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *                         &lt;/extension>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="CancelPenalties" type="{http://www.opentravel.org/OTA/2003/05}CancelPenaltiesType" minOccurs="0"/>
+     *         &lt;element name="RequiredPaymts" type="{http://www.opentravel.org/OTA/2003/05}RequiredPaymentsType" minOccurs="0"/>
+     *         &lt;element name="LengthsOfStay" type="{http://www.opentravel.org/OTA/2003/05}LengthsOfStayType" minOccurs="0"/>
+     *         &lt;element name="DOW_Restrictions" type="{http://www.opentravel.org/OTA/2003/05}DOW_RestrictionsType" minOccurs="0"/>
+     *         &lt;element name="RestrictionStatus" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RestrictionStatusGroup"/>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="Viewerships" type="{http://www.opentravel.org/OTA/2003/05}ViewershipsType" minOccurs="0"/>
+     *         &lt;element name="AddtionalRules" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;sequence>
+     *                   &lt;element name="AdditionalRule" maxOccurs="unbounded">
+     *                     &lt;complexType>
+     *                       &lt;complexContent>
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                           &lt;attribute name="AdditionalRule">
+     *                             &lt;simpleType>
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *                                 &lt;enumeration value="IsCancelable"/>
+     *                                 &lt;enumeration value="IsModifiable"/>
+     *                                 &lt;enumeration value="IsRefundable"/>
+     *                                 &lt;enumeration value="NotCancelable"/>
+     *                                 &lt;enumeration value="NotModifiable"/>
+     *                                 &lt;enumeration value="NotRefundable"/>
+     *                                 &lt;enumeration value="IsCommissionable"/>
+     *                                 &lt;enumeration value="NotCommissionable"/>
+     *                                 &lt;enumeration value="CertificateRequired"/>
+     *                                 &lt;enumeration value="ID_Required"/>
+     *                               &lt;/restriction>
+     *                             &lt;/simpleType>
+     *                           &lt;/attribute>
+     *                         &lt;/restriction>
+     *                       &lt;/complexContent>
+     *                     &lt;/complexType>
+     *                   &lt;/element>
+     *                 &lt;/sequence>
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="20" minOccurs="0"/>
+     *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
+     *         &lt;element name="CheckoutCharge" maxOccurs="2" minOccurs="0">
+     *           &lt;complexType>
+     *             &lt;complexContent>
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+     *                 &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
+     *                 &lt;attribute name="Type">
+     *                   &lt;simpleType>
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+     *                       &lt;enumeration value="Early"/>
+     *                       &lt;enumeration value="Late"/>
+     *                     &lt;/restriction>
+     *                   &lt;/simpleType>
+     *                 &lt;/attribute>
+     *                 &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+     *                 &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+     *                 &lt;attribute name="BalanceOfStayInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *               &lt;/restriction>
+     *             &lt;/complexContent>
+     *           &lt;/complexType>
+     *         &lt;/element>
+     *       &lt;/sequence>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCutoffGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/>
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
+     *       &lt;attribute name="MaxAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *       &lt;attribute name="MinAdvancedBookingOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *       &lt;attribute name="ForceGuaranteeOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *       &lt;attribute name="DepositWaiverOffset" type="{http://www.w3.org/2001/XMLSchema}duration" />
+     *       &lt;attribute name="MinTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+     *       &lt;attribute name="MaxTotalOccupancy" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+     *       &lt;attribute name="AbsoluteDropTime" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
+     *       &lt;attribute name="GenerallyBookable" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="PriceViewable" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="QualifiedRateYN" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="AddressRequired" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+     *       &lt;attribute name="MaxContiguousBookings" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+     *     &lt;/restriction>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 
@@ -412,6 +412,13 @@ public class BookingRulesType {
         @XmlAttribute(name = "MaxContiguousBookings")
         @XmlSchemaType(name = "nonNegativeInteger")
         protected BigInteger maxContiguousBookings;
+        @XmlAttribute(name = "AbsoluteCutoff")
+        protected String absoluteCutoff;
+        @XmlAttribute(name = "OffsetDuration")
+        protected Duration offsetDuration;
+        @XmlAttribute(name = "OffsetCalculationMode")
+        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+        protected String offsetCalculationMode;
         @XmlAttribute(name = "Code")
         protected String code;
         @XmlAttribute(name = "CodeContext")
@@ -428,13 +435,6 @@ public class BookingRulesType {
         protected String duration;
         @XmlAttribute(name = "End")
         protected String end;
-        @XmlAttribute(name = "AbsoluteCutoff")
-        protected String absoluteCutoff;
-        @XmlAttribute(name = "OffsetDuration")
-        protected Duration offsetDuration;
-        @XmlAttribute(name = "OffsetCalculationMode")
-        @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-        protected String offsetCalculationMode;
 
         /**
          * Gets the value of the acceptableGuarantees property.
@@ -999,6 +999,78 @@ public class BookingRulesType {
         }
 
         /**
+         * Gets the value of the absoluteCutoff property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getAbsoluteCutoff() {
+            return absoluteCutoff;
+        }
+
+        /**
+         * Sets the value of the absoluteCutoff property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setAbsoluteCutoff(String value) {
+            this.absoluteCutoff = value;
+        }
+
+        /**
+         * Gets the value of the offsetDuration property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link Duration }
+         *     
+         */
+        public Duration getOffsetDuration() {
+            return offsetDuration;
+        }
+
+        /**
+         * Sets the value of the offsetDuration property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link Duration }
+         *     
+         */
+        public void setOffsetDuration(Duration value) {
+            this.offsetDuration = value;
+        }
+
+        /**
+         * Gets the value of the offsetCalculationMode property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getOffsetCalculationMode() {
+            return offsetCalculationMode;
+        }
+
+        /**
+         * Sets the value of the offsetCalculationMode property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setOffsetCalculationMode(String value) {
+            this.offsetCalculationMode = value;
+        }
+
+        /**
          * Gets the value of the code property.
          * 
          * @return
@@ -1166,78 +1238,6 @@ public class BookingRulesType {
             this.end = value;
         }
 
-        /**
-         * Gets the value of the absoluteCutoff property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getAbsoluteCutoff() {
-            return absoluteCutoff;
-        }
-
-        /**
-         * Sets the value of the absoluteCutoff property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setAbsoluteCutoff(String value) {
-            this.absoluteCutoff = value;
-        }
-
-        /**
-         * Gets the value of the offsetDuration property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link Duration }
-         *     
-         */
-        public Duration getOffsetDuration() {
-            return offsetDuration;
-        }
-
-        /**
-         * Sets the value of the offsetDuration property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link Duration }
-         *     
-         */
-        public void setOffsetDuration(Duration value) {
-            this.offsetDuration = value;
-        }
-
-        /**
-         * Gets the value of the offsetCalculationMode property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getOffsetCalculationMode() {
-            return offsetCalculationMode;
-        }
-
-        /**
-         * Sets the value of the offsetCalculationMode property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setOffsetCalculationMode(String value) {
-            this.offsetCalculationMode = value;
-        }
-
 
         /**
          * <p>Java class for anonymous complex type.
@@ -1245,40 +1245,40 @@ public class BookingRulesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="AcceptableGuarantee" maxOccurs="unbounded"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType"&gt;
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/&gt;
-         *                 &lt;attribute name="GuaranteePolicyType"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-         *                       &lt;enumeration value="NoGuaranteesAccepted"/&gt;
-         *                       &lt;enumeration value="GuaranteesAccepted"/&gt;
-         *                       &lt;enumeration value="GuaranteesRequired"/&gt;
-         *                       &lt;enumeration value="DepositRequired"/&gt;
-         *                       &lt;enumeration value="GuaranteesNotRequired"/&gt;
-         *                       &lt;enumeration value="DepositNotRequired"/&gt;
-         *                       &lt;enumeration value="PrepayRequired"/&gt;
-         *                       &lt;enumeration value="PrepayNotRequired"/&gt;
-         *                       &lt;enumeration value="NoDepositsAccepted"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *                 &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-         *                 &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-         *               &lt;/extension&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="AcceptableGuarantee" maxOccurs="unbounded">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType">
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
+         *                 &lt;attribute name="GuaranteePolicyType">
+         *                   &lt;simpleType>
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+         *                       &lt;enumeration value="NoGuaranteesAccepted"/>
+         *                       &lt;enumeration value="GuaranteesAccepted"/>
+         *                       &lt;enumeration value="GuaranteesRequired"/>
+         *                       &lt;enumeration value="DepositRequired"/>
+         *                       &lt;enumeration value="GuaranteesNotRequired"/>
+         *                       &lt;enumeration value="DepositNotRequired"/>
+         *                       &lt;enumeration value="PrepayRequired"/>
+         *                       &lt;enumeration value="PrepayNotRequired"/>
+         *                       &lt;enumeration value="NoDepositsAccepted"/>
+         *                     &lt;/restriction>
+         *                   &lt;/simpleType>
+         *                 &lt;/attribute>
+         *                 &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+         *                 &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+         *               &lt;/extension>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1328,30 +1328,30 @@ public class BookingRulesType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType"&gt;
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/&gt;
-             *       &lt;attribute name="GuaranteePolicyType"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-             *             &lt;enumeration value="NoGuaranteesAccepted"/&gt;
-             *             &lt;enumeration value="GuaranteesAccepted"/&gt;
-             *             &lt;enumeration value="GuaranteesRequired"/&gt;
-             *             &lt;enumeration value="DepositRequired"/&gt;
-             *             &lt;enumeration value="GuaranteesNotRequired"/&gt;
-             *             &lt;enumeration value="DepositNotRequired"/&gt;
-             *             &lt;enumeration value="PrepayRequired"/&gt;
-             *             &lt;enumeration value="PrepayNotRequired"/&gt;
-             *             &lt;enumeration value="NoDepositsAccepted"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *       &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-             *       &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-             *     &lt;/extension&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}GuaranteeType">
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
+             *       &lt;attribute name="GuaranteePolicyType">
+             *         &lt;simpleType>
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+             *             &lt;enumeration value="NoGuaranteesAccepted"/>
+             *             &lt;enumeration value="GuaranteesAccepted"/>
+             *             &lt;enumeration value="GuaranteesRequired"/>
+             *             &lt;enumeration value="DepositRequired"/>
+             *             &lt;enumeration value="GuaranteesNotRequired"/>
+             *             &lt;enumeration value="DepositNotRequired"/>
+             *             &lt;enumeration value="PrepayRequired"/>
+             *             &lt;enumeration value="PrepayNotRequired"/>
+             *             &lt;enumeration value="NoDepositsAccepted"/>
+             *           &lt;/restriction>
+             *         &lt;/simpleType>
+             *       &lt;/attribute>
+             *       &lt;attribute name="PaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+             *       &lt;attribute name="UnacceptablePaymentType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+             *     &lt;/extension>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -1506,38 +1506,38 @@ public class BookingRulesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;sequence&gt;
-         *         &lt;element name="AdditionalRule" maxOccurs="unbounded"&gt;
-         *           &lt;complexType&gt;
-         *             &lt;complexContent&gt;
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *                 &lt;attribute name="AdditionalRule"&gt;
-         *                   &lt;simpleType&gt;
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-         *                       &lt;enumeration value="IsCancelable"/&gt;
-         *                       &lt;enumeration value="IsModifiable"/&gt;
-         *                       &lt;enumeration value="IsRefundable"/&gt;
-         *                       &lt;enumeration value="NotCancelable"/&gt;
-         *                       &lt;enumeration value="NotModifiable"/&gt;
-         *                       &lt;enumeration value="NotRefundable"/&gt;
-         *                       &lt;enumeration value="IsCommissionable"/&gt;
-         *                       &lt;enumeration value="NotCommissionable"/&gt;
-         *                       &lt;enumeration value="CertificateRequired"/&gt;
-         *                       &lt;enumeration value="ID_Required"/&gt;
-         *                     &lt;/restriction&gt;
-         *                   &lt;/simpleType&gt;
-         *                 &lt;/attribute&gt;
-         *               &lt;/restriction&gt;
-         *             &lt;/complexContent&gt;
-         *           &lt;/complexType&gt;
-         *         &lt;/element&gt;
-         *       &lt;/sequence&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;sequence>
+         *         &lt;element name="AdditionalRule" maxOccurs="unbounded">
+         *           &lt;complexType>
+         *             &lt;complexContent>
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *                 &lt;attribute name="AdditionalRule">
+         *                   &lt;simpleType>
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+         *                       &lt;enumeration value="IsCancelable"/>
+         *                       &lt;enumeration value="IsModifiable"/>
+         *                       &lt;enumeration value="IsRefundable"/>
+         *                       &lt;enumeration value="NotCancelable"/>
+         *                       &lt;enumeration value="NotModifiable"/>
+         *                       &lt;enumeration value="NotRefundable"/>
+         *                       &lt;enumeration value="IsCommissionable"/>
+         *                       &lt;enumeration value="NotCommissionable"/>
+         *                       &lt;enumeration value="CertificateRequired"/>
+         *                       &lt;enumeration value="ID_Required"/>
+         *                     &lt;/restriction>
+         *                   &lt;/simpleType>
+         *                 &lt;/attribute>
+         *               &lt;/restriction>
+         *             &lt;/complexContent>
+         *           &lt;/complexType>
+         *         &lt;/element>
+         *       &lt;/sequence>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1587,28 +1587,28 @@ public class BookingRulesType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType&gt;
-             *   &lt;complexContent&gt;
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-             *       &lt;attribute name="AdditionalRule"&gt;
-             *         &lt;simpleType&gt;
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-             *             &lt;enumeration value="IsCancelable"/&gt;
-             *             &lt;enumeration value="IsModifiable"/&gt;
-             *             &lt;enumeration value="IsRefundable"/&gt;
-             *             &lt;enumeration value="NotCancelable"/&gt;
-             *             &lt;enumeration value="NotModifiable"/&gt;
-             *             &lt;enumeration value="NotRefundable"/&gt;
-             *             &lt;enumeration value="IsCommissionable"/&gt;
-             *             &lt;enumeration value="NotCommissionable"/&gt;
-             *             &lt;enumeration value="CertificateRequired"/&gt;
-             *             &lt;enumeration value="ID_Required"/&gt;
-             *           &lt;/restriction&gt;
-             *         &lt;/simpleType&gt;
-             *       &lt;/attribute&gt;
-             *     &lt;/restriction&gt;
-             *   &lt;/complexContent&gt;
-             * &lt;/complexType&gt;
+             * &lt;complexType>
+             *   &lt;complexContent>
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+             *       &lt;attribute name="AdditionalRule">
+             *         &lt;simpleType>
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+             *             &lt;enumeration value="IsCancelable"/>
+             *             &lt;enumeration value="IsModifiable"/>
+             *             &lt;enumeration value="IsRefundable"/>
+             *             &lt;enumeration value="NotCancelable"/>
+             *             &lt;enumeration value="NotModifiable"/>
+             *             &lt;enumeration value="NotRefundable"/>
+             *             &lt;enumeration value="IsCommissionable"/>
+             *             &lt;enumeration value="NotCommissionable"/>
+             *             &lt;enumeration value="CertificateRequired"/>
+             *             &lt;enumeration value="ID_Required"/>
+             *           &lt;/restriction>
+             *         &lt;/simpleType>
+             *       &lt;/attribute>
+             *     &lt;/restriction>
+             *   &lt;/complexContent>
+             * &lt;/complexType>
              * </pre>
              * 
              * 
@@ -1656,26 +1656,26 @@ public class BookingRulesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
-         *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
-         *       &lt;attribute name="Type"&gt;
-         *         &lt;simpleType&gt;
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
-         *             &lt;enumeration value="Early"/&gt;
-         *             &lt;enumeration value="Late"/&gt;
-         *           &lt;/restriction&gt;
-         *         &lt;/simpleType&gt;
-         *       &lt;/attribute&gt;
-         *       &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
-         *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
-         *       &lt;attribute name="BalanceOfStayInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
+         *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
+         *       &lt;attribute name="Type">
+         *         &lt;simpleType>
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+         *             &lt;enumeration value="Early"/>
+         *             &lt;enumeration value="Late"/>
+         *           &lt;/restriction>
+         *         &lt;/simpleType>
+         *       &lt;/attribute>
+         *       &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+         *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+         *       &lt;attribute name="BalanceOfStayInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 
@@ -1957,13 +1957,13 @@ public class BookingRulesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType&gt;
-         *   &lt;complexContent&gt;
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RestrictionStatusGroup"/&gt;
-         *     &lt;/restriction&gt;
-         *   &lt;/complexContent&gt;
-         * &lt;/complexType&gt;
+         * &lt;complexType>
+         *   &lt;complexContent>
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RestrictionStatusGroup"/>
+         *     &lt;/restriction>
+         *   &lt;/complexContent>
+         * &lt;/complexType>
          * </pre>
          * 
          * 

@@ -20,30 +20,30 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="OrganizationType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="OrgMemberName" minOccurs="0"&gt;
- *           &lt;complexType&gt;
- *             &lt;complexContent&gt;
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType"&gt;
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_LevelTitleGroup"/&gt;
- *               &lt;/extension&gt;
- *             &lt;/complexContent&gt;
- *           &lt;/complexType&gt;
- *         &lt;/element&gt;
- *         &lt;element name="OrgName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
- *         &lt;element name="RelatedOrgName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OfficeTypeGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="OrganizationType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="OrgMemberName" minOccurs="0">
+ *           &lt;complexType>
+ *             &lt;complexContent>
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType">
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_LevelTitleGroup"/>
+ *               &lt;/extension>
+ *             &lt;/complexContent>
+ *           &lt;/complexType>
+ *         &lt;/element>
+ *         &lt;element name="OrgName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
+ *         &lt;element name="RelatedOrgName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}OfficeTypeGroup"/>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -65,14 +65,6 @@ public class OrganizationType {
     protected List<CompanyNameType> relatedOrgName;
     @XmlElement(name = "TravelArranger")
     protected List<TravelArrangerType> travelArranger;
-    @XmlAttribute(name = "ShareSynchInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareSynchInd;
-    @XmlAttribute(name = "ShareMarketInd")
-    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
-    protected String shareMarketInd;
-    @XmlAttribute(name = "OfficeType")
-    protected OfficeLocationType officeType;
     @XmlAttribute(name = "EffectiveDate")
     @XmlSchemaType(name = "date")
     protected XMLGregorianCalendar effectiveDate;
@@ -83,6 +75,14 @@ public class OrganizationType {
     protected Boolean expireDateExclusiveIndicator;
     @XmlAttribute(name = "DefaultInd")
     protected Boolean defaultInd;
+    @XmlAttribute(name = "ShareSynchInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareSynchInd;
+    @XmlAttribute(name = "ShareMarketInd")
+    @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
+    protected String shareMarketInd;
+    @XmlAttribute(name = "OfficeType")
+    protected OfficeLocationType officeType;
 
     /**
      * Gets the value of the orgMemberName property.
@@ -191,78 +191,6 @@ public class OrganizationType {
     }
 
     /**
-     * Gets the value of the shareSynchInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareSynchInd() {
-        return shareSynchInd;
-    }
-
-    /**
-     * Sets the value of the shareSynchInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareSynchInd(String value) {
-        this.shareSynchInd = value;
-    }
-
-    /**
-     * Gets the value of the shareMarketInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getShareMarketInd() {
-        return shareMarketInd;
-    }
-
-    /**
-     * Sets the value of the shareMarketInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setShareMarketInd(String value) {
-        this.shareMarketInd = value;
-    }
-
-    /**
-     * Gets the value of the officeType property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link OfficeLocationType }
-     *     
-     */
-    public OfficeLocationType getOfficeType() {
-        return officeType;
-    }
-
-    /**
-     * Sets the value of the officeType property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link OfficeLocationType }
-     *     
-     */
-    public void setOfficeType(OfficeLocationType value) {
-        this.officeType = value;
-    }
-
-    /**
      * Gets the value of the effectiveDate property.
      * 
      * @return
@@ -358,6 +286,78 @@ public class OrganizationType {
         this.defaultInd = value;
     }
 
+    /**
+     * Gets the value of the shareSynchInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareSynchInd() {
+        return shareSynchInd;
+    }
+
+    /**
+     * Sets the value of the shareSynchInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareSynchInd(String value) {
+        this.shareSynchInd = value;
+    }
+
+    /**
+     * Gets the value of the shareMarketInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getShareMarketInd() {
+        return shareMarketInd;
+    }
+
+    /**
+     * Sets the value of the shareMarketInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setShareMarketInd(String value) {
+        this.shareMarketInd = value;
+    }
+
+    /**
+     * Gets the value of the officeType property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link OfficeLocationType }
+     *     
+     */
+    public OfficeLocationType getOfficeType() {
+        return officeType;
+    }
+
+    /**
+     * Sets the value of the officeType property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link OfficeLocationType }
+     *     
+     */
+    public void setOfficeType(OfficeLocationType value) {
+        this.officeType = value;
+    }
+
 
     /**
      * <p>Java class for anonymous complex type.
@@ -365,13 +365,13 @@ public class OrganizationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType&gt;
-     *   &lt;complexContent&gt;
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType"&gt;
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_LevelTitleGroup"/&gt;
-     *     &lt;/extension&gt;
-     *   &lt;/complexContent&gt;
-     * &lt;/complexType&gt;
+     * &lt;complexType>
+     *   &lt;complexContent>
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType">
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_LevelTitleGroup"/>
+     *     &lt;/extension>
+     *   &lt;/complexContent>
+     * &lt;/complexType>
      * </pre>
      * 
      * 

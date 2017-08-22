@@ -12,21 +12,21 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TransactionActionType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
- *     &lt;enumeration value="Book"/&gt;
- *     &lt;enumeration value="Quote"/&gt;
- *     &lt;enumeration value="Hold"/&gt;
- *     &lt;enumeration value="Initiate"/&gt;
- *     &lt;enumeration value="Ignore"/&gt;
- *     &lt;enumeration value="Modify"/&gt;
- *     &lt;enumeration value="Commit"/&gt;
- *     &lt;enumeration value="Cancel"/&gt;
- *     &lt;enumeration value="CommitOverrideEdits"/&gt;
- *     &lt;enumeration value="VerifyPrice"/&gt;
- *     &lt;enumeration value="Ticket"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="TransactionActionType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
+ *     &lt;enumeration value="Book"/>
+ *     &lt;enumeration value="Quote"/>
+ *     &lt;enumeration value="Hold"/>
+ *     &lt;enumeration value="Initiate"/>
+ *     &lt;enumeration value="Ignore"/>
+ *     &lt;enumeration value="Modify"/>
+ *     &lt;enumeration value="Commit"/>
+ *     &lt;enumeration value="Cancel"/>
+ *     &lt;enumeration value="CommitOverrideEdits"/>
+ *     &lt;enumeration value="VerifyPrice"/>
+ *     &lt;enumeration value="Ticket"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

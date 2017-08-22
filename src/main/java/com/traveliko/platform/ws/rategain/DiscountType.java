@@ -16,19 +16,19 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DiscountType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="DiscountReason" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
- *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
- *       &lt;attribute name="RestrictedDisplayIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="DiscountType">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TotalType">
+ *       &lt;sequence>
+ *         &lt;element name="DiscountReason" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType"/>
+ *       &lt;/sequence>
+ *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
+ *       &lt;attribute name="DiscountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
+ *       &lt;attribute name="RestrictedDisplayIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

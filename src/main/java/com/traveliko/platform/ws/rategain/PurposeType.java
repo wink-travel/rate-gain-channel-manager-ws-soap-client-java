@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="PurposeType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="Sell"/&gt;
- *     &lt;enumeration value="Net"/&gt;
- *     &lt;enumeration value="Base"/&gt;
- *     &lt;enumeration value="Refund"/&gt;
- *     &lt;enumeration value="Additional"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="PurposeType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="Sell"/>
+ *     &lt;enumeration value="Net"/>
+ *     &lt;enumeration value="Base"/>
+ *     &lt;enumeration value="Refund"/>
+ *     &lt;enumeration value="Additional"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

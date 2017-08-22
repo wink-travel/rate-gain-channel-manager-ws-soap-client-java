@@ -15,14 +15,14 @@ import javax.xml.datatype.Duration;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TimeDurationType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;duration"&gt;
- *       &lt;attribute name="Minimum" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *       &lt;attribute name="Maximum" type="{http://www.w3.org/2001/XMLSchema}duration" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="TimeDurationType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>duration">
+ *       &lt;attribute name="Minimum" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *       &lt;attribute name="Maximum" type="{http://www.w3.org/2001/XMLSchema}duration" />
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

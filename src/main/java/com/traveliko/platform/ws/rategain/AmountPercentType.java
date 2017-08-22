@@ -20,41 +20,41 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AmountPercentType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
- *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="FeesInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
- *       &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
- *       &lt;attribute name="BasisType"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16"&gt;
- *             &lt;enumeration value="FullStay"/&gt;
- *             &lt;enumeration value="Nights"/&gt;
- *             &lt;enumeration value="FirstLast"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
- *       &lt;attribute name="ApplyAs"&gt;
- *         &lt;simpleType&gt;
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *             &lt;enumeration value="FirstNightDeposit"/&gt;
- *             &lt;enumeration value="LastNightDepost"/&gt;
- *             &lt;enumeration value="FirstAndLastNightDeposit"/&gt;
- *             &lt;enumeration value="FirstNightPayment"/&gt;
- *             &lt;enumeration value="LastNightPayment"/&gt;
- *             &lt;enumeration value="FirstAndLastNightPayment"/&gt;
- *           &lt;/restriction&gt;
- *         &lt;/simpleType&gt;
- *       &lt;/attribute&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="AmountPercentType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
+ *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="FeesInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
+ *       &lt;attribute name="NmbrOfNights" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
+ *       &lt;attribute name="BasisType">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16">
+ *             &lt;enumeration value="FullStay"/>
+ *             &lt;enumeration value="Nights"/>
+ *             &lt;enumeration value="FirstLast"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
+ *       &lt;attribute name="ApplyAs">
+ *         &lt;simpleType>
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *             &lt;enumeration value="FirstNightDeposit"/>
+ *             &lt;enumeration value="LastNightDepost"/>
+ *             &lt;enumeration value="FirstAndLastNightDeposit"/>
+ *             &lt;enumeration value="FirstNightPayment"/>
+ *             &lt;enumeration value="LastNightPayment"/>
+ *             &lt;enumeration value="FirstAndLastNightPayment"/>
+ *           &lt;/restriction>
+ *         &lt;/simpleType>
+ *       &lt;/attribute>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

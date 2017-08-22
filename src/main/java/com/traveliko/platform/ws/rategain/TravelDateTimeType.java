@@ -14,16 +14,16 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TravelDateTimeType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;choice&gt;
- *         &lt;element name="DepartureDateTime" type="{http://www.opentravel.org/OTA/2003/05}TimeInstantType"/&gt;
- *         &lt;element name="ArrivalDateTime" type="{http://www.opentravel.org/OTA/2003/05}TimeInstantType"/&gt;
- *       &lt;/choice&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="TravelDateTimeType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;choice>
+ *         &lt;element name="DepartureDateTime" type="{http://www.opentravel.org/OTA/2003/05}TimeInstantType"/>
+ *         &lt;element name="ArrivalDateTime" type="{http://www.opentravel.org/OTA/2003/05}TimeInstantType"/>
+ *       &lt;/choice>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

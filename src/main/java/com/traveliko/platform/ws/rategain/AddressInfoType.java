@@ -14,15 +14,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AddressInfoType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/&gt;
- *       &lt;attribute name="UseType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
- *     &lt;/extension&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="AddressInfoType">
+ *   &lt;complexContent>
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
+ *       &lt;attribute name="UseType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
+ *     &lt;/extension>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -30,10 +30,10 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "AddressInfoType")
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.AddressesType.Address.class,
-    com.traveliko.platform.ws.rategain.RequiredPaymentsType.GuaranteePayment.Address.class,
     com.traveliko.platform.ws.rategain.CompanyInfoType.AddressInfo.class,
-    com.traveliko.platform.ws.rategain.CustomerType.Address.class
+    com.traveliko.platform.ws.rategain.RequiredPaymentsType.GuaranteePayment.Address.class,
+    com.traveliko.platform.ws.rategain.CustomerType.Address.class,
+    com.traveliko.platform.ws.rategain.AddressesType.Address.class
 })
 public class AddressInfoType
     extends AddressType

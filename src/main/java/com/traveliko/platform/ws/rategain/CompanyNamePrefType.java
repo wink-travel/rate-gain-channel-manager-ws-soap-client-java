@@ -14,13 +14,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CompanyNamePrefType"&gt;
- *   &lt;simpleContent&gt;
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;CompanyNameType"&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
- *     &lt;/extension&gt;
- *   &lt;/simpleContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="CompanyNamePrefType">
+ *   &lt;simpleContent>
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>CompanyNameType">
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
+ *     &lt;/extension>
+ *   &lt;/simpleContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -28,9 +28,9 @@ import javax.xml.bind.annotation.XmlType;
 @XmlAccessorType(XmlAccessType.FIELD)
 @XmlType(name = "CompanyNamePrefType")
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.AirlinePrefType.VendorPref.class,
     com.traveliko.platform.ws.rategain.AirSearchPrefsType.VendorPref.class,
-    com.traveliko.platform.ws.rategain.VehicleAvailRQCoreType.VendorPrefs.VendorPref.class
+    com.traveliko.platform.ws.rategain.VehicleAvailRQCoreType.VendorPrefs.VendorPref.class,
+    com.traveliko.platform.ws.rategain.AirlinePrefType.VendorPref.class
 })
 public class CompanyNamePrefType
     extends CompanyNameType

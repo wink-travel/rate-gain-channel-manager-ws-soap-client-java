@@ -18,21 +18,21 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AffiliationsType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="Organization" type="{http://www.opentravel.org/OTA/2003/05}OrganizationType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Employer" type="{http://www.opentravel.org/OTA/2003/05}EmployerType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="TravelClub" type="{http://www.opentravel.org/OTA/2003/05}TravelClubType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element name="Insurance" type="{http://www.opentravel.org/OTA/2003/05}InsuranceType" maxOccurs="unbounded" minOccurs="0"/&gt;
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="AffiliationsType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="Organization" type="{http://www.opentravel.org/OTA/2003/05}OrganizationType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Employer" type="{http://www.opentravel.org/OTA/2003/05}EmployerType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TravelArranger" type="{http://www.opentravel.org/OTA/2003/05}TravelArrangerType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="TravelClub" type="{http://www.opentravel.org/OTA/2003/05}TravelClubType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element name="Insurance" type="{http://www.opentravel.org/OTA/2003/05}InsuranceType" maxOccurs="unbounded" minOccurs="0"/>
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
+ *       &lt;/sequence>
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 

@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="FareStatusType"&gt;
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
- *     &lt;enumeration value="constructed"/&gt;
- *     &lt;enumeration value="published"/&gt;
- *     &lt;enumeration value="created"/&gt;
- *     &lt;enumeration value="fareByRule"/&gt;
- *     &lt;enumeration value="fareByRulePrivate"/&gt;
- *   &lt;/restriction&gt;
- * &lt;/simpleType&gt;
+ * &lt;simpleType name="FareStatusType">
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
+ *     &lt;enumeration value="constructed"/>
+ *     &lt;enumeration value="published"/>
+ *     &lt;enumeration value="created"/>
+ *     &lt;enumeration value="fareByRule"/>
+ *     &lt;enumeration value="fareByRulePrivate"/>
+ *   &lt;/restriction>
+ * &lt;/simpleType>
  * </pre>
  * 
  */

@@ -20,17 +20,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FormattedTextType"&gt;
- *   &lt;complexContent&gt;
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
- *       &lt;sequence&gt;
- *         &lt;element name="SubSection" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextSubSectionType" maxOccurs="99"/&gt;
- *       &lt;/sequence&gt;
- *       &lt;attribute name="Title" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
- *       &lt;attribute name="Language" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
- *     &lt;/restriction&gt;
- *   &lt;/complexContent&gt;
- * &lt;/complexType&gt;
+ * &lt;complexType name="FormattedTextType">
+ *   &lt;complexContent>
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
+ *       &lt;sequence>
+ *         &lt;element name="SubSection" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextSubSectionType" maxOccurs="99"/>
+ *       &lt;/sequence>
+ *       &lt;attribute name="Title" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
+ *       &lt;attribute name="Language" type="{http://www.w3.org/2001/XMLSchema}language" />
+ *     &lt;/restriction>
+ *   &lt;/complexContent>
+ * &lt;/complexType>
  * </pre>
  * 
  * 
@@ -40,12 +40,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "subSection"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.VehicleAdditionalDriverRequirementsType.AddlDriverInfos.AddlDriverInfo.class,
     com.traveliko.platform.ws.rategain.VehicleAgeRequirementsType.Age.AgeInfos.AgeInfo.class,
-    com.traveliko.platform.ws.rategain.VehicleLocationAdditionalDetailsType.Shuttle.ShuttleInfos.ShuttleInfo.class,
+    VendorMessageType.class,
     VehicleLocationInformationType.class,
     com.traveliko.platform.ws.rategain.VehicleLocationVehiclesType.VehicleInfos.VehicleInfo.class,
-    VendorMessageType.class
+    com.traveliko.platform.ws.rategain.VehicleAdditionalDriverRequirementsType.AddlDriverInfos.AddlDriverInfo.class,
+    com.traveliko.platform.ws.rategain.VehicleLocationAdditionalDetailsType.Shuttle.ShuttleInfos.ShuttleInfo.class
 })
 public class FormattedTextType {
 
