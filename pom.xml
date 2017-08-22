@@ -55,7 +55,10 @@
 
         <plugins>
 
-            <!-- TODO Only needs to be enabled when we upgrade RateGain's WSDL version 
+            <!-- TODO Only needs to be enabled when we upgrade RateGain's WSDL version -->
+
+
+
             <plugin>
                 <groupId>org.codehaus.mojo</groupId>
                 <artifactId>jaxws-maven-plugin</artifactId>
@@ -69,25 +72,22 @@
                         </goals>
                         <configuration>
                             <genJWS>true</genJWS>
-							<bindingDirectory>${basedir}/src/jaxws</bindingDirectory>
+                            <bindingDirectory>${basedir}/src/jaxws</bindingDirectory>
                             <wsdlDirectory>${basedir}/src/wsdl</wsdlDirectory>
                             <wsdlFiles>
                                 <wsdlFile>DirectConnectReservation.wsdl</wsdlFile>
                             </wsdlFiles>
                             <wsdlLocation>/DirectConnectReservation.wsdl</wsdlLocation>
-							<vmArgs>
-					            <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
-					            <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
-					          </vmArgs>
-<<<<<<< HEAD
-					          <packageName>com.traveliko.ws.rategain</packageName>
-=======
->>>>>>> parent of 92953c8... RategaIN new Java Objects
+                            <vmArgs>
+                                <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
+                                <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
+                            </vmArgs>
+                            <packageName>com.traveliko.ws.platform.rategain</packageName>
                         </configuration>
                     </execution>
                 </executions>
             </plugin>
-			-->
+
 
         </plugins>
 
