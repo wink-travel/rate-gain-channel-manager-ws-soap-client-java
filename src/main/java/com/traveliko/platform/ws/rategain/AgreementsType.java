@@ -18,48 +18,48 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AgreementsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Certification" type="{http://www.opentravel.org/OTA/2003/05}CertificationType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="AllianceConsortium" type="{http://www.opentravel.org/OTA/2003/05}AllianceConsortiumType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="CommissionInfo" type="{http://www.opentravel.org/OTA/2003/05}CommissionInfoType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="ProfileSecurity" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="AccessingOrganizationType">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="ProfileOwner"/>
- *                       &lt;enumeration value="IATA"/>
- *                       &lt;enumeration value="Other"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="AccessingOrganizationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="AccessType">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="ReadOnly"/>
- *                       &lt;enumeration value="ReadWrite"/>
- *                       &lt;enumeration value="NoAccess"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="ContractInformation" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AgreementsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Certification" type="{http://www.opentravel.org/OTA/2003/05}CertificationType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="AllianceConsortium" type="{http://www.opentravel.org/OTA/2003/05}AllianceConsortiumType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="CommissionInfo" type="{http://www.opentravel.org/OTA/2003/05}CommissionInfoType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="ProfileSecurity" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="AccessingOrganizationType"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="ProfileOwner"/&gt;
+ *                       &lt;enumeration value="IATA"/&gt;
+ *                       &lt;enumeration value="Other"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="AccessingOrganizationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="AccessType"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="ReadOnly"/&gt;
+ *                       &lt;enumeration value="ReadWrite"/&gt;
+ *                       &lt;enumeration value="NoAccess"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="ContractInformation" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -313,32 +313,32 @@ public class AgreementsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="AccessingOrganizationType">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="ProfileOwner"/>
-     *             &lt;enumeration value="IATA"/>
-     *             &lt;enumeration value="Other"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="AccessingOrganizationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="AccessType">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="ReadOnly"/>
-     *             &lt;enumeration value="ReadWrite"/>
-     *             &lt;enumeration value="NoAccess"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="AccessingOrganizationType"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="ProfileOwner"/&gt;
+     *             &lt;enumeration value="IATA"/&gt;
+     *             &lt;enumeration value="Other"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="AccessingOrganizationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="AccessType"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="ReadOnly"/&gt;
+     *             &lt;enumeration value="ReadWrite"/&gt;
+     *             &lt;enumeration value="NoAccess"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

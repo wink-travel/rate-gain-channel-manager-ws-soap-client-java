@@ -19,41 +19,41 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType">
- *       &lt;sequence>
- *         &lt;element name="VehMakeModel" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleMakeModelGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PictureURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/>
- *         &lt;element name="VehIdentity" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleIdentityGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}UnitsOfMeasureGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeGroup"/>
- *       &lt;attribute name="PassengerQuantity" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *       &lt;attribute name="BaggageQuantity" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *       &lt;attribute name="VendorCarType" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
- *       &lt;attribute name="OdometerUnitOfMeasure" type="{http://www.opentravel.org/OTA/2003/05}DistanceUnitNameType" />
- *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}ShortDescriptionType" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VehicleType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="VehMakeModel" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleMakeModelGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PictureURL" type="{http://www.w3.org/2001/XMLSchema}anyURI" minOccurs="0"/&gt;
+ *         &lt;element name="VehIdentity" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleIdentityGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}UnitsOfMeasureGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeGroup"/&gt;
+ *       &lt;attribute name="PassengerQuantity" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *       &lt;attribute name="BaggageQuantity" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *       &lt;attribute name="VendorCarType" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" /&gt;
+ *       &lt;attribute name="OdometerUnitOfMeasure" type="{http://www.opentravel.org/OTA/2003/05}DistanceUnitNameType" /&gt;
+ *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}ShortDescriptionType" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -498,13 +498,13 @@ public class VehicleType
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleIdentityGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleIdentityGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -679,13 +679,13 @@ public class VehicleType
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleMakeModelGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleMakeModelGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

@@ -20,27 +20,27 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VideoItemsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="VideoItem" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VideoDescriptionType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
- *                 &lt;attribute name="Language" type="{http://www.w3.org/2001/XMLSchema}language" />
- *                 &lt;attribute name="Caption" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *                 &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VideoItemsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="VideoItem" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VideoDescriptionType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/&gt;
+ *                 &lt;attribute name="Language" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
+ *                 &lt;attribute name="Caption" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *                 &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -90,17 +90,17 @@ public class VideoItemsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VideoDescriptionType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/>
-     *       &lt;attribute name="Language" type="{http://www.w3.org/2001/XMLSchema}language" />
-     *       &lt;attribute name="Caption" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VideoDescriptionType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RemovalGroup"/&gt;
+     *       &lt;attribute name="Language" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
+     *       &lt;attribute name="Caption" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+     *       &lt;attribute name="Version" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

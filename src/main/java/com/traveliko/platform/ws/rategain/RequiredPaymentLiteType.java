@@ -14,24 +14,24 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RequiredPaymentLiteType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="AcceptedPayments" type="{http://www.opentravel.org/OTA/2003/05}AcceptedPaymentsType" minOccurs="0"/>
- *         &lt;element name="AmountPercent" type="{http://www.opentravel.org/OTA/2003/05}AmountPercentType" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attribute name="RetributionType">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
- *             &lt;enumeration value="ResAutoCancelled"/>
- *             &lt;enumeration value="ResNotGuaranteed"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="RequiredPaymentLiteType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="AcceptedPayments" type="{http://www.opentravel.org/OTA/2003/05}AcceptedPaymentsType" minOccurs="0"/&gt;
+ *         &lt;element name="AmountPercent" type="{http://www.opentravel.org/OTA/2003/05}AmountPercentType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="RetributionType"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
+ *             &lt;enumeration value="ResAutoCancelled"/&gt;
+ *             &lt;enumeration value="ResNotGuaranteed"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

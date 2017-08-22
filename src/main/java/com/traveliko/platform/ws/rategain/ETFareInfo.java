@@ -19,44 +19,44 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ET_FareInfo">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Waiver" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to19" />
- *                 &lt;attribute name="Type">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="ExchangedReissued"/>
- *                       &lt;enumeration value="FareComponent"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RuleIndicator" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="RuleCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to3" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="NetReportingCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to3" />
- *       &lt;attribute name="StatisticalCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to3" />
- *       &lt;attribute name="TourCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="CountryCodeOfIssue" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ET_FareInfo"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Waiver" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to19" /&gt;
+ *                 &lt;attribute name="Type"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="ExchangedReissued"/&gt;
+ *                       &lt;enumeration value="FareComponent"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RuleIndicator" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="RuleCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to3" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="NetReportingCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to3" /&gt;
+ *       &lt;attribute name="StatisticalCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to3" /&gt;
+ *       &lt;attribute name="TourCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="CountryCodeOfIssue" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -245,13 +245,13 @@ public class ETFareInfo {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="RuleCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to3" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="RuleCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to3" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -296,21 +296,21 @@ public class ETFareInfo {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to19" />
-     *       &lt;attribute name="Type">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="ExchangedReissued"/>
-     *             &lt;enumeration value="FareComponent"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to19" /&gt;
+     *       &lt;attribute name="Type"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="ExchangedReissued"/&gt;
+     *             &lt;enumeration value="FareComponent"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

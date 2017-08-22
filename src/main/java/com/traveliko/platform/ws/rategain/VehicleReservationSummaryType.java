@@ -18,43 +18,43 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleReservationSummaryType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="ConfID" maxOccurs="4">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type">
- *                 &lt;attribute name="Status">
- *                   &lt;simpleType>
- *                     &lt;union memberTypes=" {http://www.opentravel.org/OTA/2003/05}TransactionStatusType {http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2">
- *                     &lt;/union>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PickUpLocation" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/>
- *         &lt;element name="ReturnLocation" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/>
- *         &lt;element name="PersonName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
- *         &lt;element name="Vehicle" type="{http://www.opentravel.org/OTA/2003/05}VehicleType" minOccurs="0"/>
- *         &lt;element name="Vendor" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
- *       &lt;attribute name="PickUpDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *       &lt;attribute name="ReturnDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *       &lt;attribute name="ReservationStatus">
- *         &lt;simpleType>
- *           &lt;union memberTypes=" {http://www.opentravel.org/OTA/2003/05}TransactionStatusType {http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2">
- *           &lt;/union>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VehicleReservationSummaryType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="ConfID" maxOccurs="4"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type"&gt;
+ *                 &lt;attribute name="Status"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;union memberTypes=" {http://www.opentravel.org/OTA/2003/05}TransactionStatusType {http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2"&gt;
+ *                     &lt;/union&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PickUpLocation" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/&gt;
+ *         &lt;element name="ReturnLocation" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/&gt;
+ *         &lt;element name="PersonName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+ *         &lt;element name="Vehicle" type="{http://www.opentravel.org/OTA/2003/05}VehicleType" minOccurs="0"/&gt;
+ *         &lt;element name="Vendor" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/&gt;
+ *       &lt;attribute name="PickUpDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *       &lt;attribute name="ReturnDateTime" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *       &lt;attribute name="ReservationStatus"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;union memberTypes=" {http://www.opentravel.org/OTA/2003/05}TransactionStatusType {http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2"&gt;
+ *           &lt;/union&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -479,18 +479,18 @@ public class VehicleReservationSummaryType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type">
-     *       &lt;attribute name="Status">
-     *         &lt;simpleType>
-     *           &lt;union memberTypes=" {http://www.opentravel.org/OTA/2003/05}TransactionStatusType {http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2">
-     *           &lt;/union>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type"&gt;
+     *       &lt;attribute name="Status"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;union memberTypes=" {http://www.opentravel.org/OTA/2003/05}TransactionStatusType {http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2"&gt;
+     *           &lt;/union&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

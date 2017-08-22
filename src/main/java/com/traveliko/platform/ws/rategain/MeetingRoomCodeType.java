@@ -16,22 +16,22 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="MeetingRoomCodeType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}FeeType" minOccurs="0"/>
- *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}QuantityGroup"/>
- *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *       &lt;attribute name="DiscountsAvailableCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="MeetingRoomCodeType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}FeeType" minOccurs="0"/&gt;
+ *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}QuantityGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/&gt;
+ *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *       &lt;attribute name="DiscountsAvailableCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -53,8 +53,6 @@ public class MeetingRoomCodeType {
     protected String existsCode;
     @XmlAttribute(name = "DiscountsAvailableCode")
     protected String discountsAvailableCode;
-    @XmlAttribute(name = "ID")
-    protected String id;
     @XmlAttribute(name = "CodeDetail")
     protected String codeDetail;
     @XmlAttribute(name = "Removal")
@@ -62,6 +60,8 @@ public class MeetingRoomCodeType {
     @XmlAttribute(name = "Quantity")
     @XmlSchemaType(name = "nonNegativeInteger")
     protected BigInteger quantity;
+    @XmlAttribute(name = "ID")
+    protected String id;
 
     /**
      * Gets the value of the charge property.
@@ -184,30 +184,6 @@ public class MeetingRoomCodeType {
     }
 
     /**
-     * Gets the value of the id property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link String }
-     *     
-     */
-    public String getID() {
-        return id;
-    }
-
-    /**
-     * Sets the value of the id property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link String }
-     *     
-     */
-    public void setID(String value) {
-        this.id = value;
-    }
-
-    /**
      * Gets the value of the codeDetail property.
      * 
      * @return
@@ -277,6 +253,30 @@ public class MeetingRoomCodeType {
      */
     public void setQuantity(BigInteger value) {
         this.quantity = value;
+    }
+
+    /**
+     * Gets the value of the id property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link String }
+     *     
+     */
+    public String getID() {
+        return id;
+    }
+
+    /**
+     * Sets the value of the id property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link String }
+     *     
+     */
+    public void setID(String value) {
+        this.id = value;
     }
 
 }

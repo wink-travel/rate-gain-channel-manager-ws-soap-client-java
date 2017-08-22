@@ -19,27 +19,27 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AirFeeType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>ShortDescriptionType">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *       &lt;attribute name="FeeCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="TaxPercentage" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
- *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *       &lt;attribute name="FeeTransactionType">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *             &lt;enumeration value="charge"/>
- *             &lt;enumeration value="exempt"/>
- *             &lt;enumeration value="refund"/>
- *             &lt;enumeration value="reserve"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="AirFeeType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;ShortDescriptionType"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *       &lt;attribute name="FeeCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="TaxPercentage" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+ *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *       &lt;attribute name="FeeTransactionType"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="charge"/&gt;
+ *             &lt;enumeration value="exempt"/&gt;
+ *             &lt;enumeration value="refund"/&gt;
+ *             &lt;enumeration value="reserve"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -22,141 +22,141 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ItemSearchCriterionType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Position" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PositionGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Address" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
- *                 &lt;attribute name="SameCountryInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="AddressSearchScope">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="Primary"/>
- *                       &lt;enumeration value="Alternate"/>
- *                       &lt;enumeration value="PrimaryAndAlternate"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Telephone" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RefPoint" maxOccurs="999" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/>
- *                 &lt;attribute name="StateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" />
- *                 &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
- *                 &lt;attribute name="RefPointType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *                 &lt;attribute name="CityName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="CodeRef" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>LocationType">
- *                 &lt;attribute name="VicinityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="HotelRef" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/>
- *                 &lt;attribute name="SegmentCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="PropertyClassCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="ArchitecturalStyleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="SupplierIntegrationLevel" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
- *                 &lt;attribute name="LocationCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="ExtendedCitySearchIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Radius" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DistanceAttributesGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="MapArea" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="NorthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="SouthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="EastLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="WestLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="AdditionalContents" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="AdditionalContent" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
- *                           &lt;attribute name="ContentGroupCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="ExactMatch" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="ImportanceType">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16">
- *             &lt;enumeration value="Mandatory"/>
- *             &lt;enumeration value="High"/>
- *             &lt;enumeration value="Medium"/>
- *             &lt;enumeration value="Low"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="Ranking" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ItemSearchCriterionType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Position" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PositionGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Address" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
+ *                 &lt;attribute name="SameCountryInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="AddressSearchScope"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="Primary"/&gt;
+ *                       &lt;enumeration value="Alternate"/&gt;
+ *                       &lt;enumeration value="PrimaryAndAlternate"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Telephone" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RefPoint" maxOccurs="999" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/&gt;
+ *                 &lt;attribute name="StateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" /&gt;
+ *                 &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+ *                 &lt;attribute name="RefPointType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *                 &lt;attribute name="CityName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="CodeRef" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;LocationType"&gt;
+ *                 &lt;attribute name="VicinityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="HotelRef" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/&gt;
+ *                 &lt;attribute name="SegmentCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="PropertyClassCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="ArchitecturalStyleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="SupplierIntegrationLevel" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
+ *                 &lt;attribute name="LocationCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="ExtendedCitySearchIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Radius" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DistanceAttributesGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="MapArea" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="NorthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="SouthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="EastLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="WestLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="AdditionalContents" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="AdditionalContent" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
+ *                           &lt;attribute name="ContentGroupCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="ExactMatch" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="ImportanceType"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16"&gt;
+ *             &lt;enumeration value="Mandatory"/&gt;
+ *             &lt;enumeration value="High"/&gt;
+ *             &lt;enumeration value="Medium"/&gt;
+ *             &lt;enumeration value="Low"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="Ranking" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -508,24 +508,24 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="AdditionalContent" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
-     *                 &lt;attribute name="ContentGroupCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="AdditionalContent" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
+     *                 &lt;attribute name="ContentGroupCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -575,14 +575,14 @@ public class ItemSearchCriterionType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
-         *       &lt;attribute name="ContentGroupCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
+         *       &lt;attribute name="ContentGroupCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -681,22 +681,22 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
-     *       &lt;attribute name="SameCountryInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="AddressSearchScope">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="Primary"/>
-     *             &lt;enumeration value="Alternate"/>
-     *             &lt;enumeration value="PrimaryAndAlternate"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
+     *       &lt;attribute name="SameCountryInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="AddressSearchScope"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="Primary"/&gt;
+     *             &lt;enumeration value="Alternate"/&gt;
+     *             &lt;enumeration value="PrimaryAndAlternate"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -770,13 +770,13 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>LocationType">
-     *       &lt;attribute name="VicinityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;LocationType"&gt;
+     *       &lt;attribute name="VicinityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -823,19 +823,19 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/>
-     *       &lt;attribute name="SegmentCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="PropertyClassCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="ArchitecturalStyleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="SupplierIntegrationLevel" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
-     *       &lt;attribute name="LocationCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="ExtendedCitySearchIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/&gt;
+     *       &lt;attribute name="SegmentCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="PropertyClassCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="ArchitecturalStyleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="SupplierIntegrationLevel" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
+     *       &lt;attribute name="LocationCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="ExtendedCitySearchIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1245,16 +1245,16 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="NorthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="SouthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="EastLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="WestLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="NorthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="SouthLatitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="EastLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="WestLongitude" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1377,13 +1377,13 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PositionGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PositionGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1532,13 +1532,13 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DistanceAttributesGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DistanceAttributesGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1687,18 +1687,18 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/>
-     *       &lt;attribute name="StateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" />
-     *       &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
-     *       &lt;attribute name="RefPointType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *       &lt;attribute name="CityName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListGroup"/&gt;
+     *       &lt;attribute name="StateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" /&gt;
+     *       &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+     *       &lt;attribute name="RefPointType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+     *       &lt;attribute name="CityName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1981,13 +1981,13 @@ public class ItemSearchCriterionType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

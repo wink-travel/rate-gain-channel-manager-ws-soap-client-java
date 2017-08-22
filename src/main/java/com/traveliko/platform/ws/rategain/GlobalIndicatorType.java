@@ -11,24 +11,24 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="GlobalIndicatorType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="AP"/>
- *     &lt;enumeration value="AT"/>
- *     &lt;enumeration value="CT"/>
- *     &lt;enumeration value="DO"/>
- *     &lt;enumeration value="EH"/>
- *     &lt;enumeration value="FE"/>
- *     &lt;enumeration value="PA"/>
- *     &lt;enumeration value="PN"/>
- *     &lt;enumeration value="PO"/>
- *     &lt;enumeration value="RU"/>
- *     &lt;enumeration value="RW"/>
- *     &lt;enumeration value="SA"/>
- *     &lt;enumeration value="TS"/>
- *     &lt;enumeration value="WH"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="GlobalIndicatorType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="AP"/&gt;
+ *     &lt;enumeration value="AT"/&gt;
+ *     &lt;enumeration value="CT"/&gt;
+ *     &lt;enumeration value="DO"/&gt;
+ *     &lt;enumeration value="EH"/&gt;
+ *     &lt;enumeration value="FE"/&gt;
+ *     &lt;enumeration value="PA"/&gt;
+ *     &lt;enumeration value="PN"/&gt;
+ *     &lt;enumeration value="PO"/&gt;
+ *     &lt;enumeration value="RU"/&gt;
+ *     &lt;enumeration value="RW"/&gt;
+ *     &lt;enumeration value="SA"/&gt;
+ *     &lt;enumeration value="TS"/&gt;
+ *     &lt;enumeration value="WH"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

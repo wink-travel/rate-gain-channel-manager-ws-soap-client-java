@@ -17,27 +17,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VoluntaryChangesType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence minOccurs="0">
- *         &lt;element name="Penalty" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *                 &lt;attribute name="PenaltyType" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="DepartureStatus" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="VolChangeInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VoluntaryChangesType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence minOccurs="0"&gt;
+ *         &lt;element name="Penalty" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *                 &lt;attribute name="PenaltyType" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="DepartureStatus" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="VolChangeInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -108,16 +108,16 @@ public class VoluntaryChangesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *       &lt;attribute name="PenaltyType" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="DepartureStatus" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+     *       &lt;attribute name="PenaltyType" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="DepartureStatus" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="Percent" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

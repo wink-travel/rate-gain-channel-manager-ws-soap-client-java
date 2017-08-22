@@ -18,32 +18,32 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="HotelReservationIDsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="HotelReservationID" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="ResID_Type" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="ResID_Value" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                 &lt;attribute name="ResID_Source" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                 &lt;attribute name="ResID_SourceContext" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                 &lt;attribute name="ResID_Date" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *                 &lt;attribute name="ForGuest" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="ResGuestRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *                 &lt;attribute name="CancelOriginatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                 &lt;attribute name="CancellationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *                 &lt;attribute name="HotelReservationID_RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="HotelReservationIDsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="HotelReservationID" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="ResID_Type" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="ResID_Value" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                 &lt;attribute name="ResID_Source" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                 &lt;attribute name="ResID_SourceContext" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                 &lt;attribute name="ResID_Date" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *                 &lt;attribute name="ForGuest" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="ResGuestRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *                 &lt;attribute name="CancelOriginatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                 &lt;attribute name="CancellationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *                 &lt;attribute name="HotelReservationID_RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -93,22 +93,22 @@ public class HotelReservationIDsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="ResID_Type" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="ResID_Value" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="ResID_Source" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="ResID_SourceContext" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="ResID_Date" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
-     *       &lt;attribute name="ForGuest" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="ResGuestRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *       &lt;attribute name="CancelOriginatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="CancellationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
-     *       &lt;attribute name="HotelReservationID_RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="ResID_Type" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="ResID_Value" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *       &lt;attribute name="ResID_Source" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *       &lt;attribute name="ResID_SourceContext" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *       &lt;attribute name="ResID_Date" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+     *       &lt;attribute name="ForGuest" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="ResGuestRPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *       &lt;attribute name="CancelOriginatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *       &lt;attribute name="CancellationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+     *       &lt;attribute name="HotelReservationID_RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

@@ -19,28 +19,28 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RoomAmenityPrefType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to128">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}QuantityGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
- *       &lt;attribute name="RoomAmenity" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *       &lt;attribute name="QualityLevel" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="RoomGender">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *             &lt;enumeration value="Male"/>
- *             &lt;enumeration value="Female"/>
- *             &lt;enumeration value="MaleAndFemale"/>
- *             &lt;enumeration value="Unknown"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="SharedRoomInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="RoomAmenityPrefType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to128"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}QuantityGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
+ *       &lt;attribute name="RoomAmenity" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *       &lt;attribute name="QualityLevel" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="RoomGender"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="Male"/&gt;
+ *             &lt;enumeration value="Female"/&gt;
+ *             &lt;enumeration value="MaleAndFemale"/&gt;
+ *             &lt;enumeration value="Unknown"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="SharedRoomInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

@@ -15,15 +15,15 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CompanyNameType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to128">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
- *       &lt;attribute name="Division" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *       &lt;attribute name="Department" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="CompanyNameType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to128"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/&gt;
+ *       &lt;attribute name="Division" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *       &lt;attribute name="Department" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -33,13 +33,13 @@ import javax.xml.bind.annotation.XmlValue;
     "value"
 })
 @XmlSeeAlso({
-    OperatingAirlineType.class,
     com.traveliko.platform.ws.rategain.AllianceConsortiumType.AllianceMember.class,
-    com.traveliko.platform.ws.rategain.DirectBillType.CompanyName.class,
-    com.traveliko.platform.ws.rategain.VehicleAvailCoreType.Vendor.class,
-    CompanyNamePrefType.class,
     TravelArrangerType.class,
-    com.traveliko.platform.ws.rategain.FlightSegmentType.MarketingAirline.class
+    com.traveliko.platform.ws.rategain.VehicleAvailCoreType.Vendor.class,
+    com.traveliko.platform.ws.rategain.FlightSegmentType.MarketingAirline.class,
+    CompanyNamePrefType.class,
+    com.traveliko.platform.ws.rategain.DirectBillType.CompanyName.class,
+    OperatingAirlineType.class
 })
 public class CompanyNameType {
 

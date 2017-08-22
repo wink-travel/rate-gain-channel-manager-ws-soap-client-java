@@ -19,28 +19,28 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RoutingHopType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="RoutingHop" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="SystemCode" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="LocalRefID" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="TimeStamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *                 &lt;attribute name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="SequenceNmbr" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                 &lt;attribute name="Data" type="{http://www.w3.org/2001/XMLSchema}string" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="RoutingHopType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="RoutingHop" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="SystemCode" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="LocalRefID" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="TimeStamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *                 &lt;attribute name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="SequenceNmbr" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                 &lt;attribute name="Data" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -90,18 +90,18 @@ public class RoutingHopType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="SystemCode" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="LocalRefID" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="TimeStamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
-     *       &lt;attribute name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="SequenceNmbr" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *       &lt;attribute name="Data" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="SystemCode" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="LocalRefID" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="TimeStamp" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+     *       &lt;attribute name="Comment" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="SequenceNmbr" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *       &lt;attribute name="Data" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

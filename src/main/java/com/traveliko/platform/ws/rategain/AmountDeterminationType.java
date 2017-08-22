@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="AmountDeterminationType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Inclusive"/>
- *     &lt;enumeration value="Exclusive"/>
- *     &lt;enumeration value="Cumulative"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="AmountDeterminationType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Inclusive"/&gt;
+ *     &lt;enumeration value="Exclusive"/&gt;
+ *     &lt;enumeration value="Cumulative"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

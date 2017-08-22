@@ -13,14 +13,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="MarketingCabinType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CabinAvailabilityType">
- *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="MarketingCabinType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}CabinAvailabilityType"&gt;
+ *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

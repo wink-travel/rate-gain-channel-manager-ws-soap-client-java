@@ -15,14 +15,14 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="EquipmentType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
- *       &lt;attribute name="AirEquipType" type="{http://www.opentravel.org/OTA/2003/05}StringLength3" />
- *       &lt;attribute name="ChangeofGauge" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="EquipmentType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
+ *       &lt;attribute name="AirEquipType" type="{http://www.opentravel.org/OTA/2003/05}StringLength3" /&gt;
+ *       &lt;attribute name="ChangeofGauge" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

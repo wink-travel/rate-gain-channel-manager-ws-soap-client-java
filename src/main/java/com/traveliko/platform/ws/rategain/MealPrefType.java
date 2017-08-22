@@ -14,16 +14,16 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="MealPrefType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
- *       &lt;attribute name="MealType" type="{http://www.opentravel.org/OTA/2003/05}MealType" />
- *       &lt;attribute name="FavoriteFood" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *       &lt;attribute name="Beverage" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="MealPrefType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
+ *       &lt;attribute name="MealType" type="{http://www.opentravel.org/OTA/2003/05}MealType" /&gt;
+ *       &lt;attribute name="FavoriteFood" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *       &lt;attribute name="Beverage" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

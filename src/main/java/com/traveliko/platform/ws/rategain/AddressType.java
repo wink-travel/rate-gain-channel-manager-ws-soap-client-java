@@ -20,44 +20,44 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AddressType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="StreetNmbr" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StreetNmbrType">
- *                 &lt;attribute name="StreetNmbrSuffix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                 &lt;attribute name="StreetDirection" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                 &lt;attribute name="RuralRouteNmbr" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to5" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="BldgRoom" maxOccurs="2" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
- *                 &lt;attribute name="BldgNameIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="AddressLine" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to255" maxOccurs="5" minOccurs="0"/>
- *         &lt;element name="CityName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" minOccurs="0"/>
- *         &lt;element name="PostalCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" minOccurs="0"/>
- *         &lt;element name="County" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" minOccurs="0"/>
- *         &lt;element name="StateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvType" minOccurs="0"/>
- *         &lt;element name="CountryName" type="{http://www.opentravel.org/OTA/2003/05}CountryNameType" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FormattedInd"/>
- *       &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AddressType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="StreetNmbr" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StreetNmbrType"&gt;
+ *                 &lt;attribute name="StreetNmbrSuffix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                 &lt;attribute name="StreetDirection" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                 &lt;attribute name="RuralRouteNmbr" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to5" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="BldgRoom" maxOccurs="2" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
+ *                 &lt;attribute name="BldgNameIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="AddressLine" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to255" maxOccurs="5" minOccurs="0"/&gt;
+ *         &lt;element name="CityName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" minOccurs="0"/&gt;
+ *         &lt;element name="PostalCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" minOccurs="0"/&gt;
+ *         &lt;element name="County" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" minOccurs="0"/&gt;
+ *         &lt;element name="StateProv" type="{http://www.opentravel.org/OTA/2003/05}StateProvType" minOccurs="0"/&gt;
+ *         &lt;element name="CountryName" type="{http://www.opentravel.org/OTA/2003/05}CountryNameType" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FormattedInd"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
+ *       &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -74,11 +74,11 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "countryName"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.DonationType.DonorInfo.ContactInfo.class,
     com.traveliko.platform.ws.rategain.OffLocationServiceCoreType.Address.class,
-    com.traveliko.platform.ws.rategain.ItemSearchCriterionType.Address.class,
+    com.traveliko.platform.ws.rategain.AirTravelerType.Address.class,
     AddressInfoType.class,
-    com.traveliko.platform.ws.rategain.AirTravelerType.Address.class
+    com.traveliko.platform.ws.rategain.DonationType.DonorInfo.ContactInfo.class,
+    com.traveliko.platform.ws.rategain.ItemSearchCriterionType.Address.class
 })
 public class AddressType {
 
@@ -102,14 +102,14 @@ public class AddressType {
     protected String type;
     @XmlAttribute(name = "Remark")
     protected String remark;
+    @XmlAttribute(name = "FormattedInd")
+    protected Boolean formattedInd;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
-    @XmlAttribute(name = "FormattedInd")
-    protected Boolean formattedInd;
 
     /**
      * Gets the value of the streetNmbr property.
@@ -362,6 +362,30 @@ public class AddressType {
     }
 
     /**
+     * Gets the value of the formattedInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isFormattedInd() {
+        return formattedInd;
+    }
+
+    /**
+     * Sets the value of the formattedInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setFormattedInd(Boolean value) {
+        this.formattedInd = value;
+    }
+
+    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -409,30 +433,6 @@ public class AddressType {
         this.shareMarketInd = value;
     }
 
-    /**
-     * Gets the value of the formattedInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isFormattedInd() {
-        return formattedInd;
-    }
-
-    /**
-     * Sets the value of the formattedInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setFormattedInd(Boolean value) {
-        this.formattedInd = value;
-    }
-
 
     /**
      * <p>Java class for anonymous complex type.
@@ -440,13 +440,13 @@ public class AddressType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to64">
-     *       &lt;attribute name="BldgNameIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to64"&gt;
+     *       &lt;attribute name="BldgNameIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -519,15 +519,15 @@ public class AddressType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StreetNmbrType">
-     *       &lt;attribute name="StreetNmbrSuffix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *       &lt;attribute name="StreetDirection" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *       &lt;attribute name="RuralRouteNmbr" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to5" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StreetNmbrType"&gt;
+     *       &lt;attribute name="StreetNmbrSuffix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *       &lt;attribute name="StreetDirection" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *       &lt;attribute name="RuralRouteNmbr" type="{http://www.opentravel.org/OTA/2003/05}NumericStringLength1to5" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

@@ -17,43 +17,43 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="RoomSharesType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="RoomShare" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="GuestRPHs" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="GuestRPH" maxOccurs="99">
- *                               &lt;complexType>
- *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RPH_Type">
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *                                   &lt;/extension>
- *                                 &lt;/simpleContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="RoomSharesType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="RoomShare" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="GuestRPHs" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="GuestRPH" maxOccurs="99"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;simpleContent&gt;
+ *                                   &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RPH_Type"&gt;
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/simpleContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -103,33 +103,33 @@ public class RoomSharesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="GuestRPHs" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="GuestRPH" maxOccurs="99">
-     *                     &lt;complexType>
-     *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RPH_Type">
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-     *                         &lt;/extension>
-     *                       &lt;/simpleContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="GuestRPHs" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="GuestRPH" maxOccurs="99"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;simpleContent&gt;
+     *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RPH_Type"&gt;
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/simpleContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -174,23 +174,23 @@ public class RoomSharesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="GuestRPH" maxOccurs="99">
-         *           &lt;complexType>
-         *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RPH_Type">
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-         *               &lt;/extension>
-         *             &lt;/simpleContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="GuestRPH" maxOccurs="99"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;simpleContent&gt;
+         *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RPH_Type"&gt;
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/simpleContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -240,13 +240,13 @@ public class RoomSharesType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RPH_Type">
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-             *     &lt;/extension>
-             *   &lt;/simpleContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;simpleContent&gt;
+             *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RPH_Type"&gt;
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/simpleContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 

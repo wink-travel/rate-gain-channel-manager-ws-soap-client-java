@@ -14,13 +14,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TicketingInfoRS_Type">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TicketingInfoType">
- *       &lt;attribute name="eTicketNumber" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to14" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="TicketingInfoRS_Type"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}TicketingInfoType"&gt;
+ *       &lt;attribute name="eTicketNumber" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to14" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

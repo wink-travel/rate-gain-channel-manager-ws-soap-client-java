@@ -19,47 +19,47 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FeaturesType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Feature" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Charge" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/>
- *                   &lt;element name="DescriptiveText" minOccurs="0">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;pattern value="[A-Za-z0-9]{1,500}"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
- *                 &lt;attribute name="AccessibleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="SecurityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="ProximityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="FeaturesType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Feature" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Charge" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/&gt;
+ *                   &lt;element name="DescriptiveText" minOccurs="0"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                         &lt;pattern value="[A-Za-z0-9]{1,500}"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/&gt;
+ *                 &lt;attribute name="AccessibleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="SecurityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="ProximityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -109,37 +109,37 @@ public class FeaturesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Charge" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/>
-     *         &lt;element name="DescriptiveText" minOccurs="0">
-     *           &lt;simpleType>
-     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *               &lt;pattern value="[A-Za-z0-9]{1,500}"/>
-     *             &lt;/restriction>
-     *           &lt;/simpleType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/>
-     *       &lt;attribute name="AccessibleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="SecurityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="ProximityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Charge" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="MultimediaDescriptions" type="{http://www.opentravel.org/OTA/2003/05}MultimediaDescriptionsType" minOccurs="0"/&gt;
+     *         &lt;element name="DescriptiveText" minOccurs="0"&gt;
+     *           &lt;simpleType&gt;
+     *             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *               &lt;pattern value="[A-Za-z0-9]{1,500}"/&gt;
+     *             &lt;/restriction&gt;
+     *           &lt;/simpleType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeInfoGroup"/&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ID_OptionalGroup"/&gt;
+     *       &lt;attribute name="AccessibleCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="SecurityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="ExistsCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="ProximityCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -166,12 +166,12 @@ public class FeaturesType {
         protected String existsCode;
         @XmlAttribute(name = "ProximityCode")
         protected String proximityCode;
-        @XmlAttribute(name = "ID")
-        protected String id;
         @XmlAttribute(name = "CodeDetail")
         protected String codeDetail;
         @XmlAttribute(name = "Removal")
         protected Boolean removal;
+        @XmlAttribute(name = "ID")
+        protected String id;
 
         /**
          * Gets the value of the charge property.
@@ -342,30 +342,6 @@ public class FeaturesType {
         }
 
         /**
-         * Gets the value of the id property.
-         * 
-         * @return
-         *     possible object is
-         *     {@link String }
-         *     
-         */
-        public String getID() {
-            return id;
-        }
-
-        /**
-         * Sets the value of the id property.
-         * 
-         * @param value
-         *     allowed object is
-         *     {@link String }
-         *     
-         */
-        public void setID(String value) {
-            this.id = value;
-        }
-
-        /**
          * Gets the value of the codeDetail property.
          * 
          * @return
@@ -413,6 +389,30 @@ public class FeaturesType {
             this.removal = value;
         }
 
+        /**
+         * Gets the value of the id property.
+         * 
+         * @return
+         *     possible object is
+         *     {@link String }
+         *     
+         */
+        public String getID() {
+            return id;
+        }
+
+        /**
+         * Sets the value of the id property.
+         * 
+         * @param value
+         *     allowed object is
+         *     {@link String }
+         *     
+         */
+        public void setID(String value) {
+            this.id = value;
+        }
+
 
         /**
          * <p>Java class for anonymous complex type.
@@ -420,13 +420,13 @@ public class FeaturesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

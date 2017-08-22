@@ -12,12 +12,12 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="VehicleFuelUnitNameType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Gallon"/>
- *     &lt;enumeration value="Liter"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="VehicleFuelUnitNameType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Gallon"/&gt;
+ *     &lt;enumeration value="Liter"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

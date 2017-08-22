@@ -16,29 +16,29 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AreasType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Area" maxOccurs="99">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="AreaDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AreaID_Group"/>
- *                 &lt;attribute name="CityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                 &lt;attribute name="StateProvCode" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" />
- *                 &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AreasType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Area" maxOccurs="99"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="AreaDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AreaID_Group"/&gt;
+ *                 &lt;attribute name="CityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                 &lt;attribute name="StateProvCode" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" /&gt;
+ *                 &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -88,19 +88,19 @@ public class AreasType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="AreaDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AreaID_Group"/>
-     *       &lt;attribute name="CityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *       &lt;attribute name="StateProvCode" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" />
-     *       &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="AreaDescription" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}AreaID_Group"/&gt;
+     *       &lt;attribute name="CityCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *       &lt;attribute name="StateProvCode" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" /&gt;
+     *       &lt;attribute name="CountryCode" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

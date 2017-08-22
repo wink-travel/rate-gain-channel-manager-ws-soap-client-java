@@ -22,75 +22,75 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleChargeType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="TaxAmounts" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TaxAmount" maxOccurs="99">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTaxAmountGroup"/>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="MinMax" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="MaxCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                 &lt;attribute name="MinCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                 &lt;attribute name="MaxChargeDays" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Calculation" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="UnitCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                 &lt;attribute name="UnitName" type="{http://www.opentravel.org/OTA/2003/05}VehicleUnitNameType" />
- *                 &lt;attribute name="Quantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" />
- *                 &lt;attribute name="Percentage" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
- *                 &lt;attribute name="Applicability">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="FromPickupLocation"/>
- *                       &lt;enumeration value="FromDropoffLocation"/>
- *                       &lt;enumeration value="BeforePickup"/>
- *                       &lt;enumeration value="AfterDropoff"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="MaxQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
- *                 &lt;attribute name="Total" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *       &lt;attribute name="GuaranteedInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="IncludedInRate" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="IncludedInEstTotalInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="RateConvertInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VehicleChargeType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="TaxAmounts" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="TaxAmount" maxOccurs="99"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTaxAmountGroup"/&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="MinMax" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="MaxCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                 &lt;attribute name="MinCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                 &lt;attribute name="MaxChargeDays" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Calculation" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="UnitCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                 &lt;attribute name="UnitName" type="{http://www.opentravel.org/OTA/2003/05}VehicleUnitNameType" /&gt;
+ *                 &lt;attribute name="Quantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" /&gt;
+ *                 &lt;attribute name="Percentage" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+ *                 &lt;attribute name="Applicability"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="FromPickupLocation"/&gt;
+ *                       &lt;enumeration value="FromDropoffLocation"/&gt;
+ *                       &lt;enumeration value="BeforePickup"/&gt;
+ *                       &lt;enumeration value="AfterDropoff"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="MaxQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+ *                 &lt;attribute name="Total" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *       &lt;attribute name="GuaranteedInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="IncludedInRate" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="IncludedInEstTotalInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="RateConvertInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -435,28 +435,28 @@ public class VehicleChargeType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="UnitCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *       &lt;attribute name="UnitName" type="{http://www.opentravel.org/OTA/2003/05}VehicleUnitNameType" />
-     *       &lt;attribute name="Quantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" />
-     *       &lt;attribute name="Percentage" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
-     *       &lt;attribute name="Applicability">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="FromPickupLocation"/>
-     *             &lt;enumeration value="FromDropoffLocation"/>
-     *             &lt;enumeration value="BeforePickup"/>
-     *             &lt;enumeration value="AfterDropoff"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="MaxQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-     *       &lt;attribute name="Total" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="UnitCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *       &lt;attribute name="UnitName" type="{http://www.opentravel.org/OTA/2003/05}VehicleUnitNameType" /&gt;
+     *       &lt;attribute name="Quantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" /&gt;
+     *       &lt;attribute name="Percentage" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+     *       &lt;attribute name="Applicability"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="FromPickupLocation"/&gt;
+     *             &lt;enumeration value="FromDropoffLocation"/&gt;
+     *             &lt;enumeration value="BeforePickup"/&gt;
+     *             &lt;enumeration value="AfterDropoff"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="MaxQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+     *       &lt;attribute name="Total" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -658,15 +658,15 @@ public class VehicleChargeType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="MaxCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *       &lt;attribute name="MinCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *       &lt;attribute name="MaxChargeDays" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="MaxCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *       &lt;attribute name="MinCharge" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *       &lt;attribute name="MaxChargeDays" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -763,23 +763,23 @@ public class VehicleChargeType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TaxAmount" maxOccurs="99">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTaxAmountGroup"/>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="TaxAmount" maxOccurs="99"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTaxAmountGroup"/&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -829,13 +829,13 @@ public class VehicleChargeType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTaxAmountGroup"/>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}VehicleTaxAmountGroup"/&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

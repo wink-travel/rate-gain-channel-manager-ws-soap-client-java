@@ -12,21 +12,21 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="AirTripType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="OneWay"/>
- *     &lt;enumeration value="OneWayOnly"/>
- *     &lt;enumeration value="Return"/>
- *     &lt;enumeration value="Circle"/>
- *     &lt;enumeration value="OpenJaw"/>
- *     &lt;enumeration value="Other"/>
- *     &lt;enumeration value="Outbound"/>
- *     &lt;enumeration value="OutboundSeasonRoundtrip"/>
- *     &lt;enumeration value="Non-directional"/>
- *     &lt;enumeration value="Inbound"/>
- *     &lt;enumeration value="Roundtrip"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="AirTripType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="OneWay"/&gt;
+ *     &lt;enumeration value="OneWayOnly"/&gt;
+ *     &lt;enumeration value="Return"/&gt;
+ *     &lt;enumeration value="Circle"/&gt;
+ *     &lt;enumeration value="OpenJaw"/&gt;
+ *     &lt;enumeration value="Other"/&gt;
+ *     &lt;enumeration value="Outbound"/&gt;
+ *     &lt;enumeration value="OutboundSeasonRoundtrip"/&gt;
+ *     &lt;enumeration value="Non-directional"/&gt;
+ *     &lt;enumeration value="Inbound"/&gt;
+ *     &lt;enumeration value="Roundtrip"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -16,80 +16,80 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleLocationLiabilitiesType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Coverages" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Coverage" maxOccurs="99" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="CoverageInfo" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/>
- *                             &lt;element name="CoverageFees" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="CoverageFee" maxOccurs="99">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;sequence>
- *                                                 &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/>
- *                                                 &lt;element name="Vehicles" minOccurs="0">
- *                                                   &lt;complexType>
- *                                                     &lt;complexContent>
- *                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                                         &lt;sequence>
- *                                                           &lt;element name="Vehicle" maxOccurs="99">
- *                                                             &lt;complexType>
- *                                                               &lt;complexContent>
- *                                                                 &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
- *                                                                   &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
- *                                                                 &lt;/extension>
- *                                                               &lt;/complexContent>
- *                                                             &lt;/complexType>
- *                                                           &lt;/element>
- *                                                         &lt;/sequence>
- *                                                       &lt;/restriction>
- *                                                     &lt;/complexContent>
- *                                                   &lt;/complexType>
- *                                                 &lt;/element>
- *                                                 &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/>
- *                                               &lt;/sequence>
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                           &lt;attribute name="RequiredInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Info" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/>
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VehicleLocationLiabilitiesType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Coverages" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Coverage" maxOccurs="99" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="CoverageInfo" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/&gt;
+ *                             &lt;element name="CoverageFees" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="CoverageFee" maxOccurs="99"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;sequence&gt;
+ *                                                 &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/&gt;
+ *                                                 &lt;element name="Vehicles" minOccurs="0"&gt;
+ *                                                   &lt;complexType&gt;
+ *                                                     &lt;complexContent&gt;
+ *                                                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                                         &lt;sequence&gt;
+ *                                                           &lt;element name="Vehicle" maxOccurs="99"&gt;
+ *                                                             &lt;complexType&gt;
+ *                                                               &lt;complexContent&gt;
+ *                                                                 &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+ *                                                                   &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+ *                                                                 &lt;/extension&gt;
+ *                                                               &lt;/complexContent&gt;
+ *                                                             &lt;/complexType&gt;
+ *                                                           &lt;/element&gt;
+ *                                                         &lt;/sequence&gt;
+ *                                                       &lt;/restriction&gt;
+ *                                                     &lt;/complexContent&gt;
+ *                                                   &lt;/complexType&gt;
+ *                                                 &lt;/element&gt;
+ *                                                 &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/&gt;
+ *                                               &lt;/sequence&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                           &lt;attribute name="RequiredInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Info" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/&gt;
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -188,68 +188,68 @@ public class VehicleLocationLiabilitiesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Coverage" maxOccurs="99" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="CoverageInfo" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/>
-     *                   &lt;element name="CoverageFees" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="CoverageFee" maxOccurs="99">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;sequence>
-     *                                       &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/>
-     *                                       &lt;element name="Vehicles" minOccurs="0">
-     *                                         &lt;complexType>
-     *                                           &lt;complexContent>
-     *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                               &lt;sequence>
-     *                                                 &lt;element name="Vehicle" maxOccurs="99">
-     *                                                   &lt;complexType>
-     *                                                     &lt;complexContent>
-     *                                                       &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-     *                                                         &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-     *                                                       &lt;/extension>
-     *                                                     &lt;/complexContent>
-     *                                                   &lt;/complexType>
-     *                                                 &lt;/element>
-     *                                               &lt;/sequence>
-     *                                             &lt;/restriction>
-     *                                           &lt;/complexContent>
-     *                                         &lt;/complexType>
-     *                                       &lt;/element>
-     *                                       &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/>
-     *                                     &lt;/sequence>
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *                 &lt;attribute name="RequiredInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Coverage" maxOccurs="99" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="CoverageInfo" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/&gt;
+     *                   &lt;element name="CoverageFees" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="CoverageFee" maxOccurs="99"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;sequence&gt;
+     *                                       &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/&gt;
+     *                                       &lt;element name="Vehicles" minOccurs="0"&gt;
+     *                                         &lt;complexType&gt;
+     *                                           &lt;complexContent&gt;
+     *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                               &lt;sequence&gt;
+     *                                                 &lt;element name="Vehicle" maxOccurs="99"&gt;
+     *                                                   &lt;complexType&gt;
+     *                                                     &lt;complexContent&gt;
+     *                                                       &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+     *                                                         &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+     *                                                       &lt;/extension&gt;
+     *                                                     &lt;/complexContent&gt;
+     *                                                   &lt;/complexType&gt;
+     *                                                 &lt;/element&gt;
+     *                                               &lt;/sequence&gt;
+     *                                             &lt;/restriction&gt;
+     *                                           &lt;/complexContent&gt;
+     *                                         &lt;/complexType&gt;
+     *                                       &lt;/element&gt;
+     *                                       &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/&gt;
+     *                                     &lt;/sequence&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *                 &lt;attribute name="RequiredInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -299,58 +299,58 @@ public class VehicleLocationLiabilitiesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="CoverageInfo" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/>
-         *         &lt;element name="CoverageFees" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="CoverageFee" maxOccurs="99">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;sequence>
-         *                             &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/>
-         *                             &lt;element name="Vehicles" minOccurs="0">
-         *                               &lt;complexType>
-         *                                 &lt;complexContent>
-         *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                                     &lt;sequence>
-         *                                       &lt;element name="Vehicle" maxOccurs="99">
-         *                                         &lt;complexType>
-         *                                           &lt;complexContent>
-         *                                             &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-         *                                               &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-         *                                             &lt;/extension>
-         *                                           &lt;/complexContent>
-         *                                         &lt;/complexType>
-         *                                       &lt;/element>
-         *                                     &lt;/sequence>
-         *                                   &lt;/restriction>
-         *                                 &lt;/complexContent>
-         *                               &lt;/complexType>
-         *                             &lt;/element>
-         *                             &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/>
-         *                           &lt;/sequence>
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-         *       &lt;attribute name="RequiredInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="CoverageInfo" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" minOccurs="0"/&gt;
+         *         &lt;element name="CoverageFees" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="CoverageFee" maxOccurs="99"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;sequence&gt;
+         *                             &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/&gt;
+         *                             &lt;element name="Vehicles" minOccurs="0"&gt;
+         *                               &lt;complexType&gt;
+         *                                 &lt;complexContent&gt;
+         *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                                     &lt;sequence&gt;
+         *                                       &lt;element name="Vehicle" maxOccurs="99"&gt;
+         *                                         &lt;complexType&gt;
+         *                                           &lt;complexContent&gt;
+         *                                             &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+         *                                               &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+         *                                             &lt;/extension&gt;
+         *                                           &lt;/complexContent&gt;
+         *                                         &lt;/complexType&gt;
+         *                                       &lt;/element&gt;
+         *                                     &lt;/sequence&gt;
+         *                                   &lt;/restriction&gt;
+         *                                 &lt;/complexContent&gt;
+         *                               &lt;/complexType&gt;
+         *                             &lt;/element&gt;
+         *                             &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/&gt;
+         *                           &lt;/sequence&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+         *       &lt;attribute name="RequiredInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -474,45 +474,45 @@ public class VehicleLocationLiabilitiesType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="CoverageFee" maxOccurs="99">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;sequence>
-             *                   &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/>
-             *                   &lt;element name="Vehicles" minOccurs="0">
-             *                     &lt;complexType>
-             *                       &lt;complexContent>
-             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                           &lt;sequence>
-             *                             &lt;element name="Vehicle" maxOccurs="99">
-             *                               &lt;complexType>
-             *                                 &lt;complexContent>
-             *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-             *                                     &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-             *                                   &lt;/extension>
-             *                                 &lt;/complexContent>
-             *                               &lt;/complexType>
-             *                             &lt;/element>
-             *                           &lt;/sequence>
-             *                         &lt;/restriction>
-             *                       &lt;/complexContent>
-             *                     &lt;/complexType>
-             *                   &lt;/element>
-             *                   &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/>
-             *                 &lt;/sequence>
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="CoverageFee" maxOccurs="99"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;sequence&gt;
+             *                   &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/&gt;
+             *                   &lt;element name="Vehicles" minOccurs="0"&gt;
+             *                     &lt;complexType&gt;
+             *                       &lt;complexContent&gt;
+             *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                           &lt;sequence&gt;
+             *                             &lt;element name="Vehicle" maxOccurs="99"&gt;
+             *                               &lt;complexType&gt;
+             *                                 &lt;complexContent&gt;
+             *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+             *                                     &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+             *                                   &lt;/extension&gt;
+             *                                 &lt;/complexContent&gt;
+             *                               &lt;/complexType&gt;
+             *                             &lt;/element&gt;
+             *                           &lt;/sequence&gt;
+             *                         &lt;/restriction&gt;
+             *                       &lt;/complexContent&gt;
+             *                     &lt;/complexType&gt;
+             *                   &lt;/element&gt;
+             *                   &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/&gt;
+             *                 &lt;/sequence&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -562,35 +562,35 @@ public class VehicleLocationLiabilitiesType {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;sequence>
-                 *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/>
-                 *         &lt;element name="Vehicles" minOccurs="0">
-                 *           &lt;complexType>
-                 *             &lt;complexContent>
-                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *                 &lt;sequence>
-                 *                   &lt;element name="Vehicle" maxOccurs="99">
-                 *                     &lt;complexType>
-                 *                       &lt;complexContent>
-                 *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-                 *                           &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-                 *                         &lt;/extension>
-                 *                       &lt;/complexContent>
-                 *                     &lt;/complexType>
-                 *                   &lt;/element>
-                 *                 &lt;/sequence>
-                 *               &lt;/restriction>
-                 *             &lt;/complexContent>
-                 *           &lt;/complexType>
-                 *         &lt;/element>
-                 *         &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/>
-                 *       &lt;/sequence>
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;sequence&gt;
+                 *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}VehicleChargeType"/&gt;
+                 *         &lt;element name="Vehicles" minOccurs="0"&gt;
+                 *           &lt;complexType&gt;
+                 *             &lt;complexContent&gt;
+                 *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *                 &lt;sequence&gt;
+                 *                   &lt;element name="Vehicle" maxOccurs="99"&gt;
+                 *                     &lt;complexType&gt;
+                 *                       &lt;complexContent&gt;
+                 *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+                 *                           &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+                 *                         &lt;/extension&gt;
+                 *                       &lt;/complexContent&gt;
+                 *                     &lt;/complexType&gt;
+                 *                   &lt;/element&gt;
+                 *                 &lt;/sequence&gt;
+                 *               &lt;/restriction&gt;
+                 *             &lt;/complexContent&gt;
+                 *           &lt;/complexType&gt;
+                 *         &lt;/element&gt;
+                 *         &lt;element name="Deductible" type="{http://www.opentravel.org/OTA/2003/05}DeductibleType" minOccurs="0"/&gt;
+                 *       &lt;/sequence&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -689,23 +689,23 @@ public class VehicleLocationLiabilitiesType {
                      * <p>The following schema fragment specifies the expected content contained within this class.
                      * 
                      * <pre>
-                     * &lt;complexType>
-                     *   &lt;complexContent>
-                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                     *       &lt;sequence>
-                     *         &lt;element name="Vehicle" maxOccurs="99">
-                     *           &lt;complexType>
-                     *             &lt;complexContent>
-                     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-                     *                 &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-                     *               &lt;/extension>
-                     *             &lt;/complexContent>
-                     *           &lt;/complexType>
-                     *         &lt;/element>
-                     *       &lt;/sequence>
-                     *     &lt;/restriction>
-                     *   &lt;/complexContent>
-                     * &lt;/complexType>
+                     * &lt;complexType&gt;
+                     *   &lt;complexContent&gt;
+                     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                     *       &lt;sequence&gt;
+                     *         &lt;element name="Vehicle" maxOccurs="99"&gt;
+                     *           &lt;complexType&gt;
+                     *             &lt;complexContent&gt;
+                     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+                     *                 &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+                     *               &lt;/extension&gt;
+                     *             &lt;/complexContent&gt;
+                     *           &lt;/complexType&gt;
+                     *         &lt;/element&gt;
+                     *       &lt;/sequence&gt;
+                     *     &lt;/restriction&gt;
+                     *   &lt;/complexContent&gt;
+                     * &lt;/complexType&gt;
                      * </pre>
                      * 
                      * 
@@ -755,13 +755,13 @@ public class VehicleLocationLiabilitiesType {
                          * <p>The following schema fragment specifies the expected content contained within this class.
                          * 
                          * <pre>
-                         * &lt;complexType>
-                         *   &lt;complexContent>
-                         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-                         *       &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-                         *     &lt;/extension>
-                         *   &lt;/complexContent>
-                         * &lt;/complexType>
+                         * &lt;complexType&gt;
+                         *   &lt;complexContent&gt;
+                         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+                         *       &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+                         *     &lt;/extension&gt;
+                         *   &lt;/complexContent&gt;
+                         * &lt;/complexType&gt;
                          * </pre>
                          * 
                          * 

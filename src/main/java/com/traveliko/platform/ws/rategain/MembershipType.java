@@ -17,27 +17,27 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="MembershipType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Membership" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="ProgramCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                 &lt;attribute name="BonusCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                 &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                 &lt;attribute name="PointsEarned" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                 &lt;attribute name="TravelSector" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="MembershipType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Membership" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="ProgramCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                 &lt;attribute name="BonusCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                 &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                 &lt;attribute name="PointsEarned" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                 &lt;attribute name="TravelSector" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -87,17 +87,17 @@ public class MembershipType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="ProgramCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *       &lt;attribute name="BonusCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *       &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="PointsEarned" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *       &lt;attribute name="TravelSector" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="ProgramCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *       &lt;attribute name="BonusCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *       &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *       &lt;attribute name="PointsEarned" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *       &lt;attribute name="TravelSector" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

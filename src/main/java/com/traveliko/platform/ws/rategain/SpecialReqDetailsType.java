@@ -19,122 +19,122 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SpecialReqDetailsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="SeatRequests" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="SeatRequest" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SeatRequestType">
- *                           &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                           &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                           &lt;attribute name="PartialSeatingInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SpecialServiceRequests" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="SpecialServiceRequest" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialServiceRequestType">
- *                           &lt;sequence>
- *                             &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/>
- *                           &lt;/sequence>
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
- *                           &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                           &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="OtherServiceInformations" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="OtherServiceInformation" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType">
- *                           &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *                           &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Remarks" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Remark" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                           &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *                           &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SpecialRemarks" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="SpecialRemark" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialRemarkType">
- *                           &lt;sequence>
- *                             &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/>
- *                           &lt;/sequence>
- *                           &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *                           &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="SpecialReqDetailsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="SeatRequests" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="SeatRequest" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SeatRequestType"&gt;
+ *                           &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                           &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                           &lt;attribute name="PartialSeatingInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="SpecialServiceRequests" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="SpecialServiceRequest" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialServiceRequestType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/&gt;
+ *                           &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                           &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="OtherServiceInformations" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="OtherServiceInformation" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType"&gt;
+ *                           &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *                           &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Remarks" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Remark" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;simpleContent&gt;
+ *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                           &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *                           &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/simpleContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="SpecialRemarks" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="SpecialRemark" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialRemarkType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *                           &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -287,24 +287,24 @@ public class SpecialReqDetailsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="OtherServiceInformation" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType">
-     *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="OtherServiceInformation" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType"&gt;
+     *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -354,14 +354,14 @@ public class SpecialReqDetailsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType">
-         *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-         *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType"&gt;
+         *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+         *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -436,24 +436,24 @@ public class SpecialReqDetailsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Remark" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Remark" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;simpleContent&gt;
+     *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/simpleContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -503,14 +503,14 @@ public class SpecialReqDetailsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-         *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-         *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;simpleContent&gt;
+         *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+         *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+         *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/simpleContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -611,25 +611,25 @@ public class SpecialReqDetailsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="SeatRequest" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SeatRequestType">
-     *                 &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *                 &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *                 &lt;attribute name="PartialSeatingInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="SeatRequest" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SeatRequestType"&gt;
+     *                 &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *                 &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *                 &lt;attribute name="PartialSeatingInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -679,15 +679,15 @@ public class SpecialReqDetailsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SeatRequestType">
-         *       &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-         *       &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-         *       &lt;attribute name="PartialSeatingInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SeatRequestType"&gt;
+         *       &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+         *       &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+         *       &lt;attribute name="PartialSeatingInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -798,27 +798,27 @@ public class SpecialReqDetailsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="SpecialRemark" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialRemarkType">
-     *                 &lt;sequence>
-     *                   &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-     *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="SpecialRemark" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialRemarkType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+     *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -868,17 +868,17 @@ public class SpecialReqDetailsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialRemarkType">
-         *       &lt;sequence>
-         *         &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/>
-         *       &lt;/sequence>
-         *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-         *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialRemarkType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+         *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -981,28 +981,28 @@ public class SpecialReqDetailsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="SpecialServiceRequest" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialServiceRequestType">
-     *                 &lt;sequence>
-     *                   &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
-     *                 &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *                 &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="SpecialServiceRequest" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialServiceRequestType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/&gt;
+     *                 &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *                 &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1052,18 +1052,18 @@ public class SpecialReqDetailsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialServiceRequestType">
-         *       &lt;sequence>
-         *         &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/>
-         *       &lt;/sequence>
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
-         *       &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-         *       &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}SpecialServiceRequestType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="FlightLeg" type="{http://www.opentravel.org/OTA/2003/05}FlightLegType" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/&gt;
+         *       &lt;attribute name="TravelerRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+         *       &lt;attribute name="FlightRefNumberRPHList" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

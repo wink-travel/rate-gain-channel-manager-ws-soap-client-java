@@ -19,82 +19,82 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="SellableProductsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="SellableProduct" maxOccurs="unbounded">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="DestinationSystemCodes" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="DestinationSystemCode" maxOccurs="unbounded">
- *                               &lt;complexType>
- *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
- *                                     &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                                     &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                                   &lt;/extension>
- *                                 &lt;/simpleContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;choice>
- *                     &lt;element name="GuestRoom" type="{http://www.opentravel.org/OTA/2003/05}GuestRoomType"/>
- *                     &lt;element name="MeetingRooms" type="{http://www.opentravel.org/OTA/2003/05}MeetingRoomsType"/>
- *                     &lt;element name="InventoryBlock">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeGroup"/>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/choice>
- *                   &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
- *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InventoryGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *                 &lt;attribute name="InvNotifType">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="New"/>
- *                       &lt;enumeration value="Delta"/>
- *                       &lt;enumeration value="Overlay"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="InvStatusType">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="Initial"/>
- *                       &lt;enumeration value="Active"/>
- *                       &lt;enumeration value="Deactivated"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="InvGroupingCode" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="OrderSequence" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="SellableProductsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="SellableProduct" maxOccurs="unbounded"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="DestinationSystemCodes" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="DestinationSystemCode" maxOccurs="unbounded"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;simpleContent&gt;
+ *                                   &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
+ *                                     &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                                     &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/simpleContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;choice&gt;
+ *                     &lt;element name="GuestRoom" type="{http://www.opentravel.org/OTA/2003/05}GuestRoomType"/&gt;
+ *                     &lt;element name="MeetingRooms" type="{http://www.opentravel.org/OTA/2003/05}MeetingRoomsType"/&gt;
+ *                     &lt;element name="InventoryBlock"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeGroup"/&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/choice&gt;
+ *                   &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
+ *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InventoryGroup"/&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *                 &lt;attribute name="InvNotifType"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="New"/&gt;
+ *                       &lt;enumeration value="Delta"/&gt;
+ *                       &lt;enumeration value="Overlay"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="InvStatusType"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="Initial"/&gt;
+ *                       &lt;enumeration value="Active"/&gt;
+ *                       &lt;enumeration value="Deactivated"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="InvGroupingCode" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="OrderSequence" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -144,72 +144,72 @@ public class SellableProductsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="DestinationSystemCodes" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="DestinationSystemCode" maxOccurs="unbounded">
-     *                     &lt;complexType>
-     *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
-     *                           &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                           &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                         &lt;/extension>
-     *                       &lt;/simpleContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;choice>
-     *           &lt;element name="GuestRoom" type="{http://www.opentravel.org/OTA/2003/05}GuestRoomType"/>
-     *           &lt;element name="MeetingRooms" type="{http://www.opentravel.org/OTA/2003/05}MeetingRoomsType"/>
-     *           &lt;element name="InventoryBlock">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeGroup"/>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *         &lt;/choice>
-     *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/>
-     *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InventoryGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-     *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *       &lt;attribute name="InvNotifType">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="New"/>
-     *             &lt;enumeration value="Delta"/>
-     *             &lt;enumeration value="Overlay"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="InvStatusType">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="Initial"/>
-     *             &lt;enumeration value="Active"/>
-     *             &lt;enumeration value="Deactivated"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="InvGroupingCode" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="OrderSequence" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="DestinationSystemCodes" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="DestinationSystemCode" maxOccurs="unbounded"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;simpleContent&gt;
+     *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
+     *                           &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                           &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/simpleContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;choice&gt;
+     *           &lt;element name="GuestRoom" type="{http://www.opentravel.org/OTA/2003/05}GuestRoomType"/&gt;
+     *           &lt;element name="MeetingRooms" type="{http://www.opentravel.org/OTA/2003/05}MeetingRoomsType"/&gt;
+     *           &lt;element name="InventoryBlock"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeGroup"/&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *         &lt;/choice&gt;
+     *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" minOccurs="0"/&gt;
+     *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InventoryGroup"/&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+     *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *       &lt;attribute name="InvNotifType"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="New"/&gt;
+     *             &lt;enumeration value="Delta"/&gt;
+     *             &lt;enumeration value="Overlay"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="InvStatusType"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="Initial"/&gt;
+     *             &lt;enumeration value="Active"/&gt;
+     *             &lt;enumeration value="Deactivated"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="InvGroupingCode" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="OrderSequence" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -728,24 +728,24 @@ public class SellableProductsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="DestinationSystemCode" maxOccurs="unbounded">
-         *           &lt;complexType>
-         *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
-         *                 &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *                 &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *               &lt;/extension>
-         *             &lt;/simpleContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="DestinationSystemCode" maxOccurs="unbounded"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;simpleContent&gt;
+         *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
+         *                 &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *                 &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/simpleContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -795,14 +795,14 @@ public class SellableProductsType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to32">
-             *       &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-             *       &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-             *     &lt;/extension>
-             *   &lt;/simpleContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;simpleContent&gt;
+             *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to32"&gt;
+             *       &lt;attribute name="ChainRateLevelCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+             *       &lt;attribute name="ChainRateCodeCrossRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/simpleContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -903,13 +903,13 @@ public class SellableProductsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeGroup"/>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}InvBlockCodeGroup"/&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

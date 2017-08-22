@@ -18,82 +18,82 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DonationType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="FrontOfficeInfo" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="ProductName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="ProductVersion" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="OfficeID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                 &lt;attribute name="CorporateID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="CreditCardInfo">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentCardType">
- *                 &lt;attribute name="Currency" use="required" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
- *                 &lt;attribute name="DonationAmount" use="required" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="DonorInfo" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Name" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType">
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="ContactInfo" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
- *                           &lt;attribute name="EmailAddress" type="{http://www.w3.org/2001/XMLSchema}string" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="Language" use="required" type="{http://www.w3.org/2001/XMLSchema}language" />
- *       &lt;attribute name="GDS_ID">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *             &lt;enumeration value="1A"/>
- *             &lt;enumeration value="1G"/>
- *             &lt;enumeration value="1P"/>
- *             &lt;enumeration value="1V"/>
- *             &lt;enumeration value="1W"/>
- *             &lt;enumeration value="WE"/>
- *             &lt;enumeration value="WS"/>
- *             &lt;enumeration value="MF"/>
- *             &lt;enumeration value="ZZ"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="AskForReceiptInd" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="CountryCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
- *       &lt;attribute name="StateCode" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="DonationType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="FrontOfficeInfo" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="ProductName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="ProductVersion" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="OfficeID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                 &lt;attribute name="CorporateID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="CreditCardInfo"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"&gt;
+ *                 &lt;attribute name="Currency" use="required" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+ *                 &lt;attribute name="DonationAmount" use="required" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="DonorInfo" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Name" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType"&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="ContactInfo" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
+ *                           &lt;attribute name="EmailAddress" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="Language" use="required" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
+ *       &lt;attribute name="GDS_ID"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="1A"/&gt;
+ *             &lt;enumeration value="1G"/&gt;
+ *             &lt;enumeration value="1P"/&gt;
+ *             &lt;enumeration value="1V"/&gt;
+ *             &lt;enumeration value="1W"/&gt;
+ *             &lt;enumeration value="WE"/&gt;
+ *             &lt;enumeration value="WS"/&gt;
+ *             &lt;enumeration value="MF"/&gt;
+ *             &lt;enumeration value="ZZ"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="AskForReceiptInd" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="CountryCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+ *       &lt;attribute name="StateCode" type="{http://www.opentravel.org/OTA/2003/05}StateProvCodeType" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -317,14 +317,14 @@ public class DonationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentCardType">
-     *       &lt;attribute name="Currency" use="required" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
-     *       &lt;attribute name="DonationAmount" use="required" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"&gt;
+     *       &lt;attribute name="Currency" use="required" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+     *       &lt;attribute name="DonationAmount" use="required" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -397,31 +397,31 @@ public class DonationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Name" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType">
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="ContactInfo" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
-     *                 &lt;attribute name="EmailAddress" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Name" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType"&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="ContactInfo" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
+     *                 &lt;attribute name="EmailAddress" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -493,13 +493,13 @@ public class DonationType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType">
-         *       &lt;attribute name="EmailAddress" type="{http://www.w3.org/2001/XMLSchema}string" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressType"&gt;
+         *       &lt;attribute name="EmailAddress" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -546,12 +546,12 @@ public class DonationType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType">
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PersonNameType"&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -574,16 +574,16 @@ public class DonationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="ProductName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="ProductVersion" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="OfficeID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *       &lt;attribute name="CorporateID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="ProductName" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="ProductVersion" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="OfficeID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *       &lt;attribute name="CorporateID" use="required" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

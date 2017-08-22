@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="OperationSchedulePlusChargeType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OperationScheduleType">
- *       &lt;sequence>
- *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}FeeType" maxOccurs="5" minOccurs="0"/>
- *       &lt;/sequence>
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="OperationSchedulePlusChargeType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}OperationScheduleType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Charge" type="{http://www.opentravel.org/OTA/2003/05}FeeType" maxOccurs="5" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

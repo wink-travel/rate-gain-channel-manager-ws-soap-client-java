@@ -12,22 +12,22 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="FareAccessPrefType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="PointToPoint"/>
- *     &lt;enumeration value="Through"/>
- *     &lt;enumeration value="Joint"/>
- *     &lt;enumeration value="Private"/>
- *     &lt;enumeration value="Negotiated"/>
- *     &lt;enumeration value="Net"/>
- *     &lt;enumeration value="Historical"/>
- *     &lt;enumeration value="SecurateAir"/>
- *     &lt;enumeration value="Moneysaver"/>
- *     &lt;enumeration value="MoneysaverRoundtrip"/>
- *     &lt;enumeration value="MoneysaverNoOneWay"/>
- *     &lt;enumeration value="MoneysaverOneWayOnly"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="FareAccessPrefType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="PointToPoint"/&gt;
+ *     &lt;enumeration value="Through"/&gt;
+ *     &lt;enumeration value="Joint"/&gt;
+ *     &lt;enumeration value="Private"/&gt;
+ *     &lt;enumeration value="Negotiated"/&gt;
+ *     &lt;enumeration value="Net"/&gt;
+ *     &lt;enumeration value="Historical"/&gt;
+ *     &lt;enumeration value="SecurateAir"/&gt;
+ *     &lt;enumeration value="Moneysaver"/&gt;
+ *     &lt;enumeration value="MoneysaverRoundtrip"/&gt;
+ *     &lt;enumeration value="MoneysaverNoOneWay"/&gt;
+ *     &lt;enumeration value="MoneysaverOneWayOnly"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -21,108 +21,108 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AuthorizationType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;choice>
- *           &lt;element name="CheckAuthorization" minOccurs="0">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="BankAcct" type="{http://www.opentravel.org/OTA/2003/05}BankAcctType"/>
- *                   &lt;/sequence>
- *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="CreditCardAuthorization" minOccurs="0">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="CreditCard" type="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"/>
- *                     &lt;element name="ID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="5" minOccurs="0"/>
- *                   &lt;/sequence>
- *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *                   &lt;attribute name="SourceType">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                         &lt;enumeration value="NormalTransaction"/>
- *                         &lt;enumeration value="MailOrPhoneOrder"/>
- *                         &lt;enumeration value="UnattendedTerminal"/>
- *                         &lt;enumeration value="MerchantIsSuspicious"/>
- *                         &lt;enumeration value="eCommerceSecuredTransaction"/>
- *                         &lt;enumeration value="eCommerceUnsecuredTransaction"/>
- *                         &lt;enumeration value="InFlightAirPhone"/>
- *                         &lt;enumeration value="CID_NotLegible"/>
- *                         &lt;enumeration value="CID_NotOnCard"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/attribute>
- *                   &lt;attribute name="ExtendedPaymentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                   &lt;attribute name="ExtendedPaymentQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
- *                   &lt;attribute name="ExtendedPaymentFrequency" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" />
- *                   &lt;attribute name="AuthorizationCode">
- *                     &lt;simpleType>
- *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                         &lt;pattern value="[A-Za-z0-9]{1,12}"/>
- *                       &lt;/restriction>
- *                     &lt;/simpleType>
- *                   &lt;/attribute>
- *                   &lt;attribute name="ReversalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                   &lt;attribute name="CardPresentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                   &lt;attribute name="E_CommerceCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
- *                   &lt;attribute name="AuthTransactionID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                   &lt;attribute name="AuthVerificationValue" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *           &lt;element name="AccountAuthorization" minOccurs="0">
- *             &lt;complexType>
- *               &lt;complexContent>
- *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                   &lt;sequence>
- *                     &lt;element name="AccountInfo" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;attribute name="AccountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                             &lt;attribute name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                             &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                             &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                             &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/sequence>
- *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *                   &lt;attribute name="NonISO_CurrencyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                 &lt;/restriction>
- *               &lt;/complexContent>
- *             &lt;/complexType>
- *           &lt;/element>
- *         &lt;/choice>
- *         &lt;element name="DriversLicenseAuthorization" type="{http://www.opentravel.org/OTA/2003/05}DocumentType" minOccurs="0"/>
- *         &lt;element name="BookingReferenceID" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type">
- *                 &lt;attribute name="IgnoreReservationInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="PrincipalCompanyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="RefNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AuthorizationType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;choice&gt;
+ *           &lt;element name="CheckAuthorization" minOccurs="0"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="BankAcct" type="{http://www.opentravel.org/OTA/2003/05}BankAcctType"/&gt;
+ *                   &lt;/sequence&gt;
+ *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="CreditCardAuthorization" minOccurs="0"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="CreditCard" type="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"/&gt;
+ *                     &lt;element name="ID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="5" minOccurs="0"/&gt;
+ *                   &lt;/sequence&gt;
+ *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *                   &lt;attribute name="SourceType"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                         &lt;enumeration value="NormalTransaction"/&gt;
+ *                         &lt;enumeration value="MailOrPhoneOrder"/&gt;
+ *                         &lt;enumeration value="UnattendedTerminal"/&gt;
+ *                         &lt;enumeration value="MerchantIsSuspicious"/&gt;
+ *                         &lt;enumeration value="eCommerceSecuredTransaction"/&gt;
+ *                         &lt;enumeration value="eCommerceUnsecuredTransaction"/&gt;
+ *                         &lt;enumeration value="InFlightAirPhone"/&gt;
+ *                         &lt;enumeration value="CID_NotLegible"/&gt;
+ *                         &lt;enumeration value="CID_NotOnCard"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/attribute&gt;
+ *                   &lt;attribute name="ExtendedPaymentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                   &lt;attribute name="ExtendedPaymentQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+ *                   &lt;attribute name="ExtendedPaymentFrequency" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" /&gt;
+ *                   &lt;attribute name="AuthorizationCode"&gt;
+ *                     &lt;simpleType&gt;
+ *                       &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                         &lt;pattern value="[A-Za-z0-9]{1,12}"/&gt;
+ *                       &lt;/restriction&gt;
+ *                     &lt;/simpleType&gt;
+ *                   &lt;/attribute&gt;
+ *                   &lt;attribute name="ReversalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                   &lt;attribute name="CardPresentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                   &lt;attribute name="E_CommerceCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" /&gt;
+ *                   &lt;attribute name="AuthTransactionID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                   &lt;attribute name="AuthVerificationValue" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *           &lt;element name="AccountAuthorization" minOccurs="0"&gt;
+ *             &lt;complexType&gt;
+ *               &lt;complexContent&gt;
+ *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="AccountInfo" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;attribute name="AccountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                             &lt;attribute name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                             &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                             &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                             &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/sequence&gt;
+ *                   &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *                   &lt;attribute name="NonISO_CurrencyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                 &lt;/restriction&gt;
+ *               &lt;/complexContent&gt;
+ *             &lt;/complexType&gt;
+ *           &lt;/element&gt;
+ *         &lt;/choice&gt;
+ *         &lt;element name="DriversLicenseAuthorization" type="{http://www.opentravel.org/OTA/2003/05}DocumentType" minOccurs="0"/&gt;
+ *         &lt;element name="BookingReferenceID" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type"&gt;
+ *                 &lt;attribute name="IgnoreReservationInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="PrincipalCompanyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="RefNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -327,29 +327,29 @@ public class AuthorizationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="AccountInfo" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="AccountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                 &lt;attribute name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                 &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                 &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *       &lt;attribute name="NonISO_CurrencyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="AccountInfo" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="AccountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                 &lt;attribute name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                 &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                 &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+     *       &lt;attribute name="NonISO_CurrencyCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -499,17 +499,17 @@ public class AuthorizationType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="AccountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *       &lt;attribute name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *       &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *       &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="AccountName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *       &lt;attribute name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *       &lt;attribute name="AccountID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *       &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -660,13 +660,13 @@ public class AuthorizationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type">
-     *       &lt;attribute name="IgnoreReservationInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type"&gt;
+     *       &lt;attribute name="IgnoreReservationInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -713,16 +713,16 @@ public class AuthorizationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="BankAcct" type="{http://www.opentravel.org/OTA/2003/05}BankAcctType"/>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="BankAcct" type="{http://www.opentravel.org/OTA/2003/05}BankAcctType"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -848,47 +848,47 @@ public class AuthorizationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="CreditCard" type="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"/>
-     *         &lt;element name="ID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="5" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *       &lt;attribute name="SourceType">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="NormalTransaction"/>
-     *             &lt;enumeration value="MailOrPhoneOrder"/>
-     *             &lt;enumeration value="UnattendedTerminal"/>
-     *             &lt;enumeration value="MerchantIsSuspicious"/>
-     *             &lt;enumeration value="eCommerceSecuredTransaction"/>
-     *             &lt;enumeration value="eCommerceUnsecuredTransaction"/>
-     *             &lt;enumeration value="InFlightAirPhone"/>
-     *             &lt;enumeration value="CID_NotLegible"/>
-     *             &lt;enumeration value="CID_NotOnCard"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="ExtendedPaymentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="ExtendedPaymentQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-     *       &lt;attribute name="ExtendedPaymentFrequency" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" />
-     *       &lt;attribute name="AuthorizationCode">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;pattern value="[A-Za-z0-9]{1,12}"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="ReversalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="CardPresentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="E_CommerceCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
-     *       &lt;attribute name="AuthTransactionID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *       &lt;attribute name="AuthVerificationValue" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="CreditCard" type="{http://www.opentravel.org/OTA/2003/05}PaymentCardType"/&gt;
+     *         &lt;element name="ID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="5" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+     *       &lt;attribute name="SourceType"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="NormalTransaction"/&gt;
+     *             &lt;enumeration value="MailOrPhoneOrder"/&gt;
+     *             &lt;enumeration value="UnattendedTerminal"/&gt;
+     *             &lt;enumeration value="MerchantIsSuspicious"/&gt;
+     *             &lt;enumeration value="eCommerceSecuredTransaction"/&gt;
+     *             &lt;enumeration value="eCommerceUnsecuredTransaction"/&gt;
+     *             &lt;enumeration value="InFlightAirPhone"/&gt;
+     *             &lt;enumeration value="CID_NotLegible"/&gt;
+     *             &lt;enumeration value="CID_NotOnCard"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="ExtendedPaymentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="ExtendedPaymentQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+     *       &lt;attribute name="ExtendedPaymentFrequency" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" /&gt;
+     *       &lt;attribute name="AuthorizationCode"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;pattern value="[A-Za-z0-9]{1,12}"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="ReversalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="CardPresentInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="E_CommerceCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" /&gt;
+     *       &lt;attribute name="AuthTransactionID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *       &lt;attribute name="AuthVerificationValue" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

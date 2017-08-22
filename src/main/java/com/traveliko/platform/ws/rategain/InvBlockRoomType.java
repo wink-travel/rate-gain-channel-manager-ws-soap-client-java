@@ -18,110 +18,110 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="InvBlockRoomType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="RoomTypeAllocations" maxOccurs="10" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="RoomTypeAllocation" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *                           &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                           &lt;attribute name="CompRoomQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
- *                           &lt;attribute name="CompRoomFactor" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
- *                           &lt;attribute name="EndDateIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                           &lt;attribute name="SellLimit" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *                           &lt;attribute name="ProcureBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                           &lt;attribute name="AllocationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="RoomTypePickUpStatus" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RatePlans" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="RatePlan" maxOccurs="99">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RateUploadType">
- *                           &lt;sequence>
- *                             &lt;element name="MarketCode" maxOccurs="5" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                                     &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                                     &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="Commission" type="{http://www.opentravel.org/OTA/2003/05}CommissionType" minOccurs="0"/>
- *                             &lt;element name="MethodInfo" maxOccurs="5" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="DaysOfWeeks" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/>
- *                                     &lt;/sequence>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
- *                           &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                           &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                           &lt;attribute name="UpgradeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="DaysOfWeeks" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *       &lt;attribute name="RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="InvBlockRoomType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="RoomTypeAllocations" maxOccurs="10" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="RoomTypeAllocation" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *                           &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                           &lt;attribute name="CompRoomQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+ *                           &lt;attribute name="CompRoomFactor" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+ *                           &lt;attribute name="EndDateIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                           &lt;attribute name="SellLimit" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *                           &lt;attribute name="ProcureBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                           &lt;attribute name="AllocationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="RoomTypePickUpStatus" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RatePlans" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="RatePlan" maxOccurs="99"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RateUploadType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="MarketCode" maxOccurs="5" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                                     &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                                     &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="Commission" type="{http://www.opentravel.org/OTA/2003/05}CommissionType" minOccurs="0"/&gt;
+ *                             &lt;element name="MethodInfo" maxOccurs="5" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="DaysOfWeeks" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/&gt;
+ *                                     &lt;/sequence&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+ *                           &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                           &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                           &lt;attribute name="UpgradeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="DaysOfWeeks" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *       &lt;attribute name="RoomTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -329,15 +329,15 @@ public class InvBlockRoomType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -389,60 +389,60 @@ public class InvBlockRoomType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="RatePlan" maxOccurs="99">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RateUploadType">
-     *                 &lt;sequence>
-     *                   &lt;element name="MarketCode" maxOccurs="5" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                           &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *                           &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="Commission" type="{http://www.opentravel.org/OTA/2003/05}CommissionType" minOccurs="0"/>
-     *                   &lt;element name="MethodInfo" maxOccurs="5" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="DaysOfWeeks" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/>
-     *                           &lt;/sequence>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
-     *                 &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *                 &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *                 &lt;attribute name="UpgradeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="RatePlan" maxOccurs="99"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RateUploadType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="MarketCode" maxOccurs="5" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                           &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *                           &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="Commission" type="{http://www.opentravel.org/OTA/2003/05}CommissionType" minOccurs="0"/&gt;
+     *                   &lt;element name="MethodInfo" maxOccurs="5" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="DaysOfWeeks" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/&gt;
+     *                           &lt;/sequence&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+     *                 &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *                 &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *                 &lt;attribute name="UpgradeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -492,50 +492,50 @@ public class InvBlockRoomType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RateUploadType">
-         *       &lt;sequence>
-         *         &lt;element name="MarketCode" maxOccurs="5" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *                 &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *                 &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="Commission" type="{http://www.opentravel.org/OTA/2003/05}CommissionType" minOccurs="0"/>
-         *         &lt;element name="MethodInfo" maxOccurs="5" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="DaysOfWeeks" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/>
-         *                 &lt;/sequence>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
-         *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-         *       &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-         *       &lt;attribute name="UpgradeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RateUploadType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="MarketCode" maxOccurs="5" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *                 &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *                 &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="Commission" type="{http://www.opentravel.org/OTA/2003/05}CommissionType" minOccurs="0"/&gt;
+         *         &lt;element name="MethodInfo" maxOccurs="5" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="DaysOfWeeks" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/&gt;
+         *                 &lt;/sequence&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+         *       &lt;attribute name="RatePlanCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+         *       &lt;attribute name="BookingCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+         *       &lt;attribute name="UpgradeIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -808,15 +808,15 @@ public class InvBlockRoomType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/>
-             *       &lt;/sequence>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="DaysOfWeek" type="{http://www.opentravel.org/OTA/2003/05}DOW_RulesType" maxOccurs="unbounded"/&gt;
+             *       &lt;/sequence&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -868,15 +868,15 @@ public class InvBlockRoomType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-             *       &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-             *       &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attribute name="MarketCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+             *       &lt;attribute name="MarketCodeName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+             *       &lt;attribute name="CommissionableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -973,13 +973,13 @@ public class InvBlockRoomType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}MethodInfoGroup"/&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1080,31 +1080,31 @@ public class InvBlockRoomType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="RoomTypeAllocation" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-     *                 &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *                 &lt;attribute name="CompRoomQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-     *                 &lt;attribute name="CompRoomFactor" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-     *                 &lt;attribute name="EndDateIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *                 &lt;attribute name="SellLimit" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-     *                 &lt;attribute name="ProcureBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *                 &lt;attribute name="AllocationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="RoomTypePickUpStatus" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="RoomTypeAllocation" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+     *                 &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *                 &lt;attribute name="CompRoomQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+     *                 &lt;attribute name="CompRoomFactor" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+     *                 &lt;attribute name="EndDateIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *                 &lt;attribute name="SellLimit" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+     *                 &lt;attribute name="ProcureBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *                 &lt;attribute name="AllocationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="RoomTypePickUpStatus" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1180,20 +1180,20 @@ public class InvBlockRoomType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-         *       &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" />
-         *       &lt;attribute name="CompRoomQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-         *       &lt;attribute name="CompRoomFactor" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
-         *       &lt;attribute name="EndDateIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *       &lt;attribute name="SellLimit" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-         *       &lt;attribute name="ProcureBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-         *       &lt;attribute name="AllocationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+         *       &lt;attribute name="NumberOfUnits" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+         *       &lt;attribute name="CompRoomQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+         *       &lt;attribute name="CompRoomFactor" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+         *       &lt;attribute name="EndDateIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *       &lt;attribute name="SellLimit" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+         *       &lt;attribute name="ProcureBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+         *       &lt;attribute name="AllocationID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

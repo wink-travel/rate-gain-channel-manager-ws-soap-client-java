@@ -18,162 +18,162 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="HotelRoomListType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
- *         &lt;element name="Guests" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Guest" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType">
- *                           &lt;sequence>
- *                             &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
- *                             &lt;element name="Loyalty" maxOccurs="5" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="GuaranteePayment" maxOccurs="2" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType">
- *                                     &lt;attribute name="DetailType">
- *                                       &lt;simpleType>
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                           &lt;enumeration value="Payment"/>
- *                                           &lt;enumeration value="Guarantee"/>
- *                                         &lt;/restriction>
- *                                       &lt;/simpleType>
- *                                     &lt;/attribute>
- *                                     &lt;attribute name="GuaranteeType">
- *                                       &lt;simpleType>
- *                                         &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
- *                                           &lt;enumeration value="GuaranteeRequired"/>
- *                                           &lt;enumeration value="None"/>
- *                                           &lt;enumeration value="CC/DC/Voucher"/>
- *                                           &lt;enumeration value="Profile"/>
- *                                           &lt;enumeration value="Deposit"/>
- *                                           &lt;enumeration value="PrePay"/>
- *                                         &lt;/restriction>
- *                                       &lt;/simpleType>
- *                                     &lt;/attribute>
- *                                   &lt;/extension>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="AdditionalDetails" type="{http://www.opentravel.org/OTA/2003/05}AdditionalDetailsType" minOccurs="0"/>
- *                           &lt;/sequence>
- *                           &lt;attribute name="GuestAction" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *                           &lt;attribute name="PrintConfoInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="MasterContact" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType">
- *                 &lt;sequence>
- *                   &lt;element name="UniqueIDs" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="9" minOccurs="0"/>
- *                           &lt;/sequence>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Loyalty" maxOccurs="5" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="MasterAccount" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}DirectBillType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BillingType"/>
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RoomStays" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="RoomStay" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomStayType">
- *                           &lt;sequence minOccurs="0">
- *                             &lt;element name="HotelReservationIDs" type="{http://www.opentravel.org/OTA/2003/05}HotelReservationIDsType" minOccurs="0"/>
- *                             &lt;element name="RoomShares" type="{http://www.opentravel.org/OTA/2003/05}RoomSharesType" minOccurs="0"/>
- *                             &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
- *                             &lt;choice minOccurs="0">
- *                               &lt;sequence>
- *                                 &lt;element name="Success" type="{http://www.opentravel.org/OTA/2003/05}SuccessType"/>
- *                                 &lt;element name="Warnings" type="{http://www.opentravel.org/OTA/2003/05}WarningsType" minOccurs="0"/>
- *                               &lt;/sequence>
- *                               &lt;element name="Errors" type="{http://www.opentravel.org/OTA/2003/05}ErrorsType"/>
- *                             &lt;/choice>
- *                           &lt;/sequence>
- *                           &lt;attribute name="RoomStay" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Event" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="EventContact" type="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"/>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *                 &lt;attribute name="MeetingName" type="{http://www.w3.org/2001/XMLSchema}string" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/>
- *       &lt;attribute name="GroupBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="HotelRoomListType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+ *         &lt;element name="Guests" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Guest" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+ *                             &lt;element name="Loyalty" maxOccurs="5" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="GuaranteePayment" maxOccurs="2" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType"&gt;
+ *                                     &lt;attribute name="DetailType"&gt;
+ *                                       &lt;simpleType&gt;
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                           &lt;enumeration value="Payment"/&gt;
+ *                                           &lt;enumeration value="Guarantee"/&gt;
+ *                                         &lt;/restriction&gt;
+ *                                       &lt;/simpleType&gt;
+ *                                     &lt;/attribute&gt;
+ *                                     &lt;attribute name="GuaranteeType"&gt;
+ *                                       &lt;simpleType&gt;
+ *                                         &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
+ *                                           &lt;enumeration value="GuaranteeRequired"/&gt;
+ *                                           &lt;enumeration value="None"/&gt;
+ *                                           &lt;enumeration value="CC/DC/Voucher"/&gt;
+ *                                           &lt;enumeration value="Profile"/&gt;
+ *                                           &lt;enumeration value="Deposit"/&gt;
+ *                                           &lt;enumeration value="PrePay"/&gt;
+ *                                         &lt;/restriction&gt;
+ *                                       &lt;/simpleType&gt;
+ *                                     &lt;/attribute&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="AdditionalDetails" type="{http://www.opentravel.org/OTA/2003/05}AdditionalDetailsType" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="GuestAction" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *                           &lt;attribute name="PrintConfoInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="MasterContact" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="UniqueIDs" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="9" minOccurs="0"/&gt;
+ *                           &lt;/sequence&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Loyalty" maxOccurs="5" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="MasterAccount" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}DirectBillType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BillingType"/&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RoomStays" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="RoomStay" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomStayType"&gt;
+ *                           &lt;sequence minOccurs="0"&gt;
+ *                             &lt;element name="HotelReservationIDs" type="{http://www.opentravel.org/OTA/2003/05}HotelReservationIDsType" minOccurs="0"/&gt;
+ *                             &lt;element name="RoomShares" type="{http://www.opentravel.org/OTA/2003/05}RoomSharesType" minOccurs="0"/&gt;
+ *                             &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+ *                             &lt;choice minOccurs="0"&gt;
+ *                               &lt;sequence&gt;
+ *                                 &lt;element name="Success" type="{http://www.opentravel.org/OTA/2003/05}SuccessType"/&gt;
+ *                                 &lt;element name="Warnings" type="{http://www.opentravel.org/OTA/2003/05}WarningsType" minOccurs="0"/&gt;
+ *                               &lt;/sequence&gt;
+ *                               &lt;element name="Errors" type="{http://www.opentravel.org/OTA/2003/05}ErrorsType"/&gt;
+ *                             &lt;/choice&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="RoomStay" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Event" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="EventContact" type="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *                 &lt;attribute name="MeetingName" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}HotelReferenceGroup"/&gt;
+ *       &lt;attribute name="GroupBlockCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="CreationDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -640,17 +640,17 @@ public class HotelRoomListType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="EventContact" type="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"/>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-     *       &lt;attribute name="MeetingName" type="{http://www.w3.org/2001/XMLSchema}string" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="EventContact" type="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+     *       &lt;attribute name="MeetingName" type="{http://www.w3.org/2001/XMLSchema}string" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -801,65 +801,65 @@ public class HotelRoomListType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Guest" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType">
-     *                 &lt;sequence>
-     *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
-     *                   &lt;element name="Loyalty" maxOccurs="5" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="GuaranteePayment" maxOccurs="2" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType">
-     *                           &lt;attribute name="DetailType">
-     *                             &lt;simpleType>
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                                 &lt;enumeration value="Payment"/>
-     *                                 &lt;enumeration value="Guarantee"/>
-     *                               &lt;/restriction>
-     *                             &lt;/simpleType>
-     *                           &lt;/attribute>
-     *                           &lt;attribute name="GuaranteeType">
-     *                             &lt;simpleType>
-     *                               &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
-     *                                 &lt;enumeration value="GuaranteeRequired"/>
-     *                                 &lt;enumeration value="None"/>
-     *                                 &lt;enumeration value="CC/DC/Voucher"/>
-     *                                 &lt;enumeration value="Profile"/>
-     *                                 &lt;enumeration value="Deposit"/>
-     *                                 &lt;enumeration value="PrePay"/>
-     *                               &lt;/restriction>
-     *                             &lt;/simpleType>
-     *                           &lt;/attribute>
-     *                         &lt;/extension>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="AdditionalDetails" type="{http://www.opentravel.org/OTA/2003/05}AdditionalDetailsType" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="GuestAction" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-     *                 &lt;attribute name="PrintConfoInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Guest" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+     *                   &lt;element name="Loyalty" maxOccurs="5" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="GuaranteePayment" maxOccurs="2" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType"&gt;
+     *                           &lt;attribute name="DetailType"&gt;
+     *                             &lt;simpleType&gt;
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                                 &lt;enumeration value="Payment"/&gt;
+     *                                 &lt;enumeration value="Guarantee"/&gt;
+     *                               &lt;/restriction&gt;
+     *                             &lt;/simpleType&gt;
+     *                           &lt;/attribute&gt;
+     *                           &lt;attribute name="GuaranteeType"&gt;
+     *                             &lt;simpleType&gt;
+     *                               &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
+     *                                 &lt;enumeration value="GuaranteeRequired"/&gt;
+     *                                 &lt;enumeration value="None"/&gt;
+     *                                 &lt;enumeration value="CC/DC/Voucher"/&gt;
+     *                                 &lt;enumeration value="Profile"/&gt;
+     *                                 &lt;enumeration value="Deposit"/&gt;
+     *                                 &lt;enumeration value="PrePay"/&gt;
+     *                               &lt;/restriction&gt;
+     *                             &lt;/simpleType&gt;
+     *                           &lt;/attribute&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="AdditionalDetails" type="{http://www.opentravel.org/OTA/2003/05}AdditionalDetailsType" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="GuestAction" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+     *                 &lt;attribute name="PrintConfoInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -909,55 +909,55 @@ public class HotelRoomListType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType">
-         *       &lt;sequence>
-         *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
-         *         &lt;element name="Loyalty" maxOccurs="5" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="GuaranteePayment" maxOccurs="2" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType">
-         *                 &lt;attribute name="DetailType">
-         *                   &lt;simpleType>
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *                       &lt;enumeration value="Payment"/>
-         *                       &lt;enumeration value="Guarantee"/>
-         *                     &lt;/restriction>
-         *                   &lt;/simpleType>
-         *                 &lt;/attribute>
-         *                 &lt;attribute name="GuaranteeType">
-         *                   &lt;simpleType>
-         *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
-         *                       &lt;enumeration value="GuaranteeRequired"/>
-         *                       &lt;enumeration value="None"/>
-         *                       &lt;enumeration value="CC/DC/Voucher"/>
-         *                       &lt;enumeration value="Profile"/>
-         *                       &lt;enumeration value="Deposit"/>
-         *                       &lt;enumeration value="PrePay"/>
-         *                     &lt;/restriction>
-         *                   &lt;/simpleType>
-         *                 &lt;/attribute>
-         *               &lt;/extension>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="AdditionalDetails" type="{http://www.opentravel.org/OTA/2003/05}AdditionalDetailsType" minOccurs="0"/>
-         *       &lt;/sequence>
-         *       &lt;attribute name="GuestAction" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-         *       &lt;attribute name="PrintConfoInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+         *         &lt;element name="Loyalty" maxOccurs="5" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="GuaranteePayment" maxOccurs="2" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType"&gt;
+         *                 &lt;attribute name="DetailType"&gt;
+         *                   &lt;simpleType&gt;
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *                       &lt;enumeration value="Payment"/&gt;
+         *                       &lt;enumeration value="Guarantee"/&gt;
+         *                     &lt;/restriction&gt;
+         *                   &lt;/simpleType&gt;
+         *                 &lt;/attribute&gt;
+         *                 &lt;attribute name="GuaranteeType"&gt;
+         *                   &lt;simpleType&gt;
+         *                     &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
+         *                       &lt;enumeration value="GuaranteeRequired"/&gt;
+         *                       &lt;enumeration value="None"/&gt;
+         *                       &lt;enumeration value="CC/DC/Voucher"/&gt;
+         *                       &lt;enumeration value="Profile"/&gt;
+         *                       &lt;enumeration value="Deposit"/&gt;
+         *                       &lt;enumeration value="PrePay"/&gt;
+         *                     &lt;/restriction&gt;
+         *                   &lt;/simpleType&gt;
+         *                 &lt;/attribute&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="AdditionalDetails" type="{http://www.opentravel.org/OTA/2003/05}AdditionalDetailsType" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="GuestAction" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+         *       &lt;attribute name="PrintConfoInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1147,32 +1147,32 @@ public class HotelRoomListType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType">
-             *       &lt;attribute name="DetailType">
-             *         &lt;simpleType>
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-             *             &lt;enumeration value="Payment"/>
-             *             &lt;enumeration value="Guarantee"/>
-             *           &lt;/restriction>
-             *         &lt;/simpleType>
-             *       &lt;/attribute>
-             *       &lt;attribute name="GuaranteeType">
-             *         &lt;simpleType>
-             *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32">
-             *             &lt;enumeration value="GuaranteeRequired"/>
-             *             &lt;enumeration value="None"/>
-             *             &lt;enumeration value="CC/DC/Voucher"/>
-             *             &lt;enumeration value="Profile"/>
-             *             &lt;enumeration value="Deposit"/>
-             *             &lt;enumeration value="PrePay"/>
-             *           &lt;/restriction>
-             *         &lt;/simpleType>
-             *       &lt;/attribute>
-             *     &lt;/extension>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}HotelPaymentFormType"&gt;
+             *       &lt;attribute name="DetailType"&gt;
+             *         &lt;simpleType&gt;
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+             *             &lt;enumeration value="Payment"/&gt;
+             *             &lt;enumeration value="Guarantee"/&gt;
+             *           &lt;/restriction&gt;
+             *         &lt;/simpleType&gt;
+             *       &lt;/attribute&gt;
+             *       &lt;attribute name="GuaranteeType"&gt;
+             *         &lt;simpleType&gt;
+             *           &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to32"&gt;
+             *             &lt;enumeration value="GuaranteeRequired"/&gt;
+             *             &lt;enumeration value="None"/&gt;
+             *             &lt;enumeration value="CC/DC/Voucher"/&gt;
+             *             &lt;enumeration value="Profile"/&gt;
+             *             &lt;enumeration value="Deposit"/&gt;
+             *             &lt;enumeration value="PrePay"/&gt;
+             *           &lt;/restriction&gt;
+             *         &lt;/simpleType&gt;
+             *       &lt;/attribute&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1245,13 +1245,13 @@ public class HotelRoomListType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -1430,13 +1430,13 @@ public class HotelRoomListType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}DirectBillType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BillingType"/>
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}DirectBillType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BillingType"/&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1509,34 +1509,34 @@ public class HotelRoomListType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType">
-     *       &lt;sequence>
-     *         &lt;element name="UniqueIDs" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="9" minOccurs="0"/>
-     *                 &lt;/sequence>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Loyalty" maxOccurs="5" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}ContactPersonType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="UniqueIDs" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="9" minOccurs="0"/&gt;
+     *                 &lt;/sequence&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Loyalty" maxOccurs="5" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1615,13 +1615,13 @@ public class HotelRoomListType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SelectedLoyaltyGroup"/&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1796,15 +1796,15 @@ public class HotelRoomListType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="9" minOccurs="0"/>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" maxOccurs="9" minOccurs="0"/&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1858,35 +1858,35 @@ public class HotelRoomListType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="RoomStay" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomStayType">
-     *                 &lt;sequence minOccurs="0">
-     *                   &lt;element name="HotelReservationIDs" type="{http://www.opentravel.org/OTA/2003/05}HotelReservationIDsType" minOccurs="0"/>
-     *                   &lt;element name="RoomShares" type="{http://www.opentravel.org/OTA/2003/05}RoomSharesType" minOccurs="0"/>
-     *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
-     *                   &lt;choice minOccurs="0">
-     *                     &lt;sequence>
-     *                       &lt;element name="Success" type="{http://www.opentravel.org/OTA/2003/05}SuccessType"/>
-     *                       &lt;element name="Warnings" type="{http://www.opentravel.org/OTA/2003/05}WarningsType" minOccurs="0"/>
-     *                     &lt;/sequence>
-     *                     &lt;element name="Errors" type="{http://www.opentravel.org/OTA/2003/05}ErrorsType"/>
-     *                   &lt;/choice>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="RoomStay" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="RoomStay" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomStayType"&gt;
+     *                 &lt;sequence minOccurs="0"&gt;
+     *                   &lt;element name="HotelReservationIDs" type="{http://www.opentravel.org/OTA/2003/05}HotelReservationIDsType" minOccurs="0"/&gt;
+     *                   &lt;element name="RoomShares" type="{http://www.opentravel.org/OTA/2003/05}RoomSharesType" minOccurs="0"/&gt;
+     *                   &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+     *                   &lt;choice minOccurs="0"&gt;
+     *                     &lt;sequence&gt;
+     *                       &lt;element name="Success" type="{http://www.opentravel.org/OTA/2003/05}SuccessType"/&gt;
+     *                       &lt;element name="Warnings" type="{http://www.opentravel.org/OTA/2003/05}WarningsType" minOccurs="0"/&gt;
+     *                     &lt;/sequence&gt;
+     *                     &lt;element name="Errors" type="{http://www.opentravel.org/OTA/2003/05}ErrorsType"/&gt;
+     *                   &lt;/choice&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="RoomStay" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1936,25 +1936,25 @@ public class HotelRoomListType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomStayType">
-         *       &lt;sequence minOccurs="0">
-         *         &lt;element name="HotelReservationIDs" type="{http://www.opentravel.org/OTA/2003/05}HotelReservationIDsType" minOccurs="0"/>
-         *         &lt;element name="RoomShares" type="{http://www.opentravel.org/OTA/2003/05}RoomSharesType" minOccurs="0"/>
-         *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/>
-         *         &lt;choice minOccurs="0">
-         *           &lt;sequence>
-         *             &lt;element name="Success" type="{http://www.opentravel.org/OTA/2003/05}SuccessType"/>
-         *             &lt;element name="Warnings" type="{http://www.opentravel.org/OTA/2003/05}WarningsType" minOccurs="0"/>
-         *           &lt;/sequence>
-         *           &lt;element name="Errors" type="{http://www.opentravel.org/OTA/2003/05}ErrorsType"/>
-         *         &lt;/choice>
-         *       &lt;/sequence>
-         *       &lt;attribute name="RoomStay" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RoomStayType"&gt;
+         *       &lt;sequence minOccurs="0"&gt;
+         *         &lt;element name="HotelReservationIDs" type="{http://www.opentravel.org/OTA/2003/05}HotelReservationIDsType" minOccurs="0"/&gt;
+         *         &lt;element name="RoomShares" type="{http://www.opentravel.org/OTA/2003/05}RoomSharesType" minOccurs="0"/&gt;
+         *         &lt;element name="UniqueID" type="{http://www.opentravel.org/OTA/2003/05}UniqueID_Type" minOccurs="0"/&gt;
+         *         &lt;choice minOccurs="0"&gt;
+         *           &lt;sequence&gt;
+         *             &lt;element name="Success" type="{http://www.opentravel.org/OTA/2003/05}SuccessType"/&gt;
+         *             &lt;element name="Warnings" type="{http://www.opentravel.org/OTA/2003/05}WarningsType" minOccurs="0"/&gt;
+         *           &lt;/sequence&gt;
+         *           &lt;element name="Errors" type="{http://www.opentravel.org/OTA/2003/05}ErrorsType"/&gt;
+         *         &lt;/choice&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="RoomStay" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

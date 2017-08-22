@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="ActionType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *     &lt;enumeration value="Add-Update"/>
- *     &lt;enumeration value="Cancel"/>
- *     &lt;enumeration value="Delete"/>
- *     &lt;enumeration value="Add"/>
- *     &lt;enumeration value="Replace"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="ActionType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *     &lt;enumeration value="Add-Update"/&gt;
+ *     &lt;enumeration value="Cancel"/&gt;
+ *     &lt;enumeration value="Delete"/&gt;
+ *     &lt;enumeration value="Add"/&gt;
+ *     &lt;enumeration value="Replace"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

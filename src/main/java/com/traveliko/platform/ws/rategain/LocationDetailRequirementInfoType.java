@@ -12,17 +12,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="LocationDetailRequirementInfoType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="OneWayRental"/>
- *     &lt;enumeration value="Geographic"/>
- *     &lt;enumeration value="DropOff"/>
- *     &lt;enumeration value="License"/>
- *     &lt;enumeration value="Insurance"/>
- *     &lt;enumeration value="Eligibility"/>
- *     &lt;enumeration value="Miscellaneous"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="LocationDetailRequirementInfoType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="OneWayRental"/&gt;
+ *     &lt;enumeration value="Geographic"/&gt;
+ *     &lt;enumeration value="DropOff"/&gt;
+ *     &lt;enumeration value="License"/&gt;
+ *     &lt;enumeration value="Insurance"/&gt;
+ *     &lt;enumeration value="Eligibility"/&gt;
+ *     &lt;enumeration value="Miscellaneous"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

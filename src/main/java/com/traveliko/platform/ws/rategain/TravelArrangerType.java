@@ -15,17 +15,17 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="TravelArrangerType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>CompanyNameType">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *       &lt;attribute name="TravelArrangerType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="TravelArrangerType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;CompanyNameType"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DefaultIndGroup"/&gt;
+ *       &lt;attribute name="TravelArrangerType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -42,14 +42,14 @@ public class TravelArrangerType
     protected String rph;
     @XmlAttribute(name = "Remark")
     protected String remark;
-    @XmlAttribute(name = "DefaultInd")
-    protected Boolean defaultInd;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
+    @XmlAttribute(name = "DefaultInd")
+    protected Boolean defaultInd;
 
     /**
      * Gets the value of the travelArrangerType property.
@@ -124,30 +124,6 @@ public class TravelArrangerType
     }
 
     /**
-     * Gets the value of the defaultInd property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isDefaultInd() {
-        return defaultInd;
-    }
-
-    /**
-     * Sets the value of the defaultInd property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setDefaultInd(Boolean value) {
-        this.defaultInd = value;
-    }
-
-    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -193,6 +169,30 @@ public class TravelArrangerType
      */
     public void setShareMarketInd(String value) {
         this.shareMarketInd = value;
+    }
+
+    /**
+     * Gets the value of the defaultInd property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isDefaultInd() {
+        return defaultInd;
+    }
+
+    /**
+     * Sets the value of the defaultInd property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setDefaultInd(Boolean value) {
+        this.defaultInd = value;
     }
 
 }

@@ -12,18 +12,18 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="PMS_ResStatusType">
- *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16">
- *     &lt;enumeration value="Reserved"/>
- *     &lt;enumeration value="Requested"/>
- *     &lt;enumeration value="Request denied"/>
- *     &lt;enumeration value="No-show"/>
- *     &lt;enumeration value="Cancelled"/>
- *     &lt;enumeration value="In-house"/>
- *     &lt;enumeration value="Checked out"/>
- *     &lt;enumeration value="Waitlisted"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="PMS_ResStatusType"&gt;
+ *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16"&gt;
+ *     &lt;enumeration value="Reserved"/&gt;
+ *     &lt;enumeration value="Requested"/&gt;
+ *     &lt;enumeration value="Request denied"/&gt;
+ *     &lt;enumeration value="No-show"/&gt;
+ *     &lt;enumeration value="Cancelled"/&gt;
+ *     &lt;enumeration value="In-house"/&gt;
+ *     &lt;enumeration value="Checked out"/&gt;
+ *     &lt;enumeration value="Waitlisted"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

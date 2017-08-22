@@ -17,56 +17,56 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="LengthsOfStayType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="LengthOfStay" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="LOS_Pattern" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="FullPatternLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="Time" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                 &lt;attribute name="TimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" />
- *                 &lt;attribute name="OpenStatusIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="MinMaxMessageType">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                       &lt;enumeration value="SetMinLOS"/>
- *                       &lt;enumeration value="RemoveMinLOS"/>
- *                       &lt;enumeration value="SetMaxLOS"/>
- *                       &lt;enumeration value="RemoveMaxLOS"/>
- *                       &lt;enumeration value="SetForwardMinStay"/>
- *                       &lt;enumeration value="RemoveForwardMinStay"/>
- *                       &lt;enumeration value="SetForwardMaxStay"/>
- *                       &lt;enumeration value="RemoveForwardMaxStay"/>
- *                       &lt;enumeration value="FixedLOS"/>
- *                       &lt;enumeration value="FullPatternLOS"/>
- *                       &lt;enumeration value="MinLOS"/>
- *                       &lt;enumeration value="MaxLOS"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="ArrivalDateBased" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="FixedPatternLength" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="LengthsOfStayType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="LengthOfStay" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="LOS_Pattern" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="FullPatternLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="Time" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                 &lt;attribute name="TimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" /&gt;
+ *                 &lt;attribute name="OpenStatusIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="MinMaxMessageType"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                       &lt;enumeration value="SetMinLOS"/&gt;
+ *                       &lt;enumeration value="RemoveMinLOS"/&gt;
+ *                       &lt;enumeration value="SetMaxLOS"/&gt;
+ *                       &lt;enumeration value="RemoveMaxLOS"/&gt;
+ *                       &lt;enumeration value="SetForwardMinStay"/&gt;
+ *                       &lt;enumeration value="RemoveForwardMinStay"/&gt;
+ *                       &lt;enumeration value="SetForwardMaxStay"/&gt;
+ *                       &lt;enumeration value="RemoveForwardMaxStay"/&gt;
+ *                       &lt;enumeration value="FixedLOS"/&gt;
+ *                       &lt;enumeration value="FullPatternLOS"/&gt;
+ *                       &lt;enumeration value="MinLOS"/&gt;
+ *                       &lt;enumeration value="MaxLOS"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="ArrivalDateBased" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="FixedPatternLength" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to999" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -168,44 +168,44 @@ public class LengthsOfStayType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="LOS_Pattern" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="FullPatternLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="Time" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *       &lt;attribute name="TimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" />
-     *       &lt;attribute name="OpenStatusIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="MinMaxMessageType">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *             &lt;enumeration value="SetMinLOS"/>
-     *             &lt;enumeration value="RemoveMinLOS"/>
-     *             &lt;enumeration value="SetMaxLOS"/>
-     *             &lt;enumeration value="RemoveMaxLOS"/>
-     *             &lt;enumeration value="SetForwardMinStay"/>
-     *             &lt;enumeration value="RemoveForwardMinStay"/>
-     *             &lt;enumeration value="SetForwardMaxStay"/>
-     *             &lt;enumeration value="RemoveForwardMaxStay"/>
-     *             &lt;enumeration value="FixedLOS"/>
-     *             &lt;enumeration value="FullPatternLOS"/>
-     *             &lt;enumeration value="MinLOS"/>
-     *             &lt;enumeration value="MaxLOS"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="LOS_Pattern" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="FullPatternLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="Time" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *       &lt;attribute name="TimeUnit" type="{http://www.opentravel.org/OTA/2003/05}TimeUnitType" /&gt;
+     *       &lt;attribute name="OpenStatusIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="MinMaxMessageType"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *             &lt;enumeration value="SetMinLOS"/&gt;
+     *             &lt;enumeration value="RemoveMinLOS"/&gt;
+     *             &lt;enumeration value="SetMaxLOS"/&gt;
+     *             &lt;enumeration value="RemoveMaxLOS"/&gt;
+     *             &lt;enumeration value="SetForwardMinStay"/&gt;
+     *             &lt;enumeration value="RemoveForwardMinStay"/&gt;
+     *             &lt;enumeration value="SetForwardMaxStay"/&gt;
+     *             &lt;enumeration value="RemoveForwardMaxStay"/&gt;
+     *             &lt;enumeration value="FixedLOS"/&gt;
+     *             &lt;enumeration value="FullPatternLOS"/&gt;
+     *             &lt;enumeration value="MinLOS"/&gt;
+     *             &lt;enumeration value="MaxLOS"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -354,13 +354,13 @@ public class LengthsOfStayType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="FullPatternLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="FullPatternLOS" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

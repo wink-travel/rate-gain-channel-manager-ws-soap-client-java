@@ -79,7 +79,10 @@
 					            <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
 					            <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
 					          </vmArgs>
+<<<<<<< HEAD
 					          <packageName>com.traveliko.ws.rategain</packageName>
+=======
+>>>>>>> parent of 92953c8... RategaIN new Java Objects
                         </configuration>
                     </execution>
                 </executions>

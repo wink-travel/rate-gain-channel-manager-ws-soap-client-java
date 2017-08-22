@@ -20,214 +20,214 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AirlinePrefType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="LoyaltyPref" type="{http://www.opentravel.org/OTA/2003/05}LoyaltyPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="VendorPref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>CompanyNamePrefType">
- *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PaymentFormPref" type="{http://www.opentravel.org/OTA/2003/05}PaymentFormPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="AirportOriginPref" type="{http://www.opentravel.org/OTA/2003/05}AirportPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="AirportDestinationPref" type="{http://www.opentravel.org/OTA/2003/05}AirportPrefType" minOccurs="0"/>
- *         &lt;element name="AirportRoutePref" type="{http://www.opentravel.org/OTA/2003/05}AirportPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="FareRestrictPref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FareRestrictPrefGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="FarePref" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                 &lt;attribute name="RateCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="TourCodePref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;choice>
- *                   &lt;element name="TourCodeInfo">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
- *                           &lt;attribute name="TourTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                           &lt;attribute name="YearNum">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
- *                                 &lt;minInclusive value="0"/>
- *                                 &lt;maxInclusive value="9"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                           &lt;attribute name="PartyID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="StaffTourCodeInfo">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="StaffType">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                                 &lt;enumeration value="Current"/>
- *                                 &lt;enumeration value="Duty"/>
- *                                 &lt;enumeration value="CabinCrew"/>
- *                                 &lt;enumeration value="Retired"/>
- *                                 &lt;enumeration value="TechCrew"/>
- *                                 &lt;enumeration value="UnaccompaniedFamilyMember"/>
- *                                 &lt;enumeration value="OtherAirlinePersonnel"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                           &lt;attribute name="EmployeeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                           &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                           &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/choice>
- *                 &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
- *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="FlightTypePref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FlightTypePrefGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="EquipPref" type="{http://www.opentravel.org/OTA/2003/05}EquipmentTypePref" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="CabinPref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CabinPrefGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="SeatPref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SeatPrefGroup"/>
- *                 &lt;attribute name="FlightDistanceQualifier">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="LongHaul"/>
- *                       &lt;enumeration value="ShortHaul"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="InternationalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                 &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="TicketDistribPref" type="{http://www.opentravel.org/OTA/2003/05}TicketDistribPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="MealPref" type="{http://www.opentravel.org/OTA/2003/05}MealPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="SpecRequestPref" type="{http://www.opentravel.org/OTA/2003/05}SpecRequestPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="SSR_Pref" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SSR_PrefGroup"/>
- *                 &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *                 &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *                 &lt;attribute name="DefaultStatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *                 &lt;attribute name="LookupKey" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                 &lt;attribute name="TransferActionType" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
- *         &lt;element name="MediaEntertainPref" type="{http://www.opentravel.org/OTA/2003/05}MediaEntertainPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="PetInfoPref" type="{http://www.opentravel.org/OTA/2003/05}PetInfoPrefType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="AccountInformation" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="TaxRegistrationDetails" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="TaxID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                           &lt;attribute name="RecipientName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                           &lt;attribute name="RecipientAddress" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="Number" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" />
- *                 &lt;attribute name="CostCenter" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
- *                 &lt;attribute name="CompanyNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" />
- *                 &lt;attribute name="ClientReference" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="OSI_Pref" type="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType" maxOccurs="99" minOccurs="0"/>
- *         &lt;element name="KeywordPref" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" />
- *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to128" />
- *                 &lt;attribute name="Keyword" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="StatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                 &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
- *                 &lt;attribute name="AirlineVendorRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/>
- *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
- *       &lt;attribute name="AirTicketType" type="{http://www.opentravel.org/OTA/2003/05}TicketType" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="AirlinePrefType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="LoyaltyPref" type="{http://www.opentravel.org/OTA/2003/05}LoyaltyPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="VendorPref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;CompanyNamePrefType"&gt;
+ *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PaymentFormPref" type="{http://www.opentravel.org/OTA/2003/05}PaymentFormPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="AirportOriginPref" type="{http://www.opentravel.org/OTA/2003/05}AirportPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="AirportDestinationPref" type="{http://www.opentravel.org/OTA/2003/05}AirportPrefType" minOccurs="0"/&gt;
+ *         &lt;element name="AirportRoutePref" type="{http://www.opentravel.org/OTA/2003/05}AirportPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="FareRestrictPref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FareRestrictPrefGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="FarePref" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                 &lt;attribute name="RateCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="TourCodePref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;choice&gt;
+ *                   &lt;element name="TourCodeInfo"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+ *                           &lt;attribute name="TourTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                           &lt;attribute name="YearNum"&gt;
+ *                             &lt;simpleType&gt;
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
+ *                                 &lt;minInclusive value="0"/&gt;
+ *                                 &lt;maxInclusive value="9"/&gt;
+ *                               &lt;/restriction&gt;
+ *                             &lt;/simpleType&gt;
+ *                           &lt;/attribute&gt;
+ *                           &lt;attribute name="PartyID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="StaffTourCodeInfo"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="StaffType"&gt;
+ *                             &lt;simpleType&gt;
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                                 &lt;enumeration value="Current"/&gt;
+ *                                 &lt;enumeration value="Duty"/&gt;
+ *                                 &lt;enumeration value="CabinCrew"/&gt;
+ *                                 &lt;enumeration value="Retired"/&gt;
+ *                                 &lt;enumeration value="TechCrew"/&gt;
+ *                                 &lt;enumeration value="UnaccompaniedFamilyMember"/&gt;
+ *                                 &lt;enumeration value="OtherAirlinePersonnel"/&gt;
+ *                               &lt;/restriction&gt;
+ *                             &lt;/simpleType&gt;
+ *                           &lt;/attribute&gt;
+ *                           &lt;attribute name="EmployeeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                           &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                           &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/choice&gt;
+ *                 &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+ *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="FlightTypePref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FlightTypePrefGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="EquipPref" type="{http://www.opentravel.org/OTA/2003/05}EquipmentTypePref" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="CabinPref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CabinPrefGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="SeatPref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SeatPrefGroup"/&gt;
+ *                 &lt;attribute name="FlightDistanceQualifier"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="LongHaul"/&gt;
+ *                       &lt;enumeration value="ShortHaul"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="InternationalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                 &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="TicketDistribPref" type="{http://www.opentravel.org/OTA/2003/05}TicketDistribPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="MealPref" type="{http://www.opentravel.org/OTA/2003/05}MealPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="SpecRequestPref" type="{http://www.opentravel.org/OTA/2003/05}SpecRequestPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="SSR_Pref" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SSR_PrefGroup"/&gt;
+ *                 &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *                 &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *                 &lt;attribute name="DefaultStatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *                 &lt;attribute name="LookupKey" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                 &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                 &lt;attribute name="TransferActionType" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
+ *         &lt;element name="MediaEntertainPref" type="{http://www.opentravel.org/OTA/2003/05}MediaEntertainPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="PetInfoPref" type="{http://www.opentravel.org/OTA/2003/05}PetInfoPrefType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="AccountInformation" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="TaxRegistrationDetails" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="TaxID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                           &lt;attribute name="RecipientName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                           &lt;attribute name="RecipientAddress" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="Number" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" /&gt;
+ *                 &lt;attribute name="CostCenter" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+ *                 &lt;attribute name="CompanyNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" /&gt;
+ *                 &lt;attribute name="ClientReference" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="OSI_Pref" type="{http://www.opentravel.org/OTA/2003/05}OtherServiceInfoType" maxOccurs="99" minOccurs="0"/&gt;
+ *         &lt;element name="KeywordPref" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" /&gt;
+ *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to128" /&gt;
+ *                 &lt;attribute name="Keyword" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="StatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                 &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+ *                 &lt;attribute name="AirlineVendorRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PreferLevelGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SmokingIndicatorGroup"/&gt;
+ *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+ *       &lt;attribute name="AirTicketType" type="{http://www.opentravel.org/OTA/2003/05}TicketType" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -310,14 +310,14 @@ public class AirlinePrefType {
     protected String passengerTypeCode;
     @XmlAttribute(name = "AirTicketType")
     protected TicketType airTicketType;
-    @XmlAttribute(name = "PreferLevel")
-    protected PreferLevelType preferLevel;
     @XmlAttribute(name = "ShareSynchInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareSynchInd;
     @XmlAttribute(name = "ShareMarketInd")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String shareMarketInd;
+    @XmlAttribute(name = "PreferLevel")
+    protected PreferLevelType preferLevel;
     @XmlAttribute(name = "SmokingAllowed")
     protected Boolean smokingAllowed;
 
@@ -1022,30 +1022,6 @@ public class AirlinePrefType {
     }
 
     /**
-     * Gets the value of the preferLevel property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public PreferLevelType getPreferLevel() {
-        return preferLevel;
-    }
-
-    /**
-     * Sets the value of the preferLevel property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link PreferLevelType }
-     *     
-     */
-    public void setPreferLevel(PreferLevelType value) {
-        this.preferLevel = value;
-    }
-
-    /**
      * Gets the value of the shareSynchInd property.
      * 
      * @return
@@ -1094,6 +1070,30 @@ public class AirlinePrefType {
     }
 
     /**
+     * Gets the value of the preferLevel property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public PreferLevelType getPreferLevel() {
+        return preferLevel;
+    }
+
+    /**
+     * Sets the value of the preferLevel property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link PreferLevelType }
+     *     
+     */
+    public void setPreferLevel(PreferLevelType value) {
+        this.preferLevel = value;
+    }
+
+    /**
      * Gets the value of the smokingAllowed property.
      * 
      * @return
@@ -1124,29 +1124,29 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="TaxRegistrationDetails" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="TaxID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *                 &lt;attribute name="RecipientName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *                 &lt;attribute name="RecipientAddress" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="Number" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" />
-     *       &lt;attribute name="CostCenter" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
-     *       &lt;attribute name="CompanyNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" />
-     *       &lt;attribute name="ClientReference" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="TaxRegistrationDetails" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="TaxID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *                 &lt;attribute name="RecipientName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *                 &lt;attribute name="RecipientAddress" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="Number" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" /&gt;
+     *       &lt;attribute name="CostCenter" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+     *       &lt;attribute name="CompanyNumber" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" /&gt;
+     *       &lt;attribute name="ClientReference" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1295,15 +1295,15 @@ public class AirlinePrefType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="TaxID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-         *       &lt;attribute name="RecipientName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *       &lt;attribute name="RecipientAddress" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="TaxID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+         *       &lt;attribute name="RecipientName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *       &lt;attribute name="RecipientAddress" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1402,13 +1402,13 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CabinPrefGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CabinPrefGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1479,17 +1479,17 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *       &lt;attribute name="RateCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="Code" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *       &lt;attribute name="RateCategoryCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1643,13 +1643,13 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FareRestrictPrefGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FareRestrictPrefGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1746,13 +1746,13 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FlightTypePrefGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FlightTypePrefGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2060,19 +2060,19 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" />
-     *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to128" />
-     *       &lt;attribute name="Keyword" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="StatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-     *       &lt;attribute name="AirlineVendorRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to32" /&gt;
+     *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to128" /&gt;
+     *       &lt;attribute name="Keyword" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="StatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+     *       &lt;attribute name="AirlineVendorRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2279,20 +2279,20 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SSR_PrefGroup"/>
-     *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *       &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" />
-     *       &lt;attribute name="DefaultStatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *       &lt;attribute name="LookupKey" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
-     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *       &lt;attribute name="TransferActionType" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SSR_PrefGroup"/&gt;
+     *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *       &lt;attribute name="NumberInParty" type="{http://www.w3.org/2001/XMLSchema}positiveInteger" /&gt;
+     *       &lt;attribute name="DefaultStatusCode" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+     *       &lt;attribute name="LookupKey" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *       &lt;attribute name="TransferActionType" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2551,25 +2551,25 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SeatPrefGroup"/>
-     *       &lt;attribute name="FlightDistanceQualifier">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="LongHaul"/>
-     *             &lt;enumeration value="ShortHaul"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="InternationalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}SeatPrefGroup"/&gt;
+     *       &lt;attribute name="FlightDistanceQualifier"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="LongHaul"/&gt;
+     *             &lt;enumeration value="ShortHaul"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="InternationalIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2911,60 +2911,60 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;choice>
-     *         &lt;element name="TourCodeInfo">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
-     *                 &lt;attribute name="TourTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *                 &lt;attribute name="YearNum">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
-     *                       &lt;minInclusive value="0"/>
-     *                       &lt;maxInclusive value="9"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *                 &lt;attribute name="PartyID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="StaffTourCodeInfo">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="StaffType">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *                       &lt;enumeration value="Current"/>
-     *                       &lt;enumeration value="Duty"/>
-     *                       &lt;enumeration value="CabinCrew"/>
-     *                       &lt;enumeration value="Retired"/>
-     *                       &lt;enumeration value="TechCrew"/>
-     *                       &lt;enumeration value="UnaccompaniedFamilyMember"/>
-     *                       &lt;enumeration value="OtherAirlinePersonnel"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *                 &lt;attribute name="EmployeeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *                 &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/choice>
-     *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
-     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" />
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;choice&gt;
+     *         &lt;element name="TourCodeInfo"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+     *                 &lt;attribute name="TourTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *                 &lt;attribute name="YearNum"&gt;
+     *                   &lt;simpleType&gt;
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
+     *                       &lt;minInclusive value="0"/&gt;
+     *                       &lt;maxInclusive value="9"/&gt;
+     *                     &lt;/restriction&gt;
+     *                   &lt;/simpleType&gt;
+     *                 &lt;/attribute&gt;
+     *                 &lt;attribute name="PartyID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="StaffTourCodeInfo"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="StaffType"&gt;
+     *                   &lt;simpleType&gt;
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *                       &lt;enumeration value="Current"/&gt;
+     *                       &lt;enumeration value="Duty"/&gt;
+     *                       &lt;enumeration value="CabinCrew"/&gt;
+     *                       &lt;enumeration value="Retired"/&gt;
+     *                       &lt;enumeration value="TechCrew"/&gt;
+     *                       &lt;enumeration value="UnaccompaniedFamilyMember"/&gt;
+     *                       &lt;enumeration value="OtherAirlinePersonnel"/&gt;
+     *                     &lt;/restriction&gt;
+     *                   &lt;/simpleType&gt;
+     *                 &lt;/attribute&gt;
+     *                 &lt;attribute name="EmployeeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *                 &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *                 &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/choice&gt;
+     *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+     *       &lt;attribute name="AirlineVendorPrefRPH" type="{http://www.opentravel.org/OTA/2003/05}ListOfRPH" /&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -3119,28 +3119,28 @@ public class AirlinePrefType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="StaffType">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-         *             &lt;enumeration value="Current"/>
-         *             &lt;enumeration value="Duty"/>
-         *             &lt;enumeration value="CabinCrew"/>
-         *             &lt;enumeration value="Retired"/>
-         *             &lt;enumeration value="TechCrew"/>
-         *             &lt;enumeration value="UnaccompaniedFamilyMember"/>
-         *             &lt;enumeration value="OtherAirlinePersonnel"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *       &lt;attribute name="EmployeeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-         *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-         *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="StaffType"&gt;
+         *         &lt;simpleType&gt;
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+         *             &lt;enumeration value="Current"/&gt;
+         *             &lt;enumeration value="Duty"/&gt;
+         *             &lt;enumeration value="CabinCrew"/&gt;
+         *             &lt;enumeration value="Retired"/&gt;
+         *             &lt;enumeration value="TechCrew"/&gt;
+         *             &lt;enumeration value="UnaccompaniedFamilyMember"/&gt;
+         *             &lt;enumeration value="OtherAirlinePersonnel"/&gt;
+         *           &lt;/restriction&gt;
+         *         &lt;/simpleType&gt;
+         *       &lt;/attribute&gt;
+         *       &lt;attribute name="EmployeeID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+         *       &lt;attribute name="VendorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+         *       &lt;attribute name="Description" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -3264,23 +3264,23 @@ public class AirlinePrefType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
-         *       &lt;attribute name="TourTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-         *       &lt;attribute name="YearNum">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer">
-         *             &lt;minInclusive value="0"/>
-         *             &lt;maxInclusive value="9"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *       &lt;attribute name="PartyID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+         *       &lt;attribute name="TourTypeCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+         *       &lt;attribute name="YearNum"&gt;
+         *         &lt;simpleType&gt;
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}integer"&gt;
+         *             &lt;minInclusive value="0"/&gt;
+         *             &lt;maxInclusive value="9"/&gt;
+         *           &lt;/restriction&gt;
+         *         &lt;/simpleType&gt;
+         *       &lt;/attribute&gt;
+         *       &lt;attribute name="PartyID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -3436,13 +3436,13 @@ public class AirlinePrefType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>CompanyNamePrefType">
-     *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;CompanyNamePrefType"&gt;
+     *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

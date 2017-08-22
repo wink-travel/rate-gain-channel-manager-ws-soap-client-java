@@ -12,14 +12,14 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="IncludeExcludeType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Include"/>
- *     &lt;enumeration value="Exclude"/>
- *     &lt;enumeration value="Required"/>
- *     &lt;enumeration value="Allowed"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="IncludeExcludeType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Include"/&gt;
+ *     &lt;enumeration value="Exclude"/&gt;
+ *     &lt;enumeration value="Required"/&gt;
+ *     &lt;enumeration value="Allowed"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

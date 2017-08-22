@@ -19,33 +19,33 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PersonNameType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="NamePrefix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" maxOccurs="3" minOccurs="0"/>
- *         &lt;element name="GivenName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="5" minOccurs="0"/>
- *         &lt;element name="MiddleName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="3" minOccurs="0"/>
- *         &lt;element name="SurnamePrefix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" minOccurs="0"/>
- *         &lt;element name="Surname" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64"/>
- *         &lt;element name="NameSuffix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" maxOccurs="3" minOccurs="0"/>
- *         &lt;element name="NameTitle" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" maxOccurs="5" minOccurs="0"/>
- *         &lt;element name="Document" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="DocID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                 &lt;attribute name="DocType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/>
- *       &lt;attribute name="NameType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="PersonNameType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="NamePrefix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" maxOccurs="3" minOccurs="0"/&gt;
+ *         &lt;element name="GivenName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="5" minOccurs="0"/&gt;
+ *         &lt;element name="MiddleName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="3" minOccurs="0"/&gt;
+ *         &lt;element name="SurnamePrefix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" minOccurs="0"/&gt;
+ *         &lt;element name="Surname" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64"/&gt;
+ *         &lt;element name="NameSuffix" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" maxOccurs="3" minOccurs="0"/&gt;
+ *         &lt;element name="NameTitle" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" maxOccurs="5" minOccurs="0"/&gt;
+ *         &lt;element name="Document" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="DocID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                 &lt;attribute name="DocType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PrivacyGroup"/&gt;
+ *       &lt;attribute name="NameType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -62,10 +62,10 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "document"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.VerificationType.PersonName.class,
+    com.traveliko.platform.ws.rategain.OrganizationType.OrgMemberName.class,
     com.traveliko.platform.ws.rategain.TravelClubType.ClubMemberName.class,
     com.traveliko.platform.ws.rategain.DonationType.DonorInfo.Name.class,
-    com.traveliko.platform.ws.rategain.OrganizationType.OrgMemberName.class
+    com.traveliko.platform.ws.rategain.VerificationType.PersonName.class
 })
 public class PersonNameType {
 
@@ -390,14 +390,14 @@ public class PersonNameType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="DocID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *       &lt;attribute name="DocType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="DocID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *       &lt;attribute name="DocType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

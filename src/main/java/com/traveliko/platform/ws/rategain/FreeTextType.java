@@ -18,13 +18,13 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FreeTextType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/>
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="FreeTextType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -34,12 +34,12 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "value"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.PTCFareBreakdownType.Endorsements.Endorsement.class,
     CertificationType.class,
-    ErrorType.class,
-    WarningType.class,
+    CommissionInfoType.class,
+    com.traveliko.platform.ws.rategain.PTCFareBreakdownType.Endorsements.Endorsement.class,
     com.traveliko.platform.ws.rategain.TicketingInfoType.TicketAdvisory.class,
-    CommissionInfoType.class
+    ErrorType.class,
+    WarningType.class
 })
 public class FreeTextType {
 

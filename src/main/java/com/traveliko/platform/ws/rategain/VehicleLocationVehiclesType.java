@@ -16,47 +16,47 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleLocationVehiclesType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="VehicleInfos" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="VehicleInfo" maxOccurs="99">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType">
- *                           &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailVehicleInfoType" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Vehicle" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
- *                 &lt;sequence>
- *                   &lt;element name="Text" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" maxOccurs="5" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attribute name="IsConfirmableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="DistanceUnit" type="{http://www.opentravel.org/OTA/2003/05}DistanceUnitNameType" />
- *                 &lt;attribute name="DistancePerFuelUnit" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VehicleLocationVehiclesType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="VehicleInfos" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="VehicleInfo" maxOccurs="99"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType"&gt;
+ *                           &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailVehicleInfoType" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Vehicle" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Text" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" maxOccurs="5" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="IsConfirmableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="DistanceUnit" type="{http://www.opentravel.org/OTA/2003/05}DistanceUnitNameType" /&gt;
+ *                 &lt;attribute name="DistancePerFuelUnit" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -133,18 +133,18 @@ public class VehicleLocationVehiclesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType">
-     *       &lt;sequence>
-     *         &lt;element name="Text" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" maxOccurs="5" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attribute name="IsConfirmableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="DistanceUnit" type="{http://www.opentravel.org/OTA/2003/05}DistanceUnitNameType" />
-     *       &lt;attribute name="DistancePerFuelUnit" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Text" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextType" maxOccurs="5" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="IsConfirmableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="DistanceUnit" type="{http://www.opentravel.org/OTA/2003/05}DistanceUnitNameType" /&gt;
+     *       &lt;attribute name="DistancePerFuelUnit" type="{http://www.opentravel.org/OTA/2003/05}Numeric0to99" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -276,23 +276,23 @@ public class VehicleLocationVehiclesType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="VehicleInfo" maxOccurs="99">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType">
-     *                 &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailVehicleInfoType" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="VehicleInfo" maxOccurs="99"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType"&gt;
+     *                 &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailVehicleInfoType" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -342,13 +342,13 @@ public class VehicleLocationVehiclesType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType">
-         *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailVehicleInfoType" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType"&gt;
+         *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailVehicleInfoType" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 

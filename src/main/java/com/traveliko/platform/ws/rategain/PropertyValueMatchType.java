@@ -20,58 +20,58 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PropertyValueMatchType">
- *   &lt;complexContent>
- *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}BasicPropertyInfoType">
- *       &lt;sequence>
- *         &lt;element name="SearchValueMatch" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to8">
- *                 &lt;attribute name="Match" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="Relevance" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Amenities" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Amenity" maxOccurs="unbounded">
- *                     &lt;complexType>
- *                       &lt;simpleContent>
- *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RoomAmenityPrefType">
- *                           &lt;attribute name="PropertyAmenityType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                         &lt;/extension>
- *                       &lt;/simpleContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RateRange" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RateRangeGroup"/>
- *                 &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" />
- *                 &lt;attribute name="TaxRate" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
- *                 &lt;attribute name="RateInfoNotAvailableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attribute name="MoreDataEchoToken" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *       &lt;attribute name="SameCountryInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="AvailabilityStatus" type="{http://www.opentravel.org/OTA/2003/05}RateIndicatorType" />
- *     &lt;/extension>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="PropertyValueMatchType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}BasicPropertyInfoType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="SearchValueMatch" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to8"&gt;
+ *                 &lt;attribute name="Match" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="Relevance" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Amenities" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Amenity" maxOccurs="unbounded"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;simpleContent&gt;
+ *                         &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RoomAmenityPrefType"&gt;
+ *                           &lt;attribute name="PropertyAmenityType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/simpleContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RateRange" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RateRangeGroup"/&gt;
+ *                 &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" /&gt;
+ *                 &lt;attribute name="TaxRate" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+ *                 &lt;attribute name="RateInfoNotAvailableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attribute name="MoreDataEchoToken" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *       &lt;attribute name="SameCountryInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="AvailabilityStatus" type="{http://www.opentravel.org/OTA/2003/05}RateIndicatorType" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -255,23 +255,23 @@ public class PropertyValueMatchType
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Amenity" maxOccurs="unbounded">
-     *           &lt;complexType>
-     *             &lt;simpleContent>
-     *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RoomAmenityPrefType">
-     *                 &lt;attribute name="PropertyAmenityType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *               &lt;/extension>
-     *             &lt;/simpleContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Amenity" maxOccurs="unbounded"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;simpleContent&gt;
+     *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RoomAmenityPrefType"&gt;
+     *                 &lt;attribute name="PropertyAmenityType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/simpleContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -321,13 +321,13 @@ public class PropertyValueMatchType
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;simpleContent>
-         *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>RoomAmenityPrefType">
-         *       &lt;attribute name="PropertyAmenityType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-         *     &lt;/extension>
-         *   &lt;/simpleContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;simpleContent&gt;
+         *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;RoomAmenityPrefType"&gt;
+         *       &lt;attribute name="PropertyAmenityType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/simpleContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -376,16 +376,16 @@ public class PropertyValueMatchType
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RateRangeGroup"/>
-     *       &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" />
-     *       &lt;attribute name="TaxRate" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
-     *       &lt;attribute name="RateInfoNotAvailableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}RateRangeGroup"/&gt;
+     *       &lt;attribute name="InfoSource" type="{http://www.opentravel.org/OTA/2003/05}InfoSourceType" /&gt;
+     *       &lt;attribute name="TaxRate" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+     *       &lt;attribute name="RateInfoNotAvailableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -639,14 +639,14 @@ public class PropertyValueMatchType
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength1to8">
-     *       &lt;attribute name="Match" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="Relevance" type="{http://www.opentravel.org/OTA/2003/05}Percentage" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength1to8"&gt;
+     *       &lt;attribute name="Match" use="required" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="Relevance" type="{http://www.opentravel.org/OTA/2003/05}Percentage" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

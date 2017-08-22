@@ -20,23 +20,23 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FeeType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/>
- *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ChargeUnitGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
- *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="MandatoryIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *       &lt;attribute name="TaxableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="FeeType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="Taxes" type="{http://www.opentravel.org/OTA/2003/05}TaxesType" minOccurs="0"/&gt;
+ *         &lt;element name="Description" type="{http://www.opentravel.org/OTA/2003/05}ParagraphType" maxOccurs="5" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}FeeTaxGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}ChargeUnitGroup"/&gt;
+ *       &lt;attribute name="TaxInclusive" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="MandatoryIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *       &lt;attribute name="TaxableIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -60,6 +60,14 @@ public class FeeType {
     protected String rph;
     @XmlAttribute(name = "TaxableIndicator")
     protected Boolean taxableIndicator;
+    @XmlAttribute(name = "EffectiveDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar effectiveDate;
+    @XmlAttribute(name = "ExpireDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar expireDate;
+    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
+    protected Boolean expireDateExclusiveIndicator;
     @XmlAttribute(name = "Type")
     protected AmountDeterminationType type;
     @XmlAttribute(name = "Code")
@@ -89,14 +97,6 @@ public class FeeType {
     @XmlAttribute(name = "MaxChargeFrequencyApplies")
     @XmlSchemaType(name = "positiveInteger")
     protected BigInteger maxChargeFrequencyApplies;
-    @XmlAttribute(name = "EffectiveDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar effectiveDate;
-    @XmlAttribute(name = "ExpireDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar expireDate;
-    @XmlAttribute(name = "ExpireDateExclusiveIndicator")
-    protected Boolean expireDateExclusiveIndicator;
 
     /**
      * Gets the value of the taxes property.
@@ -245,6 +245,78 @@ public class FeeType {
      */
     public void setTaxableIndicator(Boolean value) {
         this.taxableIndicator = value;
+    }
+
+    /**
+     * Gets the value of the effectiveDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getEffectiveDate() {
+        return effectiveDate;
+    }
+
+    /**
+     * Sets the value of the effectiveDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setEffectiveDate(XMLGregorianCalendar value) {
+        this.effectiveDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDate property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public XMLGregorianCalendar getExpireDate() {
+        return expireDate;
+    }
+
+    /**
+     * Sets the value of the expireDate property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link XMLGregorianCalendar }
+     *     
+     */
+    public void setExpireDate(XMLGregorianCalendar value) {
+        this.expireDate = value;
+    }
+
+    /**
+     * Gets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link Boolean }
+     *     
+     */
+    public Boolean isExpireDateExclusiveIndicator() {
+        return expireDateExclusiveIndicator;
+    }
+
+    /**
+     * Sets the value of the expireDateExclusiveIndicator property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link Boolean }
+     *     
+     */
+    public void setExpireDateExclusiveIndicator(Boolean value) {
+        this.expireDateExclusiveIndicator = value;
     }
 
     /**
@@ -533,78 +605,6 @@ public class FeeType {
      */
     public void setMaxChargeFrequencyApplies(BigInteger value) {
         this.maxChargeFrequencyApplies = value;
-    }
-
-    /**
-     * Gets the value of the effectiveDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getEffectiveDate() {
-        return effectiveDate;
-    }
-
-    /**
-     * Sets the value of the effectiveDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setEffectiveDate(XMLGregorianCalendar value) {
-        this.effectiveDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDate property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public XMLGregorianCalendar getExpireDate() {
-        return expireDate;
-    }
-
-    /**
-     * Sets the value of the expireDate property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link XMLGregorianCalendar }
-     *     
-     */
-    public void setExpireDate(XMLGregorianCalendar value) {
-        this.expireDate = value;
-    }
-
-    /**
-     * Gets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link Boolean }
-     *     
-     */
-    public Boolean isExpireDateExclusiveIndicator() {
-        return expireDateExclusiveIndicator;
-    }
-
-    /**
-     * Sets the value of the expireDateExclusiveIndicator property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link Boolean }
-     *     
-     */
-    public void setExpireDateExclusiveIndicator(Boolean value) {
-        this.expireDateExclusiveIndicator = value;
     }
 
 }

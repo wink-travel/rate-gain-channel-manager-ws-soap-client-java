@@ -15,13 +15,13 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="LocationType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/>
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="LocationType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -31,18 +31,18 @@ import javax.xml.bind.annotation.XmlValue;
     "value"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.VerificationType.StartLocation.class,
-    com.traveliko.platform.ws.rategain.VerificationType.EndLocation.class,
-    com.traveliko.platform.ws.rategain.ConnectionType.ConnectionLocation.class,
+    AirportPrefType.class,
     com.traveliko.platform.ws.rategain.VehicleAvailCoreType.VendorLocation.class,
     com.traveliko.platform.ws.rategain.VehicleAvailCoreType.DropOffLocation.class,
+    com.traveliko.platform.ws.rategain.VehicleLocationAdditionalDetailsType.OneWayDropLocations.OneWayDropLocation.class,
     com.traveliko.platform.ws.rategain.VehicleRentalCoreType.PickUpLocation.class,
     com.traveliko.platform.ws.rategain.VehicleRentalCoreType.ReturnLocation.class,
+    com.traveliko.platform.ws.rategain.ConnectionType.ConnectionLocation.class,
     com.traveliko.platform.ws.rategain.ItemSearchCriterionType.CodeRef.class,
-    AirportPrefType.class,
-    com.traveliko.platform.ws.rategain.VehicleLocationAdditionalDetailsType.OneWayDropLocations.OneWayDropLocation.class,
     com.traveliko.platform.ws.rategain.OriginDestinationInformationType.OriginLocation.class,
-    com.traveliko.platform.ws.rategain.OriginDestinationInformationType.DestinationLocation.class
+    com.traveliko.platform.ws.rategain.OriginDestinationInformationType.DestinationLocation.class,
+    com.traveliko.platform.ws.rategain.VerificationType.StartLocation.class,
+    com.traveliko.platform.ws.rategain.VerificationType.EndLocation.class
 })
 public class LocationType {
 

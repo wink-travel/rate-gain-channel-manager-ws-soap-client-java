@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="AirTripDirectionType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Outbound"/>
- *     &lt;enumeration value="Return"/>
- *     &lt;enumeration value="All"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="AirTripDirectionType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Outbound"/&gt;
+ *     &lt;enumeration value="Return"/&gt;
+ *     &lt;enumeration value="All"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

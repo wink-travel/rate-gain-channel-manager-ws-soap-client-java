@@ -16,15 +16,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="DeductibleType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *       &lt;attribute name="LiabilityAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *       &lt;attribute name="ExcessAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="DeductibleType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *       &lt;attribute name="LiabilityAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *       &lt;attribute name="ExcessAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

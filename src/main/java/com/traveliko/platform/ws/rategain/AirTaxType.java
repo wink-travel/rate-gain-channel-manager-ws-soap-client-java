@@ -20,31 +20,31 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="AirTaxType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>ShortDescriptionType">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *       &lt;attribute name="TaxCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="TaxCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
- *       &lt;attribute name="TaxName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *       &lt;attribute name="TaxExemptInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *       &lt;attribute name="TaxTransactionType">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *             &lt;enumeration value="charge"/>
- *             &lt;enumeration value="exempt"/>
- *             &lt;enumeration value="refund"/>
- *             &lt;enumeration value="reserve"/>
- *             &lt;enumeration value="paid"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *       &lt;attribute name="RefundableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="AirTaxType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;ShortDescriptionType"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *       &lt;attribute name="TaxCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="TaxCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+ *       &lt;attribute name="TaxName" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *       &lt;attribute name="TaxExemptInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *       &lt;attribute name="TaxTransactionType"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="charge"/&gt;
+ *             &lt;enumeration value="exempt"/&gt;
+ *             &lt;enumeration value="refund"/&gt;
+ *             &lt;enumeration value="reserve"/&gt;
+ *             &lt;enumeration value="paid"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *       &lt;attribute name="RefundableInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 

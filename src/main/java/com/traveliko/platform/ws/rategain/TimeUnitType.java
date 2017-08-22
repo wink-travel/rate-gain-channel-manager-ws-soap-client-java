@@ -12,18 +12,18 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="TimeUnitType">
- *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16">
- *     &lt;enumeration value="Year"/>
- *     &lt;enumeration value="Month"/>
- *     &lt;enumeration value="Week"/>
- *     &lt;enumeration value="Day"/>
- *     &lt;enumeration value="Hour"/>
- *     &lt;enumeration value="Second"/>
- *     &lt;enumeration value="FullDuration"/>
- *     &lt;enumeration value="Minute"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="TimeUnitType"&gt;
+ *   &lt;restriction base="{http://www.opentravel.org/OTA/2003/05}StringLength1to16"&gt;
+ *     &lt;enumeration value="Year"/&gt;
+ *     &lt;enumeration value="Month"/&gt;
+ *     &lt;enumeration value="Week"/&gt;
+ *     &lt;enumeration value="Day"/&gt;
+ *     &lt;enumeration value="Hour"/&gt;
+ *     &lt;enumeration value="Second"/&gt;
+ *     &lt;enumeration value="FullDuration"/&gt;
+ *     &lt;enumeration value="Minute"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

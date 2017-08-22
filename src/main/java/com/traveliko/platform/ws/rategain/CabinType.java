@@ -12,17 +12,17 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="CabinType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Cockpit"/>
- *     &lt;enumeration value="Suite"/>
- *     &lt;enumeration value="First"/>
- *     &lt;enumeration value="PremiumBusiness"/>
- *     &lt;enumeration value="Business"/>
- *     &lt;enumeration value="PremiumEconomy"/>
- *     &lt;enumeration value="Economy"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="CabinType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Cockpit"/&gt;
+ *     &lt;enumeration value="Suite"/&gt;
+ *     &lt;enumeration value="First"/&gt;
+ *     &lt;enumeration value="PremiumBusiness"/&gt;
+ *     &lt;enumeration value="Business"/&gt;
+ *     &lt;enumeration value="PremiumEconomy"/&gt;
+ *     &lt;enumeration value="Economy"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

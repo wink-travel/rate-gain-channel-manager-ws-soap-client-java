@@ -12,18 +12,18 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="LocationDetailShuttleInfoType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Transportation"/>
- *     &lt;enumeration value="Frequency"/>
- *     &lt;enumeration value="PickupInfo"/>
- *     &lt;enumeration value="Distance"/>
- *     &lt;enumeration value="ElapsedTime"/>
- *     &lt;enumeration value="Fee"/>
- *     &lt;enumeration value="Miscellaneous"/>
- *     &lt;enumeration value="Hours"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="LocationDetailShuttleInfoType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Transportation"/&gt;
+ *     &lt;enumeration value="Frequency"/&gt;
+ *     &lt;enumeration value="PickupInfo"/&gt;
+ *     &lt;enumeration value="Distance"/&gt;
+ *     &lt;enumeration value="ElapsedTime"/&gt;
+ *     &lt;enumeration value="Fee"/&gt;
+ *     &lt;enumeration value="Miscellaneous"/&gt;
+ *     &lt;enumeration value="Hours"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

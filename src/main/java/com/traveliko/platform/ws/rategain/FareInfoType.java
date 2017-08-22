@@ -24,152 +24,152 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FareInfoType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="DepartureDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/>
- *         &lt;element name="FareReference" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to8">
- *                 &lt;attribute name="ResBookDesigCode" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" />
- *                 &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="AccountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RuleInfo" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RuleInfoType">
- *                 &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" />
- *                 &lt;attribute name="MoneySaverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="FilingAirline" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
- *         &lt;element name="MarketingAirline" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" maxOccurs="unbounded" minOccurs="0"/>
- *         &lt;element name="DepartureAirport" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/>
- *         &lt;element name="ArrivalAirport" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/>
- *         &lt;element name="Date" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
- *                 &lt;attribute name="Type">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="LastRuleChange"/>
- *                       &lt;enumeration value="RuleBecomesInvalid"/>
- *                       &lt;enumeration value="RestrictiveFareEffective"/>
- *                       &lt;enumeration value="RestrictiveFareDiscontinue"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="FareInfo" maxOccurs="15" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="Date" maxOccurs="5" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
- *                           &lt;attribute name="Type">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                                 &lt;enumeration value="EffectiveTravel"/>
- *                                 &lt;enumeration value="DiscontinueTravel"/>
- *                                 &lt;enumeration value="FirstTicketing"/>
- *                                 &lt;enumeration value="LastTicketing"/>
- *                                 &lt;enumeration value="TravelCompletion"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="Fare" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="BaseAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                           &lt;attribute name="BaseNUC_Amount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                           &lt;attribute name="TaxAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                           &lt;attribute name="TotalFare" type="{http://www.opentravel.org/OTA/2003/05}Money" />
- *                           &lt;attribute name="FareDescription" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="PTC" maxOccurs="5" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="FareBasisCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="GlobalIndicatorCode" type="{http://www.opentravel.org/OTA/2003/05}GlobalIndicatorType" />
- *                 &lt;attribute name="MaximumPermittedMileage" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                 &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" />
- *                 &lt;attribute name="FareType" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to3" />
- *                 &lt;attribute name="FareStatus" type="{http://www.opentravel.org/OTA/2003/05}FareStatusType" />
- *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
- *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="DiscountPricing" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DiscountPricingGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="City" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Airport" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}NegotiatedFareAttributes"/>
- *       &lt;attribute name="CurrencyCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
- *       &lt;attribute name="TariffNumber" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
- *       &lt;attribute name="RuleNumber" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
- *       &lt;attribute name="RoutingNumber" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to9999" />
- *       &lt;attribute name="NbrOfCities" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="FareInfoType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="DepartureDate" type="{http://www.w3.org/2001/XMLSchema}dateTime" minOccurs="0"/&gt;
+ *         &lt;element name="FareReference" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to8"&gt;
+ *                 &lt;attribute name="ResBookDesigCode" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" /&gt;
+ *                 &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="AccountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RuleInfo" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RuleInfoType"&gt;
+ *                 &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" /&gt;
+ *                 &lt;attribute name="MoneySaverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="FilingAirline" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+ *         &lt;element name="MarketingAirline" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" maxOccurs="unbounded" minOccurs="0"/&gt;
+ *         &lt;element name="DepartureAirport" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/&gt;
+ *         &lt;element name="ArrivalAirport" type="{http://www.opentravel.org/OTA/2003/05}LocationType" minOccurs="0"/&gt;
+ *         &lt;element name="Date" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
+ *                 &lt;attribute name="Type"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="LastRuleChange"/&gt;
+ *                       &lt;enumeration value="RuleBecomesInvalid"/&gt;
+ *                       &lt;enumeration value="RestrictiveFareEffective"/&gt;
+ *                       &lt;enumeration value="RestrictiveFareDiscontinue"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="FareInfo" maxOccurs="15" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="Date" maxOccurs="5" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
+ *                           &lt;attribute name="Type"&gt;
+ *                             &lt;simpleType&gt;
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                                 &lt;enumeration value="EffectiveTravel"/&gt;
+ *                                 &lt;enumeration value="DiscontinueTravel"/&gt;
+ *                                 &lt;enumeration value="FirstTicketing"/&gt;
+ *                                 &lt;enumeration value="LastTicketing"/&gt;
+ *                                 &lt;enumeration value="TravelCompletion"/&gt;
+ *                               &lt;/restriction&gt;
+ *                             &lt;/simpleType&gt;
+ *                           &lt;/attribute&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="Fare" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="BaseAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                           &lt;attribute name="BaseNUC_Amount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                           &lt;attribute name="TaxAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                           &lt;attribute name="TotalFare" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+ *                           &lt;attribute name="FareDescription" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="PTC" maxOccurs="5" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="FareBasisCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="GlobalIndicatorCode" type="{http://www.opentravel.org/OTA/2003/05}GlobalIndicatorType" /&gt;
+ *                 &lt;attribute name="MaximumPermittedMileage" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                 &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" /&gt;
+ *                 &lt;attribute name="FareType" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to3" /&gt;
+ *                 &lt;attribute name="FareStatus" type="{http://www.opentravel.org/OTA/2003/05}FareStatusType" /&gt;
+ *                 &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+ *                 &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="DiscountPricing" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DiscountPricingGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="City" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Airport" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}NegotiatedFareAttributes"/&gt;
+ *       &lt;attribute name="CurrencyCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+ *       &lt;attribute name="TariffNumber" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" /&gt;
+ *       &lt;attribute name="RuleNumber" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" /&gt;
+ *       &lt;attribute name="RoutingNumber" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to9999" /&gt;
+ *       &lt;attribute name="NbrOfCities" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -190,8 +190,8 @@ import javax.xml.datatype.XMLGregorianCalendar;
     "airport"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.PTCFareBreakdownType.FareInfo.class,
-    com.traveliko.platform.ws.rategain.AirItineraryPricingInfoType.FareInfos.FareInfo.class
+    com.traveliko.platform.ws.rategain.AirItineraryPricingInfoType.FareInfos.FareInfo.class,
+    com.traveliko.platform.ws.rategain.PTCFareBreakdownType.FareInfo.class
 })
 public class FareInfoType {
 
@@ -728,13 +728,13 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -805,13 +805,13 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LocationGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -882,23 +882,23 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
-     *       &lt;attribute name="Type">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="LastRuleChange"/>
-     *             &lt;enumeration value="RuleBecomesInvalid"/>
-     *             &lt;enumeration value="RestrictiveFareEffective"/>
-     *             &lt;enumeration value="RestrictiveFareDiscontinue"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
+     *       &lt;attribute name="Type"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="LastRuleChange"/&gt;
+     *             &lt;enumeration value="RuleBecomesInvalid"/&gt;
+     *             &lt;enumeration value="RestrictiveFareEffective"/&gt;
+     *             &lt;enumeration value="RestrictiveFareDiscontinue"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -970,13 +970,13 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DiscountPricingGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DiscountPricingGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1154,64 +1154,64 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="Date" maxOccurs="5" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
-     *                 &lt;attribute name="Type">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *                       &lt;enumeration value="EffectiveTravel"/>
-     *                       &lt;enumeration value="DiscontinueTravel"/>
-     *                       &lt;enumeration value="FirstTicketing"/>
-     *                       &lt;enumeration value="LastTicketing"/>
-     *                       &lt;enumeration value="TravelCompletion"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="Fare" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="BaseAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *                 &lt;attribute name="BaseNUC_Amount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *                 &lt;attribute name="TaxAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *                 &lt;attribute name="TotalFare" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-     *                 &lt;attribute name="FareDescription" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="PTC" maxOccurs="5" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="FareBasisCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="GlobalIndicatorCode" type="{http://www.opentravel.org/OTA/2003/05}GlobalIndicatorType" />
-     *       &lt;attribute name="MaximumPermittedMileage" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *       &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" />
-     *       &lt;attribute name="FareType" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to3" />
-     *       &lt;attribute name="FareStatus" type="{http://www.opentravel.org/OTA/2003/05}FareStatusType" />
-     *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" />
-     *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="Date" maxOccurs="5" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
+     *                 &lt;attribute name="Type"&gt;
+     *                   &lt;simpleType&gt;
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *                       &lt;enumeration value="EffectiveTravel"/&gt;
+     *                       &lt;enumeration value="DiscontinueTravel"/&gt;
+     *                       &lt;enumeration value="FirstTicketing"/&gt;
+     *                       &lt;enumeration value="LastTicketing"/&gt;
+     *                       &lt;enumeration value="TravelCompletion"/&gt;
+     *                     &lt;/restriction&gt;
+     *                   &lt;/simpleType&gt;
+     *                 &lt;/attribute&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="Fare" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="BaseAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *                 &lt;attribute name="BaseNUC_Amount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *                 &lt;attribute name="TaxAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *                 &lt;attribute name="TotalFare" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+     *                 &lt;attribute name="FareDescription" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="PTC" maxOccurs="5" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="FareBasisCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="GlobalIndicatorCode" type="{http://www.opentravel.org/OTA/2003/05}GlobalIndicatorType" /&gt;
+     *       &lt;attribute name="MaximumPermittedMileage" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *       &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" /&gt;
+     *       &lt;attribute name="FareType" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to3" /&gt;
+     *       &lt;attribute name="FareStatus" type="{http://www.opentravel.org/OTA/2003/05}FareStatusType" /&gt;
+     *       &lt;attribute name="Operation" type="{http://www.opentravel.org/OTA/2003/05}ActionType" /&gt;
+     *       &lt;attribute name="RPH" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1528,24 +1528,24 @@ public class FareInfoType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" />
-         *       &lt;attribute name="Type">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-         *             &lt;enumeration value="EffectiveTravel"/>
-         *             &lt;enumeration value="DiscontinueTravel"/>
-         *             &lt;enumeration value="FirstTicketing"/>
-         *             &lt;enumeration value="LastTicketing"/>
-         *             &lt;enumeration value="TravelCompletion"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Date" type="{http://www.opentravel.org/OTA/2003/05}DateOrDateTimeType" /&gt;
+         *       &lt;attribute name="Type"&gt;
+         *         &lt;simpleType&gt;
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+         *             &lt;enumeration value="EffectiveTravel"/&gt;
+         *             &lt;enumeration value="DiscontinueTravel"/&gt;
+         *             &lt;enumeration value="FirstTicketing"/&gt;
+         *             &lt;enumeration value="LastTicketing"/&gt;
+         *             &lt;enumeration value="TravelCompletion"/&gt;
+         *           &lt;/restriction&gt;
+         *         &lt;/simpleType&gt;
+         *       &lt;/attribute&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1617,17 +1617,17 @@ public class FareInfoType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="BaseAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-         *       &lt;attribute name="BaseNUC_Amount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-         *       &lt;attribute name="TaxAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-         *       &lt;attribute name="TotalFare" type="{http://www.opentravel.org/OTA/2003/05}Money" />
-         *       &lt;attribute name="FareDescription" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="BaseAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+         *       &lt;attribute name="BaseNUC_Amount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+         *       &lt;attribute name="TaxAmount" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+         *       &lt;attribute name="TotalFare" type="{http://www.opentravel.org/OTA/2003/05}Money" /&gt;
+         *       &lt;attribute name="FareDescription" type="{http://www.opentravel.org/OTA/2003/05}StringLength0to64" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1776,13 +1776,13 @@ public class FareInfoType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="PassengerTypeCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaLength3" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -1829,15 +1829,15 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to8">
-     *       &lt;attribute name="ResBookDesigCode" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" />
-     *       &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="AccountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to8"&gt;
+     *       &lt;attribute name="ResBookDesigCode" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" /&gt;
+     *       &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="AccountCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1962,14 +1962,14 @@ public class FareInfoType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RuleInfoType">
-     *       &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" />
-     *       &lt;attribute name="MoneySaverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}RuleInfoType"&gt;
+     *       &lt;attribute name="TripType" type="{http://www.opentravel.org/OTA/2003/05}AirTripType" /&gt;
+     *       &lt;attribute name="MoneySaverInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

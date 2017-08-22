@@ -20,39 +20,39 @@ import javax.xml.bind.annotation.XmlValue;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="PriceRequestInformationType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="NegotiatedFareCode" maxOccurs="unbounded" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListAirGroup"/>
- *                 &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                 &lt;attribute name="OverrideRuleInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RebookOption" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="FlightSegmentRPH" use="required" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
- *                 &lt;attribute name="ResBookDesigCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PriceRequestAttributes"/>
- *       &lt;attribute name="CabinType" type="{http://www.opentravel.org/OTA/2003/05}CabinType" />
- *       &lt;attribute name="TicketingCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" />
- *       &lt;attribute name="OverrideAirlineCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="PriceRequestInformationType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="NegotiatedFareCode" maxOccurs="unbounded" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListAirGroup"/&gt;
+ *                 &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                 &lt;attribute name="OverrideRuleInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RebookOption" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="FlightSegmentRPH" use="required" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+ *                 &lt;attribute name="ResBookDesigCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PriceRequestAttributes"/&gt;
+ *       &lt;attribute name="CabinType" type="{http://www.opentravel.org/OTA/2003/05}CabinType" /&gt;
+ *       &lt;attribute name="TicketingCountry" type="{http://www.opentravel.org/OTA/2003/05}ISO3166" /&gt;
+ *       &lt;attribute name="OverrideAirlineCode" type="{http://www.opentravel.org/OTA/2003/05}AlphaNumericStringLength1to8" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -423,15 +423,15 @@ public class PriceRequestInformationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListAirGroup"/>
-     *       &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *       &lt;attribute name="OverrideRuleInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CodeListAirGroup"/&gt;
+     *       &lt;attribute name="TicketDesignatorCode" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *       &lt;attribute name="OverrideRuleInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -688,14 +688,14 @@ public class PriceRequestInformationType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="FlightSegmentRPH" use="required" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" />
-     *       &lt;attribute name="ResBookDesigCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="FlightSegmentRPH" use="required" type="{http://www.opentravel.org/OTA/2003/05}RPH_Type" /&gt;
+     *       &lt;attribute name="ResBookDesigCode" use="required" type="{http://www.opentravel.org/OTA/2003/05}UpperCaseAlphaLength1to2" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

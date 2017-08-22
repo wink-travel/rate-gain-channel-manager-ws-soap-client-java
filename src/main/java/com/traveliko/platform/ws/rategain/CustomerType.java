@@ -23,262 +23,262 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="CustomerType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="PersonName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" maxOccurs="5" minOccurs="0"/>
- *         &lt;element name="Telephone" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneInfoGroup"/>
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Email" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>EmailType">
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="Address" maxOccurs="99" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType">
- *                 &lt;sequence>
- *                   &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
- *                   &lt;element name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
- *                 &lt;attribute name="ValidationStatus">
- *                   &lt;simpleType>
- *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *                       &lt;enumeration value="SystemValidated"/>
- *                       &lt;enumeration value="UserValidated"/>
- *                       &lt;enumeration value="NotChecked"/>
- *                     &lt;/restriction>
- *                   &lt;/simpleType>
- *                 &lt;/attribute>
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="URL" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>URL_Type">
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="CitizenCountryName" maxOccurs="3" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CitizenCountryNameGroup"/>
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PhysChallName" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to255">
- *                 &lt;attribute name="PhysChallInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="PetInfo" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="3" minOccurs="0"/>
- *         &lt;element name="PaymentForm" maxOccurs="100" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentFormType">
- *                 &lt;sequence>
- *                   &lt;element name="AssociatedSupplier" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
- *                 &lt;attribute name="DefaultInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *               &lt;/extension>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="RelatedTraveler" type="{http://www.opentravel.org/OTA/2003/05}RelatedTravelerType" maxOccurs="99" minOccurs="0"/>
- *         &lt;element name="ContactPerson" type="{http://www.opentravel.org/OTA/2003/05}ContactPersonType" maxOccurs="5" minOccurs="0"/>
- *         &lt;element name="Document" type="{http://www.opentravel.org/OTA/2003/05}DocumentType" maxOccurs="99" minOccurs="0"/>
- *         &lt;element name="CustLoyalty" maxOccurs="25" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="MemberPreferences" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="AdditionalReward" maxOccurs="5" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
- *                                       &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
- *                                     &lt;/sequence>
- *                                     &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                             &lt;element name="Offer" maxOccurs="5" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;complexContent>
- *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                     &lt;sequence>
- *                                       &lt;element name="Communication" maxOccurs="5" minOccurs="0">
- *                                         &lt;complexType>
- *                                           &lt;complexContent>
- *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                                               &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *                                             &lt;/restriction>
- *                                           &lt;/complexContent>
- *                                         &lt;/complexType>
- *                                       &lt;/element>
- *                                     &lt;/sequence>
- *                                     &lt;attribute name="Type">
- *                                       &lt;simpleType>
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                           &lt;enumeration value="Partner"/>
- *                                           &lt;enumeration value="Loyalty"/>
- *                                         &lt;/restriction>
- *                                       &lt;/simpleType>
- *                                     &lt;/attribute>
- *                                   &lt;/restriction>
- *                                 &lt;/complexContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
- *                           &lt;attribute name="Awareness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                           &lt;attribute name="AwardsPreference">
- *                             &lt;simpleType>
- *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                 &lt;enumeration value="Points"/>
- *                                 &lt;enumeration value="Miles"/>
- *                               &lt;/restriction>
- *                             &lt;/simpleType>
- *                           &lt;/attribute>
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="SecurityInfo" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;sequence>
- *                             &lt;element name="PasswordHint" maxOccurs="2" minOccurs="0">
- *                               &lt;complexType>
- *                                 &lt;simpleContent>
- *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *                                     &lt;attribute name="Hint">
- *                                       &lt;simpleType>
- *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
- *                                           &lt;enumeration value="Question"/>
- *                                           &lt;enumeration value="Answer"/>
- *                                         &lt;/restriction>
- *                                       &lt;/simpleType>
- *                                     &lt;/attribute>
- *                                   &lt;/extension>
- *                                 &lt;/simpleContent>
- *                               &lt;/complexType>
- *                             &lt;/element>
- *                           &lt;/sequence>
- *                           &lt;attribute name="Username" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                           &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;element name="SubAccountBalance" maxOccurs="99" minOccurs="0">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                           &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *                           &lt;attribute name="Balance" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *                         &lt;/restriction>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CustomerLoyaltyGroup"/>
- *                 &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element name="EmployeeInfo" type="{http://www.opentravel.org/OTA/2003/05}EmployeeInfoType" maxOccurs="3" minOccurs="0"/>
- *         &lt;element name="EmployerInfo" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
- *         &lt;element name="AdditionalLanguage" maxOccurs="5" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;attribute name="Code" type="{http://www.w3.org/2001/XMLSchema}language" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/>
- *       &lt;/sequence>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GenderGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/>
- *       &lt;attribute name="Deceased" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="LockoutType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
- *       &lt;attribute name="VIP_Indicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="Text" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
- *       &lt;attribute name="CustomerValue" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
- *       &lt;attribute name="MaritalStatus">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *             &lt;enumeration value="Annulled"/>
- *             &lt;enumeration value="Co-habitating"/>
- *             &lt;enumeration value="Divorced"/>
- *             &lt;enumeration value="Engaged"/>
- *             &lt;enumeration value="Married"/>
- *             &lt;enumeration value="Separated"/>
- *             &lt;enumeration value="Single"/>
- *             &lt;enumeration value="Widowed"/>
- *             &lt;enumeration value="Unknown"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *       &lt;attribute name="PreviouslyMarriedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="ChildQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="CustomerType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="PersonName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" maxOccurs="5" minOccurs="0"/&gt;
+ *         &lt;element name="Telephone" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneInfoGroup"/&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Email" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;EmailType"&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="Address" maxOccurs="99" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+ *                   &lt;element name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
+ *                 &lt;attribute name="ValidationStatus"&gt;
+ *                   &lt;simpleType&gt;
+ *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *                       &lt;enumeration value="SystemValidated"/&gt;
+ *                       &lt;enumeration value="UserValidated"/&gt;
+ *                       &lt;enumeration value="NotChecked"/&gt;
+ *                     &lt;/restriction&gt;
+ *                   &lt;/simpleType&gt;
+ *                 &lt;/attribute&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="URL" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;URL_Type"&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="CitizenCountryName" maxOccurs="3" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CitizenCountryNameGroup"/&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PhysChallName" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to255"&gt;
+ *                 &lt;attribute name="PhysChallInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="PetInfo" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" maxOccurs="3" minOccurs="0"/&gt;
+ *         &lt;element name="PaymentForm" maxOccurs="100" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentFormType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="AssociatedSupplier" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+ *                 &lt;attribute name="DefaultInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *                 &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="RelatedTraveler" type="{http://www.opentravel.org/OTA/2003/05}RelatedTravelerType" maxOccurs="99" minOccurs="0"/&gt;
+ *         &lt;element name="ContactPerson" type="{http://www.opentravel.org/OTA/2003/05}ContactPersonType" maxOccurs="5" minOccurs="0"/&gt;
+ *         &lt;element name="Document" type="{http://www.opentravel.org/OTA/2003/05}DocumentType" maxOccurs="99" minOccurs="0"/&gt;
+ *         &lt;element name="CustLoyalty" maxOccurs="25" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="MemberPreferences" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="AdditionalReward" maxOccurs="5" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+ *                                       &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+ *                                     &lt;/sequence&gt;
+ *                                     &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                             &lt;element name="Offer" maxOccurs="5" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;complexContent&gt;
+ *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                     &lt;sequence&gt;
+ *                                       &lt;element name="Communication" maxOccurs="5" minOccurs="0"&gt;
+ *                                         &lt;complexType&gt;
+ *                                           &lt;complexContent&gt;
+ *                                             &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                                               &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *                                             &lt;/restriction&gt;
+ *                                           &lt;/complexContent&gt;
+ *                                         &lt;/complexType&gt;
+ *                                       &lt;/element&gt;
+ *                                     &lt;/sequence&gt;
+ *                                     &lt;attribute name="Type"&gt;
+ *                                       &lt;simpleType&gt;
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                           &lt;enumeration value="Partner"/&gt;
+ *                                           &lt;enumeration value="Loyalty"/&gt;
+ *                                         &lt;/restriction&gt;
+ *                                       &lt;/simpleType&gt;
+ *                                     &lt;/attribute&gt;
+ *                                   &lt;/restriction&gt;
+ *                                 &lt;/complexContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+ *                           &lt;attribute name="Awareness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                           &lt;attribute name="AwardsPreference"&gt;
+ *                             &lt;simpleType&gt;
+ *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                 &lt;enumeration value="Points"/&gt;
+ *                                 &lt;enumeration value="Miles"/&gt;
+ *                               &lt;/restriction&gt;
+ *                             &lt;/simpleType&gt;
+ *                           &lt;/attribute&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="SecurityInfo" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;sequence&gt;
+ *                             &lt;element name="PasswordHint" maxOccurs="2" minOccurs="0"&gt;
+ *                               &lt;complexType&gt;
+ *                                 &lt;simpleContent&gt;
+ *                                   &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *                                     &lt;attribute name="Hint"&gt;
+ *                                       &lt;simpleType&gt;
+ *                                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+ *                                           &lt;enumeration value="Question"/&gt;
+ *                                           &lt;enumeration value="Answer"/&gt;
+ *                                         &lt;/restriction&gt;
+ *                                       &lt;/simpleType&gt;
+ *                                     &lt;/attribute&gt;
+ *                                   &lt;/extension&gt;
+ *                                 &lt;/simpleContent&gt;
+ *                               &lt;/complexType&gt;
+ *                             &lt;/element&gt;
+ *                           &lt;/sequence&gt;
+ *                           &lt;attribute name="Username" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                           &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;element name="SubAccountBalance" maxOccurs="99" minOccurs="0"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                           &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *                           &lt;attribute name="Balance" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *                         &lt;/restriction&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CustomerLoyaltyGroup"/&gt;
+ *                 &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element name="EmployeeInfo" type="{http://www.opentravel.org/OTA/2003/05}EmployeeInfoType" maxOccurs="3" minOccurs="0"/&gt;
+ *         &lt;element name="EmployerInfo" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+ *         &lt;element name="AdditionalLanguage" maxOccurs="5" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;attribute name="Code" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *         &lt;element ref="{http://www.opentravel.org/OTA/2003/05}TPA_Extensions" minOccurs="0"/&gt;
+ *       &lt;/sequence&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}BirthDateGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}GenderGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyCodeGroup"/&gt;
+ *       &lt;attribute name="Deceased" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="LockoutType" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+ *       &lt;attribute name="VIP_Indicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="Text" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+ *       &lt;attribute name="CustomerValue" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+ *       &lt;attribute name="MaritalStatus"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="Annulled"/&gt;
+ *             &lt;enumeration value="Co-habitating"/&gt;
+ *             &lt;enumeration value="Divorced"/&gt;
+ *             &lt;enumeration value="Engaged"/&gt;
+ *             &lt;enumeration value="Married"/&gt;
+ *             &lt;enumeration value="Separated"/&gt;
+ *             &lt;enumeration value="Single"/&gt;
+ *             &lt;enumeration value="Widowed"/&gt;
+ *             &lt;enumeration value="Unknown"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *       &lt;attribute name="PreviouslyMarriedIndicator" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="ChildQuantity" type="{http://www.opentravel.org/OTA/2003/05}Numeric1to99" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -360,11 +360,9 @@ public class CustomerType {
     protected Boolean previouslyMarriedIndicator;
     @XmlAttribute(name = "ChildQuantity")
     protected Integer childQuantity;
-    @XmlAttribute(name = "CurrencyCode")
-    protected String currencyCode;
-    @XmlAttribute(name = "DecimalPlaces")
-    @XmlSchemaType(name = "nonNegativeInteger")
-    protected BigInteger decimalPlaces;
+    @XmlAttribute(name = "BirthDate")
+    @XmlSchemaType(name = "date")
+    protected XMLGregorianCalendar birthDate;
     @XmlAttribute(name = "Gender")
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     protected String gender;
@@ -372,9 +370,11 @@ public class CustomerType {
     @XmlJavaTypeAdapter(CollapsedStringAdapter.class)
     @XmlSchemaType(name = "language")
     protected String language;
-    @XmlAttribute(name = "BirthDate")
-    @XmlSchemaType(name = "date")
-    protected XMLGregorianCalendar birthDate;
+    @XmlAttribute(name = "CurrencyCode")
+    protected String currencyCode;
+    @XmlAttribute(name = "DecimalPlaces")
+    @XmlSchemaType(name = "nonNegativeInteger")
+    protected BigInteger decimalPlaces;
 
     /**
      * Gets the value of the personName property.
@@ -1052,51 +1052,27 @@ public class CustomerType {
     }
 
     /**
-     * Gets the value of the currencyCode property.
+     * Gets the value of the birthDate property.
      * 
      * @return
      *     possible object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public String getCurrencyCode() {
-        return currencyCode;
+    public XMLGregorianCalendar getBirthDate() {
+        return birthDate;
     }
 
     /**
-     * Sets the value of the currencyCode property.
+     * Sets the value of the birthDate property.
      * 
      * @param value
      *     allowed object is
-     *     {@link String }
+     *     {@link XMLGregorianCalendar }
      *     
      */
-    public void setCurrencyCode(String value) {
-        this.currencyCode = value;
-    }
-
-    /**
-     * Gets the value of the decimalPlaces property.
-     * 
-     * @return
-     *     possible object is
-     *     {@link BigInteger }
-     *     
-     */
-    public BigInteger getDecimalPlaces() {
-        return decimalPlaces;
-    }
-
-    /**
-     * Sets the value of the decimalPlaces property.
-     * 
-     * @param value
-     *     allowed object is
-     *     {@link BigInteger }
-     *     
-     */
-    public void setDecimalPlaces(BigInteger value) {
-        this.decimalPlaces = value;
+    public void setBirthDate(XMLGregorianCalendar value) {
+        this.birthDate = value;
     }
 
     /**
@@ -1148,27 +1124,51 @@ public class CustomerType {
     }
 
     /**
-     * Gets the value of the birthDate property.
+     * Gets the value of the currencyCode property.
      * 
      * @return
      *     possible object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public XMLGregorianCalendar getBirthDate() {
-        return birthDate;
+    public String getCurrencyCode() {
+        return currencyCode;
     }
 
     /**
-     * Sets the value of the birthDate property.
+     * Sets the value of the currencyCode property.
      * 
      * @param value
      *     allowed object is
-     *     {@link XMLGregorianCalendar }
+     *     {@link String }
      *     
      */
-    public void setBirthDate(XMLGregorianCalendar value) {
-        this.birthDate = value;
+    public void setCurrencyCode(String value) {
+        this.currencyCode = value;
+    }
+
+    /**
+     * Gets the value of the decimalPlaces property.
+     * 
+     * @return
+     *     possible object is
+     *     {@link BigInteger }
+     *     
+     */
+    public BigInteger getDecimalPlaces() {
+        return decimalPlaces;
+    }
+
+    /**
+     * Sets the value of the decimalPlaces property.
+     * 
+     * @param value
+     *     allowed object is
+     *     {@link BigInteger }
+     *     
+     */
+    public void setDecimalPlaces(BigInteger value) {
+        this.decimalPlaces = value;
     }
 
 
@@ -1178,13 +1178,13 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attribute name="Code" type="{http://www.w3.org/2001/XMLSchema}language" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attribute name="Code" type="{http://www.w3.org/2001/XMLSchema}language" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1231,28 +1231,28 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType">
-     *       &lt;sequence>
-     *         &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
-     *         &lt;element name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
-     *       &lt;attribute name="ValidationStatus">
-     *         &lt;simpleType>
-     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
-     *             &lt;enumeration value="SystemValidated"/>
-     *             &lt;enumeration value="UserValidated"/>
-     *             &lt;enumeration value="NotChecked"/>
-     *           &lt;/restriction>
-     *         &lt;/simpleType>
-     *       &lt;/attribute>
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}AddressInfoType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+     *         &lt;element name="AddresseeName" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
+     *       &lt;attribute name="ValidationStatus"&gt;
+     *         &lt;simpleType&gt;
+     *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+     *             &lt;enumeration value="SystemValidated"/&gt;
+     *             &lt;enumeration value="UserValidated"/&gt;
+     *             &lt;enumeration value="NotChecked"/&gt;
+     *           &lt;/restriction&gt;
+     *         &lt;/simpleType&gt;
+     *       &lt;/attribute&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1487,13 +1487,13 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CitizenCountryNameGroup"/>
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CitizenCountryNameGroup"/&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -1564,114 +1564,114 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="MemberPreferences" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="AdditionalReward" maxOccurs="5" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
-     *                             &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
-     *                           &lt;/sequence>
-     *                           &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                   &lt;element name="Offer" maxOccurs="5" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;complexContent>
-     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                           &lt;sequence>
-     *                             &lt;element name="Communication" maxOccurs="5" minOccurs="0">
-     *                               &lt;complexType>
-     *                                 &lt;complexContent>
-     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                                     &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *                                   &lt;/restriction>
-     *                                 &lt;/complexContent>
-     *                               &lt;/complexType>
-     *                             &lt;/element>
-     *                           &lt;/sequence>
-     *                           &lt;attribute name="Type">
-     *                             &lt;simpleType>
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                                 &lt;enumeration value="Partner"/>
-     *                                 &lt;enumeration value="Loyalty"/>
-     *                               &lt;/restriction>
-     *                             &lt;/simpleType>
-     *                           &lt;/attribute>
-     *                         &lt;/restriction>
-     *                       &lt;/complexContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
-     *                 &lt;attribute name="Awareness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *                 &lt;attribute name="AwardsPreference">
-     *                   &lt;simpleType>
-     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                       &lt;enumeration value="Points"/>
-     *                       &lt;enumeration value="Miles"/>
-     *                     &lt;/restriction>
-     *                   &lt;/simpleType>
-     *                 &lt;/attribute>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="SecurityInfo" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;sequence>
-     *                   &lt;element name="PasswordHint" maxOccurs="2" minOccurs="0">
-     *                     &lt;complexType>
-     *                       &lt;simpleContent>
-     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-     *                           &lt;attribute name="Hint">
-     *                             &lt;simpleType>
-     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-     *                                 &lt;enumeration value="Question"/>
-     *                                 &lt;enumeration value="Answer"/>
-     *                               &lt;/restriction>
-     *                             &lt;/simpleType>
-     *                           &lt;/attribute>
-     *                         &lt;/extension>
-     *                       &lt;/simpleContent>
-     *                     &lt;/complexType>
-     *                   &lt;/element>
-     *                 &lt;/sequence>
-     *                 &lt;attribute name="Username" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *                 &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;element name="SubAccountBalance" maxOccurs="99" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-     *                 &lt;attribute name="Balance" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CustomerLoyaltyGroup"/>
-     *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="MemberPreferences" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="AdditionalReward" maxOccurs="5" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+     *                             &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+     *                           &lt;/sequence&gt;
+     *                           &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                   &lt;element name="Offer" maxOccurs="5" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;complexContent&gt;
+     *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                           &lt;sequence&gt;
+     *                             &lt;element name="Communication" maxOccurs="5" minOccurs="0"&gt;
+     *                               &lt;complexType&gt;
+     *                                 &lt;complexContent&gt;
+     *                                   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                                     &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *                                   &lt;/restriction&gt;
+     *                                 &lt;/complexContent&gt;
+     *                               &lt;/complexType&gt;
+     *                             &lt;/element&gt;
+     *                           &lt;/sequence&gt;
+     *                           &lt;attribute name="Type"&gt;
+     *                             &lt;simpleType&gt;
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                                 &lt;enumeration value="Partner"/&gt;
+     *                                 &lt;enumeration value="Loyalty"/&gt;
+     *                               &lt;/restriction&gt;
+     *                             &lt;/simpleType&gt;
+     *                           &lt;/attribute&gt;
+     *                         &lt;/restriction&gt;
+     *                       &lt;/complexContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+     *                 &lt;attribute name="Awareness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *                 &lt;attribute name="AwardsPreference"&gt;
+     *                   &lt;simpleType&gt;
+     *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                       &lt;enumeration value="Points"/&gt;
+     *                       &lt;enumeration value="Miles"/&gt;
+     *                     &lt;/restriction&gt;
+     *                   &lt;/simpleType&gt;
+     *                 &lt;/attribute&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="SecurityInfo" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;sequence&gt;
+     *                   &lt;element name="PasswordHint" maxOccurs="2" minOccurs="0"&gt;
+     *                     &lt;complexType&gt;
+     *                       &lt;simpleContent&gt;
+     *                         &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+     *                           &lt;attribute name="Hint"&gt;
+     *                             &lt;simpleType&gt;
+     *                               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+     *                                 &lt;enumeration value="Question"/&gt;
+     *                                 &lt;enumeration value="Answer"/&gt;
+     *                               &lt;/restriction&gt;
+     *                             &lt;/simpleType&gt;
+     *                           &lt;/attribute&gt;
+     *                         &lt;/extension&gt;
+     *                       &lt;/simpleContent&gt;
+     *                     &lt;/complexType&gt;
+     *                   &lt;/element&gt;
+     *                 &lt;/sequence&gt;
+     *                 &lt;attribute name="Username" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *                 &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;element name="SubAccountBalance" maxOccurs="99" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+     *                 &lt;attribute name="Balance" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CustomerLoyaltyGroup"/&gt;
+     *       &lt;attribute name="Remark" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to128" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -2306,64 +2306,64 @@ public class CustomerType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="AdditionalReward" maxOccurs="5" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
-         *                   &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
-         *                 &lt;/sequence>
-         *                 &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *         &lt;element name="Offer" maxOccurs="5" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                 &lt;sequence>
-         *                   &lt;element name="Communication" maxOccurs="5" minOccurs="0">
-         *                     &lt;complexType>
-         *                       &lt;complexContent>
-         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *                           &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-         *                         &lt;/restriction>
-         *                       &lt;/complexContent>
-         *                     &lt;/complexType>
-         *                   &lt;/element>
-         *                 &lt;/sequence>
-         *                 &lt;attribute name="Type">
-         *                   &lt;simpleType>
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *                       &lt;enumeration value="Partner"/>
-         *                       &lt;enumeration value="Loyalty"/>
-         *                     &lt;/restriction>
-         *                   &lt;/simpleType>
-         *                 &lt;/attribute>
-         *               &lt;/restriction>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/>
-         *       &lt;attribute name="Awareness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *       &lt;attribute name="AwardsPreference">
-         *         &lt;simpleType>
-         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *             &lt;enumeration value="Points"/>
-         *             &lt;enumeration value="Miles"/>
-         *           &lt;/restriction>
-         *         &lt;/simpleType>
-         *       &lt;/attribute>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="AdditionalReward" maxOccurs="5" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+         *                   &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+         *                 &lt;/sequence&gt;
+         *                 &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *         &lt;element name="Offer" maxOccurs="5" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                 &lt;sequence&gt;
+         *                   &lt;element name="Communication" maxOccurs="5" minOccurs="0"&gt;
+         *                     &lt;complexType&gt;
+         *                       &lt;complexContent&gt;
+         *                         &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *                           &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+         *                         &lt;/restriction&gt;
+         *                       &lt;/complexContent&gt;
+         *                     &lt;/complexType&gt;
+         *                   &lt;/element&gt;
+         *                 &lt;/sequence&gt;
+         *                 &lt;attribute name="Type"&gt;
+         *                   &lt;simpleType&gt;
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *                       &lt;enumeration value="Partner"/&gt;
+         *                       &lt;enumeration value="Loyalty"/&gt;
+         *                     &lt;/restriction&gt;
+         *                   &lt;/simpleType&gt;
+         *                 &lt;/attribute&gt;
+         *               &lt;/restriction&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}PromotionCodeGroup"/&gt;
+         *       &lt;attribute name="Awareness" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *       &lt;attribute name="AwardsPreference"&gt;
+         *         &lt;simpleType&gt;
+         *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *             &lt;enumeration value="Points"/&gt;
+         *             &lt;enumeration value="Miles"/&gt;
+         *           &lt;/restriction&gt;
+         *         &lt;/simpleType&gt;
+         *       &lt;/attribute&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2554,17 +2554,17 @@ public class CustomerType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/>
-             *         &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/>
-             *       &lt;/sequence>
-             *       &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="CompanyName" type="{http://www.opentravel.org/OTA/2003/05}CompanyNameType" minOccurs="0"/&gt;
+             *         &lt;element name="Name" type="{http://www.opentravel.org/OTA/2003/05}PersonNameType" minOccurs="0"/&gt;
+             *       &lt;/sequence&gt;
+             *       &lt;attribute name="MemberID" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2664,31 +2664,31 @@ public class CustomerType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *       &lt;sequence>
-             *         &lt;element name="Communication" maxOccurs="5" minOccurs="0">
-             *           &lt;complexType>
-             *             &lt;complexContent>
-             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-             *                 &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-             *               &lt;/restriction>
-             *             &lt;/complexContent>
-             *           &lt;/complexType>
-             *         &lt;/element>
-             *       &lt;/sequence>
-             *       &lt;attribute name="Type">
-             *         &lt;simpleType>
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-             *             &lt;enumeration value="Partner"/>
-             *             &lt;enumeration value="Loyalty"/>
-             *           &lt;/restriction>
-             *         &lt;/simpleType>
-             *       &lt;/attribute>
-             *     &lt;/restriction>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *       &lt;sequence&gt;
+             *         &lt;element name="Communication" maxOccurs="5" minOccurs="0"&gt;
+             *           &lt;complexType&gt;
+             *             &lt;complexContent&gt;
+             *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+             *                 &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+             *               &lt;/restriction&gt;
+             *             &lt;/complexContent&gt;
+             *           &lt;/complexType&gt;
+             *         &lt;/element&gt;
+             *       &lt;/sequence&gt;
+             *       &lt;attribute name="Type"&gt;
+             *         &lt;simpleType&gt;
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+             *             &lt;enumeration value="Partner"/&gt;
+             *             &lt;enumeration value="Loyalty"/&gt;
+             *           &lt;/restriction&gt;
+             *         &lt;/simpleType&gt;
+             *       &lt;/attribute&gt;
+             *     &lt;/restriction&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -2764,13 +2764,13 @@ public class CustomerType {
                  * <p>The following schema fragment specifies the expected content contained within this class.
                  * 
                  * <pre>
-                 * &lt;complexType>
-                 *   &lt;complexContent>
-                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-                 *       &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-                 *     &lt;/restriction>
-                 *   &lt;/complexContent>
-                 * &lt;/complexType>
+                 * &lt;complexType&gt;
+                 *   &lt;complexContent&gt;
+                 *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+                 *       &lt;attribute name="DistribType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+                 *     &lt;/restriction&gt;
+                 *   &lt;/complexContent&gt;
+                 * &lt;/complexType&gt;
                  * </pre>
                  * 
                  * 
@@ -2819,32 +2819,32 @@ public class CustomerType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="PasswordHint" maxOccurs="2" minOccurs="0">
-         *           &lt;complexType>
-         *             &lt;simpleContent>
-         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-         *                 &lt;attribute name="Hint">
-         *                   &lt;simpleType>
-         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-         *                       &lt;enumeration value="Question"/>
-         *                       &lt;enumeration value="Answer"/>
-         *                     &lt;/restriction>
-         *                   &lt;/simpleType>
-         *                 &lt;/attribute>
-         *               &lt;/extension>
-         *             &lt;/simpleContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *       &lt;attribute name="Username" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *       &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="PasswordHint" maxOccurs="2" minOccurs="0"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;simpleContent&gt;
+         *               &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+         *                 &lt;attribute name="Hint"&gt;
+         *                   &lt;simpleType&gt;
+         *                     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+         *                       &lt;enumeration value="Question"/&gt;
+         *                       &lt;enumeration value="Answer"/&gt;
+         *                     &lt;/restriction&gt;
+         *                   &lt;/simpleType&gt;
+         *                 &lt;/attribute&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/simpleContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *       &lt;attribute name="Username" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *       &lt;attribute name="Password" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to32" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -2946,20 +2946,20 @@ public class CustomerType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;simpleContent>
-             *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
-             *       &lt;attribute name="Hint">
-             *         &lt;simpleType>
-             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string">
-             *             &lt;enumeration value="Question"/>
-             *             &lt;enumeration value="Answer"/>
-             *           &lt;/restriction>
-             *         &lt;/simpleType>
-             *       &lt;/attribute>
-             *     &lt;/extension>
-             *   &lt;/simpleContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;simpleContent&gt;
+             *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+             *       &lt;attribute name="Hint"&gt;
+             *         &lt;simpleType&gt;
+             *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}string"&gt;
+             *             &lt;enumeration value="Question"/&gt;
+             *             &lt;enumeration value="Answer"/&gt;
+             *           &lt;/restriction&gt;
+             *         &lt;/simpleType&gt;
+             *       &lt;/attribute&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/simpleContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 
@@ -3034,14 +3034,14 @@ public class CustomerType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" />
-         *       &lt;attribute name="Balance" type="{http://www.w3.org/2001/XMLSchema}integer" />
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attribute name="Type" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to16" /&gt;
+         *       &lt;attribute name="Balance" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -3114,14 +3114,14 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>EmailType">
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;EmailType"&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -3194,26 +3194,26 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentFormType">
-     *       &lt;sequence>
-     *         &lt;element name="AssociatedSupplier" minOccurs="0">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
-     *               &lt;/restriction>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *       &lt;/sequence>
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *       &lt;attribute name="DefaultInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *     &lt;/extension>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}PaymentFormType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="AssociatedSupplier" minOccurs="0"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/&gt;
+     *               &lt;/restriction&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *       &lt;attribute name="DefaultInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -3338,13 +3338,13 @@ public class CustomerType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CompanyID_AttributesGroup"/&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -3469,13 +3469,13 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>StringLength0to255">
-     *       &lt;attribute name="PhysChallInd" type="{http://www.w3.org/2001/XMLSchema}boolean" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;StringLength0to255"&gt;
+     *       &lt;attribute name="PhysChallInd" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -3548,16 +3548,16 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneInfoGroup"/>
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}EffectiveExpireOptionalDateGroup"/&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}TelephoneInfoGroup"/&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *       &lt;attribute name="ParentCompanyRef" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to8" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -4074,13 +4074,13 @@ public class CustomerType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>URL_Type">
-     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;URL_Type"&gt;
+     *       &lt;attribute name="TransferAction" type="{http://www.opentravel.org/OTA/2003/05}TransferActionType" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

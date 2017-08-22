@@ -19,57 +19,57 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="VehicleAdditionalDriverRequirementsType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;sequence>
- *         &lt;element name="AddlDriverInfos" minOccurs="0">
- *           &lt;complexType>
- *             &lt;complexContent>
- *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                 &lt;sequence>
- *                   &lt;element name="AddlDriverInfo" maxOccurs="99">
- *                     &lt;complexType>
- *                       &lt;complexContent>
- *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType">
- *                           &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailRequirementAddlDriverInfoType" />
- *                         &lt;/extension>
- *                       &lt;/complexContent>
- *                     &lt;/complexType>
- *                   &lt;/element>
- *                   &lt;sequence>
- *                     &lt;element name="Vehicles" minOccurs="0">
- *                       &lt;complexType>
- *                         &lt;complexContent>
- *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *                             &lt;sequence>
- *                               &lt;element name="Vehicle" maxOccurs="99">
- *                                 &lt;complexType>
- *                                   &lt;complexContent>
- *                                     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType">
- *                                       &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
- *                                     &lt;/extension>
- *                                   &lt;/complexContent>
- *                                 &lt;/complexType>
- *                               &lt;/element>
- *                             &lt;/sequence>
- *                           &lt;/restriction>
- *                         &lt;/complexContent>
- *                       &lt;/complexType>
- *                     &lt;/element>
- *                   &lt;/sequence>
- *                 &lt;/sequence>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
- *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
- *                 &lt;attribute name="ChargeType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
- *               &lt;/restriction>
- *             &lt;/complexContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/sequence>
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="VehicleAdditionalDriverRequirementsType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;sequence&gt;
+ *         &lt;element name="AddlDriverInfos" minOccurs="0"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;complexContent&gt;
+ *               &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                 &lt;sequence&gt;
+ *                   &lt;element name="AddlDriverInfo" maxOccurs="99"&gt;
+ *                     &lt;complexType&gt;
+ *                       &lt;complexContent&gt;
+ *                         &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType"&gt;
+ *                           &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailRequirementAddlDriverInfoType" /&gt;
+ *                         &lt;/extension&gt;
+ *                       &lt;/complexContent&gt;
+ *                     &lt;/complexType&gt;
+ *                   &lt;/element&gt;
+ *                   &lt;sequence&gt;
+ *                     &lt;element name="Vehicles" minOccurs="0"&gt;
+ *                       &lt;complexType&gt;
+ *                         &lt;complexContent&gt;
+ *                           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *                             &lt;sequence&gt;
+ *                               &lt;element name="Vehicle" maxOccurs="99"&gt;
+ *                                 &lt;complexType&gt;
+ *                                   &lt;complexContent&gt;
+ *                                     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType"&gt;
+ *                                       &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+ *                                     &lt;/extension&gt;
+ *                                   &lt;/complexContent&gt;
+ *                                 &lt;/complexType&gt;
+ *                               &lt;/element&gt;
+ *                             &lt;/sequence&gt;
+ *                           &lt;/restriction&gt;
+ *                         &lt;/complexContent&gt;
+ *                       &lt;/complexType&gt;
+ *                     &lt;/element&gt;
+ *                   &lt;/sequence&gt;
+ *                 &lt;/sequence&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+ *                 &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+ *                 &lt;attribute name="ChargeType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+ *               &lt;/restriction&gt;
+ *             &lt;/complexContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/sequence&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -114,47 +114,47 @@ public class VehicleAdditionalDriverRequirementsType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;complexContent>
-     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *       &lt;sequence>
-     *         &lt;element name="AddlDriverInfo" maxOccurs="99">
-     *           &lt;complexType>
-     *             &lt;complexContent>
-     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType">
-     *                 &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailRequirementAddlDriverInfoType" />
-     *               &lt;/extension>
-     *             &lt;/complexContent>
-     *           &lt;/complexType>
-     *         &lt;/element>
-     *         &lt;sequence>
-     *           &lt;element name="Vehicles" minOccurs="0">
-     *             &lt;complexType>
-     *               &lt;complexContent>
-     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-     *                   &lt;sequence>
-     *                     &lt;element name="Vehicle" maxOccurs="99">
-     *                       &lt;complexType>
-     *                         &lt;complexContent>
-     *                           &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType">
-     *                             &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-     *                           &lt;/extension>
-     *                         &lt;/complexContent>
-     *                       &lt;/complexType>
-     *                     &lt;/element>
-     *                   &lt;/sequence>
-     *                 &lt;/restriction>
-     *               &lt;/complexContent>
-     *             &lt;/complexType>
-     *           &lt;/element>
-     *         &lt;/sequence>
-     *       &lt;/sequence>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/>
-     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/>
-     *       &lt;attribute name="ChargeType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" />
-     *     &lt;/restriction>
-     *   &lt;/complexContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;complexContent&gt;
+     *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *       &lt;sequence&gt;
+     *         &lt;element name="AddlDriverInfo" maxOccurs="99"&gt;
+     *           &lt;complexType&gt;
+     *             &lt;complexContent&gt;
+     *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType"&gt;
+     *                 &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailRequirementAddlDriverInfoType" /&gt;
+     *               &lt;/extension&gt;
+     *             &lt;/complexContent&gt;
+     *           &lt;/complexType&gt;
+     *         &lt;/element&gt;
+     *         &lt;sequence&gt;
+     *           &lt;element name="Vehicles" minOccurs="0"&gt;
+     *             &lt;complexType&gt;
+     *               &lt;complexContent&gt;
+     *                 &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+     *                   &lt;sequence&gt;
+     *                     &lt;element name="Vehicle" maxOccurs="99"&gt;
+     *                       &lt;complexType&gt;
+     *                         &lt;complexContent&gt;
+     *                           &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType"&gt;
+     *                             &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+     *                           &lt;/extension&gt;
+     *                         &lt;/complexContent&gt;
+     *                       &lt;/complexType&gt;
+     *                     &lt;/element&gt;
+     *                   &lt;/sequence&gt;
+     *                 &lt;/restriction&gt;
+     *               &lt;/complexContent&gt;
+     *             &lt;/complexType&gt;
+     *           &lt;/element&gt;
+     *         &lt;/sequence&gt;
+     *       &lt;/sequence&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeSpanGroup"/&gt;
+     *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}CurrencyAmountGroup"/&gt;
+     *       &lt;attribute name="ChargeType" type="{http://www.opentravel.org/OTA/2003/05}OTA_CodeType" /&gt;
+     *     &lt;/restriction&gt;
+     *   &lt;/complexContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 
@@ -414,13 +414,13 @@ public class VehicleAdditionalDriverRequirementsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType">
-         *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailRequirementAddlDriverInfoType" />
-         *     &lt;/extension>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}FormattedTextType"&gt;
+         *       &lt;attribute name="Type" use="required" type="{http://www.opentravel.org/OTA/2003/05}LocationDetailRequirementAddlDriverInfoType" /&gt;
+         *     &lt;/extension&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -467,23 +467,23 @@ public class VehicleAdditionalDriverRequirementsType {
          * <p>The following schema fragment specifies the expected content contained within this class.
          * 
          * <pre>
-         * &lt;complexType>
-         *   &lt;complexContent>
-         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
-         *       &lt;sequence>
-         *         &lt;element name="Vehicle" maxOccurs="99">
-         *           &lt;complexType>
-         *             &lt;complexContent>
-         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType">
-         *                 &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-         *               &lt;/extension>
-         *             &lt;/complexContent>
-         *           &lt;/complexType>
-         *         &lt;/element>
-         *       &lt;/sequence>
-         *     &lt;/restriction>
-         *   &lt;/complexContent>
-         * &lt;/complexType>
+         * &lt;complexType&gt;
+         *   &lt;complexContent&gt;
+         *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+         *       &lt;sequence&gt;
+         *         &lt;element name="Vehicle" maxOccurs="99"&gt;
+         *           &lt;complexType&gt;
+         *             &lt;complexContent&gt;
+         *               &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType"&gt;
+         *                 &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+         *               &lt;/extension&gt;
+         *             &lt;/complexContent&gt;
+         *           &lt;/complexType&gt;
+         *         &lt;/element&gt;
+         *       &lt;/sequence&gt;
+         *     &lt;/restriction&gt;
+         *   &lt;/complexContent&gt;
+         * &lt;/complexType&gt;
          * </pre>
          * 
          * 
@@ -533,13 +533,13 @@ public class VehicleAdditionalDriverRequirementsType {
              * <p>The following schema fragment specifies the expected content contained within this class.
              * 
              * <pre>
-             * &lt;complexType>
-             *   &lt;complexContent>
-             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType">
-             *       &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" />
-             *     &lt;/extension>
-             *   &lt;/complexContent>
-             * &lt;/complexType>
+             * &lt;complexType&gt;
+             *   &lt;complexContent&gt;
+             *     &lt;extension base="{http://www.opentravel.org/OTA/2003/05}VehicleCoreType"&gt;
+             *       &lt;attribute name="IncludeExclude" type="{http://www.opentravel.org/OTA/2003/05}IncludeExcludeType" /&gt;
+             *     &lt;/extension&gt;
+             *   &lt;/complexContent&gt;
+             * &lt;/complexType&gt;
              * </pre>
              * 
              * 

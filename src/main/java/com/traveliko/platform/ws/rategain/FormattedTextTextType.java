@@ -18,22 +18,22 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="FormattedTextTextType">
- *   &lt;simpleContent>
- *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema>string">
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/>
- *       &lt;attribute name="Formatted" type="{http://www.w3.org/2001/XMLSchema}boolean" />
- *       &lt;attribute name="TextFormat">
- *         &lt;simpleType>
- *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *             &lt;enumeration value="PlainText"/>
- *             &lt;enumeration value="HTML"/>
- *           &lt;/restriction>
- *         &lt;/simpleType>
- *       &lt;/attribute>
- *     &lt;/extension>
- *   &lt;/simpleContent>
- * &lt;/complexType>
+ * &lt;complexType name="FormattedTextTextType"&gt;
+ *   &lt;simpleContent&gt;
+ *     &lt;extension base="&lt;http://www.w3.org/2001/XMLSchema&gt;string"&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/&gt;
+ *       &lt;attribute name="Formatted" type="{http://www.w3.org/2001/XMLSchema}boolean" /&gt;
+ *       &lt;attribute name="TextFormat"&gt;
+ *         &lt;simpleType&gt;
+ *           &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *             &lt;enumeration value="PlainText"/&gt;
+ *             &lt;enumeration value="HTML"/&gt;
+ *           &lt;/restriction&gt;
+ *         &lt;/simpleType&gt;
+ *       &lt;/attribute&gt;
+ *     &lt;/extension&gt;
+ *   &lt;/simpleContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -43,14 +43,14 @@ import javax.xml.bind.annotation.adapters.XmlJavaTypeAdapter;
     "value"
 })
 @XmlSeeAlso({
-    com.traveliko.platform.ws.rategain.FulfillmentType.PaymentText.class,
+    CoverageDetailsType.class,
     com.traveliko.platform.ws.rategain.VehicleRentalDetailsType.ConditionReport.class,
+    com.traveliko.platform.ws.rategain.FulfillmentType.PaymentText.class,
+    com.traveliko.platform.ws.rategain.TravelerInfoType.AirTraveler.Comment.class,
     com.traveliko.platform.ws.rategain.ImageDescriptionType.Description.class,
-    com.traveliko.platform.ws.rategain.TextDescriptionType.Description.class,
     com.traveliko.platform.ws.rategain.RateQualifierType.RateComments.RateComment.class,
     com.traveliko.platform.ws.rategain.ParagraphType.ListItem.class,
-    CoverageDetailsType.class,
-    com.traveliko.platform.ws.rategain.TravelerInfoType.AirTraveler.Comment.class
+    com.traveliko.platform.ws.rategain.TextDescriptionType.Description.class
 })
 public class FormattedTextTextType {
 

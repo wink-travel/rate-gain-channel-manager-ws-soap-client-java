@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="LocationDetailRequirementAgeInfoType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="MinimumAge"/>
- *     &lt;enumeration value="MinimumAgeExceptions"/>
- *     &lt;enumeration value="Miscellaneous"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="LocationDetailRequirementAgeInfoType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="MinimumAge"/&gt;
+ *     &lt;enumeration value="MinimumAgeExceptions"/&gt;
+ *     &lt;enumeration value="Miscellaneous"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

@@ -12,15 +12,15 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="OfficeLocationType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Main"/>
- *     &lt;enumeration value="Field"/>
- *     &lt;enumeration value="Division"/>
- *     &lt;enumeration value="Regional"/>
- *     &lt;enumeration value="Remote"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="OfficeLocationType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Main"/&gt;
+ *     &lt;enumeration value="Field"/&gt;
+ *     &lt;enumeration value="Division"/&gt;
+ *     &lt;enumeration value="Regional"/&gt;
+ *     &lt;enumeration value="Remote"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */

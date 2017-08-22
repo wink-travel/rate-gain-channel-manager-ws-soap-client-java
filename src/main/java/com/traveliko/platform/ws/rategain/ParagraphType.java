@@ -24,30 +24,30 @@ import javax.xml.datatype.XMLGregorianCalendar;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * 
  * <pre>
- * &lt;complexType name="ParagraphType">
- *   &lt;complexContent>
- *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType">
- *       &lt;choice maxOccurs="unbounded" minOccurs="0">
- *         &lt;element name="Text" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextTextType"/>
- *         &lt;element name="Image" type="{http://www.w3.org/2001/XMLSchema}string"/>
- *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI"/>
- *         &lt;element name="ListItem">
- *           &lt;complexType>
- *             &lt;simpleContent>
- *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>FormattedTextTextType">
- *                 &lt;attribute name="ListItem" type="{http://www.w3.org/2001/XMLSchema}integer" />
- *               &lt;/extension>
- *             &lt;/simpleContent>
- *           &lt;/complexType>
- *         &lt;/element>
- *       &lt;/choice>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/>
- *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/>
- *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" />
- *       &lt;attribute name="ParagraphNumber" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" />
- *     &lt;/restriction>
- *   &lt;/complexContent>
- * &lt;/complexType>
+ * &lt;complexType name="ParagraphType"&gt;
+ *   &lt;complexContent&gt;
+ *     &lt;restriction base="{http://www.w3.org/2001/XMLSchema}anyType"&gt;
+ *       &lt;choice maxOccurs="unbounded" minOccurs="0"&gt;
+ *         &lt;element name="Text" type="{http://www.opentravel.org/OTA/2003/05}FormattedTextTextType"/&gt;
+ *         &lt;element name="Image" type="{http://www.w3.org/2001/XMLSchema}string"/&gt;
+ *         &lt;element name="URL" type="{http://www.w3.org/2001/XMLSchema}anyURI"/&gt;
+ *         &lt;element name="ListItem"&gt;
+ *           &lt;complexType&gt;
+ *             &lt;simpleContent&gt;
+ *               &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;FormattedTextTextType"&gt;
+ *                 &lt;attribute name="ListItem" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+ *               &lt;/extension&gt;
+ *             &lt;/simpleContent&gt;
+ *           &lt;/complexType&gt;
+ *         &lt;/element&gt;
+ *       &lt;/choice&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}LanguageGroup"/&gt;
+ *       &lt;attGroup ref="{http://www.opentravel.org/OTA/2003/05}DateTimeStampGroup"/&gt;
+ *       &lt;attribute name="Name" type="{http://www.opentravel.org/OTA/2003/05}StringLength1to64" /&gt;
+ *       &lt;attribute name="ParagraphNumber" type="{http://www.w3.org/2001/XMLSchema}nonNegativeInteger" /&gt;
+ *     &lt;/restriction&gt;
+ *   &lt;/complexContent&gt;
+ * &lt;/complexType&gt;
  * </pre>
  * 
  * 
@@ -59,16 +59,16 @@ import javax.xml.datatype.XMLGregorianCalendar;
 @XmlSeeAlso({
     com.traveliko.platform.ws.rategain.InvBlockType.BlockDescriptions.BlockDescription.class,
     com.traveliko.platform.ws.rategain.ProfileType.Comments.Comment.class,
-    com.traveliko.platform.ws.rategain.SpecialRequestType.SpecialRequest.class,
-    com.traveliko.platform.ws.rategain.CommentType.Comment.class
+    com.traveliko.platform.ws.rategain.CommentType.Comment.class,
+    com.traveliko.platform.ws.rategain.SpecialRequestType.SpecialRequest.class
 })
 public class ParagraphType {
 
     @XmlElementRefs({
-        @XmlElementRef(name = "Text", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "Image", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
         @XmlElementRef(name = "ListItem", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
-        @XmlElementRef(name = "URL", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false)
+        @XmlElementRef(name = "URL", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Text", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false),
+        @XmlElementRef(name = "Image", namespace = "http://www.opentravel.org/OTA/2003/05", type = JAXBElement.class, required = false)
     })
     protected List<JAXBElement<?>> textOrImageOrURL;
     @XmlAttribute(name = "Name")
@@ -112,9 +112,9 @@ public class ParagraphType {
      * 
      * <p>
      * Objects of the following type(s) are allowed in the list
+     * {@link JAXBElement }{@code <}{@link FormattedTextTextType }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * {@link JAXBElement }{@code <}{@link ParagraphType.ListItem }{@code >}
-     * {@link JAXBElement }{@code <}{@link FormattedTextTextType }{@code >}
      * {@link JAXBElement }{@code <}{@link String }{@code >}
      * 
      * 
@@ -325,13 +325,13 @@ public class ParagraphType {
      * <p>The following schema fragment specifies the expected content contained within this class.
      * 
      * <pre>
-     * &lt;complexType>
-     *   &lt;simpleContent>
-     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05>FormattedTextTextType">
-     *       &lt;attribute name="ListItem" type="{http://www.w3.org/2001/XMLSchema}integer" />
-     *     &lt;/extension>
-     *   &lt;/simpleContent>
-     * &lt;/complexType>
+     * &lt;complexType&gt;
+     *   &lt;simpleContent&gt;
+     *     &lt;extension base="&lt;http://www.opentravel.org/OTA/2003/05&gt;FormattedTextTextType"&gt;
+     *       &lt;attribute name="ListItem" type="{http://www.w3.org/2001/XMLSchema}integer" /&gt;
+     *     &lt;/extension&gt;
+     *   &lt;/simpleContent&gt;
+     * &lt;/complexType&gt;
      * </pre>
      * 
      * 

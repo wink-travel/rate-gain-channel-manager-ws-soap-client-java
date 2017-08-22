@@ -12,13 +12,13 @@ import javax.xml.bind.annotation.XmlType;
  * <p>The following schema fragment specifies the expected content contained within this class.
  * <p>
  * <pre>
- * &lt;simpleType name="CoverageTextType">
- *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN">
- *     &lt;enumeration value="Supplement"/>
- *     &lt;enumeration value="Description"/>
- *     &lt;enumeration value="Limits"/>
- *   &lt;/restriction>
- * &lt;/simpleType>
+ * &lt;simpleType name="CoverageTextType"&gt;
+ *   &lt;restriction base="{http://www.w3.org/2001/XMLSchema}NMTOKEN"&gt;
+ *     &lt;enumeration value="Supplement"/&gt;
+ *     &lt;enumeration value="Description"/&gt;
+ *     &lt;enumeration value="Limits"/&gt;
+ *   &lt;/restriction&gt;
+ * &lt;/simpleType&gt;
  * </pre>
  * 
  */
