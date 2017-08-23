@@ -82,7 +82,7 @@
                                 <vmArg>-Djavax.xml.accessExternalDTD=all</vmArg>
                                 <vmArg>-Djavax.xml.accessExternalSchema=all</vmArg>
                             </vmArgs>
-                            <packageName>com.traveliko.ws.platform.rategain</packageName>
+                            <packageName>com.traveliko.platform.ws.rategain</packageName>
                         </configuration>
                     </execution>
                 </executions>
