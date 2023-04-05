@@ -2,6 +2,52 @@
 
 Changelog of rate-gain-channel-manager-ws-soap-client-java.
 
+## 5.0.1 (2023-04-05)
+
+### Other changes
+
+**Merge branch 'release/5.0.1'**
+
+
+[86946](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/869467a5ca6c208) Bjorn Harvold *2023-04-05 07:09:38*
+
+**Update versions for release**
+
+
+[24ce3](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/24ce3c17913c508) Bjorn Harvold *2023-04-05 07:09:38*
+
+**:wrench: build: added oss parent**
+
+
+[dd567](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/dd5671a00dd845d) Bjorn Harvold *2023-04-05 07:08:59*
+
+**:twisted_rightwards_arrows: doc: merged CHANGELOG.md from master into develop branch**
+
+
+[187d4](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/187d445048e9301) Bjorn Harvold *2023-04-03 08:44:15*
+
+**Update for next development version**
+
+
+[99f38](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/99f3849d4d5b343) Bjorn Harvold *2023-04-03 08:43:39*
+
+**Merge tag '5.0.0' into develop**
+
+* Tag release 
+
+[d7fa7](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/d7fa776315617bd) Bjorn Harvold *2023-04-03 08:43:37*
+
+
+## v5.0.0 (2023-04-03)
+
+### Other changes
+
+**:memo: doc: Updated CHANGELOG.md...**
+
+
+[ea948](https://github.com/wink-travel/rate-gain-channel-manager-ws-soap-client-java/commit/ea9485f09bac6e4) Bjorn Harvold *2023-04-03 08:44:03*
+
+
 ## 5.0.0 (2023-04-03)
 
 ### Other changes
